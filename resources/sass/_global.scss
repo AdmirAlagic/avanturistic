@@ -1,0 +1,113 @@
+// Variables
+@import 'variables';
+
+img{
+  max-width: 100%;
+  width:auto;
+  height: auto;
+}
+
+
+// Buttons
+.btn{
+   
+
+  &.btn-default{
+    background-color: map-get($map-colors,'default');
+    border-color: map-get($map-colors,'default');
+    color: map-get($map-colors,'dark');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: darken( map-get($map-colors,'default'), 10%)
+    }
+  }
+
+  &.btn-primary{
+    background-color: map-get($map-colors,'primary');
+    border-color: map-get($map-colors,'primary');
+    color: map-get($map-colors,'light');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: darken( map-get($map-colors,'primary'), 10%)
+    }
+  }
+
+  &.btn-secondary{
+    background-color: map-get($map-colors,'secondary');
+    border-color: map-get($map-colors,'secondary');
+    color: map-get($map-colors,'light');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: darken( map-get($map-colors,'secondary'), 10%)
+    }
+  }
+
+  &.btn-success{
+    background-color: map-get($map-colors,'success');
+    border-color: map-get($map-colors,'success');
+    color: map-get($map-colors,'light');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: darken( map-get($map-colors,'success'), 10%)
+    }
+  }
+
+  &.btn-info{
+    background-color: map-get($map-colors,'info');
+    border-color: map-get($map-colors,'info');
+    color: map-get($map-colors,'light');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: darken( map-get($map-colors,'info'), 10%)
+    }
+  }
+
+  &.btn-danger {
+    background-color: map-get($map-colors,'danger');
+    border-color: map-get($map-colors,'danger');
+    color: map-get($map-colors,'light');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: darken( map-get($map-colors,'danger'), 10%)
+    }
+  }
+
+  &.btn-link {
+    color: map-get($map-colors,'danger');
+    &:hover,
+    &:active,
+    &:focus{
+      background-color: map-get($map-colors,'default');
+      color: map-get($map-colors,'dark');
+    }
+  }
+
+}
+
+
+.kt-badge.kt-badge--brand {
+    color: map-get($map-colors,'light');
+    background: map-get($map-colors,'dark');}
+
+.kt-badge.kt-badge--success {
+    color: map-get($map-colors,'light');
+    background: map-get($map-colors,'success');}
+
+.kt-badge.kt-badge--warning {
+    color:  map-get($map-colors,'dark');
+    background: map-get($map-colors,'warning');}
+
+
+.kt-badge.kt-badge--danger {
+    color: map-get($map-colors,'light');
+    background: map-get($map-colors,'danger') !important;}
+
+.kt-login.kt-login--v1 .kt-login__wrapper .kt-login__head{
+  margin-bottom:50px;
+}

@@ -1,0 +1,178 @@
+input[type=checkbox],
+input[type=radio] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+input[type=radio]:checked + label {
+  color: #FFFFFF !important;
+}
+
+input[type=radio]:checked + label .btn {
+  background-color: #666;
+}
+
+input[type=radio]:checked + label i {
+  opacity: 1;
+}
+
+input[type=radio]:checked + label .btn.btn-default {
+  color: #FFFFFF !important;
+}
+
+input[type=radio]:checked + label .btn.btn-default i {
+  color: #FFFFFF !important;
+}
+
+input[type=radio]:checked.check-success + label {
+  background-color: #666;
+  color: #FFFFFF !important;
+}
+
+input[type=radio]:checked.check-success + label i {
+  opacity: 1;
+}
+
+input[type=radio]:checked.check-success + label .btn.btn-default {
+  color: #FFFFFF !important;
+}
+
+input[type=radio]:checked.check-success + label .btn.btn-default i {
+  color: #FFFFFF !important;
+}
+
+input[type=radio]:checked.check-success + label:before {
+  content: url("/img/check.svg");
+  width: 37px;
+  z-index: 1;
+  bottom: 3px;
+  left: 2px;
+  position: absolute;
+}
+
+input[type=radio]:checked.color + label .btn {
+  border: 2px solid #666 !important;
+  transform: scale(1.1);
+}
+
+input[type=checkbox]:checked + label {
+  transition: ease-in-out 300ms;
+  position: relative;
+}
+
+input[type=checkbox]:checked + label img {
+  filter: brightness(0.8);
+}
+
+input[type=checkbox]:checked + label:before {
+  content: url("/img/check.svg");
+  width: 35px;
+  z-index: 1;
+  bottom: 5px;
+  right: 0;
+  position: absolute;
+}
+
+.bars {
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  right: 0;
+}
+
+.bar {
+  background: #eeeeee;
+  bottom: 0px;
+  height: 3px;
+  position: absolute;
+  width: 3px;
+  -webkit-animation: sound 0ms -800ms linear infinite alternate;
+          animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@-webkit-keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 3px;
+  }
+
+  100% {
+    opacity: 1;
+    height: 24px;
+  }
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 3px;
+  }
+
+  100% {
+    opacity: 1;
+    height: 24px;
+  }
+}
+
+.bar:nth-child(1) {
+  left: 1px;
+  -webkit-animation-duration: 474ms;
+          animation-duration: 474ms;
+}
+
+.bar:nth-child(2) {
+  left: 5px;
+  -webkit-animation-duration: 433ms;
+          animation-duration: 433ms;
+}
+
+.bar:nth-child(3) {
+  left: 9px;
+  -webkit-animation-duration: 407ms;
+          animation-duration: 407ms;
+}
+
+.bar:nth-child(4) {
+  left: 13px;
+  -webkit-animation-duration: 458ms;
+          animation-duration: 458ms;
+}
+
+.bar:nth-child(5) {
+  left: 17px;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+}
+
+.bar:nth-child(6) {
+  left: 21px;
+  -webkit-animation-duration: 427ms;
+          animation-duration: 427ms;
+}
+
+.bar:nth-child(7) {
+  left: 25px;
+  -webkit-animation-duration: 441ms;
+          animation-duration: 441ms;
+}
+
+.bar:nth-child(8) {
+  left: 29px;
+  -webkit-animation-duration: 419ms;
+          animation-duration: 419ms;
+}
+
+.bar:nth-child(9) {
+  left: 33px;
+  -webkit-animation-duration: 487ms;
+          animation-duration: 487ms;
+}
+
+.bar:nth-child(10) {
+  left: 37px;
+  -webkit-animation-duration: 442ms;
+          animation-duration: 442ms;
+}
+

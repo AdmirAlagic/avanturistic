@@ -1,0 +1,131 @@
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.btn.btn-default {
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  color: #333333;
+}
+
+.btn.btn-default:hover,
+.btn.btn-default:active,
+.btn.btn-default:focus {
+  background-color: #d5d5d5;
+}
+
+.btn.btn-primary {
+  background-color: #209a87;
+  border-color: #209a87;
+  color: #ffffff;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+  background-color: #177062;
+}
+
+.btn.btn-secondary {
+  background-color: #666666;
+  border-color: #666666;
+  color: #ffffff;
+}
+
+.btn.btn-secondary:hover,
+.btn.btn-secondary:active,
+.btn.btn-secondary:focus {
+  background-color: #4d4d4d;
+}
+
+.btn.btn-success {
+  background-color: #339900;
+  border-color: #339900;
+  color: #ffffff;
+}
+
+.btn.btn-success:hover,
+.btn.btn-success:active,
+.btn.btn-success:focus {
+  background-color: #226600;
+}
+
+.btn.btn-info {
+  background-color: #6cb2eb;
+  border-color: #6cb2eb;
+  color: #ffffff;
+}
+
+.btn.btn-info:hover,
+.btn.btn-info:active,
+.btn.btn-info:focus {
+  background-color: #3f9ae5;
+}
+
+.btn.btn-danger {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:active,
+.btn.btn-danger:focus {
+  background-color: black;
+}
+
+.btn.btn-link {
+  color: #000000;
+}
+
+.btn.btn-link:hover,
+.btn.btn-link:active,
+.btn.btn-link:focus {
+  background-color: #eeeeee;
+  color: #333333;
+}
+
+.kt-badge.kt-badge--brand {
+  color: #ffffff;
+  background: #333333;
+}
+
+.kt-badge.kt-badge--success {
+  color: #ffffff;
+  background: #339900;
+}
+
+.kt-badge.kt-badge--warning {
+  color: #333333;
+  background: #e0b639;
+}
+
+.kt-badge.kt-badge--danger {
+  color: #ffffff;
+  background: #000000 !important;
+}
+
+.kt-login.kt-login--v1 .kt-login__wrapper .kt-login__head {
+  margin-bottom: 50px;
+}
+
+.auth-input {
+  border-radius: 0px;
+  border: 1px solid #f7f5f5;
+  background: #FFFFFF;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0s;
+  box-shadow: none;
+}
+
+.auth-input:focus,
+.auth-input:active,
+.auth-input:focus-within {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #b4d67759;
+}
+
