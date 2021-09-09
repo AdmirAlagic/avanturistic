@@ -25,7 +25,8 @@
         }
         path{stroke-dasharray: 30, 5 !important;}
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <script>
         window.auth_check = '{{ isset($user)  && $user ? "true" : "false"}}'
     </script>
@@ -115,7 +116,7 @@
     @if(isset($activity->options['structured_data']))
         {!! $activity->options['structured_data'] !!}
     @endif
-</html>
+  
 @if(isset($pageLinkPrev) && $pageLinkPrev)
 <link rel="prev" href="{{ $pageLinkPrev }}" />
 @endif
@@ -158,9 +159,10 @@ console.log(document.getElementById('loged_user').value)
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
     </div>
     <div class="kt-header-mobile__logo">
-        <a href="/" class="cs-logo text-white font-weight-bold"  title="Avanturistic.com">
-            <img  src="{{ url('/img/logo.svg') }}" style="width:28px !important;margin-top:-3px;" alt="avanturistic.com" title="Avanturistic" /> <span class="logo-text">
-                <b>AVANTURISTIC</b>
+        <a href="/" class="font-weight-bold"  title="Avanturistic.com">
+            <img  src="{{ url('/img/logo.svg') }}" style="width:28px !important;margin-top:-3px;" alt="avanturistic.com" title="Avanturistic" /> 
+            <span class="logo-text" style="margin-right: 3px;">
+                <b>Avanturistic</b>
             </span>
         </a>
 

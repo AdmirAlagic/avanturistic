@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
@@ -92,10 +90,6 @@
     margin-top: 60px;
     width: 2px;
     background-color: #f2efe9;
-  }
-
-  .kt-header-mobile--fixed .kt-wrapper {
-    padding-top: 50px;
   }
 
   .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item > .kt-menu__heading .kt-menu__link-text,

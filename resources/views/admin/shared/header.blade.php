@@ -4,11 +4,8 @@
 
         <!-- begin:: Brand -->
         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand" style="padding:10px;">
-            {{--<a class="kt-header__brand-logo" href="?page=index&demo=demo4">--}}
-            {{--<img alt="Logo" src="/metronic/assets/media/logos/logo-4.png" class="kt-header__brand-logo-default" />--}}
-            {{--<img alt="Logo" src="/metronic/assets/media/logos/logo-4-sm.png" class="kt-header__brand-logo-sticky" />--}}
-            {{--</a>--}}
-            <a href="/" class="cs-logo text-white font-weight-bold"><img class="header-logo-img" src="{{ url('/img/logo.svg') }}" style="width:30px;position: absolute;left:0;top: 8px; " alt=""/> <span>Avanturistic</span></a>
+          
+            <a href="/" class="font-weight-bold"><img class="header-logo-img" src="{{ url('/img/logo.svg') }}" style="width:30px;position: absolute;left:0;top: 8px; " alt=""/> <span>Avanturistic</span></a>
         </div>
 
         <!-- end:: Brand -->

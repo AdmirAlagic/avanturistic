@@ -7,13 +7,13 @@
     <div class="full-width-bg" style="position:relative;overflow: hidden;background:rgba(0,0,0,0.4);">
 
        
-        <div class="kt" style=" {{ $user ? 'padding: 10px 20px 10px 20px;' : 'padding: 50px 20px 0px 20px;' }} ">
+        <div class="kt" style=" {{ $user ? 'padding: 20px 20px 10px 20px;' : 'padding: 50px 20px 0px 20px;' }} ">
 
             @if(!$user)
             <div class="row" >
                 <div class="col-12 text-center ">
-                    <h1 class="text-white" style="font-size:2.3em;letter-spacing:2px;font-weight: 900;">AVANTURISTIC</h1>
-                    <h2 class="text-white" style="font-size:1.5em;z-index: 0;font-weight:400; margin-top:-8px;"><span class="border-r4 " style="background: #b4d677;padding-left: 10px;padding-right: 10px;margin-left:-2px;padding-top: 1px;padding-bottom: 3px; ">World map of adventure</span></h2>
+                    <h1 class="text-white" style="font-size:2.5em;font-weight: 700;">Avanturistic</h1>
+                    <h2 class="text-white" style="font-size:1.1em;z-index: 0;font-weight:400; "><span class="border-r4 " style="background: #b4d677;color:#393939;padding-left: 10px;padding-right: 10px; padding-bottom:5px;padding-top:5px; ">World map of adventure</span></h2>
                      
                       
                 </div>
@@ -26,38 +26,7 @@
                     
                       
                     <h3 class="k-font" style="margin-top:15px;margin-bottom:15px;padding:20px;"  >Welcome to a network for outdoor enthusiasts, nature lovers and travelers</b>.</h3>
-                   <!-- 
-                    <a href="/share" class="btn-more btn-more-share  btn--with-icon loading  mt20" style="box-shadow:none;margin-bottom:10px;">
-                        <div class="img " style="padding:0px 10px 0px 10px;width:47px;height:50px;" >  
-                            
-                            <img class="" src="/img/badges/empty/backpacking.svg"   alt="Add new adventure" style="margin-top: 10px;margin-left:-5px;height:32px;">
-                            
-                        </div>
-                        <div>SHARE ADVENTURE</div>
-                    </a> -->
-                   <!--  <p>
-                        Share your favorite adventure locations
-                            and make your
-                            <em><a class=" loading text-white img-fade-hover " href="{{ url('/the-world-map-of-outdoor-adventures') }}">
-                                map of outdoor adventures
-                            </a></em>
-                    
-                    </p> -->
-                   
-                  <!--    
-                    <h4>
-                        <em><b>Get inspired</b> for your next  trip <b>&</b>  <b>discover</b></em> new destinations <br> 
-                            Explore personal impressions of best outdoor locations  & find adventure activities near you.
-                    </h5> -->
-                    
-                    
-                    <!-- <button class="text-white go-to-menu border-r8" style="background:transparent;margin:10px;border:1px solid #FFFFFF;background:#00000075;padding:10px;">
-                    Start exploring now 
-                       &nbsp;
-                        <i class="fa fa-angle-down text-white"></i>
-                         
-                    </button>
-                          -->
+                 
                     
                     
                 @else
@@ -67,7 +36,7 @@
                     <h4 class="k-font">Welcome <b>{{ $user->name }}</b>.</h3>
                      
                     <div class="text-center" style="margin-top:4em;margin-bottom:3em;">
-                    <a style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;padding:10px;margin-top: 10px;display: inline-flex;align-items:center;background:linear-gradient(to right, #565d4873, #3c78784f, #814c6357);border:1px solid #FFF;" href="/share"  >
+                    <a class="br-8" style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; padding:10px;margin-top: 10px;display: inline-flex;align-items:center;border:2px solid #FFF;" href="/share"  >
                        <div class=" kt-header__topbar-wrapper img-fade-hover">
                             <img  style="display:inline;height:22px;" height="22"  src="{{ url('/img/pinplus_white.svg') }}" alt="Share adventure">
                            <div style="white-space: nowrap;margin-left:10px;display:inline;"><b><span style="font-size:1.1rem;color:white;">Share adventure</span></b></div>
@@ -86,8 +55,8 @@
             <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-bold   nav-tabs-line-brand" role="tablist" style=" display: inline-flex;margin:0;border-bottom:1px solid transparent; ">
                 <li class="nav-item" style="display: inline-block;margin-left:-5px;">
                     <a class="nav-link nav-link-home active"  style="font-size:0.8em;"  data-toggle="tab" href="#explore" role="tab">
-                        <div class="img-circle" style="margin-left: auto;margin-right: auto;width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <img style="height:30px;;margin-top: 8px;display: inline;filter: brightness(0) invert(1);" src="{{ url('/img/adventures.svg') }}" alt="Explore outdoor activities near you">
+                        <div class="home-button">
+                            <img style="height:30px;;filter: brightness(0) invert(1);" src="{{ url('/img/adventures.svg') }}" alt="Explore outdoor activities near you">
                         </div>
                        <!--  <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             Explore <br>  Outdoor <br> Adventures
@@ -98,8 +67,8 @@
                 
                 <li class="nav-item nav-map" style="display: inline-block;">
                     <a class="nav-link nav-link-home "  style="font-size:0.8em;"  data-toggle="tab" href="#map" role="tab">
-                    <div class="img-circle" style="margin-left: auto;margin-right: auto;width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <img style="height:30px;;margin-top: 8px;display: inline;filter: brightness(0) invert(1);" src="{{ url('/img/map_pin.svg') }}" alt="The world map of outdoor adventure locations">
+                    <div class="home-button">
+                            <img style="height:30px;;filter: brightness(0) invert(1);" src="{{ url('/img/map_pin.svg') }}" alt="The world map of outdoor adventure locations">
                         </div>
                         
                         <!-- <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
@@ -110,8 +79,8 @@
                 </li>
                 <li class="nav-item nav-watch" style="display: inline-block;">
                     <a class="nav-link nav-link-home "  style="font-size:0.8em;"  data-toggle="tab" href="#watch" role="tab">
-                        <div class="img-circle text-center" style="margin-left: auto;margin-right: auto; width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <i class="fa fa-play " style="color:#FFF;font-size:24px;width:50px;height:30px;;margin-top:23px;margin-left:1px;"></i>&nbsp;&nbsp;
+                        <div class="home-button">
+                            <i class="fa fa-play " style="color:#FFF;font-size:24px;margin-left:auto;margin-right:4px;"></i>&nbsp;&nbsp;
                         </div>
                         <!-- <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             Watch<br>Latest <br>Video
@@ -122,8 +91,8 @@
                 @if(count($stories))
                 <li class="nav-item" style="display: inline-block;">
                     <a class="nav-link nav-link-home "  style="font-size:0.8em;"  data-toggle="tab" href="#stories" role="tab">
-                        <div class="img-circle" style="margin-left: auto;margin-right: auto;width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <img style="height:30px;margin-top: 8px;display: inline;margin-left:1px;filter: brightness(0) invert(1);" src="{{ url('/img/blog.svg') }}" alt="Latest news & stories">
+                        <div class="home-button">
+                            <img style="height:30px;margin-left:1px;filter: brightness(0) invert(1);" src="{{ url('/img/blog.svg') }}" alt="Latest news & stories">
                         </div>
                        <!--  <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             News <br> & <br> Stories

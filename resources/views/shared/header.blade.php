@@ -9,7 +9,7 @@
             {{--<img alt="Logo" src="/metronic/assets/media/logos/logo-4-sm.png" class="kt-header__brand-logo-sticky" />--}}
             {{--</a>--}}
 
-            <a href="/" class=" text-white font-weight-bold"><img class="header-logo-img" src="/img/logo.svg" style="width:28px; position:absolute; top:10px;left:2px;" alt="avanturistic.com"/>  <span style="margin-left:5px;" class="logo-text"><b>AVANTURISTIC</b></span></a>
+            <a href="/" class=" font-weight-bold"><img class="header-logo-img" src="/img/logo.svg" style="width:28px; position:absolute; top:10px;left:2px;" alt="avanturistic.com"/>  <span style="margin-left:5px;" class="logo-text"><b>Avanturistic</b></span></a>
         </div>
 
         <!-- end:: Brand -->
