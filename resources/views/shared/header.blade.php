@@ -3,113 +3,60 @@
     <div class="kt-container ">
 
         <!-- begin:: Brand -->
-        <div class="kt-header__brand   kt-grid__item" id="kt_header_brand" style="padding:10px;">
-            {{--<a class="kt-header__brand-logo" href="?page=index&demo=demo4">--}}
-            {{--<img alt="Logo" src="/metronic/assets/media/logos/logo-4.png" class="kt-header__brand-logo-default" />--}}
-            {{--<img alt="Logo" src="/metronic/assets/media/logos/logo-4-sm.png" class="kt-header__brand-logo-sticky" />--}}
-            {{--</a>--}}
-
-            <a href="/" class=" font-weight-bold"><img class="header-logo-img" src="/img/logo.svg" style="width:28px; position:absolute; top:10px;left:2px;" alt="avanturistic.com"/>  <span style="margin-left:5px;" class="logo-text"><b>Avanturistic</b></span></a>
-        </div>
+       
 
         <!-- end:: Brand -->
 
         <!-- begin: Header Menu -->
 
         <div class="kt-header-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_header_menu_wrapper"  >
-            <button class="kt-header-menu-wrapper-close text-white"  id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
-            <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile " >
-                @if(isset($user) && $user)
-                    <div class="kt-visible-tablet-and-mobile" style="border-bottom: 1px dotted #333;">
-                        <!--begin: Head -->
-                        <a href="/{{ '@' .$user->name_slug}}">
-                            <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="height:80px;background:#000000 !important; color:#FFFFFF;">
-                                <div class="">
-                                    @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                                        <img class="img-circle"  style="width:40px;" alt="Avatar" src="{{ $user->avatar }}" />
-                                    @else
-                                        <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success" style="color: #ffffff !important;">{{ ucfirst($user->name[0]) }}</span>
-                                    @endif
-                                </div>
-                                <div class="kt-user-card__name" style="margin-left:10px;">
-                                    <b>{{ $user->name }}</b>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @else
-                    <div class="kt-visible-tablet-and-mobile" style="border-bottom: 1px dotted #333;">
-                        <!--begin: Head -->
-                        <a  class="text-white" href="/login">
-                            <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="height:80px;background:#1c1e21 !important; color:#FFFFFF;">
-                                <div class="kt-user-card__avatar">
-                                    <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold text-white ">G</span>
-                                </div>
-                                <div class="kt-user-card__name" style="margin-left:10px;">
-                                    <b>Guest</b>
-
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-            @endif
+            
+            
+            <div id="kt_header_menu" class="kt-header-menu  " >
+                <a href="/" class="  font-weight-bold flex justify-center" style="margin-right:30px;">
+                    <img class="header-logo-img" src="/img/logo.svg" style="width:35px;" width="35" alt="avanturistic.com"/>  
+                </a>
             <!--end: Head -->
 
                 <ul class="kt-menu__nav " style="padding-top:0 !important;padding-bottom: 0;">
-                    <li style="padding-left:0;" class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-hidden-tablet-and-mobile  " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
-                        <a href="/" class="kt-menu__link {{ isset($activePage) && $activePage == 'home' ?  'kt-menu__link--active' :  '' }} ">
-                            <span class="kt-menu__link-text  "  style="padding-top: 15px;padding-bottom: 15px;">
-                                &nbsp;<b>HOME</b></span> 
-                        </a>
-                    </li>
+                    
                     <li style="padding-left:0;" class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel   " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                         <a href="/outdoor-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'adventures' ?  'kt-menu__link--active' :  '' }} ">
-                            <span class="kt-menu__link-text  " >
-                                 <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#555;background: #101010;margin-right:2px;">
-                                    <img class="" src="/img/badges/empty/backpacking.svg" style="height:17px;" alt="Backpacking Adventures">
-                                 </div> <span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>ADVENTURES</b></span>
-
-                            </span>
+                            Explore adventures
                         </a>
                     </li>
 
                     <li style="" class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel  " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/the-world-map-of-outdoor-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'map' ?  'kt-menu__link--active' :  '' }}">
-                            <span class="kt-menu__link-text  " >
-                                 <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;border-color:#555;background: #101010;margin-right:2px;">
-                                    <i class="fa fa-map-marker-alt" style="font-size:16px;margin-left:7px;margin-top:5px;"></i>&nbsp;&nbsp;
-                                </div><span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>MAP</b></span>
-                            </span>
+                            
+                             Interactive map
+                          
                         </a>
                     </li>
 
                     <li  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel  " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/watch" class="kt-menu__link {{ isset($activePage) && $activePage == 'videos' ?  'kt-menu__link--active' :  '' }}">
-                            <span class="kt-menu__link-text " >
-                                <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;border-color:#555;background: #101010;margin-right:2px;">
-                                   <i class="fa fa-play " style="font-size:14px; margin-left:9px;margin-top:6px;"></i>&nbsp;&nbsp;
-                                </div><span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>WATCH</b></span>
-
-                            </span>
+                           
+                                Watch
+ 
                         </a>
                     </li>
-                    @if(isset($stories) && count($stories) > 4)
+                    {{-- @if(isset($stories) && count($stories) > 4)
                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/stories" class="kt-menu__link {{ isset($activePage) && $activePage == 'stories' ?  'kt-menu__link--active' :  '' }}">
                             <span class="kt-menu__link-text"> 
-                            <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#555;background: #101010;margin-right:2px;">
+                            <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;">
                                     <img class="" src="/img/stories_white.svg" style="width:24px;" alt="Adventure Stories">
                                  </div> <span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>STORIES</b></span>
                         </a>
                     </li>
-                    @endif
+                    @endif --}}
                     
                     @if(isset($user) && $user)
 
-                        <li  style="border-right:1px solid #333;"  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
+                        <li  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                             <a href="/my-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'my-adventures' ?  'kt-menu__link--active' :  '' }}">
-                               <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#555;background: #101010;margin-right:2px;"> -->
+                               <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;"> -->
                                     <img class="" src="/img/triangles.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
                               <!--    </div>  -->
                                 <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">&nbsp;<b>MY ADVENTURES</b>&nbsp;</span>
@@ -119,10 +66,10 @@
                     @endif
                     </ul>
                        
-                        <div class="text-center kt-visible-tablet-and-mobile" style="height: 150px; margin-top:200px;">
+                        {{-- <div class="text-center kt-visible-tablet-and-mobile" style="height: 150px; margin-top:200px;">
                             @if(isset($user) && !$user)
                             <a href="/login" class="btn btn-default text-white" style="background:transparent !important;">LOGIN</a>
-                            <a href="/sign-up" data-toggle="modal" data-target="#signUpModal" class="btn btn-green"><span class="text-white">SIGN UP</span></a>
+                            <a href="/F-up" data-toggle="modal" data-target="#signUpModal" class="btn btn-green"><span class="text-white">SIGN UP</span></a>
                             <hr>
                             @endif
                             
@@ -138,7 +85,7 @@
                             </a>
 
                         </div>
-                   
+                    --}}
 
             </div>
         </div>
@@ -183,7 +130,7 @@
             @if(isset($user) && $user)
                 <div class="kt-header__topbar-item  kt-hidden-desktop " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " style="">
-                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#333;" href="/messages"  >
+                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;" href="/messages"  >
                             <i class="fa fa-envelope message-notification-icon {{ count($user->unreadMessages) ? 'text-success' : '' }}"></i>
                             
                         </a>
@@ -191,7 +138,7 @@
                 </div>
                 <div class="kt-header__topbar-item  kt-hidden-desktop " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " style="">
-                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#333;position:relative;" href="/notifications"  >
+                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;position:relative;" href="/notifications"  >
                             <i class="fa fa-bell notification-icon fa fa-bell "></i>
                             @if($unreadNotifications  > 0)
                                 <div class="circle notification-mobile text-white">
@@ -201,17 +148,7 @@
                         </a>
                     </div>
                 </div>
-                
-              <!--   <div class="kt-header__topbar-item  " >
-                    <a class="loading img-fade-hover  topbar-share " style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;" href="/share"  >
-                        <div class="kt-visible-tablet-and-mobile ">
-                        <img src="{{ url('img/pinplus.svg')}}" style="width:20px;" alt="Avanturistic Homepage">
-                        </div>
-                        <div class="kt-visible-desktop " style="width:20px;">
-                        <img src="{{ url('img/pinplus_white.svg')}}" style="width:20px;" alt="Avanturistic Homepage">
-                        </div>
-                    </a>
-                </div> -->
+              
                     <div class="kt-header__topbar-item  " >
                   
                     <a href="#" class="dropdown-toggle dots text-muted pull-right" style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  data-toggle="dropdown">
@@ -245,23 +182,7 @@
                 </div>
                
             @else
-                <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
-                    <a style="display: inline-flex;align-items:center;" href="/login"  >
-                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
-
-
-                        <span style="white-space: nowrap;margin-left:5px;   margin-right:10px;color:#333;font-size:1rem;"><b>LOGIN</b></span>
-                    </span>
-                    </a>
-                </div>
-                <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
-                    <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
-                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
-
-                        <span style="white-space: nowrap;margin-left:5px;  margin-right:10px;color:#333;font-size:1rem;"><b>SIGN UP</b></span>
-                    </span>
-                    </a>
-                </div>
+                
             @endif
  
             @if(isset($user))
@@ -293,7 +214,7 @@
 
                         @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
                             <span class="kt-header__topbar-icon ">
-                                <img class="img-circle"  alt="{{ $user->name }}" style="border-width:2px;border-color:#666;" src="{{ $user->avatar }}" />
+                                <img class="img-circle"  alt="{{ $user->name }}" style="border-width:2px;border-color:#474747;" src="{{ $user->avatar }}" />
                             </span>
                         @else
                             <span class="post-avatar img-circle" style="padding-top: 7px;"><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></span>
@@ -308,7 +229,7 @@
                         <span style="background-color: #000000;padding: 30px;width: 100%;" class="text-center" style="z-index:99999;">
                             <div class="">
                                 @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                                    <img class="img-circle" style="width:50px;border-width:2px;border-color:#666;" alt="Avatar" src="{{ $user->avatar }}" />
+                                    <img class="img-circle" style="width:50px;border-width:2px;border-color:#474747;" alt="Avatar" src="{{ $user->avatar }}" />
                                 @else
                                     <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">{{ ucfirst($user->name[0]) }}</span>
                                 @endif
@@ -467,30 +388,25 @@
                     </div>
                 </div>
             @else
-                <div class="kt-header__topbar-item kt-hidden-tablet-and-mobile">
-                    <a href="/login" >
-                        <div class="kt-header__topbar-wrapper">
-
-                        <span class="text-white" style="padding: 15px;">
-                              LOGIN
-                        </span>
-
+                <div class=" kt-header__topbar-item  ">
+                    <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/login"  >
+                   
+                        <div class="kt-visible-desktop text-white ">
+                           LOGIN
                         </div>
                     </a>
                 </div>
-                <div class="kt-header__topbar-item kt-hidden-tablet-and-mobile">
-                    <a href="#" data-toggle="modal" data-target="#signUpModal" >
-                        <div class="kt-header__topbar-wrapper">
-
-                        <span class="text-white" style="padding: 15px;white-space: nowrap;">
-                              SIGN UP
-                        </span>
-
+                <div class=" kt-header__topbar-item  ">
+                    <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/" data-toggle="modal" data-target="#signUpModal" >
+                   
+                        <div class="kt-visible-desktop text-success" style="white-space: nowrap;">
+                           SIGN UP
                         </div>
                     </a>
                 </div>
+                
+                 
         @endif
-        <!--end: User bar -->
         </div>
 
 

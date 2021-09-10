@@ -13,7 +13,7 @@
             <div class="row" >
                 <div class="col-12 text-center ">
                     <h1 class="text-white" style="font-size:2.5em;font-weight: 700;">Avanturistic</h1>
-                    <h2 class="text-white" style="font-size:1.1em;z-index: 0;font-weight:400; "><span class="border-r4 " style="background: #b4d677;color:#393939;padding-left: 10px;padding-right: 10px; padding-bottom:5px;padding-top:5px; ">World map of adventure</span></h2>
+                    <h2 class="text-white" style="font-size:1.1em;z-index: 0;font-weight:400; "><span class="border-r4 " style="background: #acc957;color:#393939;padding-left: 10px;padding-right: 10px; padding-bottom:5px;padding-top:5px; ">World map of adventure</span></h2>
                      
                       
                 </div>
@@ -150,7 +150,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                                    <div id="more-posts" style="min-height:100px;padding-left:10px;padding-right:10px;">
+                                    <div id="more-posts" style="min-height:100px;padding:15px;">
                                         
                                         @include('public.home.latest')
                                         
@@ -183,7 +183,7 @@
                                                     <div class="badge-wrap img-fade-hover" style="-webkit-box-shadow: 0px 0px 2px 0px #111;
                                                             -moz-box-shadow: 0px 0px 2px 0px #111;
                                                             box-shadow: 0px 0px 2px 0px #111; border:3px solid {{ $val['color'] }};
-                                                            background: #555;-webkit-border-radius: 50%;
+                                                            background: #272727;-webkit-border-radius: 50%;
                                                             -moz-border-radius: 50%;
                                                             border-radius: 50%; width: 45px; height: 45px;margin-left: auto; margin-right: auto;padding: 7px;margin-bottom:5px;">
                                                         <img  class="lazy" alt="{{ $key }} outdoor activity"   src="/img/placeholder-trans.png" data-src="{{ $badges[$key]['icon_empty'] }}" data-srcset="{{ $badges[$key]['icon_empty'] }}" style="width:3.6rem !important;">
@@ -203,7 +203,7 @@
                                                 <div class="badge-wrap" style="-webkit-box-shadow: 0px 0px 3px 0px #000000;
                                                         -moz-box-shadow: 0px 0px 3px 0px #000000;
                                                         box-shadow: 0px 0px 3px 0px #000000; border:3px solid #FFFFFF;
-                                                        background: #555;-webkit-border-radius: 50%;
+                                                        background: #272727;-webkit-border-radius: 50%;
                                                         -moz-border-radius: 50%;margin-bottom:5px;
                                                         border-radius: 50%; width: 45px; height: 45px;margin-left: auto; margin-right: auto;padding-top: 10px;">
                                                     <span class="text-white"><i class="fa fa-search" style="font-size:16px;margin-left:1px;"></i></span>
@@ -223,7 +223,7 @@
                     </section>
                     
                     @if(!$user)
-                    <section style="background:rgba(0,0,0,0.5);">
+                    <section style="background:rgba(0,0,0,0.6);">
                        
                         <div class="kt-portlet__body" >
                             <div class="kt-container ">
@@ -250,7 +250,7 @@
                                     <div class="col-sm-3" style="">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8" style="background:#00000075;">
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                <div   style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
                                                             <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
                                                             src="/img/placeholder-icon.svg" alt="Outdoor photography & film" data-src="{{ url('/img/photos-white.svg') }}" data-srcset="{{ url('/img/photos-white.svg') }}">
                                                         </div>
@@ -272,7 +272,7 @@
                                     <div class="col-sm-3">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8" style="background:#00000075;">
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                <div     style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
                                                         <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
                                                         src="/img/placeholder-icon.svg" alt="Trip & travel stories" data-src="{{ url('/img/travel.svg') }}" data-srcset="{{ url('/img/travel.svg') }}">
                                                     </div>
@@ -298,7 +298,7 @@
                                     <div class="col-sm-3">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8"  style="background:#00000075;">
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                <div     style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
                                                         <img class="lazy " width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
                                                         src="/img/placeholder-icon.svg" alt="Adventure Tourism" data-src="{{ url('/img/tourism-white.svg') }}" data-srcset="{{ url('/img/tourism-white.svg') }}">
                                                     </div>
@@ -320,7 +320,7 @@
                                     <div class="col-sm-3">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8" style="background:#00000075;">
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                <div   style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
                                                         <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
                                                         src="/img/placeholder-icon.svg" alt="Local tourism promotion" data-src="{{ url('/img/map-white.svg') }}" data-srcset="{{ url('/img/map-white.svg') }}">
                                                     </div>
@@ -397,7 +397,7 @@
                                             <a href="/country/{{ $obj->slug }}" class="img-fade-hover">
                                                     @if($obj->code2)
                                                     <div style="margin-left:-1px;position:relative;display:inline-block;border:1px solid #fbfbfb;background-image:url('/img/countries/svg/{{ strtolower($obj->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 50px; height: 50px;border:1px solid #999;">
-                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:35px;height:35px;background:#666;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
+                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:35px;height:35px;background:#474747;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
                                                     </div>
                                                     
                                                     @endif
@@ -642,7 +642,7 @@
         </div>
     </div>
     @if($quote)
-        <div style="background:rgba(0,0,0,0.5);">
+        <div style="background:rgba(0,0,0,0.6);">
         <!-- <section>
             <div class="kt-media-group text-center" style="display:block;margin:20px;margin-top:0;padding-top:40px;">
                     <h3 style="font-weight: bold;font-size:1.4rem;margin-top:10px;" class="text-white">
@@ -669,7 +669,7 @@
             
             <div class="kt-container text-center" >
                 <section>
-                    <div class="text-center text-white" style="padding-top:40px;width:80%;margin-left:auto;margin-right:auto;padding-bottom:40px;">
+                    <div class="text-center text-white" style="padding-top:4rem;padding-bottom:4rem;width:80%;margin-left:auto;margin-right:auto;;">
                         <h3 class="quote k-font" style="font-weight:400;font-size:1.8rem; font-style:italic;">{{ $quote->title}}</h3>
                         <p class="text-center" style="padding-left: 10px;padding-right: 10px;">
                             <b>&#8212;</b> {{ $quote->author }}

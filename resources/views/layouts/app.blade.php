@@ -155,9 +155,9 @@ console.log(document.getElementById('loged_user').value)
 @if(!isset($disableHeader))
 
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
-    <div class="kt-header-mobile__toolbar">
+    {{-- <div class="kt-header-mobile__toolbar">
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-    </div>
+    </div> --}}
     <div class="kt-header-mobile__logo">
         <a href="/" class="font-weight-bold"  title="Avanturistic.com">
             <img  src="{{ url('/img/logo.svg') }}" style="width:28px !important;margin-top:-3px;" alt="avanturistic.com" title="Avanturistic" /> 
@@ -175,7 +175,7 @@ console.log(document.getElementById('loged_user').value)
                     <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" st>
 
                         @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                            <span class="kt-header__topbar-icon "><img style="border-width: 2px;width:36px;border-color:#666;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
+                            <span class="kt-header__topbar-icon "><img style="border-width: 2px;width:36px;border-color:#474747;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
                         @else
                             <div style="padding-top: 6px;" class="post-avatar img-circle "><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></div>
                         @endif
@@ -307,6 +307,24 @@ console.log(document.getElementById('loged_user').value)
                         <!--end: Navigation -->
                     </div>
                 </div>
+        @else
+        <div class=" kt-header__topbar-item  kt-hidden-desktop " style=" justify-content: center;" >
+            <a style="display: inline-flex;align-items:center;" href="/login"  >
+            <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+
+
+                <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
+            </span>
+            </a>
+        </div>
+        <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
+            <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
+            <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+
+                <span style="white-space: nowrap;margin-left:5px; color:#3C3C3C;font-size:1rem;"><b>SIGN UP</b></span>
+            </span>
+            </a>
+        </div>
         @endif
     </div>
 </div>

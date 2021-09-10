@@ -1,4 +1,4 @@
-$green: #b4d677;
+$green: #acc957;
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   body{
@@ -83,8 +83,8 @@ $green: #b4d677;
 
   .kt-menu__link-text{
     .img-circle{
-      border-color:#b4d677 !important;
-      background: #b4d677;
+      border-color:#acc957 !important;
+      background: #acc957;
     }
   }
 
@@ -148,13 +148,7 @@ $green: #b4d677;
   .kt-header--fixed.kt-header--minimize .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon i{
     color: #ffffff;
   }
-  .kt-header {
-    height: 50px;
-  }
-  .kt-header--fixed.kt-header--minimize .kt-header {
-    height: 50px;
-  }
-
+  
   .kt-header--fixed.kt-header--minimize .kt-header {
     background: #041734;
   }

@@ -11,7 +11,7 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#666;">
+                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#474747;">
                                     Reset Password
                                 </h4>
                             </div>

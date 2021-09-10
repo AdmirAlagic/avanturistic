@@ -11,7 +11,7 @@
             <p style="font-size:0.9rem;font-family: 'Montserrat',sans-serif;">Hi <em><b>{{ $user->name }}</b></em>, welcome to the network of nature lovers and outdoor enthusiasts.   We are looking forward to see your favorite adventure locations.</p>
             <hr style="border-bottom:1px solid #eeeeee;border-top:0px;margin-top:3rem;margin-bottom:1rem;font-family: 'Montserrat',sans-serif;">
             <small>
-            <p  style="font-size:0.9rem;font-family: 'Montserrat',sans-serif;">If you have any questions or idea to share you can contact us directly through the <a style="color:#b4d677;" href="https://avanturistic.com/support">support chat</a>.</p></small>
+            <p  style="font-size:0.9rem;font-family: 'Montserrat',sans-serif;">If you have any questions or idea to share you can contact us directly through the <a style="color:#acc957;" href="https://avanturistic.com/support">support chat</a>.</p></small>
         </table>
     </td>
 </tr>

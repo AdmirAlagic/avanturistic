@@ -126,7 +126,7 @@
                         <!--begin: Head -->
                         <a href="/{{ '@' .$user->name_slug}}">
                             <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" >
-                            <span style="background-color: #666666;padding: 50px;" class="text-center">
+                            <span style="background-color: #474747;padding: 50px;" class="text-center">
                                 <div class="kt-user-card__avatar">
                                     @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
                                         <img alt="Avatar" src="{{ url($user->avatar) }}" />

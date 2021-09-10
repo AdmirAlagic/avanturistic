@@ -13617,7 +13617,7 @@ $(document).ready(function(){
                     fillColor: "#D3D3D3", // Default color of countries.
                     fillOpacity: 0.01,
                     stroke: false,
-                    color: "#b4d677", // Lines in between countries.
+                    color: "#acc957", // Lines in between countries.
                     weight: 1
 
                 });
@@ -13630,7 +13630,7 @@ $(document).ready(function(){
                     color: '#fff',
                     dashArray: '',
                     fillOpacity: 0.6,
-                    fillColor: '#b4d677',
+                    fillColor: '#acc957',
 
                 });
 
@@ -13664,7 +13664,7 @@ $(document).ready(function(){
                     color: '#fff',
                     dashArray: '',
                     fillOpacity: 0.6,
-                    fillColor: '#b4d677',
+                    fillColor: '#acc957',
 
                 });
             }
@@ -13678,7 +13678,7 @@ $(document).ready(function(){
                     fillColor: "#D3D3D3", // Default color of countries.
                     fillOpacity: 0.01,
                     stroke: false,
-                    color: "#b4d677", // Lines in between countries.
+                    color: "#acc957", // Lines in between countries.
                     weight: 1
                 };
             },

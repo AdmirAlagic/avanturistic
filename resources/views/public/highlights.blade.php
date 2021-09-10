@@ -6,7 +6,7 @@
 
     <div class="kt-container  kt-grid__item kt-grid__item--fluid" style="padding:0;" >
 
-        <div class="kt-portlet" style="margin-bottom:0;padding-bottom:0;border-bottom:1px solid #666;border-radius: 0px !important;">
+        <div class="kt-portlet" style="margin-bottom:0;padding-bottom:0;border-bottom:1px solid #474747;border-radius: 0px !important;">
             <div class="kt-portlet__body kt-portlet__body--fit">
                 <div class="kt-container padding0">
                     
@@ -15,7 +15,7 @@
                          
                                 <div >
                                     <div class="row" >
-                                        <div class="col-sm-4 offset-sm-4 text-right " style="background:#333333; padding:10px;padding-bottom:3px;padding-top:0px;">
+                                        <div class="col-sm-4 offset-sm-4 text-right " style="background:#3C3C3C; padding:10px;padding-bottom:3px;padding-top:0px;">
                                             <div class="video-block">
                                                 <video style="width:100%;position:relative;"    poster="{{ url('/img/placeholder-trans.png') }}"  playsinline autoplay loop muted class="lazy" >
                                                     <source src="" data-src="{{ url($timelapse->path) }}" type="video/mp4">
@@ -43,7 +43,7 @@
                                                                     <span>
                                                                         <small>
                                                                         @if($timelapse->user->avatar && $timelapse->user->avatar != ' ' && $timelapse->user->avatar != '')
-                                                                                <span><img  class="lazy img-circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $timelapse->user->avatar }}" data-srcset="{{ $timelapse->user->avatar }}" width="37" height="37" style="width:37px;border:1px solid #666;" alt="{{ $timelapse->user->name  }}"></span>
+                                                                                <span><img  class="lazy img-circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $timelapse->user->avatar }}" data-srcset="{{ $timelapse->user->avatar }}" width="37" height="37" style="width:37px;border:1px solid #474747;" alt="{{ $timelapse->user->name  }}"></span>
                                                                             @else
                                                                                 <div style="display:inline-block; padding-top:10px;padding-left:1px;margin:0;" class=" kt-header__topbar-icon text-white post-avatar"><b>{{ ucfirst($timelapse->user->name[0]) }}</b></div>
                                                                             @endif
@@ -75,7 +75,7 @@
                                                              
                                                                 <a  href="#" data-timelapse_id="{{ $timelapse->id }}" class="like  text-center" style="margin-right: 5px;">
 
-                                                                <i class="fa fa-heart {{ isset($timelapse->likeExists) && $timelapse->likeExists   ? 'text-success' : 'text-white' }}" style="width:36px;height:36px;; -webkit-border-radius: 99999em;-moz-border-radius: 99999em;border-radius: 99999em;  padding-top: 10px;background: #666; "></i>
+                                                                <i class="fa fa-heart {{ isset($timelapse->likeExists) && $timelapse->likeExists   ? 'text-success' : 'text-white' }}" style="width:36px;height:36px;; -webkit-border-radius: 99999em;-moz-border-radius: 99999em;border-radius: 99999em;  padding-top: 10px;background: #474747; "></i>
 
                                                                 </a>
                                                             

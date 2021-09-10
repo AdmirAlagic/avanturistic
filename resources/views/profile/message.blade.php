@@ -103,7 +103,7 @@
 
                                 <div class="col-10" style="padding:0;">
                                     <div class="form-group send-message" style="position:relative;">
-                                        {!! Form::text('body', null, ['class' => 'form-control',  'placeholder' => 'Type message','data-emojiable' => 'true', 'data-to_user_id' => $toUser->id , 'data-conversation_id' => $conversation_id, 'id' => 'msg-body', 'style'=> 'height:40px;border-color: #b4d677;' ]) !!}
+                                        {!! Form::text('body', null, ['class' => 'form-control',  'placeholder' => 'Type message','data-emojiable' => 'true', 'data-to_user_id' => $toUser->id , 'data-conversation_id' => $conversation_id, 'id' => 'msg-body', 'style'=> 'height:40px;border-color: #acc957;' ]) !!}
 
                                     </div>
                                 </div>

@@ -10,7 +10,7 @@ input[type=radio]:checked + label {
 }
 
 input[type=radio]:checked + label .btn {
-  background-color: #666;
+  background-color: #474747;
 }
 
 input[type=radio]:checked + label i {
@@ -26,7 +26,7 @@ input[type=radio]:checked + label .btn.btn-default i {
 }
 
 input[type=radio]:checked.check-success + label {
-  background-color: #666;
+  background-color: #474747;
   color: #FFFFFF !important;
 }
 

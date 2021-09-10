@@ -5,7 +5,7 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="margin-bottom:0;">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#666;">
+                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#474747;">
                                     Welcome to Avanturistic
                                 </h4>
                                 

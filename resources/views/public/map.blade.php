@@ -59,7 +59,7 @@
   </style>
     <div id="home" class="text-center">
 
-    <h1 class="text-white k-font" style="background:#111111;border-top:1px solid #333;padding:1em;width:100%;font-weight:900;font-size:1.3rem;margin:0;"><b> <i class="fa fa-map-marker-alt text-success"></i> &nbsp;  The world map of outdoor adventures</b></h1>
+    <h1 class="text-white k-font" style="background:#111111;border-top:1px solid #3C3C3C;padding:1em;width:100%;font-weight:900;font-size:1.3rem;margin:0;"><b> <i class="fa fa-map-marker-alt text-success"></i> &nbsp;  The world map of outdoor adventures</b></h1>
     <div class="map-container" style="position:relative;left:0;wheight: 100%;
     width: 100vw;text-align: center;height:80vh;">
         <div id="world-map" class="home-map-mobile"  style="background:#f2efe9;z-index: 1;height: 100%;
@@ -69,7 +69,7 @@
         </div>
         <div class="profile-badges profile-badge text-center" id="reset-filters" data-key="reset" style="position:absolute;left:10px;top:90px;z-index:3;display:none;">
 
-            <span class="btn text-white " style="cursor:pointer;padding:5px;font-size:0.8em;margin-top:0;background:#666;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px !important;">
+            <span class="btn text-white " style="cursor:pointer;padding:5px;font-size:0.8em;margin-top:0;background:#474747;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px !important;">
                 &nbsp;<i class="fa fa-times"></i> Reset 
             </label>
 
@@ -79,7 +79,7 @@
                 @foreach($badges as $key => $val)
                     <div class="swiper-slide text-center" style="background:transparent;" >
                         <div class="profile-badges profile-badge" data-key="{{ $key }}" style="cursor: pointer;margin-bottom:5px;">
-                            <div class="badge-wrap" style=" border:2px solid {{ $val['color'] }};background: #666;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 7px;">
+                            <div class="badge-wrap" style=" border:2px solid {{ $val['color'] }};background: #474747;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 7px;">
                                 <img class="lazy" src="/img/placeholder-trans.png" data-src="{{ $badges[$key]['icon_empty'] }}" data-srcset="{{ $badges[$key]['icon_empty'] }}" width="22" height="22">
                             </div>
                             <div>

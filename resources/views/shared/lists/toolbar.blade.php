@@ -92,7 +92,7 @@
                 @foreach($badges as $key => $val)
                     <div class="swiper-slide text-center" style="background:transparent;" >
                         <div class="profile-badges profile-badge {{ $selectedCategory  == $key ?  'active' : 'inactive' }}" data-key="{{ $key }}" style="cursor: pointer;margin-bottom:5px;">
-                            <div class="badge-wrap" style=" border:3px solid {{ $val['color'] }};background: #666;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 5px;">
+                            <div class="badge-wrap" style=" border:3px solid {{ $val['color'] }};background: #474747;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 5px;">
                                 <img class="lazy" src="/img/placeholder-trans.png" data-src="{{ $badges[$key]['icon_empty'] }}" data-srcset="{{ $badges[$key]['icon_empty'] }}" width="22" height="22">
                             </div>
                             <div>
@@ -113,7 +113,7 @@
     </div>
     <div class="profile-badges profile-badge text-center" id="reset-filters" data-key="reset" style="z-index:3;{{ $selectedCategory ?  '' : 'display:none;' }}">
 
-        <div class="btn text-white " style="cursor:pointer;padding:5px;font-size:0.8em;margin-bottom:10px;margin-top:10px;background:#666;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px !important;">
+        <div class="btn text-white " style="cursor:pointer;padding:5px;font-size:0.8em;margin-bottom:10px;margin-top:10px;background:#474747;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px !important;">
             &nbsp;<i class="fa fa-times"></i> Reset 
         </div>
 

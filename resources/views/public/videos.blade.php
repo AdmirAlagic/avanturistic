@@ -198,7 +198,7 @@
                                                 @foreach($nextPost->options['badges'] as $key => $val)
                                                     @if($countNextBadges < 3)
                                                         @if(isset($badges[$key]) && isset($badges[$key]['icon']) && isset($badges[$key]['name']))
-                                                            <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:3px solid {{ $badges[$key]['color'] }};background: #666;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-right: 5px;padding: 6px;">
+                                                            <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:3px solid {{ $badges[$key]['color'] }};background: #474747;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-right: 5px;padding: 6px;">
                                                                 <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;">
                                                             </div>
 

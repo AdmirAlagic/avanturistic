@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   position: relative;
-  color: #333; }
+  color: #3C3C3C; }
 
 .uppy-Root *, .uppy-Root *:before, .uppy-Root *:after {
   box-sizing: inherit; }
@@ -154,7 +154,7 @@
   padding: 13px 18px; }
 
 .uppy-c-btn-link:hover {
-  color: #333; }
+  color: #3C3C3C; }
 
 .uppy-c-btn-link:focus {
   outline: none;
@@ -564,7 +564,7 @@
   padding-left: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #333;
+  color: #3C3C3C;
   height: 100%; }
   .uppy-size--md .uppy-StatusBar-content {
     padding-left: 15px; }
@@ -983,7 +983,7 @@
 .uppy-ProviderBrowser-user {
   margin: 0 8px 0 0;
   font-weight: 500;
-  color: #333; }
+  color: #3C3C3C; }
 
 .uppy-ProviderBrowser-user:after {
   content: '\00B7';
@@ -2434,7 +2434,7 @@ a.uppy-Dashboard-poweredBy {
   -ms-flex-positive: 1;
       flex-grow: 1;
   overflow: hidden;
-  background-color: #333;
+  background-color: #3C3C3C;
   text-align: center;
   position: relative; }
 
@@ -2523,7 +2523,7 @@ a.uppy-Dashboard-poweredBy {
   padding: 0 15px;
   max-width: 500px;
   text-align: center;
-  color: #333; }
+  color: #3C3C3C; }
 
 .uppy-Webcam-permissons p {
   text-align: center;

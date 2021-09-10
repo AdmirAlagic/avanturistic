@@ -5,7 +5,7 @@ input[type="checkbox"], input[type="radio"] {
   }
 input[type="radio"]:checked + label {
     .btn{
-        background-color: #666;
+        background-color: #474747;
     }
     color: #FFFFFF !important;
     i{
@@ -21,7 +21,7 @@ input[type="radio"]:checked + label {
    
 }
 input[type="radio"]:checked.check-success + label {
-    background-color: #666;
+    background-color: #474747;
     color: #FFFFFF !important;
     i{
       opacity:1;

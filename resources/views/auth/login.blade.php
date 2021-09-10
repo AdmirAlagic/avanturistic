@@ -11,7 +11,7 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="width:100%;color:#666;">
+                                <h4 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
                                     <b>Welcome back</b>
                                 </h4>
                             </div>
@@ -49,7 +49,7 @@
                             </div>
                             <br>
                             @include('shared.fb_google')
-                            <p style="color:#666;margin-top:30px;margin-bottom:20px;"> New to Avanturistic? </p>
+                            <p style="color:#474747;margin-top:30px;margin-bottom:20px;"> New to Avanturistic? </p>
                             
                             <a class="text-muted img-fade-hover" href="/sign-up" style="margin-top:5px;padding:10px;border:1px solid #999; -webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;">
                                 <b> Sign Up </b>

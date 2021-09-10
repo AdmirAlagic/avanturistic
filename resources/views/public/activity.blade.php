@@ -13,7 +13,7 @@
         z-index: -1;
         }</style>
     @include('shared.success_error')
-    <div class="full-width-bg" style="color:#FFFFFF;position:relative;overflow: hidden; border-bottom:2px solid #333;">
+    <div class="full-width-bg" style="color:#FFFFFF;position:relative;overflow: hidden; border-bottom:2px solid #3C3C3C;">
         <div class="intro" style="z-index: 1;padding: 20px;margin-bottom: 150px; margin-top: 150px;background: #000000ad; font-size:1.4rem;font-weight: 600;">
             @if(!$user)
                 <div class="text-center text-white">
@@ -69,7 +69,7 @@
 
                 <div class="text-center" style="width:100%;padding: 10px;">
                     <div class="text-center" style="width:100%;">
-                        <div class="badge-wrap" style="cursor:pointer;margin-left: auto;margin-right: auto; margin-top: 10px; margin-bottom: 10px; -webkit-box-shadow: 0px 0px 3px 0px rgb(102 102 102);-moz-box-shadow: 0px 0px 3px 0px rgb(102 102 102);box-shadow: 0px 0px 3px 0px rgb(102 102 102); border:3px solid {{ $activity['color'] }};background: #666;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 60px; height: 60px;padding: 10px;">
+                        <div class="badge-wrap" style="cursor:pointer;margin-left: auto;margin-right: auto; margin-top: 10px; margin-bottom: 10px; -webkit-box-shadow: 0px 0px 3px 0px rgb(102 102 102);-moz-box-shadow: 0px 0px 3px 0px rgb(102 102 102);box-shadow: 0px 0px 3px 0px rgb(102 102 102); border:3px solid {{ $activity['color'] }};background: #474747;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 60px; height: 60px;padding: 10px;">
                             <img  src="{{ $activity->icon_empty }}" style="width:60px;">
                         </div>
                         <h1 class="kt-portlet__head-title" style="font-size: 1.8rem;width:100%;border-radius:0px !important;margin-bottom: 10px;">
