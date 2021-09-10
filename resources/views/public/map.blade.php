@@ -59,7 +59,7 @@
   </style>
     <div id="home" class="text-center">
 
-    <h1 class="text-white k-font" style="background:#111111;border-top:1px solid #3C3C3C;padding:1em;width:100%;font-weight:900;font-size:1.3rem;margin:0;"><b> <i class="fa fa-map-marker-alt text-success"></i> &nbsp;  The world map of outdoor adventures</b></h1>
+    <h1 class="text-white k-font" style="background:#474747;border-top:1px solid #3C3C3C;padding:1em;width:100%;font-weight:900;font-size:1.3rem;margin:0;"><b> <i class="fa fa-map-marker-alt text-success"></i> &nbsp;  The world map of outdoor adventures</b></h1>
     <div class="map-container" style="position:relative;left:0;wheight: 100%;
     width: 100vw;text-align: center;height:80vh;">
         <div id="world-map" class="home-map-mobile"  style="background:#f2efe9;z-index: 1;height: 100%;

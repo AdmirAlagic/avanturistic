@@ -175,10 +175,6 @@ a:active {
   border: none;
 }
 
-.kt-header__topbar {
-  box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.2);
-}
-
 .leaflet-touch .geocoder-control {
   width: 30px;
   top: 0px;
@@ -559,30 +555,14 @@ a {
 }
 
 .kt-header {
-  border-bottom: 1px solid #ffffff30;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item:hover > .kt-menu__link .kt-menu__link-text span,
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link .kt-menu__link-text span,
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--hover > .kt-menu__link .kt-menu__link-text span {
-  color: #FFF !important;
-}
-
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item:hover > .kt-menu__link i,
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link i,
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--hover > .kt-menu__link i {
-  color: #fff;
+  border-bottom: 1px solid #ebedf2;
+  background-color: #FFFFFF;
 }
 
 .kt-menu__item {
   transition: ease 0.3s;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-}
-
-.kt-menu__item a {
-  color: #FFFFFF;
 }
 
 .kt-menu__item:hover {
@@ -757,15 +737,6 @@ body,
   }
 }
 
-.kt-header--fixed.kt-header--minimize .kt-header {
-  background: #111111 !important;
-}
-
-.kt-menu__link-text,
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-text {
-  color: #ffffff;
-}
-
 @media (max-width: 1024px) {
   .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--active > .kt-menu__heading .kt-menu__link-text,
   .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--active > .kt-menu__link .kt-menu__link-text {
@@ -782,7 +753,6 @@ body,
 }
 
 .kt-menu__link-text i {
-  color: white;
   font-size: 1.4em;
 }
 
@@ -2675,5 +2645,13 @@ h3.quote:after {
 .justify-center {
   justify-items: center;
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.font-light {
+  font-weight: 300;
 }
 

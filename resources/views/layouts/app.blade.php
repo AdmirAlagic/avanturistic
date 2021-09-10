@@ -25,7 +25,7 @@
         }
         path{stroke-dasharray: 30, 5 !important;}
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,700&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <script>
         window.auth_check = '{{ isset($user)  && $user ? "true" : "false"}}'
@@ -160,9 +160,9 @@ console.log(document.getElementById('loged_user').value)
     </div> --}}
     <div class="kt-header-mobile__logo">
         <a href="/" class="font-weight-bold"  title="Avanturistic.com">
-            <img  src="{{ url('/img/logo.svg') }}" style="width:28px !important;margin-top:-3px;" alt="avanturistic.com" title="Avanturistic" /> 
-            <span class="logo-text" style="margin-right: 3px;">
-                <b>Avanturistic</b>
+            <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;margin-top:-4px;" alt="avanturistic.com" title="Avanturistic" /> 
+            <span class="logo-text" style="font-weight:300;margin-left:5px;">
+                Avanturistic
             </span>
         </a>
 
@@ -183,25 +183,7 @@ console.log(document.getElementById('loged_user').value)
                     </div>
                     <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-sm" >
 
-                        <!--begin: Head -->
-                        <a href="/{{ '@' .$user->name_slug}}">
-                            <div class="kt-user-card kt-user-card--skin-dark " style="background-color:#000000;">
-                            <span style="background-color: #000000;padding: 20px;width: 100%;" class="text-center">
-                                <div class="">
-                                    @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                                        <img class="img-circle" style="width:40px;" alt="Avatar" src="{{ $user->avatar }}" />
-                                    @else
-                                        <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">{{ ucfirst($user->name[0]) }}</span>
-                                    @endif
-                                </div>
-                                <div class="kt-user-card__name" style="margin-top:10px;">
-                                    <b>{{ $user->name }}</b>
-                                </div>
-                            </span>
-
-                            </div>
-                        </a>
-                        <!--end: Head -->
+                        
 
                         <!--begin: Navigation -->
                         <div class="kt-notification">
@@ -314,7 +296,7 @@ console.log(document.getElementById('loged_user').value)
 
 
                 <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
-            </span>
+            <Fpan>
             </a>
         </div>
         <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >

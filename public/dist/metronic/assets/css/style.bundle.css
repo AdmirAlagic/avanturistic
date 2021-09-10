@@ -5142,8 +5142,7 @@ body .kt-container .kt-container {
         position: relative;
         z-index: 2;
         height: 80px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+     }
     .kt-header .kt-container {
         display: flex;
         justify-content: space-between;
@@ -5166,7 +5165,9 @@ body .kt-container .kt-container {
         left: 0;
         transition: height 0.3s ease;
         z-index: 97;
-        box-shadow: 0 0 40px 0 rgba(82, 63, 105, 0.1);
+        -webkit-box-shadow: 0px -1px 11px 0px rgb(0 0 0 / 10%);
+        -moz-box-shadow: 0px -1px 11px 0px rgb(0 0 0 / 10%);
+        box-shadow:  0px -1px 11px 0px rgb(0 0 0 / 10%);
         height: 80px;
         background: #fff;
         border-bottom: 0;

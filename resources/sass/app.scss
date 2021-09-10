@@ -59,11 +59,6 @@ a{
   border: none;
   //border-radius:0px !important;
 }
-.kt-header__topbar{
-  -webkit-box-shadow: 0px -1px 2px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px -1px 2px 0px rgba(0,0,0,0.2);
-  box-shadow:  0px -1px 2px 0px rgba(0,0,0,0.2);
-}
 
 .leaflet-touch .geocoder-control {
   width: 30px;
@@ -424,30 +419,19 @@ a {
 
  
 .kt-header {
-   border-bottom: 1px solid #ffffff30;
-   background-color: rgba(0,0,0,0.8);
+  border-bottom: 1px solid #ebedf2;
+
+   background-color: #FFFFFF;
 }
 
-.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item:hover > .kt-menu__link, .kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link, .kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--hover > .kt-menu__link{
-  .kt-menu__link-text{
-    span{
-      color:#FFF !important;
-    }
 
-  }
-  i{
-    color:#fff;
-  }
-}
 .kt-menu__item{
   -webkit-transition: ease 0.3s;
   -moz-transition: ease 0.3s;
   -ms-transition: ease 0.3s;
   -o-transition: ease 0.3s;
   transition: ease 0.3s;
-    a{
-      color:#FFFFFF;
-    }
+     
   &:hover{
     opacity: 0.8;
   }
@@ -608,12 +592,7 @@ body,#home{
   }
 
 }
-.kt-header--fixed.kt-header--minimize .kt-header{
-  background:#111111 !important;
-}
-.kt-menu__link-text,.kt-header--fixed.kt-header--minimize .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-text{
-  color:#ffffff;
-}
+
 @media (max-width: 1024px) {
   .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--active > .kt-menu__heading .kt-menu__link-text, .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item.kt-menu__item--active > .kt-menu__link .kt-menu__link-text {
     font-size: 1em;
@@ -628,7 +607,6 @@ body,#home{
   overflow-x:hidden !important;
 }
 .kt-menu__link-text i {
-  color: white;
   font-size: 1.4em;
 }
 .grayscale{
@@ -2495,4 +2473,10 @@ border-top-right-radius: 4px;
 .justify-center{
   justify-items: center;
   justify-content: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.font-light{
+  font-weight: 300;
 }

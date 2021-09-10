@@ -57,9 +57,9 @@
                         <li  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                             <a href="/my-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'my-adventures' ?  'kt-menu__link--active' :  '' }}">
                                <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;"> -->
-                                    <img class="" src="/img/triangles.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
+                                    <img class="" src="/img/triangles-black.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
                               <!--    </div>  -->
-                                <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">&nbsp;<b>MY ADVENTURES</b>&nbsp;</span>
+                                <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">MY ADVENTURES</span>
                             </a>
                         </li>
                         
@@ -96,39 +96,27 @@
 
 
 
-        <div class="kt-header__topbar" style="margin-right:10px;z-index:99999;">
+        <div class="kt-header__topbar justify-between" style="margin-right:10px;z-index:99999;">
 
 
-            <div class=" kt-header__topbar-item  kt-hidden-desktop">
+            <div class=" kt-header__topbar-item  ">
                 <a class="text-muted img-fade-hover loading" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;" href="/"  >
                     
+                   <div style="width:21px;"> 
                     <img src="{{ url('img/home.svg')}}" style="width:21px;" alt="Avanturistic Homepage">
+                   </div>
                 </a>
             </div>
 
             <div class=" kt-header__topbar-item  " style="">
                 <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;font-size:1.4rem;" href="/search"  >
                     
-                    <div class="kt-visible-tablet-and-mobile ">
-                        <i class="fa fa-search  text-dark"></i>
-                    </div>
-                    <div class="kt-visible-desktop " style="width:20px;">
-                        <i class="fa fa-search  text-white"></i>
-                    </div>
+                    <i class="fa fa-search  text-dark"></i>
                 </a>
             </div>
-            <div class="kt-header__topbar-item  " style="flex:1;" >
-                    <a class="loading img-fade-hover  " style="display: inline-flex;align-items:center;padding-left: 15px;padding-right: 15px;font-size:1.1rem;" href="/highlights"  >
-                        <div class="kt-visible-tablet-and-mobile ">
-                            <img src="{{ url('/img/reel.svg') }}" style="width:19px;" alt="Avanturistic Highlights">
-                        </div>
-                        <div class="kt-visible-desktop " style="width:20px;">
-                            <img src="{{ url('/img/reel-white.svg') }}" style="width:19px;" alt="Avanturistic Highlights">
-                        </div>
-                    </a>
-                </div>
+            
             @if(isset($user) && $user)
-                <div class="kt-header__topbar-item  kt-hidden-desktop " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
+                <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " style="">
                         <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;" href="/messages"  >
                             <i class="fa fa-envelope message-notification-icon {{ count($user->unreadMessages) ? 'text-success' : '' }}"></i>
@@ -136,12 +124,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="kt-header__topbar-item  kt-hidden-desktop " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
+                <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " style="">
                         <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;position:relative;" href="/notifications"  >
                             <i class="fa fa-bell notification-icon fa fa-bell "></i>
                             @if($unreadNotifications  > 0)
-                                <div class="circle notification-mobile text-white">
+                                <div class="circle notification-mobile ">
                                     {{ $unreadNotifications }}
                                 </div>
                             @endif
@@ -152,11 +140,8 @@
                     <div class="kt-header__topbar-item  " >
                   
                     <a href="#" class="dropdown-toggle dots text-muted pull-right" style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  data-toggle="dropdown">
-                        <div class="kt-visible-tablet-and-mobile ">
+                        <div style="width:21px;">
                             <img src="{{ url('img/pinplus.svg')}}" style="width:20px;" alt="Avanturistic Homepage">
-                            </div>
-                            <div class="kt-visible-desktop " style="width:20px;">
-                            <img src="{{ url('img/pinplus_white.svg')}}" style="width:20px;" alt="Avanturistic Homepage">
                         </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center text-center" style="">
@@ -186,25 +171,7 @@
             @endif
  
             @if(isset($user))
-            <div class="kt-header__topbar-item  kt-hidden-tablet-and-mobile " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
-                    <div class=" kt-header__topbar-item  ">
-                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 12px;padding-right: 12px;font-size:1.4rem;color:#FFF;" href="/messages"  >
-                            <i class="fa fa-envelope  message-notification-icon fa fa-envelope {{ count($user->unreadMessages) ? 'text-success' : '' }}"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="kt-header__topbar-item  kt-hidden-tablet-and-mobile " id="last-messages" style="  padding-right:5px;" >
-                    <div class=" kt-header__topbar-item  " style="">
-                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; position:relative; color:#FFF; font-size:1.4rem;" href="/notifications"  >
-                            <i class="fa fa-bell notification-icon fa fa-bell {{ $unreadNotifications > 0  ? 'text-green' : '' }} "></i>
-                            @if($unreadNotifications  > 0)
-                                <div class="circle notification-desktop">
-                                    {{ $unreadNotifications }}
-                                </div>
-                            @endif
-                        </a>
-                    </div>
-                </div>
+                
                 <!--begin: User bar -->
                     <div class="kt-header__topbar-item kt-header__topbar-item--user kt-hidden-tablet-and-mobile">
 
@@ -223,25 +190,7 @@
                     </div>
                     <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl" style="z-index:99999;">
 
-                        <!--begin: Head -->
-                        <a href="/{{ '@' .$user->name_slug}}">
-                            <div class="kt-user-card kt-user-card--skin-dark " style="z-index:99999;">
-                        <span style="background-color: #000000;padding: 30px;width: 100%;" class="text-center" style="z-index:99999;">
-                            <div class="">
-                                @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                                    <img class="img-circle" style="width:50px;border-width:2px;border-color:#474747;" alt="Avatar" src="{{ $user->avatar }}" />
-                                @else
-                                    <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">{{ ucfirst($user->name[0]) }}</span>
-                                @endif
-                            </div>
-                            <div class="kt-user-card__name" style="margin-top:10px;">
-                                <b>{{ $user->name }}</b>
-                            </div>
-                        </span>
-
-                            </div>
-                        </a>
-                        <!--end: Head -->
+                       
 
                         <!--begin: Navigation -->
                         <div class="kt-notification">
@@ -391,7 +340,7 @@
                 <div class=" kt-header__topbar-item  ">
                     <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/login"  >
                    
-                        <div class="kt-visible-desktop text-white ">
+                        <div class="kt-visible-desktop font-light">
                            LOGIN
                         </div>
                     </a>

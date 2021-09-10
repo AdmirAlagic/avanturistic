@@ -15,7 +15,7 @@
                 </div>
             </div>
                  
-            <p class="text-gray" style="margin-top:5px;">Find users, countries, locations and adventures</p>
+            <p class="text-gray" style="margin-top:5px;margin-bottom:0;">Search for users, countries and adventure locations</p>
 
             <div v-html="this.results"></div>
         </div>
