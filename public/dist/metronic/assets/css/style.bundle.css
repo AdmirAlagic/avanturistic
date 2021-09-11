@@ -5446,7 +5446,7 @@ body .kt-container .kt-container {
 }
 .kt-header__topbar .kt-header__topbar-item.kt-header__topbar-item--user .kt-header__topbar-wrapper img {
     align-self: center;
-    height: 42px;
+    height: 30px;
 }
 .kt-header__topbar .kt-header__topbar-item.kt-header__topbar-item--user.show .kt-header__topbar-wrapper .kt-header__topbar-icon,
 .kt-header__topbar .kt-header__topbar-item.kt-header__topbar-item--user:hover .kt-header__topbar-wrapper .kt-header__topbar-icon {

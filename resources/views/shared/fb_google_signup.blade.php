@@ -6,7 +6,7 @@
                Continue with Facebook
             </a>
         </div>
-        @if(!$isWebView)
+        @if(isset($isWebView) && !$isWebView)
             <div class="col-12 ">
 
                 <a style="margin-top:10px;" class="btn social-loginBtn loginBtn--google " href="/login/google">

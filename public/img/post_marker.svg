@@ -4,8 +4,8 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
 	 style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#E25D98;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
-	.st1{fill:#FFFFFF;}
+	.st0{fill:#383838;stroke:#0C2120;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
 </style>
 <path class="st0" d="M65.7,15.4C61.5,12.2,56,10.3,50,9.6c-6,0.6-11.6,2.5-15.7,5.8C13.2,31.9,48,87.4,50,90.6
 	C52,87.4,86.8,31.9,65.7,15.4z"/>
