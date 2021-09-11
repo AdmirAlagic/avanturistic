@@ -139,12 +139,12 @@
               
                     <div class="kt-header__topbar-item  " >
                   
-                    <a href="#" class="dropdown-toggle dots text-muted pull-right" style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  data-toggle="dropdown">
+                    <a href="/share" class="dots text-muted pull-right" style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  >
                         <div style="width:21px;">
-                            <img src="{{ url('img/pinplus.svg')}}" style="width:20px;" alt="Avanturistic Homepage">
+                            <img src="{{ url('img/pinplus.svg')}}"  alt="Avanturistic Homepage">
                         </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center text-center" style="">
+                        {{-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center text-center" style="">
                             <ul class="kt-nav" style="padding:0;">
                                 
                                 <li class="kt-nav__item">
@@ -163,7 +163,7 @@
                                 
                             </ul>
                             
-                        </div>
+                        </div> --}}
                 </div>
                
             @else

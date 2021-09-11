@@ -622,7 +622,7 @@ body,#home{
 }
 
 .nav-tabs.nav-tabs-line.nav.nav-tabs .nav-link:hover g [fill], .nav-tabs.nav-tabs-line.nav.nav-tabs .nav-link.active g [fill], .nav-tabs.nav-tabs-line a.nav-link:hover g [fill], .nav-tabs.nav-tabs-line a.nav-link.active g [fill] {
-  fill: #FFFFFF;
+  fill: #474747;
 }
 
 .nav-tabs.nav-tabs-line.nav-tabs-line-brand.nav.nav-tabs .nav-link:hover, .nav-tabs.nav-tabs-line.nav-tabs-line-brand.nav.nav-tabs .nav-link.active, .nav-tabs.nav-tabs-line.nav-tabs-line-brand a.nav-link:hover, .nav-tabs.nav-tabs-line.nav-tabs-line-brand a.nav-link.active {
@@ -1423,7 +1423,7 @@ body {
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
-   
+  background: rgba(0,0,0, 0.3);
   img{
     filter:brightness(0) invert(1);
     height: 30px;
@@ -1447,6 +1447,10 @@ body {
   }
   
 }
+.nav-link.nav-link-profile{
+  border:1px solid #eee;
+}
+
 .nav-link.nav-link-profile.active{
   .nav-link-desc{
     text-shadow: 0 0 1px #3C3C3C;
@@ -1458,17 +1462,14 @@ transition: all .3s ease;
   
  
   .img-circle{
-    text-shadow: 0 0 1px #3C3C3C;
+    
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-    background:#454545;
+    border:1px solid #474747;
     
-    img{
-      filter:brightness(0) invert(1);
-    }
-   
+    
     i{
       color:#FFFFFF !important;
     }
@@ -1892,7 +1893,7 @@ transition: background 0.5s 0s ease;
       height: 50px;
       line-height: 50px;
       vertical-align: bottom;
-      color: 474747;
+      color: #FFFFFF;
       background: $green;
       clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
     }

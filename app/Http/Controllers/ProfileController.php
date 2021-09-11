@@ -52,7 +52,8 @@ class ProfileController extends AppController
 
         
         $data = [
-            'pageTitle' => 'Profile',
+            'pageTitle' => 'Profile Settings',
+            'mobileTitle' => 'Profile Settings',
             'model' => $this->user,
             'badges' => $this->badges,
             'countries' =>  Country::orderBy('title', 'asc')->get(),

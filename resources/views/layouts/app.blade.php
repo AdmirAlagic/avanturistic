@@ -167,7 +167,7 @@ console.log(document.getElementById('loged_user').value)
                 {{ str_replace('', '', $mobileTitle) }}
                 </span>
             @else
-            <span class="logo-text" style="font-weight:300;margin-left:10px;">
+            <span class="logo-text" style="font-weight:500;margin-left:10px;">
                 Avanturistic
             </span>
             @endif
@@ -263,7 +263,7 @@ console.log(document.getElementById('loged_user').value)
                                         </div>
                                     </div>
                                 </a>
-                                <a href="/my-timelapses" class="kt-notification__item">
+                             {{--    <a href="/my-timelapses" class="kt-notification__item">
                                     <div class="kt-notification__item-icon" style="padding-left:2px;">
                                         <img src="/img/reel.svg" alt="My Timelapses" style="height:22px;">
                                     </div>
@@ -275,7 +275,7 @@ console.log(document.getElementById('loged_user').value)
                                             Manage your timelapses
                                         </div>
                                     </div>
-                                </a>
+                                </a> --}}
                             <div class="kt-notification__custom kt-space-between">
                                 {!! Form::open(['route' => 'logout','method' => 'POST', 'onclick' => 'signOutGoogle()']) !!}
                                 <button class="btn  btn-xs" style="margin-left:-15px;">

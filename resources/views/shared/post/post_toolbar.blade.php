@@ -27,7 +27,7 @@
     <div class="row" style="padding-top:10px;border-top:1px solid #eeeeee;">
         <div class="col-4">
             <div class="text-muted" style="margin:5px;">
-                <b>{{ $post->views }}</b>
+                <b>{{ $post->views > 1000  ? intval($post->views / 1000). 'K+' : $post->views }}</b>
                
                     @if($post->views % 10 == 1)
                         view

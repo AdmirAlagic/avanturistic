@@ -108,6 +108,13 @@ class PostController extends AppController
         view()->share('styles', $styles);
         $data['post'] = $post;
         $data['formOptions'] = ['method' => 'PATCH', 'route' => ['posts.update', $id]];
+
+        $data = [
+            'post' => $post,
+            'formOptions' => ['method' => 'PATCH', 'route' => ['posts.update', $id]],
+            'pageTitle' => 'Edit adventure',
+            'mobileTitle' => 'Edit adventure',
+        ];
         return view('posts.edit', $data);
     }
     /**

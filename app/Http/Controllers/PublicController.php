@@ -430,6 +430,7 @@ class PublicController extends AppController
         $data = [
             'posts' => $posts,
             'pageTitle' => 'My adventures',
+            'mobileTitle' => 'My adventures',
             'pageDescription' => 'Manage your published outdoor adventures.',
         ];
         return view('public.my_adventures', $data);

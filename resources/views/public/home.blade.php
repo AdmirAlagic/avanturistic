@@ -187,7 +187,7 @@
                                     @endforeach
                                     
                                     <div class="col-3 col-sm-2  text-center"  style="padding:0;margin-bottom:20px;">
-                                        <a href="/outdoor-adventures/" class="loading">
+                                        <a href="/search/" class="loading">
                                             <div class="profile-badges profile-badge" data-key="{{ $key }}" style="cursor: pointer;margin-bottom:5px;">
                                                 <div class="badge-wrap" style="-webkit-box-shadow: 0px 0px 3px 0px #000000;
                                                         -moz-box-shadow: 0px 0px 3px 0px #000000;

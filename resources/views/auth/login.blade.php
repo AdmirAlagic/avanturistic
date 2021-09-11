@@ -5,8 +5,8 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-4 offset-sm-4" style="padding:0;">
-        <div class="container" style="min-height:720px;">
+        <div class="col-sm-4 offset-sm-4 " style="padding:0;">
+        <div class="container" style="min-height:720px;max-width: 400px;">
                 <div class="text-center" style="position:relative;background: transparent; ">
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
                         <div class="kt-portlet__head text-center" style="width:100%">
