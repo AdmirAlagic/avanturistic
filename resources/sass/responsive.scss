@@ -95,7 +95,10 @@ $green: #acc957;
 
 @media (max-width: 1024px){
   
-  
+  .filter-toolbar-container{
+    padding:0;
+    justify-items:end;
+  }
   ::-webkit-scrollbar {
 
     margin-top: 60px;
@@ -145,7 +148,10 @@ $green: #acc957;
 }
 
 @media (min-width: 1025px){
-  
+  .filter-toolbar-container{
+    padding:15px;
+    justify-items:end;
+  }
   .kt-header--fixed.kt-header--minimize .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon i{
     color: #ffffff;
   }
@@ -155,7 +161,7 @@ $green: #acc957;
     bottom: -12px;
     left: 0;
   }
-
+  
 }
 .kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__form{
   margin-top:0;

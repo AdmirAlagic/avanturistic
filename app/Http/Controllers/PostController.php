@@ -305,7 +305,7 @@ class PostController extends AppController
         
 
         
-        $pageTitle .= ' • Avanturistic';
+       
         if($post->address){
             $keywords[] = 'Things to do in '. $post->address . '?';
         }

@@ -374,8 +374,12 @@
                                
                                 <hr>
                                  @if(!$user)
-                                <p class="text-center">Every country has its own hidden gems. Show us <b>your country's best outdoor locations</b>. <br>
-                                    Add adventure locations with  photos & videos, routes & trails <br>   and get involved in creating the world map of outdoor adventures!</p>
+                                <p>
+                                    Every country has its own hidden gems. <br>
+                                        Show us your country's best outdoor locations.
+                                </p>
+                                 <br>
+                                
                                     @endif
                                     <br>
                                  
@@ -402,7 +406,9 @@
                                         
                                     </div>
                                     @if(!$user)
-                                    <p> <i class="fa fa-question-circle"></i>  You don't see the flag of your country? Be first to <a href="/share">share an adventure</a> location from your country!</p>
+                                    <p> <i class="fa fa-question-circle"></i>  You don't see the flag of your country? <br> Be first to <a href="/" data-toggle="modal" data-target="#signUpModal" >
+                   
+                                       <b>share an adventure</b></a> location from your country!</p>
                                     @endif
                             </div>
                         </div>

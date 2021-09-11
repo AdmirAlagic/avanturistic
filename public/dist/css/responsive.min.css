@@ -86,6 +86,11 @@
 }
 
 @media (max-width: 1024px) {
+  .filter-toolbar-container {
+    padding: 0;
+    justify-items: end;
+  }
+
   ::-webkit-scrollbar {
     margin-top: 60px;
     width: 2px;
@@ -138,6 +143,11 @@
 }
 
 @media (min-width: 1025px) {
+  .filter-toolbar-container {
+    padding: 15px;
+    justify-items: end;
+  }
+
   .kt-header--fixed.kt-header--minimize .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon i {
     color: #ffffff;
   }

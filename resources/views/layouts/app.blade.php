@@ -162,7 +162,7 @@ console.log(document.getElementById('loged_user').value)
       
         <a href="/" class="flex items-center"  title="Avanturistic.com">
             <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
-            @if(isset($mobileTitle) && $mobileTitle && Auth::check())
+            @if(isset($mobileTitle) && $mobileTitle)
                 <span style="margin-left: 10px;">
                 {{ str_replace('', '', $mobileTitle) }}
                 </span>
@@ -263,19 +263,7 @@ console.log(document.getElementById('loged_user').value)
                                         </div>
                                     </div>
                                 </a>
-                             {{--    <a href="/my-timelapses" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:2px;">
-                                        <img src="/img/reel.svg" alt="My Timelapses" style="height:22px;">
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            <b>My Timelapses</b>
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            Manage your timelapses
-                                        </div>
-                                    </div>
-                                </a> --}}
+                             
                             <div class="kt-notification__custom kt-space-between">
                                 {!! Form::open(['route' => 'logout','method' => 'POST', 'onclick' => 'signOutGoogle()']) !!}
                                 <button class="btn  btn-xs" style="margin-left:-15px;">
@@ -309,7 +297,7 @@ console.log(document.getElementById('loged_user').value)
                     </a>
                 </div>
             @endif
-            @if(Request::segment(1) != 'register')
+            @if(Request::segment(1) != 'register' && Request::segment(1) != 'sign-upF')
                 <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
                     <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
                     <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">

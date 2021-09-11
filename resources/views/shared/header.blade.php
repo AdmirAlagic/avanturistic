@@ -13,7 +13,7 @@
             
             
             <div id="kt_header_menu" class="kt-header-menu  " >
-                <a href="/" class="  font-weight-bold flex justify-center" style="margin-right:30px;">
+                <a href="/" class="  font-weight-bold flex justify-center" style="margin-right:15px;">
                     <img class="header-logo-img" src="/img/logo.svg" style="width:35px;" width="35" alt="avanturistic.com"/>  
                 </a>
             <!--end: Head -->
@@ -301,7 +301,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="/my-timelapses" class="kt-notification__item">
+                               {{--  <a href="/my-timelapses" class="kt-notification__item">
                                     <div class="kt-notification__item-icon" style="padding-left:2px;">
                                         <img src="/img/reel.svg" alt="My Timelapses" style="height:22px;">
                                     </div>
@@ -313,7 +313,7 @@
                                             Manage your timelapses
                                         </div>
                                     </div>
-                                </a>
+                                </a> --}}
                             
                             @endif
                             <div class="kt-notification__custom kt-space-between">

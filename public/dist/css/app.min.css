@@ -2585,3 +2585,9 @@ h3.quote:after {
   justify-content: end;
 }
 
+.login-container {
+  min-height: 720px;
+  padding: 0;
+  height: 100%;
+}
+

@@ -88,7 +88,7 @@ class ProfileController extends AppController
     public function publicProfile($slug = null){
 
         if(!$this->user){
-            return redirect('/register')->with('error', 'Create an account to see users profiles.');
+            return redirect('/sign-up')->with('error', 'Create an account to see users profiles.');
         }
 
         if(!$this->user){
