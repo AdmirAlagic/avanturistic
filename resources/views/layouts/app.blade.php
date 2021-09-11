@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"> <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/> <meta name="author" content="Admir Alagić"> <meta property="og:site_name" content="Avanturistic.com"> <meta property="og:type" content="website"/> <meta name="google" value="notranslate"/> <meta name="googlebot" content="index,follow,noodp" /><meta name="robots" content="index,follow,noodp"> <meta name="language" content="English"> <meta http-equiv="content-language" content="en"> <meta name="csrf-token" content="{{csrf_token()}}"> <meta name="mobile-web-app-capable" content="yes"> <meta property="fb:pages" content="108753130584073"/> <meta name="application-name" content="Avanturistic"/> <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png"/> <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png"/> <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png"/> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png"/> <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png"/> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png"/> <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png"/> <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png"/> <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196"/> <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/> <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/> <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/> <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128"/> <meta name="msapplication-TileColor" content="#FFFFFF"/> <meta name="msapplication-TileImage" content="/mstile-144x144.png"/> <meta name="msapplication-square70x70logo" content="/mstile-70x70.png"/> <meta name="msapplication-square150x150logo" content="/mstile-150x150.png"/> <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png"/> <meta name="msapplication-square310x310logo" content="/mstile-310x310.png"/> <meta property="fb:app_id" content="445067332826256" > <meta name="theme-color" content="#000000"> <link rel="manifest" href="/site.webmanifest">
 
-    <title>{{ isset($pageTitle) && $pageTitle != '' ?  $pageTitle  : '' }}</title>
+    <title>{{ isset($pageTitle) && $pageTitle != '' ?  $pageTitle . ' • Avanturistic'  : '' }}</title>
     <meta name="title" content="{{ isset($pageTitle) && $pageTitle ? $pageTitle : '' }}">
     <meta name="description" content="{{ isset($pageDescription) && $pageDescription ? $pageDescription : 'Explore & share Outdoor adventures locations, photos and videos and get involved in creating the world map of outdoor adventures!' }}">
     <meta name="image" content="{{ isset($pageImage) ? $pageImage : url('/img/avanturistic.jpg') }}">
@@ -25,7 +25,8 @@
         }
         path{stroke-dasharray: 30, 5 !important;}
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,700&family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <script>
         window.auth_check = '{{ isset($user)  && $user ? "true" : "false"}}'
     </script>
@@ -115,7 +116,7 @@
     @if(isset($activity->options['structured_data']))
         {!! $activity->options['structured_data'] !!}
     @endif
-</html>
+  
 @if(isset($pageLinkPrev) && $pageLinkPrev)
 <link rel="prev" href="{{ $pageLinkPrev }}" />
 @endif
@@ -154,15 +155,24 @@ console.log(document.getElementById('loged_user').value)
 @if(!isset($disableHeader))
 
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
-    <div class="kt-header-mobile__toolbar">
+    {{-- <div class="kt-header-mobile__toolbar">
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-    </div>
-    <div class="kt-header-mobile__logo">
-        <a href="/" class="cs-logo text-white font-weight-bold"  title="Avanturistic.com">
-            <img  src="{{ url('/img/logo.svg') }}" style="width:28px !important;margin-top:-3px;" alt="avanturistic.com" title="Avanturistic" /> <span class="logo-text">
-                <b>AVANTURISTIC</b>
+    </div> --}}
+    <div class="kt-header-mobile__logo" style="min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;margin-right:8px;">
+      
+        <a href="/" class="flex items-center"  title="Avanturistic.com">
+            <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
+            @if(isset($mobileTitle) && $mobileTitle)
+                <span style="margin-left: 10px;">
+                {{ str_replace('', '', $mobileTitle) }}
+                </span>
+            @else
+            <span class="logo-text" style="font-weight:500;margin-left:10px;">
+                Avanturistic
             </span>
+            @endif
         </a>
+       
 
     </div>
     <div class="kt-header-mobile__toolbar" style="color:#f8f8fb;">
@@ -173,7 +183,7 @@ console.log(document.getElementById('loged_user').value)
                     <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" st>
 
                         @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                            <span class="kt-header__topbar-icon "><img style="border-width: 2px;width:36px;border-color:#666;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
+                            <span class="kt-header__topbar-icon "><img style="border-width: 2px;width:36px;border-color:#474747;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
                         @else
                             <div style="padding-top: 6px;" class="post-avatar img-circle "><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></div>
                         @endif
@@ -181,25 +191,7 @@ console.log(document.getElementById('loged_user').value)
                     </div>
                     <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-sm" >
 
-                        <!--begin: Head -->
-                        <a href="/{{ '@' .$user->name_slug}}">
-                            <div class="kt-user-card kt-user-card--skin-dark " style="background-color:#000000;">
-                            <span style="background-color: #000000;padding: 20px;width: 100%;" class="text-center">
-                                <div class="">
-                                    @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                                        <img class="img-circle" style="width:40px;" alt="Avatar" src="{{ $user->avatar }}" />
-                                    @else
-                                        <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">{{ ucfirst($user->name[0]) }}</span>
-                                    @endif
-                                </div>
-                                <div class="kt-user-card__name" style="margin-top:10px;">
-                                    <b>{{ $user->name }}</b>
-                                </div>
-                            </span>
-
-                            </div>
-                        </a>
-                        <!--end: Head -->
+                        
 
                         <!--begin: Navigation -->
                         <div class="kt-notification">
@@ -271,19 +263,7 @@ console.log(document.getElementById('loged_user').value)
                                         </div>
                                     </div>
                                 </a>
-                                <a href="/my-timelapses" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:2px;">
-                                        <img src="/img/reel.svg" alt="My Timelapses" style="height:22px;">
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            <b>My Timelapses</b>
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            Manage your timelapses
-                                        </div>
-                                    </div>
-                                </a>
+                             
                             <div class="kt-notification__custom kt-space-between">
                                 {!! Form::open(['route' => 'logout','method' => 'POST', 'onclick' => 'signOutGoogle()']) !!}
                                 <button class="btn  btn-xs" style="margin-left:-15px;">
@@ -305,6 +285,28 @@ console.log(document.getElementById('loged_user').value)
                         <!--end: Navigation -->
                     </div>
                 </div>
+        @else
+            @if(Request::segment(1) != 'login')
+                <div class=" kt-header__topbar-item  kt-hidden-desktop " style=" justify-content: center;" >
+                    <a style="display: inline-flex;align-items:center;" href="/login"  >
+                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+
+
+                        <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
+                    <Fpan>
+                    </a>
+                </div>
+            @endif
+            @if(Request::segment(1) != 'register' && Request::segment(1) != 'sign-upF')
+                <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
+                    <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
+                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+
+                        <span style="white-space: nowrap;margin-left:5px; color:#3C3C3C;font-size:1rem;"><b>SIGN UP</b></span>
+                    </span>
+                    </a>
+                </div>
+            @endif
         @endif
     </div>
 </div>

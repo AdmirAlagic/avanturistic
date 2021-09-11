@@ -616,8 +616,8 @@ function setMarkers(posts, badges, map) {
         chunkedLoading: true,
         maxClusterRadius: 30,
         polygonOptions: {
-            fillColor: '#b4d677',
-            color: '#b4d677',
+            fillColor: '#acc957',
+            color: '#acc957',
             weight: 0.5,
             opacity: 1,
             fillOpacity: 0.5
@@ -667,7 +667,7 @@ function setMarkers(posts, badges, map) {
         if(iconUrl){
             var mIcon = L.divIcon({
                 iconSize:null,
-                html:' <div class="badge-wrap" style="-webkit-box-shadow: 0px 0px 3px 0px #000000;-moz-box-shadow: 0px 0px 3px 0px #000000;box-shadow: 0px 0px 3px 0px #000000;background: #666;border:2px solid ' + iconColor + ';-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 32px; height: 32px;margin-left: auto; margin-right: auto;padding: 4px;"> <img  src="' + iconUrl+ ' " style="width:20px;"> </div>',
+                html:' <div class="badge-wrap" style="-webkit-box-shadow: 0px 0px 3px 0px #000000;-moz-box-shadow: 0px 0px 3px 0px #000000;box-shadow: 0px 0px 3px 0px #000000;background: #474747;border:2px solid ' + iconColor + ';-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 32px; height: 32px;margin-left: auto; margin-right: auto;padding: 4px;"> <img  src="' + iconUrl+ ' " style="width:20px;"> </div>',
     
     
             });
@@ -743,7 +743,7 @@ function onEachFeature(feature, layer) {
         color: '#fff',
         dashArray: '',
         fillOpacity: 0.6,
-        fillColor: '#b4d677',
+        fillColor: '#acc957',
 
     });
 

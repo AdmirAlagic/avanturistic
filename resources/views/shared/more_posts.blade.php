@@ -3,7 +3,7 @@
         @foreach($posts as $obj)
             @php $options = json_decode($obj->opts);@endphp
             @php $images = json_decode($obj->image);@endphp
-            <div class="col-sm-6 col-lg-3" style="margin-bottom: 10px; position:relative">
+            <div class="col-sm-6 col-lg-3" style="margin-bottom: 15px; position:relative">
                 <div class="top-border-radius" style=" -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
 
                     <div style="position:relative;">
@@ -29,7 +29,7 @@
                                         <div class="col-2 text-right">
                                             @if($obj->country_code)
                                                 <a class=" img-fade-hover text-muted" style="font-weight:400;" href="/country/{{ $obj->country_code }}">
-                                                    <div style=" display:inline-block;border:2px solid #666;background-image:url('/img/countries/svg/{{ strtoupper($obj->country_code) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 37px; height: 37px;">
+                                                    <div style=" display:inline-block;border:2px solid #474747;background-image:url('/img/countries/svg/{{ strtoupper($obj->country_code) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 37px; height: 37px;">
                                                     </div>
                                                 </a>
                                             @endif 
@@ -60,7 +60,7 @@
                                                     @if($countBadge < 3)
                                                         @if(isset($badges[$key]) && isset($badges[$key]['icon']) && isset($badges[$key]['name']))
                                                             <button   class="btn img-fade-hover single-badge"  style="margin-right:5px;padding:0;" title="{{ $badges[$key]['name'] }}" >
-                                                                <div style="border:2px solid {{ $badges[$key]['color'] }};background: #333;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 5px;">
+                                                                <div style="border:2px solid {{ $badges[$key]['color'] }};background: #3C3C3C;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 5px;">
                                                                     <a href="/outdoor-adventures/{{ $key }}">
                                                                     <img alt="{{ $key }} adventures" src="{{ $badges[$key]['icon_empty'] }}" style="width:35px;">
                                                                     </a>
@@ -115,7 +115,7 @@
                                     @endif
                             </div>
                         </div>
-                        <div class="post-heading " style="border-bottom: 1px solid #222;border-top: 1px solid #666;padding:10px; background-color:#000000;height:60px; border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;">
+                        <div class="post-heading " style="border-bottom: 1px solid #222;border-top: 1px solid #474747;padding:10px; background-color:#000000;height:60px; border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;">
                             <div class="row">
                                 <div class="col-6 text-left " style="position:relative;">
                                    
@@ -125,7 +125,7 @@
                                                     <span>
                                                         <small>
                                                         @if($obj->avatar && $obj->avatar != ' ' && $obj->avatar != '')
-                                                                <span><img  class="lazy img-circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $obj->avatar }}" data-srcset="{{ $obj->avatar }}" width="37" height="37" style="width:37px;border:1px solid #666;" alt="{{ $obj->username  }}"></span>
+                                                                <span><img  class="lazy img-circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $obj->avatar }}" data-srcset="{{ $obj->avatar }}" width="37" height="37" style="width:37px;border:1px solid #474747;" alt="{{ $obj->username  }}"></span>
                                                             @else
                                                                 <div style="display:inline-block; padding-top:10px;padding-left:1px;margin:0;" class=" kt-header__topbar-icon text-white post-avatar"><b>{{ ucfirst($obj->username[0]) }}</b></div>
                                                             @endif
@@ -145,10 +145,10 @@
                                 <div class="circle-posts-toolbar text-right" style="padding:0px;margin-top:1px;">
                                         <div style="font-size: 16px;">
                                             <a  data-toggle="kt-tooltip" title="" data-placement="right" data-original-title="I Was Here!" href="#" data-post_id="{{ $obj->id }}" class="visitedBtn text-center ">
-                                                <i class="fa fa-shoe-prints  {{ isset($obj->isVisited) && $obj->isVisited ? 'text-success' : 'text-white' }}" style="font-size:1em !important;width:36px;height:36px; -webkit-border-radius: 99999em;-moz-border-radius: 99999em;border-radius: 99999em; padding-top: 11px;background: #666;"></i>
+                                                <i class="fa fa-shoe-prints  {{ isset($obj->isVisited) && $obj->isVisited ? 'text-success' : 'text-white' }}" style="font-size:1em !important;width:36px;height:36px; -webkit-border-radius: 99999em;-moz-border-radius: 99999em;border-radius: 99999em; padding-top: 11px;background: #474747;"></i>
                                             </a>
                                             <a  href="#" data-post_id="{{ $obj->id }}" class="likeBtn  text-center">
-                                                <i class="fa fa-heart {{ isset($obj->isLiked) && $obj->isLiked   ? 'text-success' : 'text-white' }}" style="width:36px;height:36px;; -webkit-border-radius: 99999em;-moz-border-radius: 99999em;border-radius: 99999em;  padding-top: 10px;background: #666; "></i>
+                                                <i class="fa fa-heart {{ isset($obj->isLiked) && $obj->isLiked   ? 'text-success' : 'text-white' }}" style="width:36px;height:36px;; -webkit-border-radius: 99999em;-moz-border-radius: 99999em;border-radius: 99999em;  padding-top: 10px;background: #474747; "></i>
                                             </a>
                                         </div>
  

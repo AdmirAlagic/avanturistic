@@ -45,7 +45,7 @@ code
 
 abbr
 {
-	border-bottom: 1px dotted #555;
+	border-bottom: 1px dotted #4D4D4D;
 	cursor: pointer;
 }
 
@@ -132,7 +132,7 @@ fieldset
 
 body, input, textarea
 {
-	color: #333333;
+	color: #3C3C3C;
 	font-family: Arial, Helvetica, sans-serif;
 }
 

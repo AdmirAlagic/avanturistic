@@ -428,7 +428,7 @@
   border: 0;
   border-radius: 0.25em;
   background: initial;
-  background-color: #b4d677;
+  background-color: #acc957;
   color: #fff;
   font-size: 1.0625em;
 }
@@ -648,7 +648,7 @@
   padding: 0.625em;
   overflow: hidden;
   background: #f0f0f0;
-  color: #666;
+  color: #474747;
   font-size: 1em;
   font-weight: 300;
 }
@@ -734,8 +734,8 @@
 }
 
 .swal2-icon.swal2-info {
-  border-color: #b4d677;
-  color: #b4d677;
+  border-color: #acc957;
+  color: #acc957;
 }
 
 .swal2-icon.swal2-info::before {
@@ -1691,6 +1691,6 @@ body.swal2-height-auto {
 }
 
 .swal2-popup .swal2-content {
-  color: #666;
+  color: #474747;
 }
 

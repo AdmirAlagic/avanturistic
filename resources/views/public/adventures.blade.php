@@ -25,7 +25,7 @@
 
                         <div style="padding:10px;border:1px solid #FFFFFF;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;background:#00000045;">
                             <p style="margin:0;">
-                            <a class="text-success" href="/register"><em>Create an account</em></a> and <b>promote</b> your adventure <b>stories</b>, <b>photos</b> & <b>videos</b>, <b>social network pages</b> or <b>adventure tourism services</b> for free!
+                            <a class="text-success" href="/sign-up"><em>Create an account</em></a> and <b>promote</b> your adventure <b>stories</b>, <b>photos</b> & <b>videos</b>, <b>social network pages</b> or <b>adventure tourism services</b> for free!
                             </p>
                     
                         </div>
@@ -46,7 +46,7 @@
 
 
    <div class="kt-portlet__body" style="padding-top:3px;background-color:#FFFFFF;">
-            <div class="kt-container padding0" >
+            <div class="kt-container filter-toolbar-container" >
                 @include('shared.lists.toolbar')
             </div>
            <div class="kt-container" style="padding:0px;">
@@ -55,13 +55,13 @@
                <!-- <div class="row">
                    <div class="col-sm-12 text-center" style="padding:0px;"> -->
                     
-                       <div class="kt-container" style="padding: 0;min-height:600px;" id="posts-container" data-page="{{ request()->filled('page') ? request()->page : 1 }}" >
+                       <div class="kt-container" style="min-height:600px;" id="posts-container" data-page="{{ request()->filled('page') ? request()->page : 1 }}" >
                            <div id="adventures-grid" class="adventures-masonry-grid" style="cursor: pointer;">
                                <div class="adventure-grid-sizer"></div>
 
                            </div>
                         
-                           <div id="more-posts" style="min-height:700px;padding:15px;">
+                           <div id="more-posts" style="min-height:700px;">
                                 @if(isset($more_posts) && $more_posts)
                                  {!! $more_posts !!}
                                 @endif

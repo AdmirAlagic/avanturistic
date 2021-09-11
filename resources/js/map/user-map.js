@@ -16,13 +16,13 @@ $(document).ready(function(){
             iconCreateFunction: function(cluster) {
                 return L.divIcon({ html: '<div class="markerGroup">' + cluster.getChildCount() + '</div>' });
             },
-            spiderLegPolylineOptions:{ weight: 1.5, color: '#b4d677', opacity: 0.5 },
+            spiderLegPolylineOptions:{ weight: 1.5, color: '#acc957', opacity: 0.5 },
             chunkedLoading:true,
             maxClusterRadius:20,
 
             polygonOptions: {
-                fillColor: '#b4d677',
-                color: '#b4d677',
+                fillColor: '#acc957',
+                color: '#acc957',
                 weight: 0.5,
                 opacity: 1,
                 fillOpacity: 0.5
@@ -13706,7 +13706,7 @@ $(document).ready(function(){
                     color: '#fff',
                     dashArray: '',
                     fillOpacity: 0.6,
-                    fillColor: '#b4d677',
+                    fillColor: '#acc957',
 
                 });
             } else {

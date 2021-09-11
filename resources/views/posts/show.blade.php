@@ -12,7 +12,7 @@
                             <div class="swiper-container gallery-top" style="width:100%; height: auto; ">
                                 <div class="swiper-wrapper spotlight-group"  data-page="false" data-autohide="false" data-zoom="false" data-infinite="true" data-fullscreen="false" data-autofit="false" style="position:relative;">
                                     @foreach($post->image as $image)
-                                        <div class="swiper-slide" style="position:relative;z-index:2;min-height:200px; {{ count($post->image) == 1 ? 'border-bottom:3px solid #666;' : '' }}">
+                                        <div class="swiper-slide" style="position:relative;z-index:2;min-height:200px; {{ count($post->image) == 1 ? 'border-bottom:3px solid #474747;' : '' }}">
                                             <img src="{{ url($image['path']) }}" alt="{{ isset($image['title']) ? $image['title'] : $post->title }}"  data-title="{{ isset($image['title']) ? $image['title'] : ''}}" class="spotlight" data-src="{{ url($image['path']) }}"> 
                                             @if(isset($image['title']))
                                                 <div style="position:absolute;bottom:0;left:0;width:100%;height:40px;padding:10px;color:#FFFFFF; 
@@ -32,7 +32,7 @@
                                 @endif
                             </div>
                             @if(count($post->image) > 1)
-                            <div class="swiper-container gallery-thumbs" style="height:80px;border-bottom:3px solid #666;">
+                            <div class="swiper-container gallery-thumbs" style="height:80px;border-bottom:3px solid #474747;">
                                 <div class="swiper-wrapper" style="height:80px;">
                                     @foreach($post->image as $image)
                                         <div class="swiper-slide  swiper-lazy"  data-background="{{ url($image['thumb_path']) }}"></div>
@@ -63,7 +63,7 @@
                                                 Next {{ $nextTxt != 'next' ? $nextTxt : '' }} {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
                                             @endif
                                         </span>
-                                            <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#b4d677 0,#78cb94 70%,#26bcbd 100%) left bottom transparent no-repeat;">
+                                            <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#acc957 0,#78cb94 70%,#26bcbd 100%) left bottom transparent no-repeat;">
                                                 <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;width:50px;border: 2px solid #FFF;">
                                             </div>
                                             <span>&nbsp;
@@ -86,7 +86,7 @@
                                             @endif
                                            
                                         </span>
-                                        <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#b4d677 0,#78cb94 70%,#26bcbd 100%) left bottom transparent no-repeat;">
+                                        <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#acc957 0,#78cb94 70%,#26bcbd 100%) left bottom transparent no-repeat;">
                                             <i id="locker"  ><img  src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;border:2px solid #FFF;"></a></i>
                                         </div>
                                     </div>
@@ -102,7 +102,7 @@
                                         @if($post->title)
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <h1 class="blog-title" style="margin-top: 10px; font-size: 1.6rem;">{{ $post->title }}</h1>
+                                                    <h1 class="blog-title text-center" style="margin-top: 10px; font-size: 1.6rem;">{{ $post->title }}</h1>
                                                 </div>
                                             </div>
                                            
@@ -155,7 +155,7 @@
                 </div>
                 <div class="kt-portlet">
                     <div class="kt-portlet__body" style="padding:15px;">
-                            <h3 class="text-gray" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
+                            <h3 class="text-gray text-center" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
                             <br><span style="font-style: italic;" class="text-muted"> Share your toughts in comments</span> </small></h3>
 
                             
@@ -205,11 +205,11 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div style="position:relative;">
-                                 <span  style="position: absolute;padding:5px;left: 0;top:0px;z-index: 1;background-color: #333333c7; color:#FFFFFF;  border-top-left-radius: 4px; border-bottom-right-radius: 4px; ">
+                                 <span  style="position: absolute;padding:5px;left: 0;top:0px;z-index: 1;background-color: #333333c7; color:#FFFFFF;  border-top-left-radius: 4px; border-bottom-right-radius: 4px; padding-left:10px;padding-right:10px;">
                                  <b>{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b><br>
                                 </span>
 
-                                    <span  style="position: absolute;right: 0;top:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; ">
+                                    <span  style="position: absolute;right: 0;top:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; padding-left:10px;padding-right:10px; ">
 
                                     <a style="padding:5px;"  class="btn showSatelite  text-white" href="#">Satellite Map</a>
                                 </span>

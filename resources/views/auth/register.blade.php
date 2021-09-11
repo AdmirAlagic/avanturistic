@@ -1,7 +1,7 @@
-@extends('layouts.auth')
+@extends('layouts.app')
 
 @section('content')
-    <div class="kt-visible-desktop" style="min-height: 40px;">
+    <div class="kt-hidden-tablet-and-mobile" style="min-height: 40px;">
 
     </div>
     <div class="row" >
@@ -11,8 +11,8 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#666;">
-                                    Welcome to Avanturistic
+                                <h4 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
+                                    <b>Welcome to Avanturistic</b>
                                 </h4>
                                 
                             </div>
@@ -88,7 +88,7 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#666;">
+                                <h4 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
                                    Already have an account?
                                     <a class="text-success" href="/login" >
                                         <b> Log In </b>

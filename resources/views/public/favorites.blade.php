@@ -11,7 +11,7 @@
 
             <div class="kt-portlet__body">
 
-                <div class="kt-visible-desktop">
+                <div class="kt-hidden-tablet-and-mobile">
                     <div class="row ">
                         <div class="col-12">
                             <h6 class="text-center text-muted">Favorites <small>({{ count($last_favorites) }})</small></h6>

@@ -250,7 +250,7 @@
                             <li class="nav-item" id="nav-item-adventures" style="display: inline-block;">
                                 <a id="nav-link-info" class="nav-link active"  style="font-size:0.8em;"  data-toggle="tab" href="#adventures" role="tab">
                                 
-                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#333;">
+                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#3C3C3C;">
                                         Adventures
                                     </div>
                                 </a>
@@ -259,7 +259,7 @@
                             <li class="nav-item nav-adventures" style="display: inline-block;">
                                 <a  id="nav-link-interests" class="nav-link "  style="font-size:0.8em;"  data-toggle="tab" href="#info" role="tab">
                                      
-                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#333;">
+                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#3C3C3C;">
                                         Info
                                     </div>
                                 </a>
@@ -269,7 +269,7 @@
                             <li class="nav-item nav-timelapses" style="display: inline-block;">
                                 <a  id="nav-link-timelapses" class="nav-link "  style="font-size:0.8em;"  data-toggle="tab" href="#timelapses" role="tab">
                                      
-                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#333;">
+                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#3C3C3C;">
                                         Timelapses
                                     </div>
                                 </a>
@@ -371,7 +371,7 @@
                                                     <div class="col-4 " style="margin-bottom:10px;">
                                                         <a href="/outdoor-adventures/{{ $key }}" style="margin-right: 10px;font-size:0.8em;">
                                                             <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:2px solid {{ $badges[$key]['color'] }}; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 6px;">
-                                                                <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter: invert(0.5);">
+                                                                <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter: invert(0.7);">
                                                             </div>
 
                                                             <br>

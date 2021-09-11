@@ -21,8 +21,8 @@ $(document).ready(function(){
     // var lc = L.control.locate().addTo(map);
     var defaultIcon = L.icon({
         iconUrl: baseUrl + '/img/post_marker.svg',
-        iconSize: [30, 30],
-        iconAnchor: [15, 30],
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
         popupAnchor: [0, 0],
 
     });

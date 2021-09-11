@@ -108,6 +108,13 @@ class PostController extends AppController
         view()->share('styles', $styles);
         $data['post'] = $post;
         $data['formOptions'] = ['method' => 'PATCH', 'route' => ['posts.update', $id]];
+
+        $data = [
+            'post' => $post,
+            'formOptions' => ['method' => 'PATCH', 'route' => ['posts.update', $id]],
+            'pageTitle' => 'Edit adventure',
+            'mobileTitle' => 'Edit adventure',
+        ];
         return view('posts.edit', $data);
     }
     /**
@@ -298,7 +305,7 @@ class PostController extends AppController
         
 
         
-        $pageTitle .= ' • Avanturistic';
+       
         if($post->address){
             $keywords[] = 'Things to do in '. $post->address . '?';
         }
@@ -472,6 +479,7 @@ class PostController extends AppController
             'mainActivity' =>  str_replace('-',' ', $mainActivity),
             'comments' => $post->comments()->approved()->orderBy('created_at', 'asc')->paginate(20),
             'pageTitle' => $pageTitle,
+            'mobileTitle' =>  $post->title,
             'pageImage' => url(isset($post->image[0]['path']) ? $post->image[0]['path'] : '/img/avanturistic.jpg'),
             'pageDescription' => $pageDescription,
             'country' => $country,

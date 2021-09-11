@@ -178,7 +178,7 @@
                                                         
                                                         <label style="margin-top: 5px;">
 
-                                                            <div class="badge-wrap {{ isset($model->options['badges'][$key]) || request()->category == $key ? 'active' : 'inactive' }}" style="-webkit-box-shadow: 0px 0px 3px 0px rgb(102 102 102);-moz-box-shadow: 0px 0px 3px 0px rgb(102 102 102);box-shadow: 0px 0px 3px 0px rgb(102 102 102); border:4px solid {{ $val['color'] }};background: #666;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 45px; height: 45px;margin-left: auto; margin-right: auto;padding: 6px;">
+                                                            <div class="badge-wrap {{ isset($model->options['badges'][$key]) || request()->category == $key ? 'active' : 'inactive' }}" style="-webkit-box-shadow: 0px 0px 3px 0px rgb(102 102 102);-moz-box-shadow: 0px 0px 3px 0px rgb(102 102 102);box-shadow: 0px 0px 3px 0px rgb(102 102 102); border:4px solid {{ $val['color'] }};background: #474747;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 45px; height: 45px;margin-left: auto; margin-right: auto;padding: 6px;">
                                                                 <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;">
                                                             </div>
                                                             <input type="checkbox" name="options[badges][{{ $key }}]" {{ isset($model->options['badges'][$key]) || request()->category == $key ? 'checked' : '' }} >

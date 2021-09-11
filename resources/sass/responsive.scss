@@ -1,4 +1,4 @@
-$green: #b4d677;
+$green: #acc957;
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   body{
@@ -83,8 +83,8 @@ $green: #b4d677;
 
   .kt-menu__link-text{
     .img-circle{
-      border-color:#b4d677 !important;
-      background: #b4d677;
+      border-color:#acc957 !important;
+      background: #acc957;
     }
   }
 
@@ -94,7 +94,11 @@ $green: #b4d677;
 }
 
 @media (max-width: 1024px){
-
+  
+  .filter-toolbar-container{
+    padding:0;
+    justify-items:end;
+  }
   ::-webkit-scrollbar {
 
     margin-top: 60px;
@@ -102,10 +106,6 @@ $green: #b4d677;
 
     background-color: #f2efe9;
   }
-  .kt-header-mobile--fixed .kt-wrapper {
-    padding-top: 50px;
-  }
-
 
   .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item > .kt-menu__heading .kt-menu__link-text, .kt-header-menu-mobile .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
     color: #FFFFFF;
@@ -124,7 +124,9 @@ $green: #b4d677;
     margin: 0px;
   }
   .kt-header__topbar{
-    height:45px;
+    -webkit-box-shadow: 0px -1px 11px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px -1px 11px 0px rgb(0 0 0 / 10%);
+    box-shadow:  0px -1px 11px 0px rgb(0 0 0 / 10%);
   }
  
   .kt-widget.kt-widget--user-profile-1 .kt-widget__head .kt-widget__content .kt-widget__action {
@@ -146,28 +148,20 @@ $green: #b4d677;
 }
 
 @media (min-width: 1025px){
-  .kt-container.post{
-    padding: 0 30px;
+  .filter-toolbar-container{
+    padding:15px;
+    justify-items:end;
   }
   .kt-header--fixed.kt-header--minimize .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon i{
     color: #ffffff;
   }
-  .kt-header {
-    height: 50px;
-  }
-  .kt-header--fixed.kt-header--minimize .kt-header {
-    height: 50px;
-  }
-
-  .kt-header--fixed.kt-header--minimize .kt-header {
-    background: #041734;
-  }
+   
   .kt-header__topbar .kt-grid__item{
     position: fixed;
     bottom: -12px;
     left: 0;
   }
-
+  
 }
 .kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__form{
   margin-top:0;

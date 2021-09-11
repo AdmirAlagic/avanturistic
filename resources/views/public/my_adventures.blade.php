@@ -7,7 +7,7 @@
        <div class="kt-portlet">
            <div class="text-center" style="width:100%;" >
            <br>
-                <a style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;padding:10px;margin-top: 10px;display: inline-flex;align-items:center;background: #b4d677;" href="/share"  >
+                <a style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;padding:10px;margin-top: 10px;display: inline-flex;align-items:center;background: #acc957;" href="/share"  >
                        <div class=" kt-header__topbar-wrapper img-fade-hover">
                             <img  style="display:inline;height:22px;" height="22"  src="{{ url('/img/pinplus_white.svg') }}" alt="Share adventure">
                            <div style="white-space: nowrap;margin-left:10px;display:inline;"><b><span style="font-size:1.1rem;color:white;">Share adventure</span></b></div>
@@ -35,10 +35,10 @@
                                             </a>
                                         </div>
                                       
-                                       <div class="post-edit-toolbar" style="">
+                                       <div class="post-edit-toolbar" style="padding-right:10px; padding-left:10px;">
                                             <div class="row">
                                                 <div class="col-9">
-                                                    <div style="margin-top:5px;margin-bottom:5px;padding-left:10px;" class="clearfix" >
+                                                    <div style="margin-top:5px;margin-bottom:5px;" class="clearfix" >
                                                         <b>
                                                             @if($obj->title)
                                                                 {{ Str::words($obj->title , 4)}}
@@ -51,22 +51,19 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-3" style="padding-top:5px;">
-                                                    <a href="#" class="dropdown-toggle dots text-muted pull-right" style="margin-right:5px;"   data-toggle="dropdown">
+                                                <div class="col-3 text-right" style="padding-top:5px;">
+                                                    <a href="/adventure/{{ $obj->id }}/edit" class="kt-nav__link">
+                                                        <i class="fa fa-cogs text-muted"></i> 
+                                                        <span class="kt-nav__link-text">Edit </span>
+                                                    </a>
+                                                   {{--  <a href="#" class="dropdown-toggle dots text-muted pull-right" style="margin-right:5px;"   data-toggle="dropdown">
                                                         <div class="text-muted btn-dots" style="font-size:2em; ">
                                                         ...
                                                         </div>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center text-center" style="">
                                                         <ul class="kt-nav" style="padding:0;">
-                                                            @if(count($obj->image) > 2)
-                                                                <li class="kt-nav__item">
-                                                                    <a href="/adventure/{{ $obj->id }}/timelapse" class="kt-nav__link">
-                                                                        <i class="fa fa-download text-muted"></i> 
-                                                                        <span class="kt-nav__link-text">Download Timelapse </span>
-                                                                    </a>
-                                                                </li>
-                                                            @endif
+                                                           
                                                             <li class="kt-nav__item">
                                                                 <a href="/adventure/{{ $obj->id }}/edit" class="kt-nav__link">
                                                                     <i class="fa fa-cogs text-muted"></i> 
@@ -77,7 +74,7 @@
                                                             
                                                         </ul>
                                                         
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                             

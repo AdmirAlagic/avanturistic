@@ -11,7 +11,7 @@
                 <div class="kt-container padding0">
                     <div class="text-center" style="width:100%;" >
                     <br>
-                            <a style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;padding:10px;margin-top: 10px;display: inline-flex;align-items:center;background: #b4d677;" href="/create-timelapse"  >
+                            <a style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;padding:10px;margin-top: 10px;display: inline-flex;align-items:center;background: #acc957;" href="/create-timelapse"  >
                                 <div class=" kt-header__topbar-wrapper img-fade-hover">
                                         <img  style="display:inline;height:20px;" height="20"  src="{{ url('/img/reel-white.svg') }}" alt="Share adventure">
                                     <div style="white-space: nowrap;margin-left:10px;display:inline;"><b><span style="font-size:1.1rem;color:white;">Create Timelapse</span></b></div>

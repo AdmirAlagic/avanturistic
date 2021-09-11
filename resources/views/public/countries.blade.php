@@ -17,7 +17,7 @@
                     @foreach($countries as $obj)
                         @php $countPosts = count($obj->posts()->public()->get());@endphp
                         @php $latestPost = $obj->posts()->latest()->public()->first();@endphp
-                        <div class="country col-12 col-sm-4 text-center" style="padding:0px;">
+                        <div class="country col-12 col-sm-4 text-center">
 
                             <a href="/country/{{ $obj->slug }}">
                                 <div style="position:relative;min-height: 300px;" class="adventure-category">

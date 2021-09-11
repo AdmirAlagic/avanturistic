@@ -26,18 +26,10 @@
                         <a href="/adventure/{{ $obj->id }}/{{ $obj->slug }}" class="loading ">
                             <img  src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class="img-fade-hover lazy"  alt="{{ $obj->title }} {{ $obj->address }}">
                             <div style="position:absolute;top:1px;right:1px;">
-                                @if(isset($obj->badge) && $obj->badge)
-                                    <p class="text-white  text-right " style="margin-bottom:1px;padding-left:5px;padding-right:5px; background-color: rgba(0,0,0,0.8);">
-                                        <small style="font-size:0.7em;">
-
-                                            <a href="/outdoor-adventures/{{$obj->badge }}">#{{$obj->badge }}</a>
-
-                                        </small>
-                                    </p>
-                                @endif
+                                 
                                 @if(isset($obj->distance))
-                                    <p class="text-white text-right" style="margin-bottom:1px;padding-left:5px;padding-right:5px; background-color: rgba(0,0,0,0.8);">
-                                        <small style="font-size:0.7em;">
+                                    <p class="text-white text-right" style="margin-bottom:1px;padding-left:5px;padding-right:5px; background-color: #535353;">
+                                        <small style="font-size:0.8em;">
                                             {{ number_format($obj->distance, 2, '.', '') }} km
                                             &nbsp;<i class="fa fa-location-arrow"></i>
                                         </small>

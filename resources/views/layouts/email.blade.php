@@ -9,7 +9,7 @@
     
 </head>
 <body style="background:#fbfbfb;">
-    <table class="table" style="width:100%;height:120px;background:#666666;color:#FFFFFF;border-bottom:4px solid #b4d677;vertical-align:middle;">
+    <table class="table" style="width:100%;height:120px;background:#474747;color:#FFFFFF;border-bottom:4px solid #acc957;vertical-align:middle;">
         <tbody>
             <tr>
                 <td  align="center" style="text-align:center;font-family:'Montserrat', sans-serif;font-weight:800;">
@@ -43,7 +43,7 @@
     </table>
  
     <div class="footer"
-         style="text-align: center; color:#666;font-size: 12px;font-family:'Montserrat', sans-serif;">
+         style="text-align: center; color:#474747;font-size: 12px;font-family:'Montserrat', sans-serif;">
         <table class="table" style="width:100%;border-top:1px solid #eeeeee;padding:2em;">
             <tbody>
            
@@ -58,7 +58,7 @@
                                 <img  src="{{ url('/img/social/instagram.png') }}"   alt="Avanturistic Instagram profile"  style="height: 28px;">
                             </a>
                             <br><br>
-                            <a href="mailto:info@avanturistic.com" style="color:#b4d677;text-decoration:none;font-family: 'Montserrat',sans-serif;font-size:0.8rem;">
+                            <a href="mailto:info@avanturistic.com" style="color:#acc957;text-decoration:none;font-family: 'Montserrat',sans-serif;font-size:0.8rem;">
                             info@avanturistic.com
                             </a>
                             <br>

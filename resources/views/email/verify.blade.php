@@ -3,7 +3,7 @@
 
 <tr>
     <td width="100%" cellpadding="0" cellspacing="0">
-        <table align="center" cellpadding="0" cellspacing="0" style="text-align:center;font-family:'Montserrat', sans-serif;color:#333;font-family: 'Montserrat',sans-serif;">
+        <table align="center" cellpadding="0" cellspacing="0" style="text-align:center;font-family:'Montserrat', sans-serif;color:#3C3C3C;font-family: 'Montserrat',sans-serif;">
             <!-- Body content -->
             <h1 style="font-size:1.2rem;color:#111111;font-family: 'Montserrat',sans-serif;">Confirm Your Account</h1>
             
@@ -11,7 +11,7 @@
             Please click the button below to verify your email address.
             </p>
             <table align="center" cellpadding="0" cellspacing="0" style="box-sizing: border-box;text-align-center;">
-            <a href="{{ $verificationUrl }}" style="margin-top:1rem;margin-bottom:1rem;display:inline-block;width: fit-content;font-size:0.9rem;padding:10px; padding-left:15px;padding-right:15px; background-color:#b4d677; font-family:'Montserrat', sans-serif;border-radius:4px;color:#FFFFFF;text-decoration:none;">
+            <a href="{{ $verificationUrl }}" style="margin-top:1rem;margin-bottom:1rem;display:inline-block;width: fit-content;font-size:0.9rem;padding:10px; padding-left:15px;padding-right:15px; background-color:#acc957; font-family:'Montserrat', sans-serif;border-radius:4px;color:#FFFFFF;text-decoration:none;">
                 Verify Email Address
             </a>
             </table>

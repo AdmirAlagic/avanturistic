@@ -7,13 +7,13 @@
     <div class="full-width-bg" style="position:relative;overflow: hidden;background:rgba(0,0,0,0.4);">
 
        
-        <div class="kt" style=" {{ $user ? 'padding: 10px 20px 10px 20px;' : 'padding: 50px 20px 0px 20px;' }} ">
+        <div class="kt" style=" {{ $user ? 'padding: 20px 20px 10px 20px;' : 'padding: 50px 20px 0px 20px;' }} ">
 
             @if(!$user)
             <div class="row" >
                 <div class="col-12 text-center ">
-                    <h1 class="text-white" style="font-size:2.3em;letter-spacing:2px;font-weight: 900;">AVANTURISTIC</h1>
-                    <h2 class="text-white" style="font-size:1.5em;z-index: 0;font-weight:400; margin-top:-8px;"><span class="border-r4 " style="background: #b4d677;padding-left: 10px;padding-right: 10px;margin-left:-2px;padding-top: 1px;padding-bottom: 3px; ">World map of adventure</span></h2>
+                    <h1 class="text-white" style="font-size:2.5em;font-weight: 700;">Avanturistic</h1>
+                    <h2 class="text-white" style="font-size:1.1em;z-index: 0;font-weight:400; "><span class="border-r4 " style="background: #acc957;color:#393939;padding-left: 10px;padding-right: 10px; padding-bottom:5px;padding-top:5px; ">World map of adventure</span></h2>
                      
                       
                 </div>
@@ -26,38 +26,7 @@
                     
                       
                     <h3 class="k-font" style="margin-top:15px;margin-bottom:15px;padding:20px;"  >Welcome to a network for outdoor enthusiasts, nature lovers and travelers</b>.</h3>
-                   <!-- 
-                    <a href="/share" class="btn-more btn-more-share  btn--with-icon loading  mt20" style="box-shadow:none;margin-bottom:10px;">
-                        <div class="img " style="padding:0px 10px 0px 10px;width:47px;height:50px;" >  
-                            
-                            <img class="" src="/img/badges/empty/backpacking.svg"   alt="Add new adventure" style="margin-top: 10px;margin-left:-5px;height:32px;">
-                            
-                        </div>
-                        <div>SHARE ADVENTURE</div>
-                    </a> -->
-                   <!--  <p>
-                        Share your favorite adventure locations
-                            and make your
-                            <em><a class=" loading text-white img-fade-hover " href="{{ url('/the-world-map-of-outdoor-adventures') }}">
-                                map of outdoor adventures
-                            </a></em>
-                    
-                    </p> -->
-                   
-                  <!--    
-                    <h4>
-                        <em><b>Get inspired</b> for your next  trip <b>&</b>  <b>discover</b></em> new destinations <br> 
-                            Explore personal impressions of best outdoor locations  & find adventure activities near you.
-                    </h5> -->
-                    
-                    
-                    <!-- <button class="text-white go-to-menu border-r8" style="background:transparent;margin:10px;border:1px solid #FFFFFF;background:#00000075;padding:10px;">
-                    Start exploring now 
-                       &nbsp;
-                        <i class="fa fa-angle-down text-white"></i>
-                         
-                    </button>
-                          -->
+                 
                     
                     
                 @else
@@ -67,7 +36,7 @@
                     <h4 class="k-font">Welcome <b>{{ $user->name }}</b>.</h3>
                      
                     <div class="text-center" style="margin-top:4em;margin-bottom:3em;">
-                    <a style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;padding:10px;margin-top: 10px;display: inline-flex;align-items:center;background:linear-gradient(to right, #565d4873, #3c78784f, #814c6357);border:1px solid #FFF;" href="/share"  >
+                    <a class="br-8" style="margin-bottom:10px;margin-top:15px; padding-left:10px;padding-right:10px; padding:10px;margin-top: 10px;display: inline-flex;align-items:center;border:2px solid #FFF;" href="/share"  >
                        <div class=" kt-header__topbar-wrapper img-fade-hover">
                             <img  style="display:inline;height:22px;" height="22"  src="{{ url('/img/pinplus_white.svg') }}" alt="Share adventure">
                            <div style="white-space: nowrap;margin-left:10px;display:inline;"><b><span style="font-size:1.1rem;color:white;">Share adventure</span></b></div>
@@ -86,10 +55,10 @@
             <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-bold   nav-tabs-line-brand" role="tablist" style=" display: inline-flex;margin:0;border-bottom:1px solid transparent; ">
                 <li class="nav-item" style="display: inline-block;margin-left:-5px;">
                     <a class="nav-link nav-link-home active"  style="font-size:0.8em;"  data-toggle="tab" href="#explore" role="tab">
-                        <div class="img-circle" style="margin-left: auto;margin-right: auto;width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <img style="height:30px;;margin-top: 8px;display: inline;filter: brightness(0) invert(1);" src="{{ url('/img/adventures.svg') }}" alt="Explore outdoor activities near you">
+                        <div class="home-button">
+                            <img src="{{ url('/img/adventures.svg') }}" alt="Explore adventures">
                         </div>
-                       <!--  <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
+                       <!--  <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             Explore <br>  Outdoor <br> Adventures
                         </div> -->
                     </a>
@@ -98,11 +67,11 @@
                 
                 <li class="nav-item nav-map" style="display: inline-block;">
                     <a class="nav-link nav-link-home "  style="font-size:0.8em;"  data-toggle="tab" href="#map" role="tab">
-                    <div class="img-circle" style="margin-left: auto;margin-right: auto;width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <img style="height:30px;;margin-top: 8px;display: inline;filter: brightness(0) invert(1);" src="{{ url('/img/map_pin.svg') }}" alt="The world map of outdoor adventure locations">
+                    <div class="home-button">
+                            <img src="{{ url('/img/map_pin.svg') }}" alt="The world map of outdoor adventure locations">
                         </div>
                         
-                        <!-- <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
+                        <!-- <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             The World Map <br> of <br>Outdoor Adventures
                         </div> -->
                     </a>
@@ -110,10 +79,10 @@
                 </li>
                 <li class="nav-item nav-watch" style="display: inline-block;">
                     <a class="nav-link nav-link-home "  style="font-size:0.8em;"  data-toggle="tab" href="#watch" role="tab">
-                        <div class="img-circle text-center" style="margin-left: auto;margin-right: auto; width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <i class="fa fa-play " style="color:#FFF;font-size:24px;width:50px;height:30px;;margin-top:23px;margin-left:1px;"></i>&nbsp;&nbsp;
+                        <div class="home-button">
+                            <img src="{{ url('/img/video.svg') }}" alt="Videos from adventure locations">
                         </div>
-                        <!-- <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
+                        <!-- <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             Watch<br>Latest <br>Video
                         </div> -->
                     </a>
@@ -122,10 +91,10 @@
                 @if(count($stories))
                 <li class="nav-item" style="display: inline-block;">
                     <a class="nav-link nav-link-home "  style="font-size:0.8em;"  data-toggle="tab" href="#stories" role="tab">
-                        <div class="img-circle" style="margin-left: auto;margin-right: auto;width:50px;height:50px;border-width:2px;margin-bottom:10px;">
-                            <img style="height:30px;margin-top: 8px;display: inline;margin-left:1px;filter: brightness(0) invert(1);" src="{{ url('/img/blog.svg') }}" alt="Latest news & stories">
+                        <div class="home-button">
+                            <img style="height:30px;margin-left:1px;filter: brightness(0) invert(1);" src="{{ url('/img/blog.svg') }}" alt="Latest news & stories">
                         </div>
-                       <!--  <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
+                       <!--  <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;color:#FFFFFF;">
                             News <br> & <br> Stories
                         </div> -->
                     </a>
@@ -155,18 +124,7 @@
                             <div class="kt-portlet__body  padding0" >
                                 <div class="kt-container padding0" >
                                     
-                                   <!--  <br>
-                                    <p><span class="text-gray">Latest outdoor adventures from outdoor activities:</span>
-                                        @php $countLatestBadges = 1;@endphp
-                                        @foreach($latestBadges as $k => $v)
-                                            <a href="/outdoor-adventures/{{  $v }}" style="padding-right: 0;">
-                                                <span class="text-success">#</span><span id="span" class="text-muted">{{  $v }}</span></a>
-                                            @if($countLatestBadges < count($latestBadges))<span>,</span>&nbsp;@endif
-                                            @php $countLatestBadges++;@endphp
-                                        @endforeach 
-
-                                    </p>
-                                    <hr> -->
+                                
                                     <div class="row">
                                             <div class="col-12 text-center">
                                                 <br>
@@ -181,7 +139,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                                    <div id="more-posts" style="min-height:100px;padding-left:10px;padding-right:10px;">
+                                    <div id="more-posts" style="min-height:100px;padding:15px;">
                                         
                                         @include('public.home.latest')
                                         
@@ -214,7 +172,7 @@
                                                     <div class="badge-wrap img-fade-hover" style="-webkit-box-shadow: 0px 0px 2px 0px #111;
                                                             -moz-box-shadow: 0px 0px 2px 0px #111;
                                                             box-shadow: 0px 0px 2px 0px #111; border:3px solid {{ $val['color'] }};
-                                                            background: #555;-webkit-border-radius: 50%;
+                                                            background: #4D4D4D;-webkit-border-radius: 50%;
                                                             -moz-border-radius: 50%;
                                                             border-radius: 50%; width: 45px; height: 45px;margin-left: auto; margin-right: auto;padding: 7px;margin-bottom:5px;">
                                                         <img  class="lazy" alt="{{ $key }} outdoor activity"   src="/img/placeholder-trans.png" data-src="{{ $badges[$key]['icon_empty'] }}" data-srcset="{{ $badges[$key]['icon_empty'] }}" style="width:3.6rem !important;">
@@ -229,12 +187,12 @@
                                     @endforeach
                                     
                                     <div class="col-3 col-sm-2  text-center"  style="padding:0;margin-bottom:20px;">
-                                        <a href="/outdoor-adventures/" class="loading">
+                                        <a href="/search/" class="loading">
                                             <div class="profile-badges profile-badge" data-key="{{ $key }}" style="cursor: pointer;margin-bottom:5px;">
                                                 <div class="badge-wrap" style="-webkit-box-shadow: 0px 0px 3px 0px #000000;
                                                         -moz-box-shadow: 0px 0px 3px 0px #000000;
                                                         box-shadow: 0px 0px 3px 0px #000000; border:3px solid #FFFFFF;
-                                                        background: #555;-webkit-border-radius: 50%;
+                                                        background: #4D4D4D;-webkit-border-radius: 50%;
                                                         -moz-border-radius: 50%;margin-bottom:5px;
                                                         border-radius: 50%; width: 45px; height: 45px;margin-left: auto; margin-right: auto;padding-top: 10px;">
                                                     <span class="text-white"><i class="fa fa-search" style="font-size:16px;margin-left:1px;"></i></span>
@@ -254,7 +212,7 @@
                     </section>
                     
                     @if(!$user)
-                    <section style="background:rgba(0,0,0,0.5);">
+                    <section style="background:rgba(0,0,0,0.6);">
                        
                         <div class="kt-portlet__body" >
                             <div class="kt-container ">
@@ -279,20 +237,20 @@
                             <br>
                                 <div class="row">
                                     <div class="col-sm-3" style="">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" style="background:#00000075;">
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                            <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
+                                                <div   style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                            <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
                                                             src="/img/placeholder-icon.svg" alt="Outdoor photography & film" data-src="{{ url('/img/photos-white.svg') }}" data-srcset="{{ url('/img/photos-white.svg') }}">
                                                         </div>
-                                                        <h2 class="text-white" style="font-size:1.2rem;"><b>Outdoor Photography & Film</b></h2>
+                                                        <h2  style="font-size:1.2rem;"><b>Outdoor Photography & Film</b></h2>
                                             </div> 
                                             <div class="kt-portlet__body text-center" style="padding:20px;">
                                                 <div class="text-justify">
-                                                <p class="text-center text-white">
+                                                <p class="text-center ">
                                                    <em>Interested in outdoor & nature photography and film? </em>
                                                 </p>
-                                                <p class="text-white">
+                                                <p>
                                                 Whether you are a professional or amateur  share  <b>photos</b> and <b>videos</b> of your outdoor activities & favorite adventure locations. <br> Attach  <b>YouTube's</b>  videos just by 
                                                     inserting video URL and increase your videos visibility.
                                                 </p>
@@ -301,24 +259,24 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" style="background:#00000075;">
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
+                                                <div     style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
                                                         src="/img/placeholder-icon.svg" alt="Trip & travel stories" data-src="{{ url('/img/travel.svg') }}" data-srcset="{{ url('/img/travel.svg') }}">
                                                     </div>
-                                                    <h2 class="text-white" style="font-size:1.2rem;"><b>Trip & Travel Stories</b></h2>
+                                                    <h2  style="font-size:1.2rem;"><b>Trip & Travel Stories</b></h2>
                                             </div>  
                                             <div class="kt-portlet__body text-center" style="padding:20px;">
                                                 <div style="width:100%">
                                                 
                                                    
                                                 </div>
-                                                <div class="text-justify text-white">
+                                                <div class="text-justify ">
                                                     <p class="text-center">
                                                     <em>Do you write stories about trips & travel?</em>
                                                     </p>
-                                                    <p class="text-white">
+                                                    <p>
                                                         Share your stories from trips & travel and <b>promote your blog</b>.<br>  Give others useful tips about travel destinations & outdoor activities that you have experienced in your country or while traveling.
                                                     </p>
                                                 </div>
@@ -327,18 +285,18 @@
                                         
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8"  style="background:#00000075;">
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8"  >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy " width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
+                                                <div     style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                        <img class="lazy " width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
                                                         src="/img/placeholder-icon.svg" alt="Adventure Tourism" data-src="{{ url('/img/tourism-white.svg') }}" data-srcset="{{ url('/img/tourism-white.svg') }}">
                                                     </div>
-                                                    <h2 class="text-white" style="font-size:1.2rem;"><b>Adventure Tourism</b></h2>
+                                                    <h2  style="font-size:1.2rem;"><b>Adventure Tourism</b></h2>
                                             </div>   
                                             <div class="kt-portlet__body text-center" style="padding:20px;">
                                                     
                                                    
-                                                    <div class="text-justify text-white">
+                                                    <div class="text-justify ">
                                                         <p class="text-center ">
                                                             <em>Do you provide adventure tourism services?</em>
                                                         </p>
@@ -349,17 +307,17 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" style="background:#00000075;">
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;background:#666;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter: drop-shadow(0px 3px 3px #000) !important;" 
+                                                <div   style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
                                                         src="/img/placeholder-icon.svg" alt="Local tourism promotion" data-src="{{ url('/img/map-white.svg') }}" data-srcset="{{ url('/img/map-white.svg') }}">
                                                     </div>
-                                                    <h2 class="text-white" style="font-size:1.2rem;"><b>Promote Your Country</b></h2>
+                                                    <h2  style="font-size:1.2rem;"><b>Promote Your Country</b></h2>
                                                 </div> 
                                             <div class="kt-portlet__body text-center" style="padding:20px;">
                                                     
-                                            <div class="text-justify text-white">
+                                            <div class="text-justify ">
                                                     <p class="text-center">
                                                         <em>Engage in <b>local tourism promotion</b> and share your country's hidden gems.</em>
                                                     </p> 
@@ -416,8 +374,12 @@
                                
                                 <hr>
                                  @if(!$user)
-                                <p class="text-center">Every country has its own hidden gems. Show us <b>your country's best outdoor locations</b>. <br>
-                                    Add adventure locations with  photos & videos, routes & trails <br>   and get involved in creating the world map of outdoor adventures!</p>
+                                <p>
+                                    Every country has its own hidden gems. <br>
+                                        Show us your country's best outdoor locations.
+                                </p>
+                                 <br>
+                                
                                     @endif
                                     <br>
                                  
@@ -428,7 +390,7 @@
                                             <a href="/country/{{ $obj->slug }}" class="img-fade-hover">
                                                     @if($obj->code2)
                                                     <div style="margin-left:-1px;position:relative;display:inline-block;border:1px solid #fbfbfb;background-image:url('/img/countries/svg/{{ strtolower($obj->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 50px; height: 50px;border:1px solid #999;">
-                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:35px;height:35px;background:#666;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
+                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:35px;height:35px;background:#474747;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
                                                     </div>
                                                     
                                                     @endif
@@ -444,7 +406,9 @@
                                         
                                     </div>
                                     @if(!$user)
-                                    <p> <i class="fa fa-question-circle"></i>  You don't see the flag of your country? Be first to <a href="/share">share an adventure</a> location from your country!</p>
+                                    <p> <i class="fa fa-question-circle"></i>  You don't see the flag of your country? <br> Be first to <a href="/" data-toggle="modal" data-target="#signUpModal" >
+                   
+                                       <b>share an adventure</b></a> location from your country!</p>
                                     @endif
                             </div>
                         </div>
@@ -558,7 +522,7 @@
                                                                                     <div class="col-xs-3" style="margin-bottom: 10px;">
                                                                                         <a href="/outdoor-adventures/{{ $key }}" style="margin-right: 10px;font-size:0.8em;">
                                                                                         <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:2px solid {{ $badges[$key]['color'] }}; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 6px;">
-                                                                                            <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter:invert(0.5);" alt="{{ $key }} adventure location ">
+                                                                                            <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter:invert(0.7);" alt="{{ $key }} adventure location ">
                                                                                         </div>
 <!-- <br>
                                                                                             <span class="text-dark" style="text-transform: lowercase;">&nbsp;<span class="text-success">#</span>{{ $badges[$key]['name'] }}</span> -->
@@ -673,10 +637,10 @@
         </div>
     </div>
     @if($quote)
-        <div style="background:rgba(0,0,0,0.5);">
+        <div style="background:rgba(0,0,0,0.6);">
         <!-- <section>
             <div class="kt-media-group text-center" style="display:block;margin:20px;margin-top:0;padding-top:40px;">
-                    <h3 style="font-weight: bold;font-size:1.4rem;margin-top:10px;" class="text-white">
+                    <h3 style="font-size:1.4rem;margin-top:10px;" class="text-white">
                         The Most Active Adventurers
                     </h3>
                     <div  style="padding-left:10px;">
@@ -700,7 +664,7 @@
             
             <div class="kt-container text-center" >
                 <section>
-                    <div class="text-center text-white" style="padding-top:40px;width:80%;margin-left:auto;margin-right:auto;padding-bottom:40px;">
+                    <div class="text-center text-white" style="padding-top:4rem;padding-bottom:4rem;width:80%;margin-left:auto;margin-right:auto;;">
                         <h3 class="quote k-font" style="font-weight:400;font-size:1.8rem; font-style:italic;">{{ $quote->title}}</h3>
                         <p class="text-center" style="padding-left: 10px;padding-right: 10px;">
                             <b>&#8212;</b> {{ $quote->author }}

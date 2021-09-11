@@ -21,17 +21,19 @@
                 <div class="kt-portlet__body text-center" style="padding:0;padding-top: 10px;">
                    
                     <div class="row">
-                        <div class="col-12 text-left">
+                        <div class="col-12 text-center">
                             <div style="padding:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; ">
                             <h4> <i class="fa fa-info-circle text-muted"></i> Country Facts</h4>
 
-                           
-                             Original Name: <b>{{ $country->origin_title }}</b><br>
+                                <div class="text-gray">
+                                    Original Name: <b>{{ $country->origin_title }}</b><br>
 
-                             Region: <b>{{ $country->subregion }}</b> <br>
-                             Language: <b>{{ $country->language }}</b> <br>
-                             Phone Code: <b>+{{ $country->phone_code }}</b> <br>
-                             Capital City: <b>{{ $country->capital }}</b> <br>
+                                    Region: <b>{{ $country->subregion }}</b> <br>
+                                    Language: <b>{{ $country->language }}</b> <br>
+                                    Phone Code: <b>+{{ $country->phone_code }}</b> <br>
+                                    Capital City: <b>{{ $country->capital }}</b> <br>
+                                </div>
+                            
                              </div>
                         </div>
                         
@@ -54,31 +56,25 @@
                 </div>
             </div>
         </div>
-        <div class="kt-portlet__body padding0">
+        <div class="kt-portlet__body ">
            
-            <div class="kt-container padding0" >
+            <div class="kt-container filter-toolbar-container" >
                 @include('shared.lists.toolbar')
             </div>
-            <div class="kt-container padding0">
-                <div class="row">
-                    <div class="col-sm-12 text-center padding0" >
-                        <div class="kt-container" style="padding: 0;" style="min-height:800px;">
-                            <div id="adventures-grid" class="adventures-masonry-grid" style="cursor: pointer;">
-                                <div class="adventure-grid-sizer"></div>
-                            </div>
+            <div class="kt-container"  style="min-height:800px;">
+                <div id="adventures-grid" class="adventures-masonry-grid" style="cursor: pointer;">
+                    <div class="adventure-grid-sizer"></div>
+                </div>
 
-                            <div id="more-posts" style="min-height:100px;padding:15px;">
-                            </div>
+                <div id="more-posts" style="min-height:100px;">
+                </div>
 
-                            <br>
-                            <div id="scrollForMore" class="" style="font-size:0.8em;">
-                                <p class="text-center">
-                                    <i style="font-size:1.4em;" class="fa fa-angle-down"></i>
-                                </p>
-                                <p>Swipe down to see more adventures.</p>
-                            </div>
-                        </div>
-                    </div>
+                <br>
+                <div id="scrollForMore" class="" style="font-size:0.8em;">
+                    <p class="text-center">
+                        <i style="font-size:1.4em;" class="fa fa-angle-down"></i>
+                    </p>
+                    <p>Swipe down to see more adventures.</p>
                 </div>
             </div>
         </div>

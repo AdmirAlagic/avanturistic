@@ -52,7 +52,8 @@ class ProfileController extends AppController
 
         
         $data = [
-            'pageTitle' => 'Profile • Avanturistic',
+            'pageTitle' => 'Profile Settings',
+            'mobileTitle' => 'Profile Settings',
             'model' => $this->user,
             'badges' => $this->badges,
             'countries' =>  Country::orderBy('title', 'asc')->get(),
@@ -87,7 +88,7 @@ class ProfileController extends AppController
     public function publicProfile($slug = null){
 
         if(!$this->user){
-            return redirect('/register')->with('error', 'Create an account to see users profiles.');
+            return redirect('/sign-up')->with('error', 'Create an account to see users profiles.');
         }
 
         if(!$this->user){
@@ -135,7 +136,7 @@ class ProfileController extends AppController
         }
 
 
-        $pageTitle = $user->name . ' • Avanturistic';
+        $pageTitle = $user->name;
         $visitedCountriesCount = 0;
         if(isset($user->options['visited_countries']) && count($user->options['visited_countries']))
             $visitedCountriesCount = count($user->options['visited_countries']);
@@ -166,6 +167,7 @@ class ProfileController extends AppController
         $data = [
             'model' => $user,
             'pageTitle' => $pageTitle,
+            'mobileTitle' => $pageTitle,
             'pageDescription' => $pageDescription,
             'pageImage' => $pageImage,
             'hasSocial' => $hasSocial,
@@ -193,7 +195,8 @@ class ProfileController extends AppController
             ]);
         }
         $data = [
-            'pageTitle' => 'Notifications • Avanturistic',
+            'pageTitle' => 'Notifications',
+            'mobileTitle' => 'Notifications',
             'unreadNotifications' => 0
         ];
         return view('notifications.index', $data);
@@ -261,8 +264,11 @@ class ProfileController extends AppController
 
         if(!Auth::check())
             return redirect('/login');
+
+       
         $data = [
-           
+            'pageTitle' => 'Messages',
+            'mobileTitle' => 'Messages',
         ];
 
         return view('profile.messages', $data);
@@ -283,6 +289,10 @@ class ProfileController extends AppController
     }
 
     public function changePassword(){
+        $data = [
+            'pageTitle' => 'Change Password',
+            'mobileTitle' => 'Change Password',
+        ];
         return view ('profile.settings.change_password');
     }
 

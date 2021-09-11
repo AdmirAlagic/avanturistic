@@ -88,7 +88,7 @@ $(document).ready(function () {
             confirm.style.zIndex = 9999;
             confirm.textContent = 'Next';
             confirm.style.color = '#FFFFFF';
-            confirm.style.backgroundColor = '#b4d677';
+            confirm.style.backgroundColor = '#acc957';
             confirm.style.padding = '10px';
             confirm.style.border = 'none';
             confirm_wrapper.appendChild(back);

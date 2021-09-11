@@ -11,7 +11,7 @@ body
 	font-size: 12px;
 
 	/* Text color */
-	color: #333;
+	color: #3C3C3C;
 
 	/* Remove the background color to make it transparent. */
 	background-color: #fff;
@@ -164,7 +164,7 @@ a > img {
 .image-grayscale
 {
 	background-color: white;
-	color: #666;
+	color: #474747;
 }
 
 .image-grayscale img, img.image-grayscale

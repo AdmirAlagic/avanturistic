@@ -24,9 +24,8 @@
                         <div class="kt-footer__content text-center" style="color:#f8f8fb;text-align: justify;">
                             <b>Avanturistic</b> is a network for <b>adventure</b>. <br><a class="text-success" href="/">Explore</a> & <a class="text-success" href="/share">
                                 share
-                            </a> outdoor adventures with  <br> routes, locations, photos, videos and <br>
-                           get involved in creating <b><a class="text-success" href="{{ url('the-world-map-of-outdoor-adventures') }}">the world map of outdoor adventures</a></b>.
-                           <br>
+                            </a> outdoor adventures with   routes, locations, photos, videos and  
+                           get involved in creating <br> <b><a class="text-success" href="{{ url('the-world-map-of-outdoor-adventures') }}">the world map of outdoor adventures</a></b>.
                            <br>
                            <a class="text-muted" href=" https://avanturistic.com/welcome-adventurer">
                                 <b>Discover more about Avanturistic</b> 
@@ -70,7 +69,7 @@
                                 </a>
                                
                                 
-                               <div class="kt-visible-desktop">
+                               <div class="kt-hidden-tablet-and-mobile">
                                <br> 
                                     <img class="lazy" alt="Avanturistic app on Google Play" src="/img/placeholder-dark.svg"  data-src="{{ url('/img/qrcode.svg') }}" data-srcset="{{ url('/img/qrcode.svg') }}"  style="width: 120px; height: 120px;">
                                     <br><br>
@@ -109,19 +108,19 @@
             <div class="kt-footer__wrapper text-center" style="padding:10px;">
                 <div class="kt-footer__logo">
                     <div class="kt-footer__copyright" style="color:#999;">
-                        <small>Copyright ©
+                       Copyright ©
                             {{ date("Y")}}
 
-                            <b>Avanturistic</b></small>
+                            <b>Avanturistic</b>
                     </div>
                 </div>
                 <div class="kt-footer__menu text-center">
-                    <a class="text-white" href="mailto:info@avanturistic.com"><small><b>info@avanturistic.com</b></small></a>
+                    <a class="text-white" href="mailto:info@avanturistic.com"><b>info@avanturistic.com</b></a>
                     <a class="text-white" href="/privacy-policy">
-                        <small>Privacy Policy</small>
+                        Privacy Policy
                     </a>
                     <a class="text-white" href="/terms-and-conditions">
-                        <small>Terms & Conditions</small>
+                        Terms & Conditions
                     </a>
                 </div>
             </div>

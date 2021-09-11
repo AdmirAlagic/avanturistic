@@ -19,12 +19,12 @@
 }
 
 .kt-chat .kt-chat__head .kt-chat__label .kt-chat__title:hover {
-  color: #b4d677;
+  color: #acc957;
   transition: color 0.3s ease;
 }
 
 .kt-chat .kt-chat__head .kt-chat__label .kt-chat__status {
-  color: #666;
+  color: #474747;
   font-size: 0.9rem;
   font-weight: 500;
   display: block;
@@ -57,12 +57,12 @@
 }
 
 .kt-chat .kt-chat__messages .kt-chat__message .kt-chat__user .kt-chat__username:hover {
-  color: #b4d677;
+  color: #acc957;
   transition: color 0.3s ease;
 }
 
 .kt-chat .kt-chat__messages .kt-chat__message .kt-chat__user .kt-chat__datetime {
-  color: #666;
+  color: #474747;
   font-size: 0.9rem;
   font-weight: 400;
 }
@@ -71,14 +71,14 @@
   display: inline-block;
   padding: 0.5rem 0.6rem;
   margin-top: 0.8rem;
-  color: #333;
+  color: #3C3C3C;
   background: #eeeeee !important;
   font-size: 1.1rem;
   border-radius: 12px;
 }
 
 .kt-chat .kt-chat__messages .kt-chat__message .kt-chat__text b {
-  color: #333;
+  color: #3C3C3C;
   font-weight: 0;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .kt-chat .kt-chat__input .kt-chat__toolbar .kt_chat__tools a i:hover {
-  color: #b4d677;
+  color: #acc957;
   transition: color 0.3s ease;
 }
 

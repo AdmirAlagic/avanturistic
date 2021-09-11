@@ -41,8 +41,9 @@ class LoginController extends Controller
         $this->middleware(function ($request, $next) {
 //            $scripts[] = '/auth/login.js';
 //            view()->share('scripts', $scripts);
-            view()->share('pageTitle', 'Login • Avanturistic');
-            view()->share('pageDescription', 'Log in to Avanturistic. Continue with Facebook. Continue with Google. Don\'t have an account?. Sign up');
+view()->share('pageTitle', 'Login');
+ 
+view()->share('pageDescription', 'Log in to Avanturistic. Continue with Facebook. Continue with Google. Don\'t have an account?. Sign up');
             view()->share('pageImage', url('/img/avanturistic.jpg'));
             $isWebView = false;
             if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
@@ -51,6 +52,18 @@ class LoginController extends Controller
                 }
             }
             view()->share('isWebView', $isWebView);
+
+            if(preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo 
+            |fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i"
+                , $_SERVER["HTTP_USER_AGENT"])){
+                $isMobile = true;
+            } else{
+                $isMobile = false;
+            }
+
+
+            view()->share('isMobile', $isMobile);
+         
             return $next($request);
         });
     }

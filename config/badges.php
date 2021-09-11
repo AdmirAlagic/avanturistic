@@ -48,7 +48,7 @@ return [
         'backpacking' => ['name' => 'Backpacking',
             'icon' => '/img/badges/backpacking.svg',
             'icon_empty' => '/img/badges/empty/backpacking.svg',
-            'color' => '#b4d677',
+            'color' => '#acc957',
             'keywords' =>[
             'Best backpacking adventures',
             'Best backpacking destinations',
@@ -97,7 +97,7 @@ return [
             'icon' => '/img/badges/camping.svg',
             'icon_empty' => '/img/badges/empty/camping.svg',
 
-            'color' => '#b4d677',
+            'color' => '#acc957',
             'keywords' =>[
             'Best camping adventures',
             'Best Camping locations',
@@ -186,7 +186,7 @@ return [
         'hiking' => ['name' => 'Hiking',
             'icon' => '/img/badges/hiking.svg',
             'icon_empty' => '/img/badges/empty/hiking.svg',
-            'color' => '#b4d677',
+            'color' => '#acc957',
             'keywords' =>[
             'Best hiking adventures',
             'Best hHiking destinations',
@@ -257,7 +257,7 @@ return [
         'nature-parks' => ['name' => 'Nature Parks',
                 'icon' => '/img/badges/nature_parks.svg',
                 'icon_empty' => '/img/badges/empty/nature_parks.svg',
-                'color' => '#b4d677',
+                'color' => '#acc957',
                 'keywords' =>[
                 'Best national parks',
                 'Best nature park destinations',
@@ -418,7 +418,7 @@ return [
     'via-ferrata' => ['name' => 'Via Ferrata',
         'icon' => '/img/badges/via_ferrata.svg',
         'icon_empty' => '/img/badges/empty/via_ferrata.svg',
-        'color' => '#b4d677', 'keywords' =>[
+        'color' => '#acc957', 'keywords' =>[
         'Best swimming adventures',
         'Best swimming destinations',
         'swimming pictures',
