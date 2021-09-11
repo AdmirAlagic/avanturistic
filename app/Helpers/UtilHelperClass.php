@@ -97,7 +97,7 @@ class UtilHelperClass
                     Log::info('Missing file:' . $obj['path'] . ' post ID:'. $post->id);
                     Log::info($images);
                     $hasMissingFiles = true;
-                    $img = Image::make(public_path($obj['thumb_path']));
+                    $img = Image::make(public_path(str_replace('.JPG', '.jpg', $obj['thumb_path'])));
                     $img->resize(900, null, function ($constraint) {
                         $constraint->aspectRatio();
                        /*  $constraint->upsize(); */
