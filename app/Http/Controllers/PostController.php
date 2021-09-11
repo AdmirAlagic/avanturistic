@@ -472,6 +472,7 @@ class PostController extends AppController
             'mainActivity' =>  str_replace('-',' ', $mainActivity),
             'comments' => $post->comments()->approved()->orderBy('created_at', 'asc')->paginate(20),
             'pageTitle' => $pageTitle,
+            'mobileTitle' =>  $post->title,
             'pageImage' => url(isset($post->image[0]['path']) ? $post->image[0]['path'] : '/img/avanturistic.jpg'),
             'pageDescription' => $pageDescription,
             'country' => $country,

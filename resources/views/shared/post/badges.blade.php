@@ -8,7 +8,7 @@
                     <div class="col-4 col-sm-3 text-center">
                         <a href="/outdoor-adventures/{{ $key }}" style="margin-right: 10px;font-size:0.8em;">
                             <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:3px solid {{ $badges[$key]['color'] }}; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 6px;">
-                                <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter:invert(0.5);" alt="{{ $key }} adventure location ">
+                                <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter:invert(0.7);" alt="{{ $key }} adventure location ">
                             </div>
 
              <br>

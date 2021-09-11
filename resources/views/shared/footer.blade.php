@@ -69,7 +69,7 @@
                                 </a>
                                
                                 
-                               <div class="kt-visible-desktop">
+                               <div class="kt-hidden-tablet-and-mobile">
                                <br> 
                                     <img class="lazy" alt="Avanturistic app on Google Play" src="/img/placeholder-dark.svg"  data-src="{{ url('/img/qrcode.svg') }}" data-srcset="{{ url('/img/qrcode.svg') }}"  style="width: 120px; height: 120px;">
                                     <br><br>

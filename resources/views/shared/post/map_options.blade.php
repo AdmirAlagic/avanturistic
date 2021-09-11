@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a class="btn btn-dark" style="margin-top:10px;padding:5px;background:#474747;-webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;" target="_blank" href="https://www.google.com/maps/search/?api=1&query={{$post->lat}},{{$post->lng}}">
+                <a class="btn btn-dark" style="margin-top:10px;padding:5px;background:#474747;-webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;padding-left: 10px; padding-right: 10px; " target="_blank" href="https://www.google.com/maps/search/?api=1&query={{$post->lat}},{{$post->lng}}">
                     <b><span class="text-white">Get Directions</span></b>
                 </a>
             </div>

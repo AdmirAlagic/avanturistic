@@ -96,7 +96,7 @@
 }
 .geocoder-control-header {
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #444;
@@ -283,7 +283,7 @@
     z-index: 650;
 }
 .leaflet-popup-pane {
-    z-index: 700;
+    z-index: 500;
 }
 .leaflet-map-pane canvas {
     z-index: 100;
@@ -656,7 +656,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     font: 16px/14px Tahoma, Verdana, sans-serif;
     color: #c3c3c3;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     background: 0 0;
 }
 .leaflet-container a.leaflet-popup-close-button:hover {
@@ -1841,7 +1841,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     font-weight: 600;
 }
 .kt-badge.kt-badge--boldest {
-    font-weight: 700;
+    font-weight: 500;
 }
 .kt-badge.kt-badge--md {
     height: 24px;
@@ -2362,137 +2362,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         padding-bottom: 10px;
     }
 }
-.kt-pagination {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-}
-.kt-pagination .kt-pagination__links,
-.kt-pagination .kt-pagination__links li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.kt-pagination .kt-pagination__links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.kt-pagination .kt-pagination__links li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0.5rem;
-    border-radius: 4px;
-}
-.kt-pagination .kt-pagination__links li a {
-    font-weight: 500;
-    color: #474747;
-    font-size: 1rem;
-    padding: 0 0.2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-width: 30px;
-    min-height: 30px;
-    margin: 0;
-}
-.kt-pagination .kt-pagination__links .kt-pagination__link--active a {
-    color: #fff;
-}
-.kt-pagination .kt-pagination__toolbar {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
-.kt-pagination .kt-pagination__toolbar .form-control {
-    padding: 0;
-    margin-right: 10px;
-    height: 30px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1;
-    outline: 0;
-    border: none;
-}
-.kt-pagination .kt-pagination__toolbar .pagination__desc {
-    flex-grow: 1;
-    font-weight: 500;
-    color: #474747;
-}
-.kt-pagination.kt-pagination--brand .kt-pagination__links .kt-pagination__link--first,
-.kt-pagination.kt-pagination--brand .kt-pagination__links .kt-pagination__link--last,
-.kt-pagination.kt-pagination--brand .kt-pagination__links .kt-pagination__link--next,
-.kt-pagination.kt-pagination--brand .kt-pagination__links .kt-pagination__link--prev {
-    background: rgba(54, 108, 243, 0.1);
-}
-.kt-pagination.kt-pagination--brand .kt-pagination__links .kt-pagination__link--active {
-    background: #474747;
-    background-color:#474747;
-}
-.kt-pagination.kt-pagination--brand .kt-pagination__links li:hover {
-    background: #474747;
-    transition: color 0.3s ease;
-}
-.kt-pagination.kt-pagination--brand .kt-pagination__links li:hover a {
-    color: #fff  !important;
-}
-.kt-pagination.kt-pagination--brand .kt-pagination__links li:hover a i {
-    color: #fff !important;
-}
-.kt-pagination.kt-pagination--brand .kt-pagination__toolbar .form-control {
-    background: rgba(54, 108, 243, 0.1);
-}
  
-.kt-pagination.kt-pagination--circle .kt-pagination__links li {
-    min-width: 30px;
-    min-height: 30px;
-   
-}
-.kt-pagination.kt-pagination--lg .kt-pagination__links li a {
-    font-size: 1.3rem;
-    min-width: 35px;
-    min-height: 35px;
-}
-.kt-pagination.kt-pagination--lg .kt-pagination__toolbar .form-control {
-    height: 35px;
-    font-size: 1.2rem;
-    padding: 0.2rem 0 0.2rem 0.2rem;
-}
-.kt-pagination.kt-pagination--sm .kt-pagination__links li a {
-    font-size: 1rem;
-    min-width: 25px;
-    min-height: 25px;
-}
-.kt-pagination.kt-pagination--sm .kt-pagination__toolbar .form-control {
-    height: 25px;
-    font-size: 0.9rem;
-}
-@media (max-width: 768px) {
-    .kt-pagination .kt-pagination__links {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .kt-pagination .kt-pagination__links li {
-        margin: 0.3rem 0.5rem 0.3rem 0;
-    }
-    .kt-pagination .kt-pagination__links li a {
-        font-size: 0.9rem;
-        min-width: 25px;
-        min-height: 25px;
-    }
-    .kt-pagination .kt-pagination__toolbar .form-control {
-        height: 25px;
-        font-size: 0.9rem;
-        padding: 0.2rem 0 0.2rem 0.2rem;
-    }
-}
 .kt-footer {
     padding: 0;
     margin: 0;

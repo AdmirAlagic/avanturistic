@@ -22,6 +22,8 @@ class AppController extends Controller
 
             view()->share('user', $this->user);
 
+           
+
             $this->badges = config('badges.list', []);
             $badges_kewords = '';
 

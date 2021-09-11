@@ -55,13 +55,13 @@
                <!-- <div class="row">
                    <div class="col-sm-12 text-center" style="padding:0px;"> -->
                     
-                       <div class="kt-container" style="padding: 0;min-height:600px;" id="posts-container" data-page="{{ request()->filled('page') ? request()->page : 1 }}" >
+                       <div class="kt-container" style="min-height:600px;" id="posts-container" data-page="{{ request()->filled('page') ? request()->page : 1 }}" >
                            <div id="adventures-grid" class="adventures-masonry-grid" style="cursor: pointer;">
                                <div class="adventure-grid-sizer"></div>
 
                            </div>
                         
-                           <div id="more-posts" style="min-height:700px;padding:15px;">
+                           <div id="more-posts" style="min-height:700px;">
                                 @if(isset($more_posts) && $more_posts)
                                  {!! $more_posts !!}
                                 @endif

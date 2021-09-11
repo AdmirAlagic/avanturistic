@@ -128,14 +128,13 @@ body {
 }
 
 a {
-  font-weight: bold;
-  color: #ACC957;
+  font-weight: 500;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #ACC957;
+  opacity: 0.8;
 }
 
 .kt-notification .kt-notification__item:hover .kt-notification__item-details .kt-notification__item-title {
@@ -338,18 +337,18 @@ a:active {
 }
 
 .kt-header-mobile .kt-header-mobile__toolbar .kt-header-mobile__toolbar-toggler span {
-  background: #474747;
+  background: #454545;
   height: 3px;
 }
 
 .kt-header-mobile .kt-header-mobile__toolbar .kt-header-mobile__toolbar-toggler span:before {
   height: 3px;
-  background: #474747;
+  background: #454545;
 }
 
 .kt-header-mobile .kt-header-mobile__toolbar .kt-header-mobile__toolbar-toggler span:after {
   height: 3px;
-  background: #474747;
+  background: #454545;
 }
 
 .flag-svg svg {
@@ -368,7 +367,7 @@ a:active {
 
 .kt-header__topbar .kt-header__topbar-item:hover .kt-header__topbar-icon,
 .kt-header__topbar .kt-header__topbar-item.show .kt-header__topbar-icon {
-  background-color: #474747;
+  background-color: #454545;
 }
 
 .kt-header-mobile__toolbar-topbar-toggler--active {
@@ -478,7 +477,7 @@ a:active {
 .btn.btn-default {
   background-color: transparent;
   border-color: #eeeeee;
-  color: #474747;
+  color: #454545;
 }
 
 .btn.btn-default:hover,
@@ -522,13 +521,9 @@ a {
   color: #ffffff;
 }
 
-.alert.alert-warning a {
-  color: #FFFFFF;
-}
-
 .alert.alert-danger {
   background: #ffffff;
-  color: #474747;
+  color: #454545;
   border: 1px solid #666 !important;
 }
 
@@ -819,7 +814,7 @@ body,
   width: 40px;
   height: 40px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   border: 2px solid #FFF;
   vertical-align: middle;
 }
@@ -936,7 +931,7 @@ html {
 }
 
 .text-gray {
-  color: #999 !important;
+  color: #666 !important;
 }
 
 .my-post-edit {
@@ -1034,7 +1029,7 @@ html {
   transition: 300ms ease-out;
   padding-top: 3px;
   border-radius: 9999em;
-  background-color: #474747;
+  background-color: #454545;
   transition: box-shadow 0.3s;
   width: 30px;
   height: 30px;
@@ -1195,7 +1190,7 @@ html {
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
-  color: #474747;
+  color: #454545;
   cursor: pointer;
   outline: none;
   overflow: hidden;
@@ -1265,8 +1260,8 @@ body {
 }
 
 .profile-badge.active.badge-wrap {
-  background-color: #474747;
-  border-color: #474747;
+  background-color: #454545;
+  border-color: #454545;
 }
 
 .profile-badge.inactive .badge-wrap {
@@ -1433,7 +1428,7 @@ blockquote {
   border-radius: 4px;
   margin: 20px auto;
   font-style: italic;
-  color: #272727;
+  color: #4D4D4D;
   padding: 1em;
   padding-right: 1.2em;
   border-left: 8px solid #ACC957;
@@ -1552,17 +1547,21 @@ label {
   content: "" !important;
 }
 
+.home-button {
+  transition: all 0.3s ease;
+}
+
+.home-button img {
+  filter: brightness(0) invert(1);
+  height: 30px;
+}
+
 .nav-link.nav-link-home.active .nav-link-desc {
   transition: all 0.3s ease;
 }
 
 .nav-link.nav-link-home.active .home-button {
-  transition: all 0.3s ease;
   border-color: #acc957;
-}
-
-.nav-link.nav-link-home.active .home-button img {
-  filter: brightness(0) invert(1);
 }
 
 .nav-link.nav-link-profile.active .nav-link-desc {
@@ -1573,7 +1572,7 @@ label {
 .nav-link.nav-link-profile.active .img-circle {
   text-shadow: 0 0 1px #3C3C3C;
   transition: all 0.3s ease;
-  background: #474747;
+  background: #454545;
 }
 
 .nav-link.nav-link-profile.active .img-circle img {
@@ -1785,8 +1784,8 @@ img.lazyloaded {
 }
 
 label {
-  font-weight: 600 !important;
-  color: #474747;
+  font-weight: 500 !important;
+  color: #454545;
 }
 
 .country .adventureCount {
@@ -1994,7 +1993,6 @@ h3.quote:after {
 .btn-more {
   background: white;
   color: #333 !important;
-  font-weight: bold;
   font-size: 1rem;
   outline: none;
   box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
@@ -2045,7 +2043,7 @@ h3.quote:after {
   height: 50px;
   line-height: 50px;
   vertical-align: bottom;
-  color: white;
+  color: 474747;
   background: #ACC957;
   -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
@@ -2091,10 +2089,6 @@ h3.quote:after {
   -moz-border-radius-bottomleft: 8px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-}
-
-#blog-show {
-  font-size: 15px;
 }
 
 #blog-show ins {
@@ -2196,78 +2190,6 @@ h3.quote:after {
   border-radius: 50%;
 }
 
-.kt-media-card {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.kt-media-card .kt-media {
-  margin-right: 0.75rem;
-}
-
-.kt-media-card .kt-media-card__info {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.kt-media-card .kt-media-card__info .kt-media-card__title {
-  color: kt-base-color(label, 3);
-  font-weight: 500;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.kt-media-card .kt-media-card__info a.kt-media-card__title {
-  transition: color 0.3s ease;
-}
-
-.kt-media-card .kt-media-card__info a.kt-media-card__title:hover {
-  transition: color 0.3s ease;
-  color: kt-brand-color();
-}
-
-.kt-media-card .kt-media-card__info .kt-media-card__desc {
-  color: kt-base-color(label, 2);
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
-.kt-media-card .kt-media-card__info a.kt-media-card__desc {
-  transition: color 0.3s ease;
-}
-
-.kt-media-card .kt-media-card__info a.kt-media-card__desc:hover {
-  transition: color 0.3s ease;
-  color: kt-brand-color();
-}
-
-.kt-media-group {
-  display: flex;
-  align-items: center;
-}
-
-.kt-media-group .kt-media {
-  position: relative;
-  z-index: 0;
-  margin-left: -10px;
-  border: 2px solid #fff;
-  transition: all 0.3s ease;
-}
-
-.kt-media-group .kt-media:first-child {
-  margin-left: 0;
-}
-
-.kt-media-group .kt-media:hover {
-  transition: all 0.3s ease;
-  z-index: 1;
-}
-
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 2rem !important;
@@ -2316,7 +2238,7 @@ h3.quote:after {
 }
 
 .slide-text {
-  color: #474747;
+  color: #454545;
   font-size: 1rem;
   margin-left: 25%;
   width: 70%;
@@ -2354,7 +2276,7 @@ h3.quote:after {
   display: inline-flex;
   font-weight: 100;
   transition: color ease 0.3s;
-  color: #474747;
+  color: #454545;
   border: none;
 }
 
@@ -2369,7 +2291,7 @@ h3.quote:after {
 }
 
 .sendMessageBtn:hover {
-  background: #474747;
+  background: #454545;
   color: #FFFFFF !important;
 }
 
@@ -2555,7 +2477,7 @@ h3.quote:after {
 }
 
 .btnOutline {
-  border: 1px solid #474747;
+  border: 1px solid #454545;
   padding: 6px;
   margin-top: 2px;
   font-size: 1rem;
@@ -2585,7 +2507,7 @@ h3.quote:after {
   right: -11px;
   width: 22px;
   height: 22px;
-  background: #474747;
+  background: #454545;
   text-align: center;
   padding: 1px;
   border: 2px solid #111;
@@ -2653,5 +2575,13 @@ h3.quote:after {
 
 .font-light {
   font-weight: 300;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: end;
 }
 

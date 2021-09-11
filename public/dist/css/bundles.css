@@ -36291,7 +36291,7 @@ fieldset[disabled] .datepicker table tr td.range.today.focus {
 .datepicker table tr td.selected.highlighted {
   color: #fff;
   background-color: #777777;
-  border-color: #272727;
+  border-color: #4D4D4D;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .datepicker table tr td.selected:focus,
@@ -36351,7 +36351,7 @@ fieldset[disabled] .datepicker table tr td.selected.highlighted:focus,
 fieldset[disabled] .datepicker table tr td.selected.focus,
 fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
   background-color: #777777;
-  border-color: #272727;
+  border-color: #4D4D4D;
 }
 .datepicker table tr td.active,
 .datepicker table tr td.active.highlighted {
@@ -37584,7 +37584,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
     font-weight: bold;
     margin-right: 2px; }
     .select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover {
-      color: #272727; }
+      color: #4D4D4D; }
 
 .select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice {
   float: right;

@@ -45,7 +45,7 @@
                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/stories" class="kt-menu__link {{ isset($activePage) && $activePage == 'stories' ?  'kt-menu__link--active' :  '' }}">
                             <span class="kt-menu__link-text"> 
-                            <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;">
+                            <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;">
                                     <img class="" src="/img/stories_white.svg" style="width:24px;" alt="Adventure Stories">
                                  </div> <span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>STORIES</b></span>
                         </a>
@@ -56,7 +56,7 @@
 
                         <li  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                             <a href="/my-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'my-adventures' ?  'kt-menu__link--active' :  '' }}">
-                               <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;"> -->
+                               <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;"> -->
                                     <img class="" src="/img/triangles-black.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
                               <!--    </div>  -->
                                 <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">MY ADVENTURES</span>
@@ -340,7 +340,7 @@
                 <div class=" kt-header__topbar-item  ">
                     <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/login"  >
                    
-                        <div class="kt-visible-desktop font-light">
+                        <div class="kt-hidden-tablet-and-mobile font-light">
                            LOGIN
                         </div>
                     </a>
@@ -348,7 +348,7 @@
                 <div class=" kt-header__topbar-item  ">
                     <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/" data-toggle="modal" data-target="#signUpModal" >
                    
-                        <div class="kt-visible-desktop text-success" style="white-space: nowrap;">
+                        <div class="kt-hidden-tablet-and-mobile text-success" style="white-space: nowrap;">
                            SIGN UP
                         </div>
                     </a>

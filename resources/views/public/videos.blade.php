@@ -4,10 +4,10 @@
     <!--begin::Portlet-->
     @include('shared.success_error')
 
-    <div class="kt-container padding0" >
-        <h1 class=" text-center" style="font-size: 1.3em;width:100%;border-radius:0px !important;padding:15px;">
-            <i class="text-green fa fa-play-circle " style="font-size: 1.2em;"></i>
-            Watch Adventure Videos
+    <div class="kt-container" >
+        <h1 class="kt-hidden-tablet-and-mobile text-center" style="font-size: 1.3em;width:100%;border-radius:0px !important;padding:15px;">
+            
+            Adventure Locations Videos
         </h1>
         <div style="min-height:800px;">
 
@@ -159,7 +159,7 @@
                                                             <div class="col-xs-3" style="margin-bottom: 10px;">
                                                                 <a href="/outdoor-adventures/{{ $key }}" style="margin-right: 10px;font-size:0.8em;">
                                                                 <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:2px solid {{ $badges[$key]['color'] }}; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 6px;">
-                                                                                            <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter:invert(0.5);" alt="{{ $key }} adventure location ">
+                                                                                            <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter:invert(0.7);" alt="{{ $key }} adventure location ">
                                                                                         </div>
                                                                 </a>
                                                             </div>
@@ -174,7 +174,7 @@
 
                             <div class="kt-portlet__body ">
                                 <a href="/adventure/{{ $post->id }}/{{ $post->slug }}" class="btn-more btn--with-icon pull-right loading"><i class="btn-icon fa fa-angle-right"></i> 
-                                    <div class="text-center" style="font-size:1.1rem;padding-bottom:1px;">Discover More</div>
+                                    <div class="text-center" style="font-size:1.1rem;padding-bottom:1px;">Explore location</div>
                                 </a>
                                
                             </div>

@@ -1,7 +1,7 @@
-@extends('layouts.auth')
+@extends('layouts.app')
 
 @section('content')
-    <div class="kt-visible-desktop" style="min-height: 40px;">
+    <div class="kt-hidden-tablet-and-mobile" style="min-height: 40px;">
 
     </div>
     <div class="row">
@@ -49,12 +49,7 @@
                             </div>
                             <br>
                             @include('shared.fb_google')
-                            <p style="color:#474747;margin-top:30px;margin-bottom:20px;"> New to Avanturistic? </p>
                             
-                            <a class="text-muted img-fade-hover" href="/sign-up" style="margin-top:5px;padding:10px;border:1px solid #999; -webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;">
-                                <b> Sign Up </b>
-                            </a>
-                           <br> 
                             
 
                         <!--end::Action-->

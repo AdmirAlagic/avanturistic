@@ -185,7 +185,7 @@
                     <li style="padding-left:0;" class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel   " data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                         <a href="/outdoor-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'adventures' ?  'kt-menu__link--active' :  '' }} ">
                             <span class="kt-menu__link-text  " >
-                                 <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;">
+                                 <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;">
                                     <img class="" src="/img/badges/empty/backpacking.svg" style="height:17px;" alt="Backpacking Adventures">
                                  </div> <span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>ADVENTURES</b></span>
 
@@ -196,7 +196,7 @@
                     <li style="" class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel  " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/the-world-map-of-outdoor-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'map' ?  'kt-menu__link--active' :  '' }}">
                             <span class="kt-menu__link-text  " >
-                                 <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;border-color:#272727;background: #101010;margin-right:2px;">
+                                 <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;border-color:#4D4D4D;background: #101010;margin-right:2px;">
                                     <i class="fa fa-map-marker-alt" style="font-size:16px;margin-left:7px;margin-top:5px;"></i>&nbsp;&nbsp;
                                 </div><span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>MAP</b></span>
                             </span>
@@ -206,7 +206,7 @@
                     <li  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel  " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/watch" class="kt-menu__link {{ isset($activePage) && $activePage == 'videos' ?  'kt-menu__link--active' :  '' }}">
                             <span class="kt-menu__link-text " >
-                                <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;border-color:#272727;background: #101010;margin-right:2px;">
+                                <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;border-color:#4D4D4D;background: #101010;margin-right:2px;">
                                    <i class="fa fa-play " style="font-size:14px; margin-left:9px;margin-top:6px;"></i>&nbsp;&nbsp;
                                 </div><span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>WATCH</b></span>
 
@@ -217,7 +217,7 @@
                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
                         <a href="/stories" class="kt-menu__link {{ isset($activePage) && $activePage == 'stories' ?  'kt-menu__link--active' :  '' }}">
                             <span class="kt-menu__link-text"> 
-                            <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#272727;background: #101010;margin-right:2px;">
+                            <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;">
                                     <img class="" src="/img/stories_white.svg" style="width:24px;" alt="Adventure Stories">
                                  </div> <span style="font-size:0.9rem;padding-left:0.5rem;margin-right:1px;"> <b>STORIES</b></span>
                         </a>

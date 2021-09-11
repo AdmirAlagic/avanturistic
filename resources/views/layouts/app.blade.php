@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"> <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/> <meta name="author" content="Admir Alagić"> <meta property="og:site_name" content="Avanturistic.com"> <meta property="og:type" content="website"/> <meta name="google" value="notranslate"/> <meta name="googlebot" content="index,follow,noodp" /><meta name="robots" content="index,follow,noodp"> <meta name="language" content="English"> <meta http-equiv="content-language" content="en"> <meta name="csrf-token" content="{{csrf_token()}}"> <meta name="mobile-web-app-capable" content="yes"> <meta property="fb:pages" content="108753130584073"/> <meta name="application-name" content="Avanturistic"/> <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png"/> <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png"/> <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png"/> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png"/> <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png"/> <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png"/> <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png"/> <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png"/> <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196"/> <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/> <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/> <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/> <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128"/> <meta name="msapplication-TileColor" content="#FFFFFF"/> <meta name="msapplication-TileImage" content="/mstile-144x144.png"/> <meta name="msapplication-square70x70logo" content="/mstile-70x70.png"/> <meta name="msapplication-square150x150logo" content="/mstile-150x150.png"/> <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png"/> <meta name="msapplication-square310x310logo" content="/mstile-310x310.png"/> <meta property="fb:app_id" content="445067332826256" > <meta name="theme-color" content="#000000"> <link rel="manifest" href="/site.webmanifest">
 
-    <title>{{ isset($pageTitle) && $pageTitle != '' ?  $pageTitle  : '' }}</title>
+    <title>{{ isset($pageTitle) && $pageTitle != '' ?  $pageTitle . ' • Avanturistic'  : '' }}</title>
     <meta name="title" content="{{ isset($pageTitle) && $pageTitle ? $pageTitle : '' }}">
     <meta name="description" content="{{ isset($pageDescription) && $pageDescription ? $pageDescription : 'Explore & share Outdoor adventures locations, photos and videos and get involved in creating the world map of outdoor adventures!' }}">
     <meta name="image" content="{{ isset($pageImage) ? $pageImage : url('/img/avanturistic.jpg') }}">
@@ -158,13 +158,21 @@ console.log(document.getElementById('loged_user').value)
     {{-- <div class="kt-header-mobile__toolbar">
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
     </div> --}}
-    <div class="kt-header-mobile__logo">
-        <a href="/" class="font-weight-bold"  title="Avanturistic.com">
-            <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;margin-top:-4px;" alt="avanturistic.com" title="Avanturistic" /> 
-            <span class="logo-text" style="font-weight:300;margin-left:5px;">
+    <div class="kt-header-mobile__logo" style="min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;margin-right:8px;">
+      
+        <a href="/" class="flex items-center"  title="Avanturistic.com">
+            <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
+            @if(isset($mobileTitle) && $mobileTitle && Auth::check())
+                <span style="margin-left: 10px;">
+                {{ str_replace('', '', $mobileTitle) }}
+                </span>
+            @else
+            <span class="logo-text" style="font-weight:300;margin-left:10px;">
                 Avanturistic
             </span>
+            @endif
         </a>
+       
 
     </div>
     <div class="kt-header-mobile__toolbar" style="color:#f8f8fb;">
@@ -290,23 +298,27 @@ console.log(document.getElementById('loged_user').value)
                     </div>
                 </div>
         @else
-        <div class=" kt-header__topbar-item  kt-hidden-desktop " style=" justify-content: center;" >
-            <a style="display: inline-flex;align-items:center;" href="/login"  >
-            <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+            @if(Request::segment(1) != 'login')
+                <div class=" kt-header__topbar-item  kt-hidden-desktop " style=" justify-content: center;" >
+                    <a style="display: inline-flex;align-items:center;" href="/login"  >
+                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
 
 
-                <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
-            <Fpan>
-            </a>
-        </div>
-        <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
-            <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
-            <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+                        <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
+                    <Fpan>
+                    </a>
+                </div>
+            @endif
+            @if(Request::segment(1) != 'register')
+                <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
+                    <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
+                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
 
-                <span style="white-space: nowrap;margin-left:5px; color:#3C3C3C;font-size:1rem;"><b>SIGN UP</b></span>
-            </span>
-            </a>
-        </div>
+                        <span style="white-space: nowrap;margin-left:5px; color:#3C3C3C;font-size:1rem;"><b>SIGN UP</b></span>
+                    </span>
+                    </a>
+                </div>
+            @endif
         @endif
     </div>
 </div>

@@ -28,7 +28,7 @@
     }
    
   </style>
-<div  class="text-right" style="border-bottom: 1px solid #f6f6f6;">
+<div  class="flex justify-end items-center"  id="filter-toolbar">
         <span class="text-left  img-fade-hover">
             <a  href="#" class=" aquireLocation" style="font-size:1em;padding: 5px;  -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;">
             <i class="fa fa-map-marker-alt text-green refresh-loc-icon" style="font-size:1.4rem;"></i> 
@@ -48,7 +48,7 @@
 
                 <ul id="sortBy" style="background:white;">
 
-                    <li class="sortBy active" data-sort="date" style="border-bottom:1px solid #eee;">
+                    <li class="sortBy active" data-sort="date" style="">
                         <a href="#" data-sort="date" class="text-muted">
                             <span>Latest</span>
                             <br>

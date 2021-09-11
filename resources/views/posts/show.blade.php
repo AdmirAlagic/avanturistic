@@ -102,7 +102,7 @@
                                         @if($post->title)
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <h1 class="blog-title" style="margin-top: 10px; font-size: 1.6rem;">{{ $post->title }}</h1>
+                                                    <h1 class="blog-title text-center" style="margin-top: 10px; font-size: 1.6rem;">{{ $post->title }}</h1>
                                                 </div>
                                             </div>
                                            
@@ -155,7 +155,7 @@
                 </div>
                 <div class="kt-portlet">
                     <div class="kt-portlet__body" style="padding:15px;">
-                            <h3 class="text-gray" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
+                            <h3 class="text-gray text-center" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
                             <br><span style="font-style: italic;" class="text-muted"> Share your toughts in comments</span> </small></h3>
 
                             
@@ -205,11 +205,11 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div style="position:relative;">
-                                 <span  style="position: absolute;padding:5px;left: 0;top:0px;z-index: 1;background-color: #333333c7; color:#FFFFFF;  border-top-left-radius: 4px; border-bottom-right-radius: 4px; ">
+                                 <span  style="position: absolute;padding:5px;left: 0;top:0px;z-index: 1;background-color: #333333c7; color:#FFFFFF;  border-top-left-radius: 4px; border-bottom-right-radius: 4px; padding-left:10px;padding-right:10px;">
                                  <b>{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b><br>
                                 </span>
 
-                                    <span  style="position: absolute;right: 0;top:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; ">
+                                    <span  style="position: absolute;right: 0;top:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; padding-left:10px;padding-right:10px; ">
 
                                     <a style="padding:5px;"  class="btn showSatelite  text-white" href="#">Satellite Map</a>
                                 </span>

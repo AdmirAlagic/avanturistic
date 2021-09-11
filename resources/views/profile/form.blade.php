@@ -17,7 +17,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
+                    <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Profile
                     </div>
                 </a>
@@ -34,7 +34,7 @@
                         </g>
                     </svg>
                     </div>
-                    <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
+                    <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Interests
                     </div>
                 </a>
@@ -50,7 +50,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
+                    <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Visited countries
                     </div>
                 </a>
@@ -68,7 +68,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="kt-visible-desktop nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
+                    <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Security
                     </div>
                 </a>

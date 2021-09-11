@@ -1044,7 +1044,7 @@ ul ul {
     margin-bottom: 0;
 }
 dt {
-    font-weight: 700;
+    font-weight: 500;
 }
 dd {
     margin-bottom: 0.5rem;
@@ -2637,7 +2637,7 @@ input[type="submit"].btn-block {
     color: inherit;
 }
 .alert-link {
-    font-weight: 700;
+    font-weight: 500;
 }
 .alert-dismissible {
     padding-right: 4rem;
@@ -2745,7 +2745,7 @@ input[type="submit"].btn-block {
 .close {
     float: right;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     color: #000;
     text-shadow: 0 1px 0 #fff;
@@ -3948,11 +3948,11 @@ canvas {
     font-weight: 600 !important;
 }
 .kt-font-boldest {
-    font-weight: 700 !important;
+    font-weight: 500 !important;
 }
 b,
 strong {
-    font-weight: 700;
+    font-weight: 500;
 }
 .kt-visible-desktop,
 .kt-visible-desktop-inline,
@@ -4194,8 +4194,8 @@ strong {
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
-    font-weight: 500;
-    color: #272727;
+    font-weight: 300;
+    color: #4D4D4D;
 }
 .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title small {
     font-weight: 400;

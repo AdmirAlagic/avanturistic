@@ -5,7 +5,7 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="margin-bottom:0;">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="font-weight: bold;width:100%;color:#474747;">
+                                <h4 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
                                     Welcome to Avanturistic
                                 </h4>
                                 
@@ -60,7 +60,7 @@
                                     <a class="text-muted" href="/terms-and-conditions">terms</a> &
                                     <a class="text-muted" href="/privacy-policy">privacy policy</a>.</small>
                             </p>
-                            <p style="padding-top:0px;">
+                           {{--  <p style="padding-top:0px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 20 24" version="1.1" class="kt-svg-icon">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                         <rect x="0" y="0" width="20" height="20"/>
@@ -70,11 +70,11 @@
                                     </g>
                                 </svg>
                                 <a class="text-muted" style="color:#999;" href="https://avanturistic.com/welcome-adventurer"><small>&nbsp;Discover more about AVANTURISTIC</small></a>
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
 
-                 
+                 {{-- 
                     @if($isMobile && !$isWebView)
                     <div class="kt-portlet kt-portlet--height-fluid" style="margin-bottom:0;">
                         <div class="kt-portlet__body" style="">
@@ -86,7 +86,7 @@
                     </div>
                     
 
-                    @endif
+                    @endif --}}
                    
                 </div>
             </div>

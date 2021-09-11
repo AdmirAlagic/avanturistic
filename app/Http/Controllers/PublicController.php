@@ -154,7 +154,7 @@ class PublicController extends AppController
             $posts = Post::whereNotNull('video')->orderBy('created_at', 'desc')->take(1)->get();
 
         }
-        $title = 'Watch • Avanturistic';
+        $title = 'Watch';
         $description = 'Watch adventure videos from outdoor enthusiasts worldwide. Promote your YouTube videos for free.';
 
         $meta['og:title'] = $title;
@@ -165,6 +165,7 @@ class PublicController extends AppController
             'posts' => $posts,
             'nextPost' => $nextPost,
             'pageTitle' => $title,
+            'mobileTitle' => 'Watch',
             'pageDescription' => $description,
         ];
 
@@ -192,7 +193,7 @@ class PublicController extends AppController
         $activity =  Category::where('slug', $slug)->firstOrFail();
         $data['activity'] = $activity;
 
-        $title =  ucfirst($activity->title) . ' adventures • Avanturistic';
+        $title =  ucfirst($activity->title) . ' adventures';
         
         $pageDescription = isset($activity->options['meta_description']) ? $activity->options['meta_description'] : ($activity->options['intro_description_explore'] ? Str::limit($activity->options['intro_description_explore'], 160) : $title);
         $hasPosts = DB::table('posts')->where('options', 'LIKE', '%'.$activity->slug.'%')->get();
@@ -200,6 +201,7 @@ class PublicController extends AppController
         $data['hasPosts'] = count($hasPosts) ? true : false;
         $data['pageImage'] = url($activity->bg_image);
         $data['pageTitle'] = $title;
+        $data['mobileTitle'] = $title;
         $data['pageDescription'] = $pageDescription;
 
         $meta['og:image'] = url($activity->bg_image);
@@ -227,7 +229,10 @@ class PublicController extends AppController
         $posts = [];
       
         $data = [
-            'badges' => Category::all(),           
+            'badges' => Category::all(),  
+            'pageTitle' => 'Search',
+            'mobileTitle' => 'Search',
+         
         ];
         return view('public.search', $data);
     }
@@ -264,7 +269,7 @@ class PublicController extends AppController
         $activePage = 'privacy';
         view()->share('activePage', $activePage);
         $data = [
-            'pageTitle' => 'Privacy policy • Avanturistic',
+            'pageTitle' => 'Privacy policy',
             'pageDescription' => 'Read about Avanturistic\'s privacy regulations.',
         ];
         return view('shared.privacy', $data);
@@ -275,7 +280,7 @@ class PublicController extends AppController
         $activePage = 'terms';
         view()->share('activePage', $activePage);
         $data = [
-            'pageTitle' => 'Terms and Conditions • Avanturistic',
+            'pageTitle' => 'Terms and Conditions',
             'pageDescription' => 'Read about Avanturistic\'s terms of usage.',
         ];
         return view('shared.terms', $data);
@@ -307,7 +312,9 @@ class PublicController extends AppController
             'country' => $country,
             'selectedCategory' => $request->session()->pull('selectedCategory'),
             'badges' => config('badges.list'),
-            'pageTitle' => $country->title . ' map of outdoor adventures • Avanturistic',
+            'pageTitle' => $country->title . ' map of outdoor adventures',
+            'mobileTitle' => $country->title,
+            
             'pageImage' => url(isset($bestPost->image[0]['path']) ? $bestPost->image[0]['path'] : '/img/avanturistic.jpg'),
             'pageDescription' => 'Find best outdoor activities in ' . $country->title . ' and explore personal experiences from outdoor adventures in this country.'
         ];
@@ -422,7 +429,7 @@ class PublicController extends AppController
         $posts = Post::where('user_id', $this->user->id)->orderBy('created_at', 'desc')->paginate(30);
         $data = [
             'posts' => $posts,
-            'pageTitle' => 'My adventures • Avanturistic',
+            'pageTitle' => 'My adventures',
             'pageDescription' => 'Manage your published outdoor adventures.',
         ];
         return view('public.my_adventures', $data);
@@ -438,7 +445,8 @@ class PublicController extends AppController
         $data = [
            'countries' => $countries,
             'badges' => config('badges.list'),
-            'pageTitle' => 'The world map of outdoor adventures • Avanturistic',
+            'pageTitle' => 'The world map of outdoor adventures',
+            'mobileTitle' => 'The world map of outdoor adventures',
             'pageDescription' => 'Interactive map of outdoor adventures by outdoor enthusiasts worldwide. Discover your favorite outdoor activities locations near you.',
         ];
 
@@ -520,7 +528,8 @@ class PublicController extends AppController
             'badges' => config('badges.list'),
             'pageLinkPrev' => $pagePrev ? url('/adventures?page='. $pagePrev) : null,
             'pageLinkNext' => $pageNext ? url('/adventures?page='. $pageNext) : null,
-            'pageTitle' => 'Outdoor Adventures • Avanturistic',
+            'pageTitle' => 'Outdoor Adventures',
+            'mobileTitle' => 'Outdoor Adventures',
             'pageDescription' => 'Explore through personal experiences of adventures from outdoor enthusiast worldwide and share your favorite spots.'
         ]);
 

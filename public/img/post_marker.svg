@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns:v="https://vecta.io/nano"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-214 216 100 100"
-	 style="enable-background:new -214 216 100 100;" xml:space="preserve">
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+	 style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#E25D98;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
-	.st1{fill:#acc957;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
-	.st2{fill:#25BCBD;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
-	.st3{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;}
 </style>
-<path class="st0" d="M-120.3,246.3c-6.6-14.5-27.2-22.5-43.7-20.7c5.8,0.6,11.1,2.5,15.1,5.8c20.2,16.5-13.3,71.9-15.2,75.1l0.1,0.1
-	C-164,306.6-108.6,272.1-120.3,246.3z"/>
-<path class="st1" d="M-179.1,231.4c4-3.2,9.3-5.1,15.1-5.8c-16.5-1.8-37.2,6.2-43.8,20.7c-11.7,25.8,43.8,60.3,43.8,60.3l0.1-0.1
-	C-165.9,303.3-199.4,247.9-179.1,231.4z"/>
-<path class="st2" d="M-148.3,231.4c-4.2-3.2-9.7-5.1-15.7-5.8c-6,0.6-11.6,2.5-15.7,5.8c-21.1,16.5,13.7,72,15.7,75.2
-	C-162,303.4-127.2,247.9-148.3,231.4z"/>
-<circle class="st3" cx="-164" cy="247.8" r="9.4"/>
+<path class="st0" d="M65.7,15.4C61.5,12.2,56,10.3,50,9.6c-6,0.6-11.6,2.5-15.7,5.8C13.2,31.9,48,87.4,50,90.6
+	C52,87.4,86.8,31.9,65.7,15.4z"/>
+<circle class="st1" cx="50" cy="31.8" r="9.4"/>
 </svg>

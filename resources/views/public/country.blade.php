@@ -54,12 +54,12 @@
                 </div>
             </div>
         </div>
-        <div class="kt-portlet__body padding0">
+        <div class="kt-portlet__body ">
            
-            <div class="kt-container padding0" >
+            <div class="kt-container " >
                 @include('shared.lists.toolbar')
             </div>
-            <div class="kt-container padding0">
+            <div class="kt-container ">
                 <div class="row">
                     <div class="col-sm-12 text-center padding0" >
                         <div class="kt-container" style="padding: 0;" style="min-height:800px;">
