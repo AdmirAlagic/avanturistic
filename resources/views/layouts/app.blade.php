@@ -158,20 +158,22 @@ console.log(document.getElementById('loged_user').value)
     {{-- <div class="kt-header-mobile__toolbar">
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
     </div> --}}
-    <div class="kt-header-mobile__logo" style="min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;margin-right:8px;">
+    <div class="kt-header-mobile__logo" style=" margin-right:8px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
       
-        <a href="/" class="flex items-center"  title="Avanturistic.com">
+       
             <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
             @if(isset($mobileTitle) && $mobileTitle)
-                <span style="margin-left: 10px;">
+                <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:500;">
                 {{ str_replace('', '', $mobileTitle) }}
-                </span>
+                </h2>
             @else
-            <span class="logo-text" style="font-weight:500;margin-left:10px;">
-                Avanturistic
-            </span>
+                <a href="/" class="flex items-center"  title="Avanturistic.com" style="">
+                    <span class="logo-text" style="font-weight:500;margin-left:10px;">
+                        Avanturistic
+                    </span>
+                </a>
             @endif
-        </a>
+       
        
 
     </div>
@@ -293,11 +295,11 @@ console.log(document.getElementById('loged_user').value)
 
 
                         <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
-                    <Fpan>
+                    <span>
                     </a>
                 </div>
             @endif
-            @if(Request::segment(1) != 'register' && Request::segment(1) != 'sign-upF')
+            @if(Request::segment(1) != 'register' && Request::segment(1) != 'sign-up')
                 <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
                     <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
                     <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
