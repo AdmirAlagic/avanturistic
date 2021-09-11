@@ -96,7 +96,7 @@
 
 
 
-        <div class="kt-header__topbar justify-between" style="margin-right:10px;z-index:99999;">
+        <div class="kt-header__topbar justify-between" style="z-index:99999;">
 
 
             <div class=" kt-header__topbar-item  ">

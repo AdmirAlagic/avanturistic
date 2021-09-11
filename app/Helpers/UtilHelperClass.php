@@ -1,7 +1,12 @@
 <?php
 
 namespace App\Helpers;
+
+use App\Post;
 use Str;
+use File;
+use Log;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class UtilHelperClass
 {
@@ -77,6 +82,37 @@ class UtilHelperClass
             }
         }
        
+    }
+
+    public static function missingFiles(){
+        $posts = Post::all();
+        foreach($posts as $post){
+            $images = $post->image;
+            $hasMissingFiles = false;
+       
+            foreach($post->image as $key => $obj)
+            {
+                if(isset($obj['path']) && !File::exists(public_path($obj['path']))){
+                    $images[$key]['path'] = $obj['thumb_path'];
+                    Log::info('Missing file:' . $obj['path'] . ' post ID:'. $post->id);
+                    Log::info($images);
+                    $hasMissingFiles = true;
+                    $img = Image::make(public_path($obj['thumb_path']));
+                    $img->resize(900, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                       /*  $constraint->upsize(); */
+                    })->encode('jpg')->save(public_path($obj['path']));
+                }
+                   
+            }
+          /*   if($hasMissingFiles)
+                $post->update([
+                    'image' => $images
+                ]); */
+         
+       
+        }
+        
     }
 
 }
