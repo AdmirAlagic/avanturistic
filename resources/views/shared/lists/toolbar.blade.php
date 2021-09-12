@@ -28,19 +28,21 @@
     }
    
   </style>
-<div  class="flex justify-end items-center"  id="filter-toolbar">
+  <div id="filter-toolbar" class="kt-container">
+  
+<div  class="flex justify-between items-center">
         <span class="text-left  img-fade-hover">
-            <a  href="#" class=" aquireLocation" style="font-size:1em;padding: 5px;  -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;">
-            <i class="fa fa-map-marker-alt text-green refresh-loc-icon" style="font-size:1.4rem;"></i> 
+            <a  href="#" class=" aquireLocation" >
+            <i class="fa fa-map-marker-alt text-muted refresh-loc-icon" style="font-size:1.4rem;"></i> 
                 <span class="loading-spinner-loc" style="margin-right:30px;display:none;">
                     <span class="kt-spinner kt-spinner--left  kt-spinner--primary"></span>
                 </span>
-                <span class="text-muted" style="font-weight: 400;font-size:1.1rem;">Update Location</span>
+                <span class="text-muted" style="font-weight: 400;font-size:1rem;">Update Location</span>
             </a>
         </span>
         <span class=" text-right  ">
             <a href="#" class="dropdown-toggle text-muted img-fade-hover"  id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="padding: 10px;z-index:998;">
-                <span class="category-sort " style="font-weight: normal;font-size:1.1rem;">
+                <span class="category-sort " style="font-weight: normal;font-size:1rem;">
                     Latest
                 </span>
             </a>
@@ -52,28 +54,28 @@
                         <a href="#" data-sort="date" class="text-muted">
                             <span>Latest</span>
                             <br>
-                            <small>Show latest adventures.</small>
+                            Sort by latest.
                         </a>
                     </li>
                     <li class="sortBy" data-sort="distance">
                         <a href="#" class="text-muted">
                             <span>Near Me</span>
                             <br>
-                            <small>Show adventures nearest to your location. <br>To get more precise distances from your current location enable location services and use "Update location".</small>
+                            Sort by nearest. <br>To get more precise distances from your current location enable location services and use "Update location".
                         </a>
                     </li>
                 </ul>
             </div>
         </span>
        
-        <span class="btn text-right">
+        <span class="btn text-right" style="padding-right:0px;">
             @if(isset($hasCategoryFilter))
-            <a class="show-filters img-fade-hover {{ $selectedCategory ?  'active' : 'inactive' }}" href="#"   class="text-dark" style="font-size:1rem;margin-right:2px;">
+            <a class="show-filters img-fade-hover {{ $selectedCategory ?  'active' : 'inactive' }}" href="#"   class="text-dark" style="font-size:1rem;margin-right:10px;">
             <img src="{{ $selectedCategory ?  url('img/filter-active.svg') : url('img/filter.svg')}}" width="26" height="26" style="height:26px;" alt="Show grid">
             </a>
             @endif
  
-            <a class="layoutStyle  img-fade-hover active" href="#" data-sort="details" class="text-dark">
+            <a class="layoutStyle  img-fade-hover active" href="#" data-sort="details" class="text-dark" style=" margin-right:10px;">
                 <img src="/img/details_layout.svg" width="23" height="23" style="height:23px;" alt="Show grid">
             </a>
 
@@ -84,40 +86,40 @@
         </span>
 </div>
 @if(isset($hasCategoryFilter))
-<div class="swiper-categories-container" style=" {{ $selectedCategory ?  '' : 'display:none;' }}">
-    <div class="kt-container " style=" overflow:hidden;position:relative;  z-index:1; padding-right:30px; border-bottom: 1px solid #f6f6f6;" id="categories-filter">
-        
-        <div class="swiper-categories " style="height: 80px;padding-top: 8px;">
-            <div class="swiper-wrapper" style="margin-left:30px;">
-                @foreach($badges as $key => $val)
-                    <div class="swiper-slide text-center" style="background:transparent;" >
-                        <div class="profile-badges profile-badge {{ $selectedCategory  == $key ?  'active' : 'inactive' }}" data-key="{{ $key }}" style="cursor: pointer;margin-bottom:5px;">
-                            <div class="badge-wrap" style=" border:3px solid {{ $val['color'] }};background: #474747;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 5px;">
-                                <img class="lazy" src="/img/placeholder-trans.png" data-src="{{ $badges[$key]['icon_empty'] }}" data-srcset="{{ $badges[$key]['icon_empty'] }}" width="22" height="22">
-                            </div>
-                            <div>
-                                <span style="white-space: nowrap;font-size:0.9rem;"><b>{{ $val['name'] }}</b></span>
+    <div class="swiper-categories-container" style=" {{ $selectedCategory ?  '' : 'display:none;' }}">
+        <div class="kt-container " style=" overflow:hidden;position:relative;  z-index:1; padding-right:30px;border-top:1px solid #f6f6f6; border-bottom: 1px solid #f6f6f6;" id="categories-filter">
+            
+            <div class="swiper-categories " style="height: 80px;padding-top: 8px;">
+                <div class="swiper-wrapper" style="margin-left:30px;">
+                    @foreach($badges as $key => $val)
+                        <div class="swiper-slide text-center" style="background:transparent;" >
+                            <div class="profile-badges profile-badge {{ $selectedCategory  == $key ?  'active' : 'inactive' }}" data-key="{{ $key }}" style="cursor: pointer;margin-bottom:5px;">
+                                <div class="badge-wrap" style=" border:3px solid {{ $val['color'] }};background: transparent !important;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 40px; height: 40px;margin-left: auto; margin-right: auto;padding: 5px;">
+                                    <img class="lazy" src="/img/placeholder-trans.png" data-src="{{ $badges[$key]['icon_empty'] }}" data-srcset="{{ $badges[$key]['icon_empty'] }}" width="22" height="22" style="filter:invert(0.6) !important;">
+                                </div>
+                                <div>
+                                    <span style="white-space: nowrap;font-size:0.9rem;"><b>{{ $val['name'] }}</b></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
-                <!-- <div class="swiper-slide text-center" style="background:transparent;" style="width:25px;" >
-                        
-                    </div> -->
+                    @endforeach
+                    <!-- <div class="swiper-slide text-center" style="background:transparent;" style="width:25px;" >
+                            
+                        </div> -->
+                </div>
+            </div>
+            <div class="swiper-button-prev text-gray" style="margin-left: -15px;"></div>
+            <div class="swiper-button-next  text-gray" style="margin-right: -15px;"></div>
+            <div class="fade" style="background-image: linear-gradient(to bottom, transparent, black);width:30px;height:100%;position:absolute;right:0;top:0;">
             </div>
         </div>
-        <div class="swiper-button-prev text-gray"></div>
-        <div class="swiper-button-next  text-gray"></div>
-        <div class="fade" style="background-image: linear-gradient(to bottom, transparent, black);width:30px;height:100%;position:absolute;right:0;top:0;">
+        <div class="profile-badges profile-badge text-center" id="reset-filters" data-key="reset" style="z-index:3;{{ $selectedCategory ?  '' : 'display:none;' }}">
+
+            <div class="btn text-white " style="cursor:pointer;padding:5px;font-size:0.8em;margin-bottom:10px;margin-top:10px;background:#474747;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px !important;">
+                 Reset 
+            </div>
+
         </div>
     </div>
-    <div class="profile-badges profile-badge text-center" id="reset-filters" data-key="reset" style="z-index:3;{{ $selectedCategory ?  '' : 'display:none;' }}">
-
-        <div class="btn text-white " style="cursor:pointer;padding:5px;font-size:0.8em;margin-bottom:10px;margin-top:10px;background:#474747;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px !important;">
-            &nbsp;<i class="fa fa-times"></i> Reset 
-        </div>
-
-    </div>
-</div>
-
+</div> 
 @endif

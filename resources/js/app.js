@@ -123,3 +123,13 @@ function showErrors(errors) {
     }
 });
 
+$(document).ready(function(){var spans = $(".popEffect span"); //get all the "span" inside "popEffect"
+var spansWidth = [];
+
+spans.each(function(){
+	spansWidth.splice(0,0,$(this).width());
+});
+//
+  var largest = Math.max.apply(Math, spansWidth);//get the largest number
+ /*  $(".stuff").width($("h1").width() + largest); */
+});

@@ -28,14 +28,7 @@ var KTLayout = function() {
                 mobile: false
             },
             offset: {},
-            minimize: {
-                desktop: {
-                    on: 'kt-header--minimize'
-                },
-                mobile: {
-                    on: 'kt-header--minimize'
-                }
-            }
+            minimize: false
         };
 
         if (tmp = KTUtil.attr(headerEl, 'data-ktheader-minimize-offset')) {
@@ -356,7 +349,7 @@ var KTLayout = function() {
 
         initHeader: function() {
             initHeader();
-            initHeaderMenu();
+            //initHeaderMenu();
             initHeaderTopbar();
             initScrolltop();
         },

@@ -83,11 +83,11 @@
     </div>
     {{--list--}}
     <div id="activity" data-key="{{ $activity->slug }}"></div>
-
-    <div class="kt-portlet__body" style="padding-top:3px;background-color:#FFFFFF;">
+    @include('shared.lists.toolbar')
+    <div class="kt-portlet__body" style="padding-top:50px;background-color:#FFFFFF;">
         
         <div class="kt-container filter-toolbar-container" >
-        @include('shared.lists.toolbar')
+       
         
             <div class="row">
                 <div class="col-sm-12 text-center" style="padding: 0;min-height:600px;" >

@@ -19,10 +19,7 @@ var KTHeader = function(elementId, options) {
             mobile: 150,
             desktop: 200
         },
-        minimize: {
-            mobile: false,
-            desktop: false
-        }
+        minimize: false
     };
 
     ////////////////////////////
@@ -70,7 +67,7 @@ var KTHeader = function(elementId, options) {
             var eventTriggerState = true;
             var viewportHeight = KTUtil.getViewPort().height;
             var documentHeight = KTUtil.getDocumentHeight();
-
+            return;
             if (the.options.minimize.mobile === false && the.options.minimize.desktop === false) {
                 return;
             }
@@ -181,7 +178,7 @@ var KTHeader = function(elementId, options) {
      * Register event
      */
     the.on = function(name, handler) {
-        return Plugin.addEvent(name, handler);
+        // return Plugin.addEvent(name, handler);
     };
 
     ///////////////////////////////

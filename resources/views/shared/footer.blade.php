@@ -27,9 +27,9 @@
                             </a> outdoor adventures with   routes, locations, photos, videos and  
                            get involved in creating <br> <b><a class="text-success" href="{{ url('the-world-map-of-outdoor-adventures') }}">the world map of outdoor adventures</a></b>.
                            <br>
-                           <a class="text-muted" href=" https://avanturistic.com/welcome-adventurer">
+                         {{--   <a class="text-muted" href=" https://avanturistic.com/welcome-adventurer">
                                 <b>Discover more about Avanturistic</b> 
-                            </a>
+                            </a> --}}
                             
                         </div>
                     </div>

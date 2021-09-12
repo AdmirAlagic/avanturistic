@@ -148,9 +148,17 @@ $green: #acc957;
 }
 
 @media (min-width: 1025px){
+  body{
+    padding-top: 80px;
+  }
   .filter-toolbar-container{
     padding:15px;
     justify-items:end;
+  }
+  #filter-toolbar{
+    top:80px;
+    border:none;
+    box-shadow: none;
   }
   .kt-header--fixed.kt-header--minimize .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon i{
     color: #ffffff;

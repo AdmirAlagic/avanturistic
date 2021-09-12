@@ -144,7 +144,7 @@
 
 </head>
 
-<body style="background:#fff;" class=" kt-header--fixed kt-header-mobile--fixed">
+<body style="background:#fff;" class=" kt-header--fixed kt-header-mobile--fixed"  >
 @if(isset($user) && $user)
         <input type="hidden" name="loged_user" id="loged_user" value="{{ $user->email }}">
     @endif
@@ -154,7 +154,7 @@ console.log(document.getElementById('loged_user').value)
 <!-- begin:: Header Mobile -->
 @if(!isset($disableHeader))
 
-<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed kt-header--minimize">
     {{-- <div class="kt-header-mobile__toolbar">
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
     </div> --}}
@@ -163,7 +163,7 @@ console.log(document.getElementById('loged_user').value)
        
             <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
             @if(isset($mobileTitle) && $mobileTitle)
-                <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:500;">
+                <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:300;">
                 {{ str_replace('', '', $mobileTitle) }}
                 </h2>
             @else

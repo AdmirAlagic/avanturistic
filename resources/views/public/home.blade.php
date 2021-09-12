@@ -20,13 +20,24 @@
                
             </div>
             @endif
+          
             <br>
             <div  class="text-center text-white">
                 @if(!$user)
                     
                       
-                    <h3 class="k-font" style="margin-top:15px;margin-bottom:15px;padding:20px;"  >Welcome to a network for outdoor enthusiasts, nature lovers and travelers</b>.</h3>
-                 
+                    {{-- <h3 class="k-font" style="margin-top:15px;margin-bottom:15px;padding:20px;"  >Welcome to a network for outdoor enthusiasts, nature lovers and travelers</b>.</h3> --}}
+                    <div class="" style=" margin-bottom:15px;margin-top:15px;padding:20px;">
+                        <h3 class="k-font">Welcome to a network for
+                            <div class="popEffect">
+                            <span>outdoor enthusiasts</span>
+                            <span>nature lovers</span>
+                            <span>travelers</span>
+                            <span>explorers</span>
+                            <span>adventure.</span>
+                            </div>
+                        </h3>
+                    </div>
                     
                     
                 @else

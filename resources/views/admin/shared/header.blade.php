@@ -1,5 +1,5 @@
 <!-- begin:: Header -->
-<div id="kt_header" class="kt-header kt-header--fixed" data-ktheader-minimize="on">
+<div id="kt_header" class="kt-header kt-header--fixed">
     <div class="kt-container ">
 
         <!-- begin:: Brand -->

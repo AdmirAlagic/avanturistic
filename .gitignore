@@ -28,3 +28,4 @@ public/timelapse
 public/timelapse/.DS_Store
 public/dist/css/app.min.css
 public/dist/css/style.min.css
+public/dist/css/responsive.min.css

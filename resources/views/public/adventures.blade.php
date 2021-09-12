@@ -44,11 +44,9 @@
 
     </div>
 
-
-   <div class="kt-portlet__body" style="padding-top:3px;background-color:#FFFFFF;">
-            <div class="kt-container filter-toolbar-container" >
-                @include('shared.lists.toolbar')
-            </div>
+  
+   <div class="kt-portlet__body" style="padding-top:50px;background-color:#FFFFFF;">
+    @include('shared.lists.toolbar')
            <div class="kt-container" style="padding:0px;">
 
            
