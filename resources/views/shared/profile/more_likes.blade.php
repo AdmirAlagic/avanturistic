@@ -15,7 +15,7 @@
         <div class="kt-notification__item-details">
             <div class="kt-notification__item-title">
 
-                <span><i class="fa fa-heart text-green"></i>&nbsp; </span> from <a class="text-muted" href="/@{{ $obj->username }}">{{ $obj->username }}</a>
+                <span><i class="fa fa-heart text-green"></i>&nbsp; </span> from <a class="text-muted" href="/{{ '@' .$obj->username_slug  }}">{{ $obj->username }}</a>
 
 
             </div>

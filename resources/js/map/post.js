@@ -22,6 +22,16 @@ $(document).ready(function(){
               swiper: galleryThumbs
             }
           });
+
+          var nearbyPostsSwiper = new Swiper('.nearby-swiper', {
+            autoHeight:true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            loop:true,
+          
+          })
        
     }
     var map;

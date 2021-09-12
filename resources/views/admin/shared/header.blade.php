@@ -159,7 +159,7 @@
                                 </a>
 
                             @endif
-                            <div class="kt-notification__custom kt-space-between">
+                            <div class="">
                                 {!! Form::open(['route' => 'logout','method' => 'POST']) !!}
                                 {!! Form::submit('Sign Out', ['class' => 'btn btn-sm btn-bold btn-danger']) !!}
                                 {!! Form::close() !!}

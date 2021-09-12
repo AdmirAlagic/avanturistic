@@ -10,10 +10,10 @@
                     <div class="" style="padding: 0;width:100% !important;">
                         <div class="kt-portlet__head-label" style="width:100%;display: block;position: relative;">
                             <div class="swiper-container gallery-top" style="width:100%; height: auto; ">
-                                <div class="swiper-wrapper spotlight-group"  data-page="false" data-autohide="false" data-zoom="false" data-infinite="true" data-fullscreen="false" data-autofit="false" style="position:relative;">
+                                <div class="swiper-wrapper "  data-page="false" data-autohide="false" data-zoom="false" data-infinite="true" data-fullscreen="false" data-autofit="false" style="position:relative;">
                                     @foreach($post->image as $image)
                                         <div class="swiper-slide" style="position:relative;z-index:2;min-height:200px; {{ count($post->image) == 1 ? 'border-bottom:3px solid #474747;' : '' }}">
-                                            <img src="{{ url($image['path']) }}" alt="{{ isset($image['title']) ? $image['title'] : $post->title }}"  data-title="{{ isset($image['title']) ? $image['title'] : ''}}" class="spotlight" data-src="{{ url($image['path']) }}"> 
+                                            <img src="{{ url($image['path']) }}" alt="{{ isset($image['title']) ? $image['title'] : $post->title }}"  data-title="{{ isset($image['title']) ? $image['title'] : ''}}" class="" data-src="{{ url($image['path']) }}"> 
                                             @if(isset($image['title']))
                                                 <div style="position:absolute;bottom:0;left:0;width:100%;height:40px;padding:10px;color:#FFFFFF; 
                                                             background: linear-gradient(180deg, rgba(180,214,119,0) 0%, rgba(51,51,51,0.7) 100%);"> 
@@ -50,7 +50,7 @@
                                 @include('shared.post.post_toolbar')
                                 @if($nextPost && !$isMobile)
                               
-                                <a class="text-muted img-fade-hover" href="{{ $nextPostUrl}}" style="width:100%;color:#999;">
+                                <a class=" img-fade-hover" href="{{ $nextPostUrl}}" style="width:100%;color:#474747;">
                                     <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:20px;">
                                         <div class="nextPostBtn" style="  padding:10px;display: flex;align-items: center;justify-content: flex-end;"> 
                                             
@@ -224,7 +224,7 @@
                             <div class="col-sm-12">
 
                                 <div class="kt-notification" style="margin-top:10px;">
-                                    @if($user && $post->user_id == $user->id && $post->likes > 0)
+                                    {{-- @if($user && $post->user_id == $user->id && $post->likes > 0)
                                         <div class="tab-pane " id="kt_widget6_tab5_content" aria-expanded="true">
                                             <div class="kt-notification">
                                                 <p class="text-muted text-center"><small>Only you can see who liked your adventure</small></p>
@@ -238,7 +238,7 @@
                                             </div>
                                         </div>
                                         <hr>
-                                    @endif
+                                    @endif --}}
 
                                     @if($user && $post->visiteds > 0)
 
