@@ -80,8 +80,10 @@
                             @endif
                         @endforeach
                     </div>
+                    @if(count($nearbyPosts) > 1)
                     <div class="swiper-button-prev text-white"></div>
                     <div class="swiper-button-next  text-white"></div>
+                    @endif
                 </div>
                
             </div>
