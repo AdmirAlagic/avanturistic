@@ -35,12 +35,12 @@
                 <span class="loading-spinner-loc" style="margin-right:30px;display:none;">
                     <span class="kt-spinner kt-spinner--left  kt-spinner--primary"></span>
                 </span>
-                <span class="text-muted" style="font-weight: 400;font-size:1rem;">Update Location</span>
+                <span class="text-muted" style="font-weight: 400;font-size:1.1rem;">Update Location</span>
             </a>
         </span>
         <span class=" text-right  ">
             <a href="#" class="dropdown-toggle text-muted img-fade-hover"  id="dropdownSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="padding: 10px;z-index:998;">
-                <span class="category-sort " style="font-weight: normal;font-size:1rem;">
+                <span class="category-sort " style="font-weight: normal;font-size:1.1rem;">
                     Latest
                 </span>
             </a>
