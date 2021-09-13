@@ -870,7 +870,6 @@ html {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  font-size:15px !important;
 }
 
 .resp-sharing-button__link {
@@ -880,9 +879,11 @@ html {
 }
 
 .resp-sharing-button {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 300ms ease-out;
-  padding-top: 3px;
+
   -webkit-border-radius: 9999em;
   -moz-border-radius: 9999em;
   border-radius: 9999em;
@@ -895,6 +896,10 @@ html {
     -moz-box-shadow: 0px 0px 5px 0px #3C3C3C;
     box-shadow: 0px 0px 5px 0px #3C3C3C;
 
+  }
+  svg {
+
+    fill: white;
   }
 
 }
@@ -925,34 +930,7 @@ html {
   fill: #fff;
   fill: white;
 }
-
-.resp-sharing-button--twitter {
-  background-color: #2795e9;
-  svg {
-
-    fill: white;
-  }
-}
-
-.resp-sharing-button--twitter:hover {
-  background-color: #2795e9;
-}
-
-
-
-.resp-sharing-button--facebook {
-  svg {
-    fill: white;
-  }
-}
-
-.resp-sharing-button--google {
-  background-color: #1877F2;
-  svg {
-    fill: white;
-  }
-}
-
+ 
 .resp-sharing-button--google:hover {
   background-color: #c23321
 }
@@ -974,10 +952,7 @@ html {
 }
 
 
-.resp-sharing-button--viber{
-  background-color: #665CAC;
-  padding-top:3px;
-}
+
 .resp-sharing-button--viber:hover, .resp-sharing-button--viber:active{
   background-color: #665CAC;
 
@@ -987,10 +962,8 @@ html {
 }
 
 .resp-sharing-button--whatsapp {
-  background-color: #1da851;
   svg {
-    margin-top:-4px;
-    margin-right: -1px;
+  
     fill: white;
   }
 }
@@ -1000,12 +973,7 @@ html {
 
 }
 
-.resp-sharing-button--facebook{
-  background-color: #1877F2;
-  svg{
-    margin-left: -1px;
-  }
-}
+
 
 .resp-sharing-button--facebook:hover,
 .resp-sharing-button--facebook:active {
