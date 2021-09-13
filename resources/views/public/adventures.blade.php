@@ -46,7 +46,7 @@
 
   
    <div class="kt-portlet__body" style="padding-top:50px;background-color:#FFFFFF;">
-    @include('shared.lists.toolbar')
+        @include('shared.lists.toolbar')
            <div class="kt-container" style="padding:0px;">
 
            

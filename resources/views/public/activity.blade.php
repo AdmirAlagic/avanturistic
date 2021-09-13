@@ -83,9 +83,9 @@
     </div>
     {{--list--}}
     <div id="activity" data-key="{{ $activity->slug }}"></div>
-    @include('shared.lists.toolbar')
+   
     <div class="kt-portlet__body" style="padding-top:50px;background-color:#FFFFFF;">
-        
+        @include('shared.lists.toolbar')
         <div class="kt-container filter-toolbar-container" >
        
         

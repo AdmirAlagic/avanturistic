@@ -58,9 +58,7 @@
         </div>
         <div class="kt-portlet__body ">
            
-            <div class="kt-container filter-toolbar-container" >
-                @include('shared.lists.toolbar')
-            </div>
+            @include('shared.lists.toolbar')
             <div class="kt-container"  style="min-height:800px;">
                 <div id="adventures-grid" class="adventures-masonry-grid" style="cursor: pointer;">
                     <div class="adventure-grid-sizer"></div>
