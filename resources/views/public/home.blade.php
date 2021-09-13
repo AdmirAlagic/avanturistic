@@ -171,9 +171,9 @@
                             <div class="kt-container" >
                                 <p class="text-center">
                                     Explore <b>personal impressions</b> from other users outdoor adventures and <b>get useful tips</b>.
-                                    <br> Every adventure is location based, so we will help you to find outdoor recreation activity <b>near you</b>.
+                                    <br><br> Every adventure is location based, so we will help you to find outdoor recreation activity <b>near you</b>.
                                 </p>
-                                <p class="text-gray"><em>Choose your favorite outdoor activity</em></p>
+                                <p class="text-gray">Choose your favorite outdoor activity</p>
                                 <div class="row" style="margin-bottom:20px;margin-top: 30px; ">
 
                                     @foreach($badges as $key => $val)
