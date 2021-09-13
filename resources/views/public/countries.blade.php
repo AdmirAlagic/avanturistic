@@ -27,7 +27,7 @@
                                         <h2 class="text-center   text-white" style="font-weight: 900; text-transform:uppercase;font-size:1.3em;">{{ $obj->title }}</h2>
 
                                         <p style="margin-bottom:0;padding: 5px;" class="text-center">
-                                        <div style="border:3px solid #FFFFFF;font-size:2.7em;background: #33333359;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; line-height:2.7em; width: 60px; height: 60px;margin-left: auto; margin-right: auto;padding: 0px;">
+                                        <div style="border:3px solid #FFFFFF;font-size:2.7em;background: #33333359;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; line-height:1.5em; width: 60px; height: 60px;margin-left: auto; margin-right: auto;padding: 0px;">
                                             {!! $obj->emoji !!}
                                         </div>
 
