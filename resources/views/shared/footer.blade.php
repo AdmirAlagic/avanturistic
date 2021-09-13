@@ -3,6 +3,26 @@
 <div class="kt-footer kt-grid__item" id="kt_footer" style="padding: 10px;">
     <div class="kt-footer__top">
         <div class="kt-container ">
+            {{-- @if(isset($user) && $user)
+            <br> <br>
+            <div class="kt-footer__section">
+                <h4 class="kt-footer__title text-center text-gray" style="padding-bottom:0;">
+                    We care for your feedback
+                </h4>
+                <div class="kt-footer__content text-center" style="color:#f8f8fb;text-align: justify;">
+                    <p style="">
+                        If you are experiencing any issues with your account or just want to share an idea with us - send a direct message to our support.
+                    </p>
+                
+                    <a class="text-white text-light" href="{{ url('/support') }}">
+                    <img class="lazy" src="/img/placeholder-dark.svg"  data-src="/img/support.svg" data-srcset="/img/support.svg" alt="Avanturistic Support"  style="width: 30px; height: 30px;margin-left:1px;margin-right: 2px;">&nbsp;Contact support
+                    </a>
+                    <br><br>
+                    
+                    
+                </div>
+            </div>
+            @endif --}}
             <div class="row">
                 <div class="col-sm-3">
                     <div class="kt-footer__section">
@@ -131,29 +151,11 @@
                             </div>
                         </div>
                         @endif
-                        @if(isset($user) && $user)
-                            <br> <br>
-                            <div class="kt-footer__section">
-                                <h4 class="kt-footer__title text-center text-gray" style="padding-bottom:0;">
-                                    We care for your feedback
-                                </h4>
-                                <div class="kt-footer__content text-center" style="color:#f8f8fb;text-align: justify;">
-                                    <p style="">
-                                        If you are experiencing any issues with your account or just want to share an idea with us - send a direct message to our support.
-                                    </p>
-                                
-                                    <a class="text-white text-light" href="{{ url('/support') }}">
-                                    <img class="lazy" src="/img/placeholder-dark.svg"  data-src="/img/support.svg" data-srcset="/img/support.svg" alt="Avanturistic Support"  style="width: 30px; height: 30px;margin-left:1px;margin-right: 2px;">&nbsp;Contact support
-                                    </a>
-                                    <br><br>
-                                    
-                                    
-                                </div>
-                            </div>
-                            @endif
+                       
                     </div>
                 @endif
             </div>
+          
         </div>
     </div>
 
