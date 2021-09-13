@@ -95,34 +95,24 @@ $(document).ready(function () {
 
         resizeWindow();
     }
-    $('#back-to-upload').on('click', function (e) {
+    $('.back-to-upload').on('click', function (e) {
         e.preventDefault();
         $('#tab-finish').hide();
         showImage();
     })
-    $('#to-location').on('click', function (e) {
+    $('.to-location').on('click', function (e) {
         e.preventDefault();
         showLocation();
     })
-    $('#back-to-location').on('click', function (e) {
+    $('.back-to-location').on('click', function (e) {
         e.preventDefault();
         $('.item-finish').hide();
         $('#tab-finish').hide();
         showLocation();
     })
-    $('#finish-form').on('click', function(e){
+    $('.finish-form').on('click', function(e){
         e.preventDefault();
-        $('.item-image').hide();
-        $('.item-location').hide();
-        $('#tab-image').hide();
-        $('#tab-location').hide();
-        $('.item-finish').show( "fast", function() {
-
-            $('.item-finish').trigger('click');
-
-            $('#tab-finish').show();
-        });
-
+      
 
         var  lat = $('[name="lat"]').val();
         var  lng = $('[name="lng"]').val();
@@ -130,16 +120,27 @@ $(document).ready(function () {
         if(!lat ||  !lng){
             // $('.item-location').trigger('click');
             console.log(lat);
-            $('.location-msg').html('<div class="alert alert-danger">Location is required.</div>');
-            var loc = document.getElementById('location-msg');
+            toastr.warning('Please add a map marker.', 'Location required', {timeOut: 3000})
+/*             $('.location-msg').html('<div class="alert alert-danger text-center">Location is required.</div>');
+ */            var loc = document.getElementById('location-msg');
             $('.item-finish').hide();
-            $('#back-to-location').trigger('click');
+            $('.back-to-location').trigger('click');
             // $('html,body').scrollTop(loc.offsetTop );
 
             resizeWindow();
             return false;
         } else {
-
+            $('.item-image').hide();
+            $('.item-location').hide();
+            $('#tab-image').hide();
+            $('#tab-location').hide();
+            $('.item-finish').show( "fast", function() {
+    
+                $('.item-finish').trigger('click');
+    
+                $('#tab-finish').show();
+            });
+    
         }
 
 

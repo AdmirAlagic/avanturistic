@@ -57,12 +57,14 @@ class PostController extends AppController
         $scripts[] = '/js/libs/ckeditor/ckeditor.js';
         $scripts[] = '/dist/metronic/assets/plugins/dropzone/dropzone.min.js';
         $scripts[] =  '/dist/metronic/assets/js/pages/custom/wizard/wizard-1.js';
+        $scripts[] = '//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js';
 
         $mixScripts[] = '/dist/js/create-post.js';
         $mixScripts[] = '/dist/js/posts.js';
 
         $styles[] = '/dist/css/share.css';
         $styles[] = '/dist/metronic/assets/plugins/dropzone/dropzone.min.css';
+        $styles[] = '/dist/css/toastr.min.css';
 
         view()->share('mixScripts', $mixScripts);
         view()->share('scripts', $scripts);
@@ -71,7 +73,7 @@ class PostController extends AppController
 
 
         $data['disableFooter'] = true;
-        $data['disableHeader'] = true;
+        $data['disableHeaderMobile'] = true;
         $data['model'] = new Post();
         $data['formOptions'] = ['method' => 'POST', 'route' => 'posts.store'];
         return view('posts.form', $data);

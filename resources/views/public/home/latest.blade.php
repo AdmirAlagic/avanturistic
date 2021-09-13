@@ -102,7 +102,10 @@
                                     @endif
                                 </a>
                                 @if($obj->video && $obj->video != '' && $obj->video != ' ')
-                                    <span style="z-index:1;position:absolute;right:15px;bottom:10px;color:#FFFFFF;background: #333333bf;text-align:center;padding-left:4px;padding-top:6px;border-radius:50%;border:2px solid #FFF; width:36px;height:36px;"><i class="fa fa-play" style="font-size:14px;"></i></span>
+                                    <span class="flex justify-center" style="z-index:1;position:absolute;right:15px;bottom:10px;color:#FFFFFF;background: #333333bf;text-align:center;border-radius:50%;border:2px solid #FFF; width:36px;height:36px;">
+                                       
+                                        <img src="/img/video.svg" width="22" alt="{{ $obj->title }} Video" style="width:22px;filter:brightness(0) invert(1);">
+                                    </span>
                                 @endif
                             </div>
                         </div>

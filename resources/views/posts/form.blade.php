@@ -4,41 +4,78 @@
 
     <!-- begin:: Content -->
 
-    <div class="kt-container  kt-grid__item kt-grid__item--fluid" style="padding:0;">
+    @if(isset($disableHeaderMobile))
+    {{-- <div class="kt-visible-desktop" style="height: 3em;"></div> --}}
+    @endif
+    <div class="kt-container create-post-container kt-grid__item kt-grid__item--fluid" style="padding:0;">
 
-        <div class="kt-portlet">
+        <div class="">
             <div class="kt-portlet__body kt-portlet__body--fit">
                 <div class="kt-grid  kt-wizard-v1 kt-wizard-v1--white" id="kt_wizard_v1" data-ktwizard-state="step-first">
                     <div class="kt-grid__item">
                         <!--begin: Form Wizard Nav -->
-                        <div class="kt-wizard-v1__nav" >
+                        <div class="kt-wizard-v1__nav kt-visible-tablet-and-mobile" >
                             <div class="kt-wizard-v1__nav-items" style="padding:0;">
-                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" data-ktwizard-type="step" style="min-height:40px;">
-                                    <a  class="btn  text-center text-muted btn-default btn-tall noborder-r " href="/" style="position:absolute;top:0;left:0;">
-                                    <i class="fa fa-angle-left text-muted"></i> Cancel
+                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:40px;">
+                                    <a  class="btn  flex justify-center   noborder-r " href="/" style="position:absolute;top:0;left:0;height: 100%;">
+                                    <i class="fa fa-angle-left "></i> Cancel
                                     </a>
-                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;" id="to-location"   class="btn  btn-green btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u noborder-r">
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class="to-location btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r">
                                         <span class="text-white">
                                             Next
                                         </span>
                                     </a>
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-location" data-ktwizard-type="step" style="display: none;min-height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:40px;">
 
-                                    <a id="back-to-upload" class="btn btn-default btn-tall text-muted noborder-r" style="position:absolute;top:0;left:0;" >
-                                        <i class="fa fa-angle-left text-muted"></i> Back
+                                    <a   class="back-to-upload btn flex justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                        <i class="fa fa-angle-left "></i> Back
                                     </a>
-                                    <button id="finish-form" class="btn  btn-green btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
+                                    <button class="finish-form btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
                                         Describe & Finish
                                     </button>
 
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-finish" data-ktwizard-type="step"  style="display: none;height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:40px;">
 
-                                    <a id="back-to-location"  class="btn btn-default btn-tall text-muted noborder-r" style="position:absolute;top:0;left:0;" >
-                                        <i class="fa fa-angle-left text-muted"></i> Back
+                                    <a   class="back-to-location btn  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                        <i class="fa fa-angle-left "></i> Back
                                     </a>
-                                    <button  id="submitPost" type="submit" data-ktwizard-type="action-submit" class="btn  btn-green btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:fixed;top:0;right:0;z-index:9999;" >
+                                    <button   type="submit " class="submitPost btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:fixed;top:0;right:0;z-index:9999;" >
+                                        <i class="fa fa-paper-plane"></i> Upload
+                                    </button>
+                                   <div style="height:40px;width:100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-wizard-v1__nav kt-visible-desktop" style="position: relative;" >
+                            <div class="kt-wizard-v1__nav-items" style="padding:0;">
+                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:40px;">
+                                    <a  class="btn  flex justify-center   btn-tall noborder-r " href="/" style="position:absolute;top:0;left:0;height: 100%;">
+                                    <i class="fa fa-angle-left "></i> Cancel
+                                    </a>
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class=" to-location btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r">
+                                        <span class="text-white">
+                                            Next
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:40px;">
+
+                                    <a   class="btn back-to-upload flex justify-center btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                        <i class="fa fa-angle-left "></i> Back
+                                    </a>
+                                    <button class=" finish-form btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
+                                        Describe & Finish
+                                    </button>
+
+                                </div>
+                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:40px;">
+
+                                    <a   class="back-to-location btn  btn-tall  noborder-r" style="position:absolute;top:0;left:0;" >
+                                        <i class="fa fa-angle-left "></i> Back
+                                    </a>
+                                    <button  type="submit"   class="submitPost btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:absolute;top:0;right:0;" >
                                         <i class="fa fa-paper-plane"></i> Upload
                                     </button>
                                    <div style="height:40px;width:100%;"></div>
@@ -61,10 +98,10 @@
                         <div class="kt-heading kt-heading--md text-center text-gray">Upload photos</div> 
                             <div class="kt-form__section kt-form__section--first">
                                 <div class="kt-wizard-v1__form text-center" style="margin-top:1rem;">
-                                    <div class="image-msg"></div>
+                                    <div class="image-msg text-center"></div>
                                     <div id="image-files"></div>
                                     <p><small>
-                                            <i class="fa fa-info-circle text-muted">
+                                            <i class="fa fa-info-circle ">
 
                                             </i> Tap area below to add photos
                                         </small></p>
@@ -75,7 +112,7 @@
                                             <img  width="50" height="50" style="width:40px;height:40px;"  alt="Upload Photos" src="{{ url('/img/photos.svg') }}">
                                             </div>
                                         <h5 class=" text-center"><br><p>
-                                                Select photos</p>
+                                                Choose photos</p>
                                         </h5>
                                         </div>
                                     </div>
@@ -103,15 +140,15 @@
                                 </div>
 
  
-                                <p class="text-center" style="margin-bottom:5px;">Tap on map to <b>set location</b><span class="text-muted"> (required)</span>
+                                <p class="text-center" style="margin-bottom:5px;">Tap on map to <b>set location</b><span class=""> (required)</span>
                                
                                 </p>
-                                <p class="text-center text-muted" > 
+                                <p class="text-center " > 
                                     <small>
                                         Use&nbsp;&nbsp;<img style="border:1px solid #999;margin-bottom:5px;width:30px;height:30px;border-radius:4px;" width="30" src="/img/search.png" alt="">&nbsp;&nbsp;button to find location.
                                        
                                     </small></p>
-                                <div id="location-msg" class="location-msg"></div>
+                                <div id="location-msg text-center" class="location-msg"></div>
                                 <div style="margin-top: 5px;position:relative;">
                                      <span  style="position: absolute;bottom: 0;left:0px;z-index: 3;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; ">
                                         <a style="padding:5px;"  class="btn showSatelite  text-white" href="#">Satellite Map</a>
@@ -121,11 +158,10 @@
                                    
                                 </div>
                                 <br>
-                                <small class="text-muted">
+                                <small class="">
                                     Use&nbsp;&nbsp;<img style="border:1px solid #999;width:30px;height:30px;border-radius:4px;" width="30" src="/img/polyline.png" alt="">&nbsp;&nbsp;button to draw <b>trail</b>, <b>route</b> or <b>directions</b> 
                                 </small>
-
-
+                              
                                 {!! Form::hidden('map_options[route]', null, ['id' => 'route-input']) !!}
                                 {!! Form::hidden('map_options[length]', null , ['id' => 'route-input-length']) !!}
                                 {!! Form::hidden('country_code') !!}
@@ -140,11 +176,11 @@
                         <div class="kt-heading kt-heading--md text-center text-gray">Describe</div> 
                             <div class="kt-form__section kt-form__section--first" style="margin-top:1rem;">
                                 <div style="border: 1px solid #f1f1f1;padding: 10px;border-radius: 10px;">
-                                    <label>Title</label><span class="text-muted"><small></small></span>
+                                    <label>Title</label><span class=""><small></small></span>
                                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                                     <br>
                                     <label>{{ @trans('posts.description') }}</label>
-                                    {{--<br><small class="text-muted">Enter informative description  about adventure & location</small>--}}
+                                    {{--<br><small class="">Enter informative description  about adventure & location</small>--}}
                                     <div class="description-emoji">
                                         {!! Form::textarea('description', null, ['class' => 'form-control ' ,   'rows' => 2, 'id' => 'cke-description', 'style' => 'resize: x;']) !!}
                                     </div>
@@ -153,14 +189,20 @@
                                 <br>
                                 <div style="border: 1px solid #f1f1f1;padding: 10px;border-radius: 10px;">
                                     <div class="video">
-                                        <label><i class="fa fa-play-circle"></i> YouTube <b>Video</b> URL</label><span class="text-gray"><br><small> Video will be shown in Watch section</small></span>
+                                        <label style="display: flex;align-items:center;margin-bottom:0;">
+                                            <img src="/img/video.svg" width="22"  style="width:22px;invert(0.2);">&nbsp;YouTube&nbsp;<b>Video</b>&nbsp;URL</label>
+                                            <div class="text-gray" style="margin-bottom: 0.5rem;">
+                                                <small> Video will be shown in Watch section</small>
+                                            </div>
                                         {!! Form::text('video', null, ['class' => 'form-control' , 'placeholder' => 'Paste YouTube video URL']) !!}
                                     </div>
                                 </div>
                                 <br>
                                 <div style="border: 1px solid #f1f1f1;padding: 10px;border-radius: 10px;">
-                                    <div class="embeded">
-                                        <label><i class="fa fa-share-alt-square"></i> Embedded Code</label><span class="text-gray"><br><small> Embed your posts from other social networks</small></span>
+                                    <div class="embeded" >
+                                        <label style="display: flex;align-items:center;margin-bottom:0;"><i class="fa fa-share-alt-square" style="font-size:1.4rem;"></i>&nbsp;&nbsp;Embedded Code</label>
+                                        <div class="text-gray" style="margin-bottom: 0.5rem;"><small> Embed your posts from other social networks</small></div>
+                                         
                                         {!! Form::textarea('embeded_code', null, ['class' => 'form-control' , 'placeholder' => 'Paste embedded code', 'rows' => 2]) !!}
                                         <small></small>
                                     </div>

@@ -119,32 +119,11 @@
     width: 60%;
     padding: 1rem 0 5rem;
 }
-.kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #eeeef4;
-}
+ 
 .kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__form {
     margin-top: 3rem;
 }
-.kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__review .kt-wizard-v1__review-item {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #eeeef4;
-}
-.kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__review .kt-wizard-v1__review-item .kt-wizard-v1__review-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 0.7rem;
-}
-.kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__review .kt-wizard-v1__review-item .kt-wizard-v1__review-content {
-    line-height: 1.8rem;
-}
-.kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__review .kt-wizard-v1__review-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+
 .kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-form__actions {
     display: flex;
     flex-direction: row;

@@ -152,173 +152,173 @@
 console.log(document.getElementById('loged_user').value)
 </script>
 <!-- begin:: Header Mobile -->
-@if(!isset($disableHeader))
+@if(!isset($disableHeaderMobile))
 
-<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed kt-header--minimize">
-    {{-- <div class="kt-header-mobile__toolbar">
-        <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-    </div> --}}
-    <div class="kt-header-mobile__logo" style=" margin-right:8px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-      
-       
-            <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
-            @if(isset($mobileTitle) && $mobileTitle)
-                <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:300;">
-                {{ str_replace('', '', $mobileTitle) }}
-                </h2>
-            @else
-                <a href="/" class="flex items-center"  title="Avanturistic.com" style="">
-                    <span class="logo-text" style="font-weight:500;margin-left:10px;">
-                        Avanturistic
-                    </span>
-                </a>
-            @endif
-       
-       
+    <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed kt-header--minimize">
+        {{-- <div class="kt-header-mobile__toolbar">
+            <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+        </div> --}}
+        <div class="kt-header-mobile__logo" style=" margin-right:8px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        
+        
+                <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
+                @if(isset($mobileTitle) && $mobileTitle)
+                    <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:300;">
+                    {{ str_replace('', '', $mobileTitle) }}
+                    </h2>
+                @else
+                    <a href="/" class="flex items-center"  title="Avanturistic.com" style="">
+                        <span class="logo-text" style="font-weight:500;margin-left:10px;">
+                            Avanturistic
+                        </span>
+                    </a>
+                @endif
+        
+        
 
-    </div>
-    <div class="kt-header-mobile__toolbar" style="color:#f8f8fb;">
-        @if(isset($user) && $user)
+        </div>
+        <div class="kt-header-mobile__toolbar" style="color:#f8f8fb;">
+            @if(isset($user) && $user)
 
-                <div class="kt-header__topbar-item kt-header__topbar-item--user">
+                    <div class="kt-header__topbar-item kt-header__topbar-item--user">
 
-                    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" st>
+                        <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px" st>
 
-                        @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
-                            <span class="kt-header__topbar-icon "><img style="border-width: 1px;width:30px;border-color:#474747;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
-                        @else
-                            <div style="padding-top: 6px;" class="post-avatar img-circle "><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></div>
-                        @endif
-
-                    </div>
-                    <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-sm" >
-
-                        
-
-                        <!--begin: Navigation -->
-                        <div class="kt-notification" style="z-index:999;">
-                            @if($user->group == 'admin')
-                                <a href="/admin" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:0.6em;">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <polygon points="0 0 24 0 24 24 0 24"/>
-                                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.5"/>
-                                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            <b>Admin</b>
-                                        </div>
-
-                                    </div>
-                                </a>
+                            @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
+                                <span class="kt-header__topbar-icon "><img style="border-width: 1px;width:30px;border-color:#474747;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
+                            @else
+                                <div style="padding-top: 6px;" class="post-avatar img-circle "><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></div>
                             @endif
-                                <a href="/{{ '@' .$user->name_slug}}" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:5px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:0.6em;">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <polygon points="0 0 24 0 24 24 0 24"/>
-                                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.5"/>
-                                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            <b>View Profile</b>
-                                        </div>
 
-                                    </div>
-                                </a>
-                                <a href="/profile" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:7px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect opacity="0.200000003" x="0" y="0" width="24" height="24"/>
-                                                <path d="M4.5,7 L9.5,7 C10.3284271,7 11,7.67157288 11,8.5 C11,9.32842712 10.3284271,10 9.5,10 L4.5,10 C3.67157288,10 3,9.32842712 3,8.5 C3,7.67157288 3.67157288,7 4.5,7 Z M13.5,15 L18.5,15 C19.3284271,15 20,15.6715729 20,16.5 C20,17.3284271 19.3284271,18 18.5,18 L13.5,18 C12.6715729,18 12,17.3284271 12,16.5 C12,15.6715729 12.6715729,15 13.5,15 Z" fill="#000000" opacity="0.3"/>
-                                                <path d="M17,11 C15.3431458,11 14,9.65685425 14,8 C14,6.34314575 15.3431458,5 17,5 C18.6568542,5 20,6.34314575 20,8 C20,9.65685425 18.6568542,11 17,11 Z M6,19 C4.34314575,19 3,17.6568542 3,16 C3,14.3431458 4.34314575,13 6,13 C7.65685425,13 9,14.3431458 9,16 C9,17.6568542 7.65685425,19 6,19 Z" fill="#000000"/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            <b>Profile Settings</b>
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            Edit profile preferences
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="/my-adventures" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:2px;">
-                                        <img src="/img/triangles-black.svg" alt="My Adventures" style="width:24px;" width="24">
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            <b>My Adventures</b>
-                                        </div>
-                                        <div class="kt-notification__item-time">
-                                            Manage your adventures
-                                        </div>
-                                    </div>
-                                </a>
-                             
-                                <a href="/logout" class="kt-notification__item">
-                                    <div class="kt-notification__item-icon" style="padding-left:8px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect x="0" y="0" width="24" height="24"/>
-                                                <path d="M14.0069431,7.00607258 C13.4546584,7.00607258 13.0069431,6.55855153 13.0069431,6.00650634 C13.0069431,5.45446114 13.4546584,5.00694009 14.0069431,5.00694009 L15.0069431,5.00694009 C17.2160821,5.00694009 19.0069431,6.7970243 19.0069431,9.00520507 L19.0069431,15.001735 C19.0069431,17.2099158 17.2160821,19 15.0069431,19 L3.00694311,19 C0.797804106,19 -0.993056895,17.2099158 -0.993056895,15.001735 L-0.993056895,8.99826498 C-0.993056895,6.7900842 0.797804106,5 3.00694311,5 L4.00694793,5 C4.55923268,5 5.00694793,5.44752105 5.00694793,5.99956624 C5.00694793,6.55161144 4.55923268,6.99913249 4.00694793,6.99913249 L3.00694311,6.99913249 C1.90237361,6.99913249 1.00694311,7.89417459 1.00694311,8.99826498 L1.00694311,15.001735 C1.00694311,16.1058254 1.90237361,17.0008675 3.00694311,17.0008675 L15.0069431,17.0008675 C16.1115126,17.0008675 17.0069431,16.1058254 17.0069431,15.001735 L17.0069431,9.00520507 C17.0069431,7.90111468 16.1115126,7.00607258 15.0069431,7.00607258 L14.0069431,7.00607258 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.006943, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-9.006943, -12.000000) "/>
-                                                <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) rotate(-270.000000) translate(-14.000000, -12.000000) " x="13" y="6" width="2" height="12" rx="1"/>
-                                                <path d="M21.7928932,9.79289322 C22.1834175,9.40236893 22.8165825,9.40236893 23.2071068,9.79289322 C23.5976311,10.1834175 23.5976311,10.8165825 23.2071068,11.2071068 L20.2071068,14.2071068 C19.8165825,14.5976311 19.1834175,14.5976311 18.7928932,14.2071068 L15.7928932,11.2071068 C15.4023689,10.8165825 15.4023689,10.1834175 15.7928932,9.79289322 C16.1834175,9.40236893 16.8165825,9.40236893 17.2071068,9.79289322 L19.5,12.0857864 L21.7928932,9.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(19.500000, 12.000000) rotate(-90.000000) translate(-19.500000, -12.000000) "/>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="kt-notification__item-details">
-                                        <div class="kt-notification__item-title kt-font-bold">
-                                            {!! Form::open(['route' => 'logout','method' => 'POST']) !!}
-                                            <button class="btn  btn-xs" style="padding-left:0;">
-                                        
-                                            Sign Out
-                                            </button>
-                                            {!! Form::close() !!}
-                                        </div>
-                                        
-                                    </div>
-                                </a>
                         </div>
+                        <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-sm" >
 
-                        <!--end: Navigation -->
+                            
+
+                            <!--begin: Navigation -->
+                            <div class="kt-notification" style="z-index:999;">
+                                @if($user->group == 'admin')
+                                    <a href="/admin" class="kt-notification__item">
+                                        <div class="kt-notification__item-icon" style="padding-left:5px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:0.6em;">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"/>
+                                                    <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.5"/>
+                                                    <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="kt-notification__item-details">
+                                            <div class="kt-notification__item-title kt-font-bold">
+                                                <b>Admin</b>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                @endif
+                                    <a href="/{{ '@' .$user->name_slug}}" class="kt-notification__item">
+                                        <div class="kt-notification__item-icon" style="padding-left:5px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:0.6em;">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <polygon points="0 0 24 0 24 24 0 24"/>
+                                                    <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.5"/>
+                                                    <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="kt-notification__item-details">
+                                            <div class="kt-notification__item-title kt-font-bold">
+                                                <b>View Profile</b>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                    <a href="/profile" class="kt-notification__item">
+                                        <div class="kt-notification__item-icon" style="padding-left:7px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect opacity="0.200000003" x="0" y="0" width="24" height="24"/>
+                                                    <path d="M4.5,7 L9.5,7 C10.3284271,7 11,7.67157288 11,8.5 C11,9.32842712 10.3284271,10 9.5,10 L4.5,10 C3.67157288,10 3,9.32842712 3,8.5 C3,7.67157288 3.67157288,7 4.5,7 Z M13.5,15 L18.5,15 C19.3284271,15 20,15.6715729 20,16.5 C20,17.3284271 19.3284271,18 18.5,18 L13.5,18 C12.6715729,18 12,17.3284271 12,16.5 C12,15.6715729 12.6715729,15 13.5,15 Z" fill="#000000" opacity="0.3"/>
+                                                    <path d="M17,11 C15.3431458,11 14,9.65685425 14,8 C14,6.34314575 15.3431458,5 17,5 C18.6568542,5 20,6.34314575 20,8 C20,9.65685425 18.6568542,11 17,11 Z M6,19 C4.34314575,19 3,17.6568542 3,16 C3,14.3431458 4.34314575,13 6,13 C7.65685425,13 9,14.3431458 9,16 C9,17.6568542 7.65685425,19 6,19 Z" fill="#000000"/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="kt-notification__item-details">
+                                            <div class="kt-notification__item-title kt-font-bold">
+                                                <b>Profile Settings</b>
+                                            </div>
+                                            <div class="kt-notification__item-time">
+                                                Edit profile preferences
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="/my-adventures" class="kt-notification__item">
+                                        <div class="kt-notification__item-icon" style="padding-left:2px;">
+                                            <img src="/img/triangles-black.svg" alt="My Adventures" style="width:24px;" width="24">
+                                        </div>
+                                        <div class="kt-notification__item-details">
+                                            <div class="kt-notification__item-title kt-font-bold">
+                                                <b>My Adventures</b>
+                                            </div>
+                                            <div class="kt-notification__item-time">
+                                                Manage your adventures
+                                            </div>
+                                        </div>
+                                    </a>
+                                
+                                    <a href="/logout" class="kt-notification__item">
+                                        <div class="kt-notification__item-icon" style="padding-left:8px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24"/>
+                                                    <path d="M14.0069431,7.00607258 C13.4546584,7.00607258 13.0069431,6.55855153 13.0069431,6.00650634 C13.0069431,5.45446114 13.4546584,5.00694009 14.0069431,5.00694009 L15.0069431,5.00694009 C17.2160821,5.00694009 19.0069431,6.7970243 19.0069431,9.00520507 L19.0069431,15.001735 C19.0069431,17.2099158 17.2160821,19 15.0069431,19 L3.00694311,19 C0.797804106,19 -0.993056895,17.2099158 -0.993056895,15.001735 L-0.993056895,8.99826498 C-0.993056895,6.7900842 0.797804106,5 3.00694311,5 L4.00694793,5 C4.55923268,5 5.00694793,5.44752105 5.00694793,5.99956624 C5.00694793,6.55161144 4.55923268,6.99913249 4.00694793,6.99913249 L3.00694311,6.99913249 C1.90237361,6.99913249 1.00694311,7.89417459 1.00694311,8.99826498 L1.00694311,15.001735 C1.00694311,16.1058254 1.90237361,17.0008675 3.00694311,17.0008675 L15.0069431,17.0008675 C16.1115126,17.0008675 17.0069431,16.1058254 17.0069431,15.001735 L17.0069431,9.00520507 C17.0069431,7.90111468 16.1115126,7.00607258 15.0069431,7.00607258 L14.0069431,7.00607258 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.006943, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-9.006943, -12.000000) "/>
+                                                    <rect fill="#000000" opacity="0.3" transform="translate(14.000000, 12.000000) rotate(-270.000000) translate(-14.000000, -12.000000) " x="13" y="6" width="2" height="12" rx="1"/>
+                                                    <path d="M21.7928932,9.79289322 C22.1834175,9.40236893 22.8165825,9.40236893 23.2071068,9.79289322 C23.5976311,10.1834175 23.5976311,10.8165825 23.2071068,11.2071068 L20.2071068,14.2071068 C19.8165825,14.5976311 19.1834175,14.5976311 18.7928932,14.2071068 L15.7928932,11.2071068 C15.4023689,10.8165825 15.4023689,10.1834175 15.7928932,9.79289322 C16.1834175,9.40236893 16.8165825,9.40236893 17.2071068,9.79289322 L19.5,12.0857864 L21.7928932,9.79289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(19.500000, 12.000000) rotate(-90.000000) translate(-19.500000, -12.000000) "/>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="kt-notification__item-details">
+                                            <div class="kt-notification__item-title kt-font-bold">
+                                                {!! Form::open(['route' => 'logout','method' => 'POST']) !!}
+                                                <button class="btn  btn-xs" style="padding-left:0;">
+                                            
+                                                Sign Out
+                                                </button>
+                                                {!! Form::close() !!}
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                            </div>
+
+                            <!--end: Navigation -->
+                        </div>
                     </div>
-                </div>
-        @else
-            @if(Request::segment(1) != 'login')
-                <div class=" kt-header__topbar-item  kt-hidden-desktop " style=" justify-content: center;" >
-                    <a style="display: inline-flex;align-items:center;" href="/login"  >
-                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+            @else
+                @if(Request::segment(1) != 'login')
+                    <div class=" kt-header__topbar-item  kt-hidden-desktop " style=" justify-content: center;" >
+                        <a style="display: inline-flex;align-items:center;" href="/login"  >
+                        <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
 
 
-                        <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
-                    <span>
-                    </a>
-                </div>
+                            <span style="white-space: nowrap; margin-right:10px;color:#3C3C3C;font-size:1rem;"><b>LOGIN</b></span>
+                        <span>
+                        </a>
+                    </div>
+                @endif
+                @if(Request::segment(1) != 'register' && Request::segment(1) != 'sign-up')
+                    <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
+                        <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
+                        <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
+
+                            <span style="white-space: nowrap;margin-left:5px; color:#3C3C3C;font-size:1rem;"><b>SIGN UP</b></span>
+                        </span>
+                        </a>
+                    </div>
+                @endif
             @endif
-            @if(Request::segment(1) != 'register' && Request::segment(1) != 'sign-up')
-                <div class=" kt-header__topbar-item  kt-hidden-desktop " style="border-left:1px solid #f8f8fb;justify-content: center;" >
-                    <a style="display: inline-flex;align-items:center;" href="#" data-toggle="modal" data-target="#signUpModal" >
-                    <span class=" kt-header__topbar-wrapper " style="padding-left:5px; ">
-
-                        <span style="white-space: nowrap;margin-left:5px; color:#3C3C3C;font-size:1rem;"><b>SIGN UP</b></span>
-                    </span>
-                    </a>
-                </div>
-            @endif
-        @endif
+        </div>
     </div>
-</div>
 @endif
 <div class="kt-grid kt-grid--hor kt-grid--root">
     @if(isset($user) && $user)
@@ -327,7 +327,7 @@ console.log(document.getElementById('loged_user').value)
         </div>
     @endif
     <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver">
-        <div {{ isset($disableHeader) ? 'style=padding-top:0px;' : '' }} class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" >
+        <div {{ isset($disableHeaderMobile) ? 'style=padding-top:0px;' : '' }} class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper" >
             @if(!isset($disableHeader))
                 @include('shared.header')
             @endif

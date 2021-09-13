@@ -306,7 +306,7 @@ $(document).ready(function(){
         resizeEvent.initUIEvent('resize', true, false, window, 0);
         window.dispatchEvent(resizeEvent);
     }
-    $(document).on('click', '#submitPost', function (e) {
+    $(document).on('click', '.submitPost', function (e) {
         e.preventDefault();
         var  lat = $('[name="lat"]').val();
         var  lng = $('[name="lng"]').val();
@@ -315,15 +315,15 @@ $(document).ready(function(){
         if($('#image-files [name="image[]"]').length == 0){
 
             $('.item-finish').hide();
-            $('#back-to-upload').trigger('click');
-
-            $('.image-msg').html('<div class="alert alert-danger">At least one photo is required.</div>');
-
+            $('.back-to-upload').trigger('click');
+            toastr.warning('Upload at least one photo.','Upload photos', {timeOut: 3000})
+/*             $('.image-msg').html('<div class="alert alert-danger text-center">At least one photo is required.</div>');
+ */
             resizeWindow();
             return false;
         }
         $('#kt_form').submit();
-        $('#submitPost').prop('disabled', 'true');
+        $('.submitPost').prop('disabled', 'true');
 
     })
     initMap();
@@ -337,11 +337,11 @@ window.onload = function () {
            
              history.pushState('newbackbutton', null, null);
             if($('#tab-location').is(':visible')){
-                $('#back-to-upload').trigger('click');
+                $('.back-to-upload').trigger('click');
 
             } else {
                 if($('#tab-finish').is(':visible')){
-                    $('#back-to-location').trigger('click');
+                    $('.back-to-location').trigger('click');
 
                 }
             }
