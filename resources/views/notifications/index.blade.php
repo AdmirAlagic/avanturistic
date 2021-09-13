@@ -3,7 +3,7 @@
  <!-- begin:: Content -->
  <div class="kt-container  kt-grid__item kt-grid__item--fluid" style="min-height:700px;padding:0;" id="all-notifications">
         <div class="kt-portlet kt-portlet--tabs">
-            <div class="kt-portlet__head">
+            <div class="kt-portlet__head kt-hidden-tablet-and-mobile">
                 <div class="kt-portlet__head-label">
                         <span class="kt-portlet__head-icon">
                             <i class="fa fa-bell"></i>
