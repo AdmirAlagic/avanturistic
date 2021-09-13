@@ -94,17 +94,17 @@
                         </a>
                     </p>
                     <p>
-                        <a class="text-white" href="/privacy-policy">
+                        <a class="text-white" href="/outdoor-adventures">
                             Explore Adventures
                         </a>
                     </p>
                     <p>
-                        <a class="text-white" href="/privacy-policy">
+                        <a class="text-white" href="/the-world-map-of-outdoor-adventures">
                             Interactive map
                         </a>
                     </p>  
                     <p>
-                        <a class="text-white" href="/privacy-policy">
+                        <a class="text-white" href="/watch">
                             Watch
                         </a>
                     </p>
