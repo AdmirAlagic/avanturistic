@@ -85,5 +85,10 @@ view()->share('pageDescription', 'Log in to Avanturistic. Continue with Facebook
         }
     }
 
+    public function logout(Request $request){
+        Auth::logout();
+        return redirect('/');
+    }
+
     
 }

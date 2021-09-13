@@ -105,6 +105,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'], function(){
 
 Auth::routes(['verify' => true]);
 Route::post('login', 'Auth\LoginController@authenticate');
+Route::get('logout', 'Auth\LoginController@logout');
 Route::get('sign-up', 'Auth\RegisterController@getRegister');
 Route::post('asyncRegister', 'Auth\RegisterController@asyncRegister');
  

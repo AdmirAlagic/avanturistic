@@ -94,7 +94,9 @@ $green: #acc957;
 }
 
 @media (max-width: 1024px){
-  
+  .kt-header{
+    position: relative;
+  }
   .filter-toolbar-container{
     padding:0;
     justify-items:end;
@@ -169,6 +171,7 @@ $green: #acc957;
     bottom: -12px;
     left: 0;
   }
+  
   
 }
 .kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form .kt-wizard-v1__content .kt-wizard-v1__form{

@@ -419,7 +419,7 @@ a {
  
 .kt-header {
   border-bottom: 1px solid #ebedf2;
-
+  z-index: 97;
    background-color: #FFFFFF;
    position: fixed;
    top: 0;
@@ -2454,13 +2454,7 @@ border-top-right-radius: 4px;
   left: 50%;
   transform: translateX(-50%);
 }
-h1{
-	color: #000;
-	font-size: 44px;
-	margin-top: 40px;
-  display: inline-block;
-  white-space: nowrap;
-}
+ 
 /*Sentence*/
 .sentence{
      color: #222;
@@ -2536,7 +2530,7 @@ h1{
 }
 #filter-toolbar{
   position: fixed;
-  z-index: 97;
+  z-index: 5;
   background: white;
   box-shadow: 0 1px 9px -3px rgb(0 0 0 / 20%);
   left: 0;
