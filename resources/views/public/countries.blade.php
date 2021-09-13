@@ -17,25 +17,27 @@
                     @foreach($countries as $obj)
                         @php $countPosts = count($obj->posts()->public()->get());@endphp
                         @php $latestPost = $obj->posts()->latest()->public()->first();@endphp
-                        <div class="country col-12 col-sm-4 text-center" style="margin-bottom:20px;">
+                        <div class="country col-12 col-sm-4 text-center flex justify-center" style="margin-bottom:20px;">
 
                             <a href="/country/{{ $obj->slug }}">
-                                <div style="position:relative;min-height: 300px;" class="adventure-category">
-                                    <img class="bg lazy "  data-src="{{ $latestPost->image[0]['thumb_path'] }}" data-srcset="{{ $latestPost->image[0]['thumb_path'] }}" alt="{{ $latestPost->image[0]['thumb_path'] }}"  >
+                                
+                                <div style="position:relative;min-height: 300px;" class="adventure-category img-hover-zoom">
+                                    <img class="bg lazy  "  data-src="{{ $latestPost->image[0]['thumb_path'] }}" data-srcset="{{ $latestPost->image[0]['thumb_path'] }}" alt="{{ $latestPost->image[0]['thumb_path'] }}"  >
                                     <div class="adventure-category-wrapper" >
+                                        <h2 class="text-center   text-white" style="font-weight: 900; text-transform:uppercase;font-size:1.3em;">{{ $obj->title }}</h2>
+
                                         <p style="margin-bottom:0;padding: 5px;" class="text-center">
-                                        <div style="border:3px solid #FFFFFF;font-size:2.7em;background: #33333359;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 60px; height: 60px;margin-left: auto; margin-right: auto;padding: 0px;">
+                                        <div style="border:3px solid #FFFFFF;font-size:2.7em;background: #33333359;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; line-height:2.7em; width: 60px; height: 60px;margin-left: auto; margin-right: auto;padding: 0px;">
                                             {!! $obj->emoji !!}
                                         </div>
 
                                         &nbsp;&nbsp;</p>
 
-                                        <h2 class="text-center   text-white" style="font-weight: 900; text-transform:uppercase;font-size:1.3em;">{{ $obj->title }}</h2>
-                                        <span  class="adventureCount" style="font-size:1.5em;">
+                                        <span  class="adventureCount" style="font-size:1.6em;font-weight:900;">
                                             {{ $countPosts }}
-                                    </span>
+                                        </span>
 
-                                        <span class="adventureDesc text-white" style="font-size:1em;"> {{ $countPosts > 1 ? 'adventures' : ' adventure' }}</span>
+                                        <span class="adventureDesc text-white"  style="font-weight: 500; font-size:1em;"> <br>adventure {{ $countPosts > 1 ? ' locations' : ' location' }}</span>
                                     </div>
                                 </div>
 
