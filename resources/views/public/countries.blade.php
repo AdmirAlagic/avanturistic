@@ -5,8 +5,8 @@
         <div class="kt-portlet kt-portlet--height-fluid">
             <div class="kt-portlet__head text-center">
                 <div class="kt-portlet__head-label" style="width:100%">
-                    <h1 class="kt-portlet__head-title text-center" style="font-family: 'Kaushan Script', cursive;font-size: 1.5em;width:100%;border-radius:0px !important;">
-                        <i class="fa fa-flag text-green"></i>
+                    <h1 class="kt-portlet__head-title text-center" style="font-size: 1.2em;width:100%;border-radius:0px !important;">
+                        <i class="fa fa-flag text-muted"></i>
 
                         &nbsp;Explore adventures by country
                     </h1>
@@ -17,7 +17,7 @@
                     @foreach($countries as $obj)
                         @php $countPosts = count($obj->posts()->public()->get());@endphp
                         @php $latestPost = $obj->posts()->latest()->public()->first();@endphp
-                        <div class="country col-12 col-sm-4 text-center">
+                        <div class="country col-12 col-sm-4 text-center" style="margin-bottom:20px;">
 
                             <a href="/country/{{ $obj->slug }}">
                                 <div style="position:relative;min-height: 300px;" class="adventure-category">
