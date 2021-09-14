@@ -158,6 +158,7 @@ button.toast-close-button {
 }
 .toast {
     background-color: #474747;
+    letter-spacing: normal !important
 }
 /* .toast-success {
     background-color: #51a351;

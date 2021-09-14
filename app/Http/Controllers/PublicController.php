@@ -327,7 +327,8 @@ class PublicController extends AppController
        /*  return redirect('/the-world-map-of-outdoor-adventures'); */
        $data = [
         'countries' =>  Country::whereHas('posts')->get(),
-
+        'pageTitle' => 'Countries',
+        'mobileTitle' => 'Countries'
        ];
 
        return view('public.countries',$data);

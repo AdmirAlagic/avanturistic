@@ -91,13 +91,7 @@
         position: absolute;
         right: 2rem;
     }
-    .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item:last-child:after {
-        content: "\f105";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        font-size: 2rem;
-        color: #a2a5b9;
-    }
+    
     .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item .kt-wizard-v1__nav-body {
         flex-direction: row;
         justify-content: flex-start;
@@ -222,4 +216,4 @@
 .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item .kt-wizard-v1__nav-body .kt-wizard-v1__nav-icon {
     font-size: 1.2em;
 }
-  
+ 

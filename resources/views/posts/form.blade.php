@@ -17,32 +17,42 @@
                         <div class="kt-wizard-v1__nav kt-visible-tablet-and-mobile" >
                             <div class="kt-wizard-v1__nav-items" style="padding:0;">
                                 <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:40px;">
-                                    <a  class="btn  flex justify-center   noborder-r " href="/" style="position:absolute;top:0;left:0;height: 100%;">
-                                    <i class="fa fa-angle-left "></i> Cancel
+                                    <a  class="btn  flex justify-center   noborder-r btn-tall  kt-font-transform-u" href="/" style="position:absolute;top:0;left:0;height: 100%;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                        &nbsp;Cancel
                                     </a>
-                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class="to-location btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r">
-                                        <span class="text-white">
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class="to-location btn btn-tall   btn-md flex kt-font-transform-u noborder-r">
+                                        <span >
                                             Next
                                         </span>
                                     </a>
                                 </div>
                                 <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:40px;">
 
-                                    <a   class="back-to-upload btn flex justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
-                                        <i class="fa fa-angle-left "></i> Back
+                                    <a   class="back-to-upload btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                        &nbsp;Back
                                     </a>
-                                    <button class="finish-form btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
+                                    <button class="finish-form btn btn-tall   btn-md flex kt-font-transform-u noborder-r "  style="position:absolute;top:0;right:0;border:none;height:40px; " >
                                         Describe & Finish
                                     </button>
 
                                 </div>
                                 <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:40px;">
 
-                                    <a   class="back-to-location btn  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
-                                        <i class="fa fa-angle-left "></i> Back
+                                    <a   class="back-to-location btn  kt-font-transform-u btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                         Back
                                     </a>
-                                    <button   type="submit " class="submitPost btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:fixed;top:0;right:0;z-index:9999;" >
-                                        <i class="fa fa-paper-plane"></i> Upload
+                                    <button   type="submit " class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:fixed;top:0;right:0;z-index:9999;" >
+                                       
+                                           Share
                                     </button>
                                    <div style="height:40px;width:100%;"></div>
                                 </div>
@@ -51,32 +61,39 @@
                         <div class="kt-wizard-v1__nav kt-visible-desktop" style="position: relative;" >
                             <div class="kt-wizard-v1__nav-items" style="padding:0;">
                                 <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:40px;">
-                                    <a  class="btn  flex justify-center   btn-tall noborder-r " href="/" style="position:absolute;top:0;left:0;height: 100%;">
-                                    <i class="fa fa-angle-left "></i> Cancel
+                                    <a  class="btn  flex justify-center   btn-tall noborder-r  kt-font-transform-u" href="/" style="position:absolute;top:0;left:0;height: 100%;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                            </svg>
+                                            &nbsp;Cancel
+                                        </svg>
                                     </a>
-                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class=" to-location btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r">
-                                        <span class="text-white">
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class=" to-location btn btn-tall    btn-md flex kt-font-transform-u noborder-r">
+                                        <span >
                                             Next
                                         </span>
                                     </a>
                                 </div>
                                 <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:40px;">
-
-                                    <a   class="btn back-to-upload flex justify-center btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
-                                        <i class="fa fa-angle-left "></i> Back
+                                    <a   class="back-to-upload btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                        &nbsp;Back
                                     </a>
-                                    <button class=" finish-form btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
+                                    <button class=" finish-form btn   btn-md flex kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
                                         Describe & Finish
                                     </button>
 
                                 </div>
                                 <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:40px;">
 
-                                    <a   class="back-to-location btn  btn-tall  noborder-r" style="position:absolute;top:0;left:0;" >
+                                    <a   class="back-to-location btn  kt-font-transform-u btn-tall  noborder-r" style="position:absolute;top:0;left:0;" >
                                         <i class="fa fa-angle-left "></i> Back
                                     </a>
-                                    <button  type="submit"   class="submitPost btn  btn-green btn-md flex kt-font-bold kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:absolute;top:0;right:0;" >
-                                        <i class="fa fa-paper-plane"></i> Upload
+                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:absolute;top:0;right:0;" >
+                                       
+                                           Share
                                     </button>
                                    <div style="height:40px;width:100%;"></div>
                                 </div>
@@ -95,7 +112,7 @@
                     <!--begin: Form Wizard Step 1-->
                         <div class="kt-wizard-v1__content"  data-ktwizard-state="current" data-ktwizard-type="step-content" id="tab-image">
                         <div class="kt-heading kt-heading--md text-center text-gray"><small>Step 1/3</small></div> 
-                        <div class="kt-heading kt-heading--md text-center text-gray">Upload photos</div> 
+                        <div class="kt-heading kt-heading--md text-center text-gray">Share photos</div> 
                             <div class="kt-form__section kt-form__section--first">
                                 <div class="kt-wizard-v1__form text-center" style="margin-top:1rem;">
                                     <div class="image-msg text-center"></div>
@@ -129,37 +146,44 @@
                             <div class="kt-heading kt-heading--md text-center text-gray"><small>Step 2/3</small></div> 
                             <div class="kt-heading kt-heading--md text-center text-gray">Set Location</div> 
                             <div class="kt-form__section kt-form__section--first" style="margin-top:1rem;">
-                                <div class="form-group">
-                                    <label>Location Name</label>
-                                    {!! Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter location name']) !!}
-                                </div>
-                                <br>
+                               
+                              
                                 <div class="form-group" id="route-input-description" style="display:none;">
                                     <label>Route Description</label>
                                     {!! Form::text('map_options[description]', null, ['class' => 'form-control', 'placeholder' => 'Enter route description']) !!}
                                 </div>
 
  
-                                <p class="text-center" style="margin-bottom:5px;">Tap on map to <b>set location</b><span class=""> (required)</span>
+                                <p class="text-center" style="margin-bottom:5px;">Tap on map to set location
+                                    <span class=""><small style="font-weight:normal;"> (required)</small>
+                                    </span>
                                
                                 </p>
                                 <p class="text-center " > 
                                     <small>
-                                        Use&nbsp;&nbsp;<img style="border:1px solid #999;margin-bottom:5px;width:30px;height:30px;border-radius:4px;" width="30" src="/img/search.png" alt="">&nbsp;&nbsp;button to find location.
+                                        Use&nbsp;&nbsp;<img style="border:1px solid #999;margin-bottom:5px;width:20px;;height:20px;;border-radius:4px;" width="30" src="/img/search.png" alt="">&nbsp;&nbsp;button to find location.
                                        
                                     </small></p>
                                 <div id="location-msg text-center" class="location-msg"></div>
                                 <div style="margin-top: 5px;position:relative;">
                                      <span  style="position: absolute;bottom: 0;left:0px;z-index: 3;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; ">
-                                        <a style="padding:5px;"  class="btn showSatelite  text-white" href="#">Satellite Map</a>
+                                        <a style="padding:5px;"  class="btn showSatelite  text-white" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                              </svg>
+                                        </a>
                                     </span>
                                     <div id="single-map" style="width:100%; height:270px; margin:0;padding:0;position:relative;">
                                     </div>
                                    
                                 </div>
                                 <br>
+                                <div class="form-group">
+                                    <label>Location Name</label>
+                                    {!! Form::text('address', null, ['class' => 'form-control', 'placeholder' => 'Enter location name']) !!}
+                                </div>
                                 <small class="">
-                                    Use&nbsp;&nbsp;<img style="border:1px solid #999;width:30px;height:30px;border-radius:4px;" width="30" src="/img/polyline.png" alt="">&nbsp;&nbsp;button to draw <b>trail</b>, <b>route</b> or <b>directions</b> 
+                                    Use&nbsp;&nbsp;<img style="border:1px solid #999;width:20px;;height:20px;;border-radius:4px;" width="30" src="/img/polyline.png" alt="">&nbsp;&nbsp;button to draw <b>trail</b>, <b>route</b> or <b>directions</b> 
                                 </small>
                               
                                 {!! Form::hidden('map_options[route]', null, ['id' => 'route-input']) !!}
@@ -190,7 +214,7 @@
                                 <div style="border: 1px solid #f1f1f1;padding: 10px;border-radius: 10px;">
                                     <div class="video">
                                         <label style="display: flex;align-items:center;margin-bottom:0;">
-                                            <img src="/img/video.svg" width="22"  style="width:22px;invert(0.2);">&nbsp;YouTube&nbsp;<b>Video</b>&nbsp;URL</label>
+                                            <img src="/img/video.svg" width="22"  style="width:22px;invert(0.3);">&nbsp;YouTube&nbsp;<b>Video</b>&nbsp;URL</label>
                                             <div class="text-gray" style="margin-bottom: 0.5rem;">
                                                 <small> Video will be shown in Watch section</small>
                                             </div>
