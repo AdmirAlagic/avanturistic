@@ -11,7 +11,7 @@
                     <!--Begin::Portlet-->
                     <div class="kt-portlet kt-portlet--height-fluid" style="margin-bottom:0;">
 
-                        <div class="kt-portlet__body" style="padding-left:0;padding-right:0;">
+                        <div class="kt-portlet__body padding0" >
                             <div class="">
 
                                 <div class="row">
@@ -20,11 +20,11 @@
 
                                         <div class="kt-widget__section">
                                             <a href="#" class="kt-widget__username text-dark" >
-                                                <h1 style="font-size:1.4rem;font-weight:300;">{{ $model->name }}</h1>
+                                                <h1 style="font-size:1.4rem;font-weight:300;margin:2rem;">{{ $model->name }}</h1>
                                             </a>
                                         </div>
                                         <div class="kt-widget__media text-center">
-                                            <br>
+                                            
                                             <div class="kt-avatar kt-avatar--outline kt-avatar--circle- " >
                                                 <div  class="kt-avatar__holder {{ $user && $user->id == $model->id ? 'dropzone-file-area dropzone dz-clickable' : '' }} img-circle" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url('{{ $model->avatar ? url($model->avatar) : '/img/avatar.png' }}');">
                                                     @if($user && $user->id == $model->id)
@@ -36,7 +36,7 @@
                                                         </div>
                                                     @endif
                                                     @if(!$model->avatar || $model->avatar == ' ' || $model->avatar == '')
-                                                        <div class="text-white" style="padding-top:1.5em;font-size:2rem;" ><b>{{ ucfirst($model->name[0]) }}</b></div>
+                                                        <div class="text-white" style="padding-top:1.5em;font-size:2rem;" >{{ ucfirst($model->name[0]) }}</div>
                                                     @endif
                                                     <input type="hidden" name="avatar">
                                                 </div>
@@ -46,13 +46,13 @@
                                             <br>
                                             @if($user && $model->id != $user->id)
                                             <br>
-                                            <a href="/message/{{ $model->id }}" class="kt-nav__link" >
+                                            <a href="/message/{{ $model->id }}" class="kt-nav__link mb-10" >
                                                 <div class="img-circle sendMessageBtn">
                                                 <i  class="fa fa-envelope"></i>
                                                     <span><small>Send message</small></span>
                                                 </div> 
                                                 
-                                            </a><br><br>
+                                            </a> 
                                             @endif
                                             @if($user && $model->id == $user->id)
                                                 <a href="/profile" class="flex items-center justify-center mt-10 mb-10">
@@ -65,16 +65,17 @@
                                                
                                             @endif 
                                             @if($hasSocial)
-                                                <div class="kt-widget__content">
-                                                    <hr>
+                                                <div class="kt-widget__content mt-10 " style="border-top:1px solid #eee; padding-top:15px;padding-bottom:15px;">
+                                                    
                                                     <div class="row">
 
                                                         <div class="col-12 text-center">
-                                                            @if(isset($model->social_links['website']))
+                                                            <p>
                                                                 <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['website'] , '') }}">
-                                                                    <i class="la la-globe text-dark img-fade-hover" style="font-size:2.4rem;"></i>
+                                                                     {{ UtilHelper::stripUrl($model->social_links['website']) }}
                                                                 </a>
-                                                            @endif
+                                                            </p>
+                                                           
                                                             @if(isset($model->social_links['facebook']))
                                                                 <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['facebook'] , 'facebook.com') }}">
                                                                     <i class="la la-facebook text-dark img-fade-hover" style="font-size:2.5rem;"></i>
@@ -175,7 +176,7 @@
                                                                         </div>
                                                                         <div class="col-10 text-left">
                                                                         
-                                                                            <span class="text-dark">Upload <b>profile picture</b>
+                                                                            <span class="text-dark">Upload profile picture
                                                                             </span>
                                                                         </div>
                                                                     </div>
@@ -192,7 +193,7 @@
                                                                         </div>
                                                                         <div class="col-10 text-left">
                                                                         
-                                                                            <span class="text-dark">Set your<b> country</b>
+                                                                            <span class="text-dark">Set your country
                                                                             </span>
                                                                         </div>
                                                                     </div>
@@ -210,7 +211,7 @@
                                                                         </div>
                                                                         <div class="col-10 text-left">
                                                                         
-                                                                            <span class="text-dark">Choose your<b> interests</b>
+                                                                            <span class="text-dark">Choose your interests
                                                                         
                                                                         </div>
                                                                     </div>
@@ -236,7 +237,7 @@
             </div>
             <div class="col-md-7 col-sm-7" style="padding:0;margin:0;">
 
-                <div class="kt-portlet kt-portlet--tabs text-center" style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
+                <div class="kt-portlet kt-portlet--tabs text-center " style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
                     <div class="text-center">
                     
                         <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-line-brand" role="tablist" style=" display: inline-flex;margin:0;">  
@@ -293,10 +294,10 @@
                                                 
                                                 @if($model->country)
                                                     <div class="col-4">
-                                                        <h5 style="font-size: 0.9em;"><b>Country</b></h5> 
+                                                        <h5 style="font-size: 0.9em;" class="font-light">Country</h5> 
 
                                                             <a href="/country/{{ $model->country->slug }}" class="img-fade-hover">
-                                                            <div style="background-image:url('/img/countries/svg/{{ strtolower($model->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover;  border:2px solid #999;   background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 0px;">
+                                                            <div style="background-image:url('/img/countries/svg/{{ strtolower($model->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover;  border:2px solid #474747;   background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 0px;">
                                                 
                                                                 </div>
                                                                 
@@ -315,10 +316,12 @@
                                                 @endif
                                                
                                                     <div class="col-4">
-                                                        <h5 style="font-size: 0.9em;"><b>Outdoor Adventures</b></h5> 
+                                                        <h5 style="font-size: 0.9em;" class="font-light">Outdoor Adventures</h5> 
                                                         
                                                       
-                                                        <span class="text-green" style="font-size:1.3em;"><b>{{ count($model->posts) }}</b></span>
+                                                        <span class="text-green font-boldest" style="font-size:1.5em;">
+                                                            {{ count($model->posts) }}
+                                                        </span>
                                                          
                                                     </div>
                                                 
@@ -326,12 +329,10 @@
                                                 <div class="col-4">
                                                     @if(isset($model->options['visited_countries']) && count($model->options['visited_countries']))
                                                         
-                                                        <h5 style="font-size: 0.9em;"><b>Countries Visited</b></h5> 
+                                                        <h5  style="font-size: 0.9em;" class="font-light">Countries Visited</h5> 
                                                          
-                                                        <span class="text-green" style="font-size:1.3em;">
-                                                            <b>
+                                                        <span class="text-green font-boldest" style="font-size:1.5em;">
                                                             {{  count($model->options['visited_countries']) }}
-                                                            </b>
                                                         </span>
                                                     @endif
                                                 </div>
@@ -342,19 +343,19 @@
                                                 
                                                     
                                         @if(isset($model->options['badges']))
-                                            <div class="row text-center" style="margin-top:10px;">
-                                                <div class="col-4">
-                                                    <h5 style="font-size: 0.9em;"><b>Interests</b></h5> 
+                                            <div class="row text-center mt-10 mb-10" >
+                                                <div class="col-12">
+                                                    <h5 style="font-size: 0.9em;" class="font-light">Interests</h5> 
                                                 </div>
                                             </div>
-                                            <div class="row text-center" >
+                                            <div class="row text-center mb-10" >
                                             @foreach($model->options['badges'] as $key => $val)
 
                                                 @if(isset($badges[$key]) && isset($badges[$key]['icon']) && isset($badges[$key]['name']))
                                                     <div class="col-4 " style="margin-bottom:10px;">
                                                         <a href="/outdoor-adventures/{{ $key }}" style="margin-right: 10px;font-size:0.8em;">
                                                             <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:2px solid {{ $badges[$key]['color'] }}; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 6px;">
-                                                                <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter: invert(0.7);">
+                                                                <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter: invert(0.8);">
                                                             </div>
 
                                                             <br>
@@ -364,6 +365,29 @@
                                                 @endif
                                             @endforeach
                                             </div>
+                                        @endif
+
+                                        @if($visitedCountries && count($visitedCountries))
+                                        <br>
+                                            <div class="row text-center  mt-10 mb-10">
+                                                <div class="col-12">
+                                                    <h5 style="font-size: 0.9em;" class="font-light">Visited Countries</h5> 
+                                                </div>
+                                            </div>
+                                             
+                                           <div class="row mt-10" style="padding:2rem;">
+                                               <div class="col-12 text-center">
+                                                    <div class="flex justify-center" style="flex-wrap:wrap;">
+                                                        @foreach($visitedCountries as $visitedCountry)
+                                                            <a class=" mr-10 mb-10 img-fade-hover text-muted" style="font-weight:400;" href="/country/{{ $visitedCountry->slug }}">
+                                                                <div style=" display:inline-block;border:2px solid #474747;background-image:url('/img/countries/svg/{{ strtolower($visitedCountry->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 36px; height: 36px;">
+                                                                </div>
+                                                            </a>
+                                                        @endforeach
+                                                    </div>
+                                               </div>
+                                           </div>
+                                            
                                         @endif
                                                     
                                         

@@ -171,7 +171,8 @@ class ProfileController extends AppController
             'pageDescription' => $pageDescription,
             'pageImage' => $pageImage,
             'hasSocial' => $hasSocial,
-            'timelapses' => $user->timelapses()->public()->latest()->get()
+            'timelapses' => $user->timelapses()->public()->latest()->get(),
+            'visitedCountries' => isset($user->options['visited_countries']) && count($user->options['visited_countries']) ? Country::whereIn('code3', $user->options['visited_countries'])->get() : null
         ];
 
         view()->share('meta', $meta);

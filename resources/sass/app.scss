@@ -48,7 +48,7 @@ a{
   }
   .nav-link.active{
     color:#FFFFFF !important;
-    background:#666666 !important;
+    background:#474747 !important;
   }
 }
 
@@ -356,8 +356,8 @@ border:2px solid #FFFFFF;
 
   &:hover,&:active{
     color: #FFFFFF !important;
-    background-color: #666 !important;
-    border-color: #666 !important;;
+    background-color: #474747 !important;
+    border-color: #474747 !important;;
     i{
       color:#FFFFFF !important;
     }
@@ -397,7 +397,7 @@ a {
 .alert.alert-danger {
   background: #ffffff;
   color: #454545;
-  border: 1px solid #666 !important;
+  border: 1px solid #474747 !important;
  
 }
 
@@ -540,16 +540,16 @@ body,#home{
   i {
     font-size: 1.2em;
   }
-  color: #666666 !important;
+  color: #474747 !important;
 }
 
 .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item[data-ktwizard-state="done"] .kt-wizard-v1__nav-body .kt-wizard-v1__nav-label, .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item[data-ktwizard-state="current"] .kt-wizard-v1__nav-body .kt-wizard-v1__nav-label {
-  color: #666666 !important;
+  color: #474747 !important;
 
 }
 
 .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item[data-ktwizard-state="done"] .kt-wizard-v1__nav-body .kt-wizard-v1__nav-icon, .kt-wizard-v1 .kt-wizard-v1__nav .kt-wizard-v1__nav-items .kt-wizard-v1__nav-item[data-ktwizard-state="current"] .kt-wizard-v1__nav-body .kt-wizard-v1__nav-icon {
-  color: #666666 !important;
+  color: #474747 !important;
 
 }
 
@@ -1102,8 +1102,8 @@ body{
 }
 .profile-badge.inactive{
   .badge-wrap{
-    background-color: #666 !important;
-    border-color:#666 !important;
+    background-color: #474747 !important;
+    border-color:#474747 !important;
   }
 
 
@@ -1118,8 +1118,8 @@ body{
 transition: border 0.1s ease-in-out;
 }
 .badge-wrap.inactive{
-  background-color: #666 !important;
-  border-color:#666 !important;
+  background-color: #474747 !important;
+  border-color:#474747 !important;
 }
 
 img.drop-shadow{
@@ -1730,7 +1730,7 @@ backface-visibility:visible;
     width: 2em;
     height: 2em;
     line-height: 2em;
-    color: #666 !important;
+    color: #474747 !important;
     font-size: 1.2em;
     border-radius: 4px !important;
     -webkit-border-radius: 4px !important;
@@ -2133,7 +2133,7 @@ $slideTextColor: #3a3d55;
   padding:25px;
 }
 .sendMessageBtn{
-  padding:0.5rem 1rem; 
+  padding:0.75rem 1.1rem;
   display:inline-flex;
   font-weight:100;
   transition:color ease 0.3s;
@@ -2142,7 +2142,7 @@ $slideTextColor: #3a3d55;
   span{
     margin-top:-1px;
   }
-  border:none;
+ 
   i{
     font-size:1.3em;margin-right:10px;
     margin-left:1px;
@@ -2523,6 +2523,9 @@ body{
 .pl-0{
   padding-left: 0px;
 }
+.mb-20{
+  margin-bottom:20px;
+}
 .mb-10{
   margin-bottom:10px;
 }
@@ -2537,4 +2540,13 @@ body{
 }
 .mt-10{
   margin-top: 10px;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.fullscreen-icon{
+  width: 80%;
+}
+.font-boldest{
+  font-weight: 900;
 }

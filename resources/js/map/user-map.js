@@ -13700,7 +13700,7 @@ $(document).ready(function(){
 
             var inArray = $.inArray(feature.id, visited_countries);
 
-           /*  if(inArray > -1){
+            if(inArray > -1){
                 layer.setStyle({
                     weight: 1,
                     color: '#26bcbd',
@@ -13717,14 +13717,14 @@ $(document).ready(function(){
                     color: "#eeeeee", // Lines in between countries.
                     weight: 2
                 };
-            } */
+            }
 
         }
         L.geoJSON(countries, {
                 style: function(feature) {
                     return {
                         fillColor: "#eeeeee", // Default color of countries.
-                        fillOpacity: 0,
+                        fillOpacity: 0.5,
                         stroke: false,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1

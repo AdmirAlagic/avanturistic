@@ -85,6 +85,11 @@ class UtilHelperClass
        
     }
 
+    public function stripUrl($url){
+        $url = str_replace(['http://', 'https://', 'www.'], '', $url);
+        return $url;
+    }
+
     public static function missingFiles(){
         $posts = Post::all();
         $missingFiles = 0;
