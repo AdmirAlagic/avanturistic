@@ -20,7 +20,7 @@
 
                                         <div class="kt-widget__section">
                                             <a href="#" class="kt-widget__username text-dark" >
-                                                <h1 style="font-size:1.5rem;">{{ $model->name }}</h1>
+                                                <h1 style="font-size:1.4rem;font-weight:300;">{{ $model->name }}</h1>
                                             </a>
                                         </div>
                                         <div class="kt-widget__media text-center">
@@ -55,21 +55,14 @@
                                             </a><br><br>
                                             @endif
                                             @if($user && $model->id == $user->id)
-                                                <a href="#" class="dropdown-toggle dots "data-toggle="dropdown">
-                                                    <div class="text-muted btn-dots" style="font-size:2.2em;margin-right:5px;">
-                                                    ...
-                                                    </div>
+                                                <a href="/profile" class="flex items-center justify-center mt-10 mb-10">
+                                                    <svg class="mr-5" xmlns="http://www.w3.org/2000/svg" style="width:16px;" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                        <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                                    </svg>
+                                                    <span class="kt-nav__link-text">Edit Profile </span>
                                                 </a>
-                                                <div class="dropdown-menu dropdown-menu-center text-center" style="margin:0;">
-                                                    <ul class="kt-nav">
-                                                    <li class="kt-nav__item">
-                                                            <a href="/profile" class="kt-nav__link">
-                                                                <i class="fa fa-cogs text-muted"></i> 
-                                                                <span class="kt-nav__link-text">Edit Profile</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                               
                                             @endif 
                                             @if($hasSocial)
                                                 <div class="kt-widget__content">
@@ -265,17 +258,7 @@
                                 </a>
                                 
                             </li>
-                            @if(count($timelapses))
-                            <li class="nav-item nav-timelapses" style="display: inline-block;">
-                                <a  id="nav-link-timelapses" class="nav-link "  style="font-size:0.8em;"  data-toggle="tab" href="#timelapses" role="tab">
-                                     
-                                    <div class="nav-link-desc" style="text-transform: uppercase;text-align:center;color:#3C3C3C;">
-                                        Timelapses
-                                    </div>
-                                </a>
-                                
-                            </li>
-                            @endif
+                            
                         </ul>
                     
                     </div>
@@ -390,45 +373,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane " id="timelapses" role="tabpanel">
-                    <div class="kt-portlet">
-                        <div class="kt-portlet__body padding0">
-                            <div class="kt-container">
-                           
-                                    <div id="highlights">
-                                        <div class="row" >
-                                            @foreach($timelapses as $timelapse)
-
-                                                <div class="col-12 col-sm-4 offset-sm-4 text-right " style="padding:0;">
-                                                    <div class="video-block">
-                                                        <video style="width:100%;position:relative;"    poster="{{ url('/img/placeholder-trans.png') }}"     loop muted class="lazy" >
-                                                            <source src="" data-src="{{ url($timelapse->path) }}" type="video/mp4">
-                                                            <source src="" data-src="{{ url($timelapse->path_webm) }}" type="video/webm">
-                                                        </video>
-
-                                                        <span class="volume">
-                                                            <i class="fa fa-volume-mute"></i>
-                                                        </span>
-                                                        
-                                                        @if($timelapse->post && $timelapse->post->is_recommended)
-                                                        
-                                                            <div style="-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;position:absolute;bottom:12%;left:10px;">
-                                                                <img class="lazy" src="{{ url('/img/placeholder-trans.png') }}" data-src="{{ url('/img/star.svg') }}" alt="Avanturistick Pick" data-srcset="{{ url('/img/star.svg') }}" style="width:35px;">
-                                                            </div>
-                                                        @endif
-                                                    </div>
-
-                                                    
-                                                </div>
-                                            
-                                            @endforeach
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>                            
-                        </div>
-                         
-                    </div>
+               
                 </div>
             </div>
         </div>

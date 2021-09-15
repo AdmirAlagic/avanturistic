@@ -52,8 +52,8 @@ class ProfileController extends AppController
 
         
         $data = [
-            'pageTitle' => 'Profile Settings',
-            'mobileTitle' => 'Profile Settings',
+            'pageTitle' => 'Settings',
+            'mobileTitle' => 'Settings',
             'model' => $this->user,
             'badges' => $this->badges,
             'countries' =>  Country::orderBy('title', 'asc')->get(),
@@ -292,8 +292,9 @@ class ProfileController extends AppController
         $data = [
             'pageTitle' => 'Change Password',
             'mobileTitle' => 'Change Password',
+            'backUrl' => '/profile'
         ];
-        return view ('profile.settings.change_password');
+        return view ('profile.settings.change_password', $data);
     }
 
     public function postChangePassword(ChangePassword $request){

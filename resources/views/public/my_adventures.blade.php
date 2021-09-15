@@ -51,9 +51,12 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-3 text-right" style="padding-top:5px;">
-                                                    <a href="/adventure/{{ $obj->id }}/edit" class="kt-nav__link">
-                                                        <i class="fa fa-cogs text-muted"></i> 
+                                                <div class="col-3 text-right flex items-center justify-end">
+                                                    <a href="/adventure/{{ $obj->id }}/edit" class="flex">
+                                                        <svg class="mr-5" xmlns="http://www.w3.org/2000/svg" style="width:16px;" viewBox="0 0 20 20" fill="currentColor">
+                                                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
+                                                          </svg>
                                                         <span class="kt-nav__link-text">Edit </span>
                                                     </a>
                                                    {{--  <a href="#" class="dropdown-toggle dots text-muted pull-right" style="margin-right:5px;"   data-toggle="dropdown">
@@ -78,19 +81,21 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="clearfix" style="font-size:1.1rem;border-top:1px solid #eee;padding-left:10px;padding-right:10px;">
+                                            <div class="clearfix" style="font-size:1.1rem;border-top:1px solid #eee;padding-top:10px;padding-bottom:10px;">
                                                 
-                                                <div class="row" style="margin-top:10px; padding:10px;">
-                                                    <div class="col-2 text-center">
-                                                        <i class="fa fa-heart {{ $obj->likes > 0 ? 'text-success' : 'text-gray' }}"></i> <br>  
-                                                        <span class="text-muted">{{ $obj->likes }}</span>
+                                                <div class="row" style="margin-top:10px;">
+                                                    <div class="col-2 pl-0">
+                                                        <div class="text-center">
+                                                            <i class="mb-5 fa fa-heart {{ $obj->likes > 0 ? 'text-success' : 'text-gray' }}"></i> <br>  
+                                                             <span class="text-muted">{{ $obj->likes }}</span>
+                                                        </div>
                                                     </div>
                                                     <div class="col-2 text-center">
-                                                        <i class="fa fa-shoe-prints  {{ count($obj->visitedBy) ? 'text-muted' : 'text-gray' }} "></i><br> 
+                                                        <i class="mb-5 fa fa-shoe-prints  {{ count($obj->visitedBy) ? 'text-muted' : 'text-gray' }} "></i><br> 
                                                          {{ count($obj->visitedBy) }}
                                                     </div>
-                                                    <div class="col-2 text-center">
-                                                        <i class="fa fa-comment-dots {{ count($obj->comments) ? 'text-muted' : 'text-gray' }} "></i> <br>
+                                                    <div class=" col-2 text-center">
+                                                        <i class="mb-5 fa fa-comment-dots {{ count($obj->comments) ? 'text-muted' : 'text-gray' }} "></i> <br>
                                                          {{ count($obj->comments) }}
                                                     </div>
                                                     <div class="col-6 text-right">

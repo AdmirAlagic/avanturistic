@@ -160,11 +160,18 @@ console.log(document.getElementById('loged_user').value)
         </div> --}}
         <div class="kt-header-mobile__logo" style=" margin-right:8px;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
         
-        
-                <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
+                @if(isset($backUrl))
+                    <a href="{{ $backUrl }}" class="btn pl-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </a>
+                @else
+                    <img  src="{{ url('/img/logo.svg') }}" style="width:30px !important;" alt="avanturistic.com" title="Avanturistic" /> 
+                @endif
                 @if(isset($mobileTitle) && $mobileTitle)
                     <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:300;">
-                    {{ str_replace('', '', $mobileTitle) }}
+                        {{ str_replace('', '', $mobileTitle) }}
                     </h2>
                 @else
                     <a href="/" class="flex items-center"  title="Avanturistic.com" style="">
@@ -228,7 +235,7 @@ console.log(document.getElementById('loged_user').value)
                                         </div>
                                         <div class="kt-notification__item-details">
                                             <div class="kt-notification__item-title kt-font-bold">
-                                                <b>View Profile</b>
+                                                Profile
                                             </div>
 
                                         </div>
@@ -245,7 +252,7 @@ console.log(document.getElementById('loged_user').value)
                                         </div>
                                         <div class="kt-notification__item-details">
                                             <div class="kt-notification__item-title kt-font-bold">
-                                                <b>Profile Settings</b>
+                                                Settings
                                             </div>
                                             <div class="kt-notification__item-time">
                                                 Edit profile preferences
@@ -258,7 +265,7 @@ console.log(document.getElementById('loged_user').value)
                                         </div>
                                         <div class="kt-notification__item-details">
                                             <div class="kt-notification__item-title kt-font-bold">
-                                                <b>My Adventures</b>
+                                                Adventures
                                             </div>
                                             <div class="kt-notification__item-time">
                                                 Manage your adventures

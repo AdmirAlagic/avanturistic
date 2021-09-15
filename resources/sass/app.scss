@@ -44,6 +44,7 @@ a{
     font-size:0.8em;
     color: #3C3C3C;
     margin:5px;
+    font-weight: 300;
   }
   .nav-link.active{
     color:#FFFFFF !important;
@@ -791,7 +792,7 @@ html {
   }
 }
 .text-gray{
-  color:#666 !important;
+  color:#999 !important;
 }
 
 .my-post-edit {
@@ -1421,6 +1422,10 @@ body {
 }
 .nav-link.nav-link-profile{
   border:1px solid #eee;
+  font-weight: 300;
+  div{
+    font-weight: 300;
+  }
 }
 
 .nav-link.nav-link-profile.active{
@@ -2128,9 +2133,12 @@ $slideTextColor: #3a3d55;
   padding:25px;
 }
 .sendMessageBtn{
-  padding:10px; display:inline-flex;font-weight:100;
+  padding:0.5rem 1rem; 
+  display:inline-flex;
+  font-weight:100;
   transition:color ease 0.3s;
   color:#454545;
+  border:1px solid #eee;
   span{
     margin-top:-1px;
   }
@@ -2511,4 +2519,22 @@ body{
 }
 .kt-wizard-v1 .kt-wizard-v1__wrapper .kt-form{
   letter-spacing: 0.02em;
+}
+.pl-0{
+  padding-left: 0px;
+}
+.mb-10{
+  margin-bottom:10px;
+}
+.mb-5{
+  margin-bottom:5px;
+}
+.mr-10{
+  margin-right: 10px;
+}
+.mr-5{
+  margin-right: 5px;
+}
+.mt-10{
+  margin-top: 10px;
 }

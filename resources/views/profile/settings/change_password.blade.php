@@ -4,7 +4,7 @@
 <!-- begin:: Content -->
 <div class="kt-container padding0">
     <div class="kt-portlet">
-        <div class="kt-portlet__head text-center" style="min-height:30px;border-top:1px solid #f6f6f6;">
+        <div class="kt-portlet__head text-center kt-hidden-tablet-and-mobile" style="min-height:30px;border-top:1px solid #f6f6f6;">
             <div class="kt-portlet__head-label" style="width:100%;min-height:30px;">
                 <h4 class="kt-portlet__head-title text-center" style="width:100%;border-radius:0px !important;margin:10px;">
                     Change Password

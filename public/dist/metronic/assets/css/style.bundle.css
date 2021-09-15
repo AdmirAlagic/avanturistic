@@ -3571,7 +3571,7 @@ code {
     float: right;
 }
 .kt-portlet--tabs .nav-tabs.nav-tabs-line {
-    margin: 0 0 -1px 0.5rem;
+    margin: 0 0 0px 0.5rem;
     border-color: transparent !important;
 }
 .kt-portlet--tabs .nav-tabs.nav-tabs-line.nav-tabs-line-2x {

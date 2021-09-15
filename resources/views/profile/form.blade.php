@@ -2,10 +2,10 @@
 
 @section('content')
 <!-- begin:: Content -->
-<div class="kt-portlet kt-portlet--tabs text-center" style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
+<div class="kt-portlet kt-portlet--tabs text-center" style="padding: 10px;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
     <div class="text-center">
     
-        <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-bold  " role="tablist" style=" display: inline-flex;margin-bottom: 10px;">  
+        <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-bold  " role="tablist" style=" display: inline-flex;">  
             <li class="nav-item" style="display: inline-block;">
                 <a id="nav-link-info" class="nav-link nav-link-profile active"  style="font-size:0.8em;"  data-toggle="tab" href="#info" role="tab">
                     <div class="img-circle" style="margin-left: auto;margin-right: auto;width:45px;height:45px;border-width:2px;text-align:center;">
@@ -247,7 +247,7 @@
                         <div class="kt-form__body">
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
-                                <h5 class="text-center">Account Settings</h5>
+                                <h5 class="text-center text-gray font-light">Account Settings</h5>
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-sm-3 col-form-label">Email Address</label>
                                         <div class="col-sm-9 col-xl-6">
@@ -281,7 +281,7 @@
                         <div class="kt-form__body">
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
-                                    <h5 class="text-center">
+                                    <h5 class="text-center text-gray font-light">
                                         Outdoor Activities Interests
                                     </h5>
                                     <p class="text-center text-gray">Selected activities will be shown on your profile</p>
@@ -325,7 +325,7 @@
                                         <input type="hidden" id="country-lat" value="{{ $model->country->lat }}">
                                         <input type="hidden" id="country-lng" value="{{ $model->country->lng }}">
                                     @endif
-                                    <h5 class="text-center">Visited Countries</h5>
+                                    <h5 class="text-center text-gray font-light">Visited Countries</h5>
                                     <p class="text-center text-gray">Visited countries are automatically updated when you share adventure locations</p>
                                     <h6 class="text-center"><span class="font-size:0.9em;"><i class="fa fa-hand-pointer text-success"></i></span>&nbsp;<b><em>Tap on map to mark country as visited</em></b></h6>
                                     <div id="visiteds-map" style="width:100%; height:300px;">

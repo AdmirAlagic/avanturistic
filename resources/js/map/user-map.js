@@ -87,7 +87,7 @@ $(document).ready(function(){
 
         });
         if(markersArray.length > 1){
-            map.fitBounds(markersArray, {padding: [30, 30]});
+            map.fitBounds(markersArray, {padding: [100, 100]});
         }
         
         if(markersArray.length == 1){
@@ -13700,31 +13700,31 @@ $(document).ready(function(){
 
             var inArray = $.inArray(feature.id, visited_countries);
 
-            if(inArray > -1){
+           /*  if(inArray > -1){
                 layer.setStyle({
                     weight: 1,
-                    color: '#fff',
+                    color: '#26bcbd',
                     dashArray: '',
-                    fillOpacity: 0.6,
-                    fillColor: '#acc957',
+                    fillOpacity: 0,
+                    fillColor: '#26bcbd',
 
                 });
             } else {
                 return {
-                    fillColor: "#D3D3D3", // Default color of countries.
-                    fillOpacity: 0.01,
+                    fillColor: "#000", // Default color of countries.
+                    fillOpacity: 0.9,
                     stroke: false,
                     color: "#eeeeee", // Lines in between countries.
-                    weight: 1
+                    weight: 2
                 };
-            }
+            } */
 
         }
         L.geoJSON(countries, {
                 style: function(feature) {
                     return {
-                        fillColor: "#D3D3D3", // Default color of countries.
-                        fillOpacity: 0.01,
+                        fillColor: "#eeeeee", // Default color of countries.
+                        fillOpacity: 0,
                         stroke: false,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1

@@ -59,7 +59,7 @@
                                <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;"> -->
                                     <img class="" src="/img/triangles-black.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
                               <!--    </div>  -->
-                                <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">MY ADVENTURES</span>
+                                <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">Adventures</span>
                             </a>
                         </li>
                         
@@ -264,7 +264,7 @@
                                     </div>
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title kt-font-bold">
-                                            <b>View Profile</b>
+                                            Profile
                                         </div>
 
                                     </div>
@@ -281,7 +281,7 @@
                                     </div>
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title kt-font-bold">
-                                            <b>Profile Settings</b>
+                                            Settings
                                         </div>
                                         <div class="kt-notification__item-time">
                                             Edit profile preferences
@@ -294,7 +294,7 @@
                                     </div>
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title kt-font-bold">
-                                            <b>My Adventures</b>
+                                            <b>Adventures</b>
                                         </div>
                                         <div class="kt-notification__item-time">
                                             Manage your adventures
