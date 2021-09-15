@@ -30,9 +30,24 @@ a{
 .kt-notification .kt-notification__item:hover .kt-notification__item-details .kt-notification__item-title{
   color:$green;
 }
-.nav-tabs.nav-tabs-line.nav-tabs-line-success.nav.nav-tabs .nav-link:hover, .nav-tabs.nav-tabs-line.nav-tabs-line-success.nav.nav-tabs .nav-link.active, .nav-tabs.nav-tabs-line.nav-tabs-line-success a.nav-link:hover, .nav-tabs.nav-tabs-line.nav-tabs-line-success a.nav-link.active{
-  border-bottom: 1px solid #acc957;
-}
+
+ .profile-tabs {
+   .nav-item{
+    padding: 1rem 2rem;
+   }
+  .nav-link.active{
+    .nav-link-desc{
+     font-weight: 500;
+   
+    }
+    
+  }
+ }
+ .public-profile{
+  h5{
+    color:#2B2B2B;
+  }
+ }
 .logo-text {
   font-size: 16px;
   
@@ -2549,4 +2564,7 @@ body{
 }
 .font-boldest{
   font-weight: 900;
+}
+.flex-col{
+  flex-direction: column;
 }

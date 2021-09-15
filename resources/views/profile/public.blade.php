@@ -2,7 +2,7 @@
 
 @section('content')
 <div style="min-height:750px;"> 
-    <div class="kt-container" style="padding:0;">
+    <div class="kt-container" style="padding:0;" id="public-profile">
         <div class="row">
             <div class="col-md-5 col-sm-5">
                 <!--begin::Portlet-->
@@ -46,13 +46,7 @@
                                             <br>
                                             @if($user && $model->id != $user->id)
                                             <br>
-                                            <a href="/message/{{ $model->id }}" class="kt-nav__link mb-10" >
-                                                <div class="img-circle sendMessageBtn">
-                                                <i  class="fa fa-envelope"></i>
-                                                    <span><small>Send message</small></span>
-                                                </div> 
-                                                
-                                            </a> 
+                                          
                                             @endif
                                             @if($user && $model->id == $user->id)
                                                 <a href="/profile" class="flex items-center justify-center mt-10 mb-10">
@@ -65,16 +59,18 @@
                                                
                                             @endif 
                                             @if($hasSocial)
-                                                <div class="kt-widget__content mt-10 " style="border-top:1px solid #eee; padding-top:15px;padding-bottom:15px;">
+                                                <div class="kt-widget__content mt-10 mb-10 " style="padding-bottom:15px;">
                                                     
                                                     <div class="row">
 
                                                         <div class="col-12 text-center">
+                                                            @if(isset($model->social_links['website']) && $model->social_links['website'] && $model->social_links['website'] != ' ')
                                                             <p>
                                                                 <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['website'] , '') }}">
                                                                      {{ UtilHelper::stripUrl($model->social_links['website']) }}
                                                                 </a>
                                                             </p>
+                                                            @endif
                                                            
                                                             @if(isset($model->social_links['facebook']))
                                                                 <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['facebook'] , 'facebook.com') }}">
@@ -237,7 +233,7 @@
             </div>
             <div class="col-md-7 col-sm-7" style="padding:0;margin:0;">
 
-                <div class="kt-portlet kt-portlet--tabs text-center " style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
+                <div class="kt-portlet kt-portlet--tabs profile-tabs text-center " style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
                     <div class="text-center">
                     
                         <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-line-brand" role="tablist" style=" display: inline-flex;margin:0;">  
@@ -297,11 +293,11 @@
                                                         <h5 style="font-size: 0.9em;" class="font-light">Country</h5> 
 
                                                             <a href="/country/{{ $model->country->slug }}" class="img-fade-hover">
-                                                            <div style="background-image:url('/img/countries/svg/{{ strtolower($model->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover;  border:2px solid #474747;   background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 0px;">
+                                                            <div style="background-image:url('/img/countries/svg/{{ strtolower($model->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover;  border:2px solid #999999;   background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;margin-left: auto; margin-right: auto;padding: 0px;">
                                                 
                                                                 </div>
                                                                 
-                                                                <h6 class="text-muted" style="font-size: 0.9em;margin-top:10px;">
+                                                                <h6 class="text-gray" style="font-size: 0.8em;margin-top:10px;font-weight:300;">
                                                                     {!! $model->country->title  !!}
                                                                 </h6>
                                                             </a>
@@ -319,7 +315,7 @@
                                                         <h5 style="font-size: 0.9em;" class="font-light">Outdoor Adventures</h5> 
                                                         
                                                       
-                                                        <span class="text-green font-boldest" style="font-size:1.5em;">
+                                                        <span style="font-size:1.5em;">
                                                             {{ count($model->posts) }}
                                                         </span>
                                                          
@@ -331,7 +327,7 @@
                                                         
                                                         <h5  style="font-size: 0.9em;" class="font-light">Countries Visited</h5> 
                                                          
-                                                        <span class="text-green font-boldest" style="font-size:1.5em;">
+                                                        <span class="kt-boldest" style="font-size:1.5em;">
                                                             {{  count($model->options['visited_countries']) }}
                                                         </span>
                                                     @endif
@@ -352,14 +348,13 @@
                                             @foreach($model->options['badges'] as $key => $val)
 
                                                 @if(isset($badges[$key]) && isset($badges[$key]['icon']) && isset($badges[$key]['name']))
-                                                    <div class="col-4 " style="margin-bottom:10px;">
+                                                    <div class="col-4 flex items-center justify-center" style="margin-bottom:20px;">
                                                         <a href="/outdoor-adventures/{{ $key }}" style="margin-right: 10px;font-size:0.8em;">
                                                             <div class="badge-wrap" style="cursor:pointer;display: inline-block;margin-right: 10px;border:2px solid {{ $badges[$key]['color'] }}; -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;margin-left: auto; margin-right: auto;padding: 6px;">
                                                                 <img  src="{{ $badges[$key]['icon_empty'] }}" style="width:45px;filter: invert(0.8);">
                                                             </div>
-
-                                                            <br>
-                                                            <span class="text-dark " style="padding-left:5px;font-weight:normal;">{{ $badges[$key]['name'] }}</span>
+ 
+                                                            <div class="text-dark mt-10 " style="font-weight:normal;">{{ $badges[$key]['name'] }}</div>
                                                         </a>
                                                     </div>
                                                 @endif
@@ -369,18 +364,18 @@
 
                                         @if($visitedCountries && count($visitedCountries))
                                         <br>
-                                            <div class="row text-center  mt-10 mb-10">
+                                            <div class="row text-center  mt-20 ">
                                                 <div class="col-12">
                                                     <h5 style="font-size: 0.9em;" class="font-light">Visited Countries</h5> 
                                                 </div>
                                             </div>
                                              
-                                           <div class="row mt-10" style="padding:2rem;">
+                                           <div class="row mt-10" style="padding-left:2rem;padding-right:2rem;">
                                                <div class="col-12 text-center">
                                                     <div class="flex justify-center" style="flex-wrap:wrap;">
                                                         @foreach($visitedCountries as $visitedCountry)
                                                             <a class=" mr-10 mb-10 img-fade-hover text-muted" style="font-weight:400;" href="/country/{{ $visitedCountry->slug }}">
-                                                                <div style=" display:inline-block;border:2px solid #474747;background-image:url('/img/countries/svg/{{ strtolower($visitedCountry->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 36px; height: 36px;">
+                                                                <div style=" display:inline-block;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($visitedCountry->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;">
                                                                 </div>
                                                             </a>
                                                         @endforeach
