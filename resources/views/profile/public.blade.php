@@ -374,7 +374,7 @@
                                                <div class="col-12 text-center">
                                                     <div class="flex justify-center" style="flex-wrap:wrap;">
                                                         @foreach($visitedCountries as $visitedCountry)
-                                                            @if($model->country && $visitedCountry->id != $model->country->id)
+                                                           
                                                             {{--     <a class=" mr-10 mb-10 img-fade-hover text-muted" style="font-weight:400;" href="/country/{{ $visitedCountry->slug }}">
                                                                     <div style=" display:inline-block;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($visitedCountry->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;">
                                                                     </div>
@@ -385,7 +385,7 @@
                                                                         {{ $visitedCountry->title }}
                                                                     </a>
                                                                 </div>
-                                                            @endif
+                                                            
                                                         @endforeach
                                                     </div>
                                                </div>

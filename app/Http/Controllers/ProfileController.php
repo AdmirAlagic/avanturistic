@@ -163,7 +163,14 @@ class ProfileController extends AppController
             'og:title' => $pageTitle,
             'og:description' => $pageDescription
          ];
-
+        
+         $visitedCountries = [];
+         if(isset($user->options['visited_countries']) && count($user->options['visited_countries'])){ 
+             $visitedCountries = Country::whereIn('code3', $user->options['visited_countries']);
+             if($user->country)
+                $visitedCountries =   $visitedCountries->where('id', '!=', $user->country->id);
+             $visitedCountries = $visitedCountries->get();
+         }
         $data = [
             'model' => $user,
             'pageTitle' => $pageTitle,
@@ -171,8 +178,8 @@ class ProfileController extends AppController
             'pageDescription' => $pageDescription,
             'pageImage' => $pageImage,
             'hasSocial' => $hasSocial,
-            'timelapses' => $user->timelapses()->public()->latest()->get(),
-            'visitedCountries' => isset($user->options['visited_countries']) && count($user->options['visited_countries']) ? Country::whereIn('code3', $user->options['visited_countries'])->get() : null
+/*             'timelapses' => $user->timelapses()->public()->latest()->get(),
+ */            'visitedCountries' => $visitedCountries
         ];
 
         view()->share('meta', $meta);
