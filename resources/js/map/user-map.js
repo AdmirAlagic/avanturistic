@@ -13723,8 +13723,8 @@ $(document).ready(function(){
         L.geoJSON(countries, {
                 style: function(feature) {
                     return {
-                        fillColor: "#eeeeee", // Default color of countries.
-                        fillOpacity: 0.5,
+                        fillColor: "#000000", // Default color of countries.
+                        fillOpacity: 0.1,
                         stroke: false,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1

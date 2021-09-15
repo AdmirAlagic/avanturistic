@@ -290,7 +290,7 @@
                                                 
                                                 @if($model->country)
                                                     <div class="col-4">
-                                                        <h5 style="font-size: 0.9em;" class="font-light">Country</h5> 
+                                                        <h5 style="font-size: 0.9em;" class="text-center">Country</h5> 
 
                                                             <a href="/country/{{ $model->country->slug }}" class="img-fade-hover">
                                                             <div style="background-image:url('/img/countries/svg/{{ strtolower($model->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover;  border:2px solid #999999;   background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;margin-left: auto; margin-right: auto;padding: 0px;">
@@ -312,7 +312,7 @@
                                                 @endif
                                                
                                                     <div class="col-4">
-                                                        <h5 style="font-size: 0.9em;" class="font-light">Outdoor Adventures</h5> 
+                                                        <h5 style="font-size: 0.9em;" class="text-center">Outdoor <br> Adventures</h5> 
                                                         
                                                       
                                                         <span style="font-size:1.5em;">
@@ -325,7 +325,7 @@
                                                 <div class="col-4">
                                                     @if(isset($model->options['visited_countries']) && count($model->options['visited_countries']))
                                                         
-                                                        <h5  style="font-size: 0.9em;" class="font-light">Countries Visited</h5> 
+                                                        <h5  style="font-size: 0.9em;" class="text-center">Countries <br> Visited</h5> 
                                                          
                                                         <span class="kt-boldest" style="font-size:1.5em;">
                                                             {{  count($model->options['visited_countries']) }}
@@ -341,7 +341,7 @@
                                         @if(isset($model->options['badges']))
                                             <div class="row text-center mt-10 mb-10" >
                                                 <div class="col-12">
-                                                    <h5 style="font-size: 0.9em;" class="font-light">Interests</h5> 
+                                                    <h5 style="font-size: 0.9em;" class="text-center">Interests</h5> 
                                                 </div>
                                             </div>
                                             <div class="row text-center mb-10" >
@@ -366,7 +366,7 @@
                                         <br>
                                             <div class="row text-center  mt-20 ">
                                                 <div class="col-12">
-                                                    <h5 style="font-size: 0.9em;" class="font-light">Visited Countries</h5> 
+                                                    <h5 style="font-size: 0.9em;" class="text-center">Visited Countries</h5> 
                                                 </div>
                                             </div>
                                              
@@ -374,10 +374,18 @@
                                                <div class="col-12 text-center">
                                                     <div class="flex justify-center" style="flex-wrap:wrap;">
                                                         @foreach($visitedCountries as $visitedCountry)
-                                                            <a class=" mr-10 mb-10 img-fade-hover text-muted" style="font-weight:400;" href="/country/{{ $visitedCountry->slug }}">
-                                                                <div style=" display:inline-block;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($visitedCountry->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;">
+                                                            @if($model->country && $visitedCountry->id != $model->country->id)
+                                                            {{--     <a class=" mr-10 mb-10 img-fade-hover text-muted" style="font-weight:400;" href="/country/{{ $visitedCountry->slug }}">
+                                                                    <div style=" display:inline-block;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($visitedCountry->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 30px; height: 30px;">
+                                                                    </div>
+                                                                </a> --}}
+                                                                <div class="">
+                                                                    <a class="btn" href="/country/{{ $visitedCountry->title }}">
+                                                                         <span class="">{!! $visitedCountry->emoji !!}</span>
+                                                                        {{ $visitedCountry->title }}
+                                                                    </a>
                                                                 </div>
-                                                            </a>
+                                                            @endif
                                                         @endforeach
                                                     </div>
                                                </div>
