@@ -217,3 +217,23 @@
     font-size: 1.2em;
 }
  
+.leaflet-control-attribution{
+    z-index: 1;
+}
+.geocoder-control-input{
+    border: 1px solid #474747 !important;
+}
+.leaflet-control-locate{
+    .leaflet-bar-part{
+        position: absolute;
+        right: -10px;
+        bottom: -25px;
+        cursor:pointer;
+        z-index: 2;
+        background:#474747;
+        color:white;
+        width:32px;
+        height:32px;
+    }
+    
+}

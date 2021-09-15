@@ -68,7 +68,7 @@
                 </div>
             </span>
         
-            <span class="btn text-right" style="padding-right:0px;">
+            <span class="btn text-right flex" style="padding-right:0px;">
                 @if(isset($hasCategoryFilter))
                 <a class="show-filters img-fade-hover {{ $selectedCategory ?  'active' : 'inactive' }}" href="#"   class="text-dark" style="font-size:1rem;margin-right:10px;">
                 <img src="{{ $selectedCategory ?  url('img/filter-active.svg') : url('img/filter.svg')}}" width="26" height="26" style="height:26px;" alt="Show grid">
