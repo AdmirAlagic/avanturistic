@@ -69,7 +69,7 @@
                         </svg>
                     </div>
                     <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
-                        Security
+                        Account
                     </div>
                 </a>
                 
@@ -259,15 +259,43 @@
                                             <small class="text-muted">Email address is not visible on your profile</small>
                                         </div>
                                     </div>
+                                    <div class="form-group row mt-10">
+
+                                        <label class="col-xl-3 col-sm-3 col-form-label"></label>
+                                        <div class="col-sm-9 col-xl-6">
+                                            <a class="btn pl-0 flex items-center" href="/profile/change-password" style="font-weight:normal;">
+                                               <i class="fa fa-key text-muted mr-10" style="width:18px;"></i> <span>Change Password</span>
+                                            </a>   
+                                        </div>
+                                    </div>
+
                                     <div class="form-group row">
 
                                         <label class="col-xl-3 col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9 col-xl-6">
-                                            <a class="btn" href="/profile/change-password" style="font-weight:normal;">
-                                               <i class="fa fa-key text-muted"></i> &nbsp;Change Password
-                                            </a>   
+                                            <a class="btn pl-0  flex items-center" href="{{ url('/support') }}">
+                                                <img class="lazy mr-10" src="/img/placeholder-dark.svg"  data-src="/img/support.svg" data-srcset="/img/support.svg" alt="Avanturistic Support"  style="width: 18px; height: 18px;">
+                                                <span>
+                                                    Contact Support
+                                                   
+                                                </span>
+                                            </a>
+                                           
+                                            <small class="pl-10 text-gray">
+                                                If you are experiencing any issues with your account or just want to share an idea with us - send a direct message to our support.
+                                            </small>
+                                               
                                         </div>
+                                        
                                     </div>
+
+                                  {{--   <h4 >
+                                        We care for your feedback
+                                    </h4> --}}
+                                   
+                                      
+                                      
+                                    
                                    
                                 </div>
                             </div>
