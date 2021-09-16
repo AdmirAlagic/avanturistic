@@ -147,7 +147,7 @@
                                         </label>
 
                                         <div class="col-sm-9 col-xl-6">
-                                            <small class="text-muted">Country flag will be shown on your profile</small>
+                                            <small class="text-gray">Country flag will be shown on your profile</small>
                                             <select class="form-control"  name="country_code" id="" style="margin-top: 10px;">
                                                 <option value="">Select your country</option>
                                                 @foreach($countries as $obj)
@@ -256,7 +256,7 @@
                                                 <div class="input-group-prepend"><span class="input-group-text"><b>@</b></span></div>
                                                 {!! Form::text('email', $model->email, ['class' => 'form-control', 'aria-describedby', 'basic-addon1', 'disabled' => true]) !!}
                                             </div>
-                                            <small class="text-muted">Email address is not visible on your profile</small>
+                                            <small class="text-gray">Email address is not visible on your profile</small>
                                         </div>
                                     </div>
                                     <div class="form-group row mt-10">
@@ -264,7 +264,7 @@
                                         <label class="col-xl-3 col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9 col-xl-6">
                                             <a class="btn pl-0 flex items-center" href="/profile/change-password" style="font-weight:normal;">
-                                               <i class="fa fa-key text-muted mr-10" style="width:18px;"></i> <span>Change Password</span>
+                                               <i class="fa fa-key   mr-10" style="width:18px;"></i> <span>Change Password</span>
                                             </a>   
                                         </div>
                                     </div>
