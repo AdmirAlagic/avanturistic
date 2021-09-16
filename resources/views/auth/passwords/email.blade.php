@@ -5,7 +5,7 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-4 offset-sm-4" style="min-height: 680px;padding:0;">
+        <div class="col-sm-4 offset-sm-4" style="min-height: 680px;">
             <div class="container"  style=" ">
                 <div class="text-center" style="position:relative;background: transparent; ">
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
@@ -16,7 +16,7 @@
                                 </h4>
                             </div>
                         </div>
-                        <div class="kt-portlet__body" style="background: #FFFFFF;">
+                        <div class="kt-portlet__body" style="background: #FFFFFF;padding:4em;">
 
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
@@ -37,10 +37,10 @@
                                     <span class="text-white"><b>Send Password Reset Link</b></span></button>
 
                                 <br><br>
-                                <p>Back to <a href="/login">Login</a></p>
+                                <p><a href="/login">Back to Login</a></p>
                             </div>
                             <br>
-                            <p>If you are not receiving password reset email, contact us at <a href="mailto:info@avanturistic.com">info@avanturistic.com</a> and we will help you.</p>
+                            <p class="text-gray">If you are not receiving password reset email, contact us at <a href="mailto:info@avanturistic.com">info@avanturistic.com</a> and we will help you.</p>
                             <!--end::Action-->
                             {!! Form::close() !!}
                         </div>

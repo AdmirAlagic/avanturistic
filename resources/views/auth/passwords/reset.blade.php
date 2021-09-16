@@ -5,7 +5,7 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-4 offset-sm-4" style="min-height: 680px;padding:0;">
+        <div class="col-sm-4 offset-sm-4" style="min-height: 680px;">
             <div class="container"  style=" ">
                 <div class="text-center" style="position:relative;background: transparent; ">
                     <div class="kt-portlet kt-portlet--height-fluid" style="">
@@ -16,7 +16,7 @@
                                 </h4>
                             </div>
                         </div>
-                        <div class="kt-portlet__body" style="background: #FFFFFF;">
+                        <div class="kt-portlet__body" style="background: #FFFFFF;padding:4em;">
 
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
@@ -29,13 +29,14 @@
                             {{--$token = Password reset token--}}
                             {!! Form::hidden('token', $token) !!}
                             <div class="form-group">
-                                {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Email']) !!}
+                                {!! Form::text('email', request('email'), ['class' => 'form-control', 'placeholder' => 'Email']) !!}
                             </div>
                             <div class="form-group">
                                 {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'New password']) !!}
+                            </div>
+                            <div class="form-group">
                                 {!! Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Confirm New Password']) !!}
                             </div>
-
                             <!--begin::Action-->
                             <div class="kt-login__actions">
                                 {!! Form::submit('Reset Password', ['class' => 'btn btn-success']) !!}
