@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('layouts.app')
 
 @section('content')
     <div class="kt-hidden-tablet-and-mobile" style="min-height: 40px;">
