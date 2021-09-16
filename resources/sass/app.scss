@@ -2330,16 +2330,20 @@ border-top-right-radius: 4px;
 
 .notification-mobile{
   position:absolute;
-  top:1px;
-  right:-2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family:Arial, sans-serif;
   width:22px;
   height:22px;
   background:#acc957;
   border:2px solid #FFF;
   text-align:center;
-  padding:1px;
-  font-size:0.9rem;
+  color:#474747;
+  font-size:0.8rem;
+  top: -14px;
+  right: -10px;
+  font-weight:bold;
 }
 
 .notification-desktop{

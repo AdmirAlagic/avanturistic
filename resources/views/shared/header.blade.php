@@ -126,13 +126,15 @@
                 </div>
                 <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " style="">
-                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;position:relative;" href="/notifications"  >
-                            <i class="fa fa-bell notification-icon fa fa-bell "></i>
-                            @if($unreadNotifications  > 0)
-                                <div class="circle notification-mobile ">
-                                    {{ $unreadNotifications }}
-                                </div>
-                            @endif
+                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;" href="/notifications"  >
+                            <div style="position: relative">
+                                <i class="fa fa-bell notification-icon fa fa-bell "></i>
+                                @if($unreadNotifications  > 0)
+                                    <div class="circle notification-mobile ">
+                                        {{ $unreadNotifications }}
+                                    </div>
+                                @endif
+                            </div>
                         </a>
                     </div>
                 </div>
