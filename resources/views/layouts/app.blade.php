@@ -194,7 +194,7 @@ console.log(document.getElementById('loged_user').value)
                             @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
                                 <span class="kt-header__topbar-icon "><img style="border-width: 1px;width:30px;border-color:#474747;" class="img-circle" alt="{{ $user->name }}" src="{{ $user->avatar }}" /></span>
                             @else
-                                <div style="padding-top: 6px;" class="post-avatar img-circle "><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></div>
+                                <div   class="post-avatar flex items-center justify-center "><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></div>
                             @endif
 
                         </div>

@@ -175,16 +175,16 @@
                 <!--begin: User bar -->
                     <div class="kt-header__topbar-item kt-header__topbar-item--user kt-hidden-tablet-and-mobile">
 
-                    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <div class="kt-header__topbar-wrapper" data-toggle="dropdown" style="padding-left: 12px;" data-offset="10px,0px">
                        
-                        <span class="kt-header__topbar-username" style="white-space: nowrap;"></span>
-
+                      {{--   <span class="kt-header__topbar-username" style="white-space: nowrap;"></span>
+ --}}
                         @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
                             <span class="kt-header__topbar-icon ">
                                 <img class="img-circle"  alt="{{ $user->name }}" style="border-width:2px;border-color:#474747;" src="{{ $user->avatar }}" />
                             </span>
                         @else
-                            <span class="post-avatar img-circle" style="padding-top: 7px;"><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></span>
+                            <span class="post-avatar " style=" align-self:center;"><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></span>
                         @endif
 
                     </div>

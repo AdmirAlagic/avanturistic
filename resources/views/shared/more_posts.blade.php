@@ -130,7 +130,7 @@
                                                         @if($obj->avatar && $obj->avatar != ' ' && $obj->avatar != '')
                                                                 <span><img  class="lazy img-circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $obj->avatar }}" data-srcset="{{ $obj->avatar }}" width="37" height="37" style="width:37px;border:1px solid #474747;" alt="{{ $obj->username  }}"></span>
                                                             @else
-                                                                <div style="display:inline-block; padding-top:10px;padding-left:1px;margin:0;" class=" kt-header__topbar-icon text-white post-avatar"><b>{{ ucfirst($obj->username[0]) }}</b></div>
+                                                                <div style="display:inline-flex;margin:0;" class="wh-36  kt-header__topbar-icon text-white post-avatar"><b>{{ ucfirst($obj->username[0]) }}</b></div>
                                                             @endif
                                                     </small>
                                                     </span>

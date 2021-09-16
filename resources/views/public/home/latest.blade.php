@@ -116,15 +116,16 @@
                                         @if($obj->user && $obj->user->group == 'user')
                                           
                                                 <a class="text-white img-fade-hover overflow-dots" href="/{{ !$user ? '#' : '@' .$obj->user->name_slug }}"  {{ !$user ? 'data-toggle=modal data-target=#signUpModal' : 'data-toggle=kt-tooltip' }} style="position: relative; display:inline-block;">
-                                                    <span>
-                                                        <small>
-                                                        @if($obj->user->avatar && $obj->user->avatar != ' ' && $obj->user->avatar != '')
-                                                                <span><img  class="lazy circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $obj->user->avatar }}" data-srcset="{{ $obj->user->avatar }}" width="37" height="37" style="width:37px;border:1px solid #474747;" alt="{{ $obj->user->name  }}"></span>
-                                                            @else
-                                                                <div style="display:inline-block; padding-top:10px;padding-left:1px;margin:0;" class=" kt-header__topbar-icon text-white post-avatar"><b>{{ ucfirst($obj->user->name[0]) }}</b></div>
-                                                            @endif
-                                                    </small>
-                                                    </span>
+                                                   
+                                                    @if($obj->user->avatar && $obj->user->avatar != ' ' && $obj->user->avatar != '')
+                                                            <span><img  class="lazy circle img-fade-hover"  src="/img/placeholder-trans.png" data-src="{{ $obj->user->avatar }}" data-srcset="{{ $obj->user->avatar }}" width="37" height="37" style="width:37px;border:1px solid #474747;" alt="{{ $obj->user->name  }}"></span>
+                                                        @else
+                                                            <div style="display:inline-flex;" class="wh-36 kt-header__topbar-icon text-white post-avatar">
+                                                            <small>
+                                                                <b>{{ ucfirst($obj->user->name[0]) }}</b>
+                                                            </small></div>
+                                                        @endif
+                                                   
                                                     <span  style="padding-top:16px;left:5px;white-space: nowrap;"> <small><b>&nbsp;{{ $obj->user->name }}</b></small></span>
                                                 </a>
                                             

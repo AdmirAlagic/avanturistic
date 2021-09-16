@@ -844,16 +844,17 @@ html {
 }
 
 .post-avatar {
-  width: 36px;
-  height: 36px;
-  margin: 5px;
-  border-radius: 4px;
+  width: 30px;
+  height: 30px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   vertical-align: middle;
-  background-color: #444444;
+  background-color: #474747;
+  display: flex;
   border-radius: 9999em;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  
 }
 .leaflet-control-zoom-in, .leaflet-control-zoom-out{
   color:#000000 !important;
@@ -2567,4 +2568,8 @@ body{
 }
 .flex-col{
   flex-direction: column;
+}
+.wh-36{
+  width:36px;
+  height:36px;
 }
