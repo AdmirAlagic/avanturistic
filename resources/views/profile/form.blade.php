@@ -312,7 +312,8 @@
                                     <h5 class="text-center text-gray font-light">
                                         Outdoor Activities Interests
                                     </h5>
-                                    <p class="text-center text-gray">Selected activities will be shown on your profile</p>
+                                    <p class="text-center text-gray"><small>
+                                        Selected activities will be shown on your profile</small></p>
                                     <div class="form-group  row">
                                         <div class="row">
                                             @foreach($badges as $key => $val)
@@ -354,7 +355,7 @@
                                         <input type="hidden" id="country-lng" value="{{ $model->country->lng }}">
                                     @endif
                                     <h5 class="text-center text-gray font-light">Visited Countries</h5>
-                                    <p class="text-center text-gray">Visited countries are automatically updated when you share adventure locations</p>
+                                    <p class="text-center text-gray"><small>Visited countries are automatically updated when you share adventure locations</small></p>
                                     <h6 class="text-center"><span class="font-size:0.9em;"><i class="fa fa-hand-pointer text-success"></i></span>&nbsp;<b><em>Tap on map to mark country as visited</em></b></h6>
                                     <div id="visiteds-map" style="width:100%; height:300px;">
                                     </div>
