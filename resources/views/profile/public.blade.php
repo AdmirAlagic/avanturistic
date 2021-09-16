@@ -36,7 +36,7 @@
                                                         </div>
                                                     @endif
                                                     @if(!$model->avatar || $model->avatar == ' ' || $model->avatar == '')
-                                                        <div class="text-white" style="padding-top:1.5em;font-size:2rem;" >{{ ucfirst($model->name[0]) }}</div>
+                                                        <div  style="padding-top:1.5em;font-size:2rem;" >{{ ucfirst($model->name[0]) }}</div>
                                                     @endif
                                                     <input type="hidden" name="avatar">
                                                 </div>

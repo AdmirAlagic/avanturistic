@@ -181,9 +181,26 @@
 
                         </div>
                         @if($nextPost)
-                                
-                                    <a class="btn  btn-default text-center" style="width:100%;" href="/watch?page={{ request()->has('page') ? request()->input('page') + 1 : 1 }}">
-                                        <span class="text-gray"><b> NEXT</b>   <i style="margin-top:-2px;margin-left:5px;" class="fa fa-angle-right text-dark"></i>  
+                        <p>Next</p>
+                                    <a class="btn flex  justify-between btn-default text-center" style="width:100%;" href="/watch?page={{ request()->has('page') ? request()->input('page') + 1 : 1 }}">
+                                        
+                                        <img class="br-8" src="{{ $nextPost->image[0]['thumb_path'] }}" style="width:6em;;" alt="">
+                                        <div class="text-left ml-10" > 
+                                            <p>
+                                                @if($nextPost->title)
+                                                    {{ Str::limit($nextPost->title, 56) }} 
+                                                    <br>
+                                                @endif
+                                                <small class="text-gray">
+                                                    {{ $nextPost->country->title}}
+                                                </small>
+                                               
+                                            </p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" style=";width: 30px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                          </svg>
+                                        {{-- <span class="text-gray"><b> NEXT</b>   <i style="margin-top:-2px;margin-left:5px;" class="fa fa-angle-right text-dark"></i>  
                                        
                                          </span> <br><br>
                                         @if($nextPost && $nextPost->title)
@@ -206,8 +223,9 @@
                                                         @php $countNextBadges++;@endphp
                                                     @endif
                                                 @endforeach
-                                        </span>
-                                        @endif
+                                        </span> --}}
+
+                                      {{--   @endif --}}
                                         <br>               
                                     </a>
                                     <br>
