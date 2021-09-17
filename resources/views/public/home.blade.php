@@ -607,9 +607,9 @@
                                 @if(count($stories))
                                     <div class="row">
                                         @foreach($stories as $obj)
-                                            <div class="col-sm-3 ">
+                                            <div class="col-sm-3 mt-10 mb-10">
                                                 <div class="kt-portlet  kt-portlet--height-fluid" >
-                                                    <div class="kt-portlet__body" style="position:relative;padding:0;">
+                                                    <div class="kt-portlet__body" style="position:relative;padding:10px;">
                                                         <a href="/{{$obj->slug}}">
                                                             <img class="image-thumbnail lazy top-radius" style=""  src="/img/placeholder-trans.png" data-src="{{ $obj->image[0]['thumb_path'] }}" data-srcset="{{ $obj->image[0]['thumb_path'] }}" alt="{{ $obj->title }} " title="{{ $obj->title }}" style="-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;">
 
@@ -617,7 +617,7 @@
                                                                 {{ $obj->title }}
                                                             </h3>
                                                         </a>
-                                                        <div class="text-muted " style="padding:15px;"> {!! $obj->description !!} </div>
+                                                        <div class="text-muted mb-10 mt-10" style=""> {!! $obj->description !!} </div>
 
                                                     </div>
                                                    
