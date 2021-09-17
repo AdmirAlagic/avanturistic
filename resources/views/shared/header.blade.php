@@ -59,7 +59,7 @@
                                <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;"> -->
                                     <img class="" src="/img/triangles-black.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
                               <!--    </div>  -->
-                                <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">Adventures</span>
+                                <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">My Adventures</span>
                             </a>
                         </li>
                         
@@ -298,7 +298,7 @@
                                     </div>
                                     <div class="kt-notification__item-details">
                                         <div class="kt-notification__item-title kt-font-bold">
-                                            <b>Adventures</b>
+                                            <b>My Adventures</b>
                                         </div>
                                         <div class="kt-notification__item-time">
                                             Manage your adventures

@@ -61,7 +61,7 @@
 
     <h1 class="text-white k-font kt-hidden-tablet-and-mobile" style="background:#474747;border-top:1px solid #3C3C3C;padding:1em;width:100%;font-weight:900;font-size:1.3rem;margin:0;"><b> <i class="fa fa-map-marker-alt text-success"></i> &nbsp;  The world map of outdoor adventures</b></h1>
     <div class="map-container" style="position:relative;left:0;wheight: 100%;
-    width: 100vw;text-align: center;height:80vh;">
+    width: 100vw;text-align: center;height:84vh;">
         <div id="world-map" class="home-map-mobile"  style="background:#f2efe9;z-index: 1;height: 100%;
     width: 100vw;margin-top:0;">
             <!--  <img src="/img/seek_for_adventure.jpg" alt="Avanturistic Background" style="width:100%;height: 90vh;object-fit: cover;">

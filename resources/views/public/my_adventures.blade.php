@@ -22,7 +22,7 @@
                    <div class="row">
                        @foreach($posts as $obj)
                            @if(isset($obj->image[0]['thumb_path']))
-                               <div class="col-12 col-sm-4 col-lg-3 ">
+                               <div class="col-12 col-sm-4 col-lg-3 mb-10">
                                    <div class="my-post-edit" >
                                        
                                        <div style="position:relative" class="postImg overflowH">
