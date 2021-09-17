@@ -122,7 +122,7 @@
         <div class="text-center" >
             <div class="tab-content " style="padding: 0;">
                 {{--explore--}}
-                <div class="kt-portlet tab-pane active"  role="tabpanel" style="border-radius:0px;padding:0;margin-bottom: 0px;background:transparent;" id="explore">
+                <div class="kt-portlet tab-pane active"  role="tabpanel" style="border-radius:0px;padding:0;margin-bottom: 0px;background:#FFFFFF;" id="explore">
                     <section style="background:#FFFFFF;">
                             <div class="kt-portlet__head text-center" style="min-height:30px;">
                                 <div class="kt-portlet__head-label" style="width:100%;min-height:30px;">
@@ -150,7 +150,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                                    <div id="more-posts" style="min-height:100px;padding:15px;">
+                                    <div id="more-posts mb-10" style="min-height:100px;padding:15px;">
                                         
                                         @include('public.home.latest')
                                         
@@ -159,8 +159,8 @@
                                 </div>
                             </div>
                         </section>
-                    <section  style="background:#FFFFFF;">
-                        <div class="kt-portlet__head text-center" style="background:transparent;min-height:30px;border-top:1px solid #f6f6f6;">
+                    <section  style="background:#FFFFFF;margin-top:15px;">
+                        <div class="kt-portlet__head text-center" style="background:transparent;min-height:30px;">
                             <div class="kt-portlet__head-label" style="width:100%;min-height:30px;">
                                 <h3 class="kt-portlet__head-title text-center" style="font-size: 1.5rem;width:100%;border-radius:0px !important;margin:10px;padding:10px;">
                                     Find Your Next Adventure
@@ -381,9 +381,9 @@
                                     </div>
                                 </div>
                                  
-                                <p class="text-center text-gray">Explore through interactive map and find adventures  by <em><b>outdoor activity</b></em>.</p>
+                                <p class="text-center text-gray mb-10">Explore through interactive map and find adventures  by <em><b>outdoor activity</b></em>.</p>
                                
-                                <hr>
+                               <br>
                                  @if(!$user)
                                 <p>
                                     Every country has its own hidden gems. <br>
@@ -401,7 +401,7 @@
                                             <a href="/country/{{ $obj->slug }}" class="img-fade-hover">
                                                     @if($obj->code2)
                                                     <div style="margin-left:-1px;position:relative;display:inline-block;border:1px solid #fbfbfb;background-image:url('/img/countries/svg/{{ strtolower($obj->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 50px; height: 50px;border:1px solid #999;">
-                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:35px;height:35px;background:#474747;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
+                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:30px;height:30px;background:#474747;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
                                                     </div>
                                                     
                                                     @endif
@@ -613,17 +613,14 @@
                                                         <a href="/{{$obj->slug}}">
                                                             <img class="image-thumbnail lazy top-radius" style=""  src="/img/placeholder-trans.png" data-src="{{ $obj->image[0]['thumb_path'] }}" data-srcset="{{ $obj->image[0]['thumb_path'] }}" alt="{{ $obj->title }} " title="{{ $obj->title }}" style="-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;">
 
-                                                            <h3 style="font-weight: 900;font-size:1.4rem;margin-top:10px;padding:15px;" class="text-dark">
+                                                            <h3 style="font-weight: 900;font-size:1.3rem;margin-top:10px;padding:15px;" class="text-dark">
                                                                 {{ $obj->title }}
                                                             </h3>
                                                         </a>
-                                                        <div class="text-muted" style="padding:15px;"> {!! $obj->description !!} </div>
+                                                        <div class="text-muted " style="padding:15px;"> {!! $obj->description !!} </div>
 
                                                     </div>
-                                                    <div class="kt-portlet__foot kt-portlet__foot--sm kt-align-right">
-                                                        <span> <small class="text-muted">{!! $obj->created_at->format('jS F Y') !!} </small></span>
-                                                        
-                                                    </div>
+                                                   
                                                 </div>
 
                                             </div>
