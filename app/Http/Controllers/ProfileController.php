@@ -252,7 +252,7 @@ class ProfileController extends AppController
             }
         }
         $data['conversation_id'] = $conversation->id;
-
+        $data['mobileTitle'] = $toUser->name;
         $data['messages'] = $messages;
         return view('profile.message', $data);
     }
