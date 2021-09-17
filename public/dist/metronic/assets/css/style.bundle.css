@@ -4850,7 +4850,7 @@ strong {
 }
 .kt-notification .kt-notification__item:hover .kt-notification__item-details .kt-notification__item-title {
     transition: color 0.3s ease;
-    color: #acc957;
+    color: #292929;
 }
 .kt-notification .kt-notification__item.kt-notification__item--read {
     opacity: 0.5;

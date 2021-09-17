@@ -1,13 +1,13 @@
 <template>
-    <div class="kt-portlet" style="padding-bottom:0;">
+    <div class="kt-portlet " style="padding-bottom:0;t">
         <div class="kt-portlet__body">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="kt-searchbar">
+                    <div class="kt-searchbar ">
                         <div class="input-group">
                             <div class="input-group-prepend" style="cursor:pointer;" >
                                 <span class="input-group-text" id="basic-addon1">
-                                    <i class="fa fa-search"></i>
+                                    <img src="/img/search.svg" style="width:16px;" alt="">
                                 </span></div>
                             <input type="text"  v-model="query" class="form-control" autocomplete="false"  name="query" placeholder="Start typing to explore" aria-describedby="basic-addon1">
                         </div>
@@ -15,7 +15,8 @@
                 </div>
             </div>
                  
-            <p class="text-gray" style="margin-top:5px;margin-bottom:0;">Search for users, countries and adventure locations</p>
+            <p class="text-gray" style="margin-top:5px;margin-bottom:0;"><small>
+                Search for users, countries and adventure locations</small></p>
 
             <div v-html="this.results"></div>
         </div>

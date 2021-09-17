@@ -339,7 +339,7 @@ console.log(document.getElementById('loged_user').value)
                 @include('shared.header')
             @endif
             <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
-                <div class="kt-content kt-content--fit-top  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-scroll" id="kt_content" style="position:relative;padding-bottom: 0px;">
+                <div class="kt-content kt-content--fit-top  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor " id="kt_content" style="position:relative;padding-bottom: 0px;">
                     <!-- begin:: Content -->
 
                         @yield('content')

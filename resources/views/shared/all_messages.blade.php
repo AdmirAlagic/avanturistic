@@ -40,5 +40,5 @@
         @endif
     @endforeach
 @else
-    <div>You haven't chated with anyone.</div>
+    <div class="p15">You haven't chated with anyone.</div>
 @endif

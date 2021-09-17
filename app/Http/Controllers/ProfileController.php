@@ -275,8 +275,8 @@ class ProfileController extends AppController
 
        
         $data = [
-            'pageTitle' => 'Messages',
-            'mobileTitle' => 'Messages',
+            'pageTitle' => 'Inbox',
+            'mobileTitle' => 'Inbox',
         ];
 
         return view('profile.messages', $data);

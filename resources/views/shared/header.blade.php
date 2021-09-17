@@ -103,23 +103,24 @@
                 <a class="text-muted img-fade-hover loading" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;" href="/"  >
                     
                    <div style="width:21px;"> 
-                    <img src="{{ url('img/home.svg')}}" style="width:21px;" alt="Avanturistic Homepage">
+                    <img src="{{ url('/img/home.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == '' ? 'active' : '' }}" alt="">
                    </div>
                 </a>
             </div>
 
             <div class=" kt-header__topbar-item  " style="">
-                <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;font-size:1.4rem;" href="/search"  >
+                <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;font-size:1.4rem;width:max-content;" href="/search"  >
                     
-                    <i class="fa fa-search  text-dark"></i>
+                    <img src="{{ url('/img/search.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == 'search' ? 'active' : '' }}"alt="">
+ 
                 </a>
             </div>
             
             @if(isset($user) && $user)
                 <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
-                    <div class=" kt-header__topbar-item  " style="">
-                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;" href="/messages"  >
-                            <i class="fa fa-envelope message-notification-icon {{ count($user->unreadMessages) ? 'text-success' : '' }}"></i>
+                    <div class=" kt-header__topbar-item  " >
+                        <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;width:max-content;" href="/messages"  >
+                            <img src="{{ url('/img/chat.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == 'messages' ? 'active' : '' }}" alt="">
                             
                         </a>
                     </div>
@@ -127,8 +128,9 @@
                 <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " style="">
                         <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;" href="/notifications"  >
-                            <div style="position: relative">
-                                <i class="fa fa-bell notification-icon fa fa-bell "></i>
+                            <div style="position: relative; width:max-content;">
+                               
+                                <img src="{{ url('/img/bell.svg')}}" style="height:22px;" class="{{ Request::segment(1) == 'notifications' ? 'active' : '' }}" alt="">
                                 @if($unreadNotifications  > 0)
                                     <div class="circle notification-mobile ">
                                         {{ $unreadNotifications }}
@@ -141,9 +143,9 @@
               
                     <div class="kt-header__topbar-item  " >
                   
-                    <a href="/share" class="dots text-muted pull-right" style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  >
-                        <div style="width:21px;">
-                            <img src="{{ url('img/pinplus.svg')}}"  alt="Avanturistic Homepage">
+                    <a href="/share" class="dots text-muted   " style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  >
+                        <div style="width:22px;">
+                            <img src="{{ url('img/pinplus.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == 'share' ? 'active' : '' }}"  alt="Avanturistic Homepage">
                         </div>
                         </a>
                         {{-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center text-center" style="">
@@ -351,7 +353,7 @@
                 </div>
             @else
                 <div class=" kt-header__topbar-item  ">
-                    <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/login"  >
+                    <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;" href="/login"  >
                    
                         <div class="kt-hidden-tablet-and-mobile font-light">
                            LOGIN
@@ -359,7 +361,7 @@
                     </a>
                 </div>
                 <div class=" kt-header__topbar-item  ">
-                    <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center;padding-top:1px; padding-left: 15px;padding-right: 15px;" href="/" data-toggle="modal" data-target="#signUpModal" >
+                    <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;" href="/" data-toggle="modal" data-target="#signUpModal" >
                    
                         <div class="kt-hidden-tablet-and-mobile text-success" style="white-space: nowrap;">
                            SIGN UP

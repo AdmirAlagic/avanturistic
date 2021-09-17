@@ -7,10 +7,10 @@
             <div class="kt-portlet__head kt-hidden-tablet-and-mobile">
                 <div class="kt-portlet__head-label">
                         <span class="kt-portlet__head-icon">
-                            <i class="fa fa-envelope"></i>
+                            <img src="{{ url('/img/chat.svg')}}" alt="">
                         </span>
                     <h3 class="kt-portlet__head-title text-dark">
-                       Messages
+                       Chat
                     </h3>
                 </div>
             </div>

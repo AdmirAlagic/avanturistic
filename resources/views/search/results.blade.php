@@ -7,15 +7,15 @@
                     <div class="kt-notification__item-icon kt-pulse kt-pulse--light"  style="margin-right:2rem;flex:0 50px;" >
                         @if($obj->avatar && $obj->avatar != ' ' && $obj->avatar != '')
 
-                            <span ><img src="{{ $obj->avatar }}" style="border-radius:50%;width:60px;border:none;"></span>
+                            <span ><img src="{{ $obj->avatar }}" style="border-radius:50%;border:none;"></span>
                         @else
-                        <div style="display:inline-block; padding-top:8px;;margin-top:0px; " class=" kt-header__topbar-icon text-white post-avatar"><b>{{ ucfirst($obj->name[0]) }}</b></div>
+                        <div class="items-center  kt-header__topbar-icon post-avatar text-gray" style="background-color:#eeeeee;display:inline-flex;;margin-top:0px;width:50px;height:50px;" ><b>{{ ucfirst($obj->name[0]) }}</b></div>
                         @endif
                         
                     </div>
                     <div class="kt-notification__item-details">
                         <div class="kt-notification__item-title ">
-                        <i class="fa fa-user text-gray"></i> &nbsp;<span>{{$obj->name}}</span>
+                        <i class="fa fa-user "></i> &nbsp;<span>{{$obj->name}}</span>
                         </div>
                         <div class="kt-notification__item-time">
                             
@@ -41,15 +41,21 @@
                     <div class="kt-notification__item-details">
                         <div class="kt-notification__item-title ">
                             <p style="margin-bottom:0px;">
-                                {{$post->title}}
+                                <i class="fa fa-map-marker-alt "></i>  {{$post->title}}
                             </p>
                             
-                            @if($post->address)
+                           
                             
-                            <div style="margin-bottom:5px;">
-                                <i class="fa fa-map-marker-alt text-gray" ></i>&nbsp;&nbsp;<span class=text-gray>{{ $post->address }}</span>
+                            <div class="mt-5 mb-5 " style="margin-bottom:5px;">
+                               {{--  @if($post->address)
+                                    <div class=>{{ $post->address }}</div>
+                                @endif --}}
+                                 <div class="text-gray">
+                                    {{ $post->country ? $post->country->title  : '' }}
+                                 </div>
+                                 
                             </div>
-                            @endif
+                          
                             
                         </div>
                         <div class="kt-notification__item-time">
@@ -72,7 +78,7 @@
                     </div>
                     <div class="kt-notification__item-details">
                         <div class="kt-notification__item-title ">
-                        <span><b>{{ $obj->title }}</b></span>
+                        <span>  <i class="fa fa-flag"></i> <b>{{ $obj->title }}</b></span>
                         <span></span>
                         </div>
                         <div class="kt-notification__item-time">
