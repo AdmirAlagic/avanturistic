@@ -16,20 +16,20 @@
                         <!--begin: Form Wizard Nav -->
                         <div class="kt-wizard-v1__nav kt-visible-tablet-and-mobile" >
                             <div class="kt-wizard-v1__nav-items" style="padding:0;">
-                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:50px;;">
                                     <a  class="btn  flex justify-center   noborder-r btn-tall  kt-font-transform-u" href="/" style="position:absolute;top:0;left:0;height: 100%;">
                                     <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                         </svg>
                                         &nbsp;Cancel
                                     </a>
-                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class="to-location btn btn-tall   btn-md flex kt-font-transform-u noborder-r">
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:50px;;"    class="to-location btn btn-tall   btn-md flex kt-font-transform-u noborder-r">
                                         <span >
                                             Next
                                         </span>
                                     </a>
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:50px;;">
 
                                     <a   class="back-to-upload btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
                                         <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -37,12 +37,12 @@
                                         </svg>
                                         &nbsp;Back
                                     </a>
-                                    <button class="finish-form btn btn-tall   btn-md flex kt-font-transform-u noborder-r "  style="position:absolute;top:0;right:0;border:none;height:40px; " >
+                                    <button class="finish-form btn btn-tall   btn-md flex kt-font-transform-u noborder-r "  style="position:absolute;top:0;right:0;border:none;height:50px;; " >
                                         Describe & Finish
                                     </button>
 
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:50px;;">
 
                                     <a   class="back-to-location btn  kt-font-transform-u btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
                                         <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,17 +50,17 @@
                                         </svg>
                                          Back
                                     </a>
-                                    <button   type="submit " class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:fixed;top:0;right:0;z-index:9999;" >
+                                    <button   type="submit " class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:fixed;top:0;right:0;z-index:9999;" >
                                        
                                            Share
                                     </button>
-                                   <div style="height:40px;width:100%;"></div>
+                                   <div style="height:50px;;width:100%;"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="kt-wizard-v1__nav kt-visible-desktop" style="position: relative;" >
                             <div class="kt-wizard-v1__nav-items" style="padding:0;">
-                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-image"  data-ktwizard-state="current" style="min-height:50px;;">
                                     <a  class="btn  flex justify-center   btn-tall noborder-r  kt-font-transform-u" href="/" style="position:absolute;top:0;left:0;height: 100%;">
                                             <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -68,34 +68,34 @@
                                             &nbsp;Cancel
                                         </svg>
                                     </a>
-                                    <a  style="position:absolute;top:0;right:0;border:none;height:40px;"    class=" to-location btn btn-tall    btn-md flex kt-font-transform-u noborder-r">
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:50px;;"    class=" to-location btn btn-tall    btn-md flex kt-font-transform-u noborder-r">
                                         <span >
                                             Next
                                         </span>
                                     </a>
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:50px;;">
                                     <a   class="back-to-upload btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
                                         <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                         </svg>
                                         &nbsp;Back
                                     </a>
-                                    <button class=" finish-form btn   btn-md flex kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:40px; " >
+                                    <button class=" finish-form btn   btn-md flex kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:50px;; " >
                                         Describe & Finish
                                     </button>
 
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:40px;">
+                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:50px;;">
 
                                     <a   class="back-to-location btn  kt-font-transform-u btn-tall  noborder-r" style="position:absolute;top:0;left:0;" >
                                         <i class="fa fa-angle-left "></i> Back
                                     </a>
-                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 40px;border:none;position:absolute;top:0;right:0;" >
+                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:absolute;top:0;right:0;" >
                                        
                                            Share
                                     </button>
-                                   <div style="height:40px;width:100%;"></div>
+                                   <div style="height:50px;;width:100%;"></div>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
 
                                         <div class="dz-default dz-message">
                                             <div class="text-green">
-                                            <img  width="50" height="50" style="width:40px;height:40px;"  alt="Upload Photos" src="{{ url('/img/photos.svg') }}">
+                                            <img  width="50" height="50" style="width:50px;;height:50px;;"  alt="Upload Photos" src="{{ url('/img/photos.svg') }}">
                                             </div>
                                         <h5 class=" text-center"><br><p>
                                                 Choose photos</p>
