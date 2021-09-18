@@ -51,24 +51,23 @@
                                 @if(isset($image[0]))
                                     <div class="swiper-slide" style="position:relative;z-index:2;min-height:200px; {{ count($post->image) == 1 ? 'border-bottom:3px solid #474747;' : '' }}">
                                         <a href="/adventure/{{ $obj->id }}/{{ $obj->slug }}" class="loading img-hover-zoom">
-                                        <img src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class=" lazy" > 
-                                        <div style="position:absolute;top:0px;right:0px;width:38.2%;">
+                                        <img style="width:100%;" src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class=" lazy" > 
+                                       
+                                        @if($obj->title)
+                                            <div class="  flex items-center" style="position:absolute;bottom:0px;left:0px;width:100%;">
                                                 
-                                            @if(isset($obj->distance))
-                                                <p class="text-white text-right" style="padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px; background-color: #474747;height: 2.5rem;">
+                                                <div class=" overflow-dots k-font text-white" style="padding:0.5rem 1rem;font-size: 1.2rem; background-color: #000000bd;"> 
+                                                    @if($obj->title)<b>{{ Str::limit($obj->title, 56) }}  @endif 
+                                                    </b>
+                                                </div>  
+                                                @if(isset($obj->distance))
+                                                <div class="text-white text-right " style="padding:0.5rem 1rem;width:42%; background-color: #000000;">
                                                     <small style="font-size:0.8em;">
                                                         {{ number_format($obj->distance, 2, '.', '') }} km
                                                         &nbsp;<i class="fa fa-location-arrow"></i>
                                                     </small>
-                                                </p>
+                                                </div>
                                             @endif
-
-                                        </div>
-                                        @if($obj->title)
-                                            <div style="position:absolute;top:0px;left:0px;width:61.8%;">
-                                                
-                                                <p class="overflow-dots k-font text-white" style="font-size: 1.2rem;padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px; background-color: #474747;height: 2.5rem;">  @if($obj->title)<b>{{ Str::limit($obj->title, 56) }}  @endif</b></p>  
-
                                             </div>
                                         @endif
                                         

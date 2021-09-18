@@ -62,6 +62,7 @@ view()->share('pageDescription', 'Log in to Avanturistic. Continue with Facebook
             }
 
 
+            view()->share('mobileTitle', 'Login');
             view()->share('isMobile', $isMobile);
          
             return $next($request);

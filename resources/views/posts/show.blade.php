@@ -205,14 +205,18 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div style="position:relative;">
-                                 <span  style="position: absolute;padding:5px;left: 0;top:0px;z-index: 1;background-color: #333333c7; color:#FFFFFF;  border-top-left-radius: 4px; border-bottom-right-radius: 4px; padding-left:10px;padding-right:10px;">
+                               {{--   <span  style="position: absolute;padding:5px;left: 0;top:0px;z-index: 1;background-color: #333333c7; color:#FFFFFF;  border-top-left-radius: 4px; border-bottom-right-radius: 4px; padding-left:10px;padding-right:10px;">
                                  <b>{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b><br>
-                                </span>
+                                </span> --}}
 
-                                    <span  style="position: absolute;right: 0;top:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px; padding-left:10px;padding-right:10px; ">
+                                    <div  style="position: absolute;left: 0;bottom:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px;  ">
 
-                                    <a style="padding:5px;"  class="btn showSatelite  text-white" href="#">Satellite Map</a>
-                                </span>
+                                        <a style="padding-left:10px;padding-right:10px;" class="btn showSatelite  text-white" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                                              </svg>
+                                        </a>
+                                    </div>
                                     <div id="single-map"  style="width:100%;height:270px;z-index: 0;"></div>
                                 </div>
 

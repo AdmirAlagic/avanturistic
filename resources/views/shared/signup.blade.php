@@ -5,22 +5,16 @@
                     <div class="kt-portlet kt-portlet--height-fluid" style="margin-bottom:0;">
                         <div class="kt-portlet__head text-center" style="width:100%">
                             <div class="kt-portlet__head-label text-center" style="width:100%">
-                                <h4 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
-                                    Welcome to Avanturistic
+                                <h2 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
+                                    Welcome aboard!
                                 </h4>
                                 
                             </div>
                         </div>
                         <div class="kt-portlet__body" style="padding-top:10px;">
                             
-                            
-                            @include('shared.fb_google_signup')
-                            <br>
-                            <p class="text-gray" style="margin-bottom:0;">OR</p>
-                            <br>
-                            
-                            <p class="text-center text-muted" >
-                                <b>Create a free account</b>
+                            <p class="text-center " >
+                                <b>Create your account</b>
                             </p>
                             {!! Form::open(['url' => 'register', 'method' => 'POST', 'class' => 'kt-form', 'novalidate' => 'novalidate', 'style' => 'padding:15px;padding-top:0;padding-bottom:5px;', 'id' => 'signup-form']) !!}
                             <div class="row class-text-center">
@@ -48,17 +42,33 @@
 
                            <div class="form-group">
                             <button id="signupSubmit" class="btn btn-green" style="padding: 5px;position:relative;-webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important; width:100%;height:35px;">
-                                <span style="position:absolute;right:35%;top:15px;display:none;" class="kt-spinner  kt-spinner--sm kt-spinner--light signupLoading" ></span> <span class="text-white signupSubmit"><b>Sign Up</b></span>
+                                <span style="position:absolute;right:35%;top:15px;display:none;" class="kt-spinner  kt-spinner--sm kt-spinner--light signupLoading" ></span> <span class="text-white font-boldest signupSubmit">
+                                    Sign Up
+                                </span>
                                 </button>
                                
-                                <p class="mt-10 text-gray" style="line-height:1rem; font-weight:300; ">
-                                    <small> By signing up, you agree to our  
-                                        <a class="text-muted" href="/terms-and-conditions">terms</a> &
-                                        <a class="text-muted" href="/privacy-policy">privacy policy</a>.</small>
-                                </p>
-                           </div>
                              
+                           </div>
                            
+                            <br>
+                            <div class="kt-login__divider ">
+                                <div class="kt-divider kt-auth-divider">
+                                    <span></span>
+                                    <span style="color:#999;"><b>OR</b></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <br>
+                            <p class="font-light">Continue with</p>
+
+                            @include('shared.fb_google_signup')
+                          
+                             
+                            <p class="mt-10 mb-10 text-gray" style="line-height:1rem; font-weight:300; ">
+                                <small> By signing up, you agree to our  
+                                    <a class="text-muted" href="/terms-and-conditions">terms</a> &
+                                    <a class="text-muted" href="/privacy-policy">privacy policy</a>.</small>
+                            </p>
                             {!! Form::close() !!}
 
 
