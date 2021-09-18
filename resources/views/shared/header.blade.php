@@ -115,7 +115,13 @@
  
                 </a>
             </div>
-            
+            <div class="kt-header__topbar-item  " >
+                <a href="/share" class="dots text-muted   " style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  >
+                    <div style="width:23px;">
+                        <img src="{{ url('img/pinplus.svg')}}" style="height:23px;"  class="{{ Request::segment(1) == 'share' ? 'active' : '' }}"  alt="Avanturistic Homepage">
+                    </div>
+                </a>
+            </div>
             @if(isset($user) && $user)
                 <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " >
@@ -141,34 +147,7 @@
                     </div>
                 </div>
               
-                    <div class="kt-header__topbar-item  " >
-                  
-                    <a href="/share" class="dots text-muted   " style="display: inline-flex;align-items:center;padding-left: 12px;padding-right: 12px;font-size:1.1rem;"  >
-                        <div style="width:22px;">
-                            <img src="{{ url('img/pinplus.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == 'share' ? 'active' : '' }}"  alt="Avanturistic Homepage">
-                        </div>
-                        </a>
-                        {{-- <div class="dropdown-menu dropdown-menu-lg dropdown-menu-center text-center" style="">
-                            <ul class="kt-nav" style="padding:0;">
-                                
-                                <li class="kt-nav__item">
-                                    <a href="/create-timelapse" class="kt-nav__link">
-                                         <img src="{{ url('/img/reel.svg') }}" style="width:20px;" alt="Avanturistic Highlights">
-                           
-                                        <span class="kt-nav__link-text"> Create timelapse </span>
-                                    </a>
-                                </li>
-                                <li class="kt-nav__item">
-                                    <a href="/share" class="kt-nav__link">
-                                    <img src="{{ url('img/pinplus.svg')}}" style="width:20px;" alt="Avanturistic Homepage">
-                                        <span class="kt-nav__link-text">Share adventure </span>
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                        </div> --}}
-                </div>
+                
                
             @else
                 
