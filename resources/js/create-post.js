@@ -316,7 +316,7 @@ $(document).ready(function(){
 
             $('.item-finish').hide();
             $('.back-to-upload').trigger('click');
-            toastr.warning('Upload at least one photo.','Upload photos', {timeOut: 3000})
+            toastr.warning('Upload at least one photo.','Upload photos', {timeOut: 1500})
 /*             $('.image-msg').html('<div class="alert alert-danger text-center">At least one photo is required.</div>');
  */
             resizeWindow();
