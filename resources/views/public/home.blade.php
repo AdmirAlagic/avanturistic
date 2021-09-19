@@ -122,8 +122,8 @@
         <div class="text-center" >
             <div class="tab-content " style="padding: 0;">
                 {{--explore--}}
-                <div class="kt-portlet tab-pane active"  role="tabpanel" style="border-radius:0px;padding:0;margin-bottom: 0px;background:#FFFFFF;" id="explore">
-                    <section style="background:#FFFFFF;">
+                <div class="kt-portlet tab-pane active"  role="tabpanel" style="border-radius:0px;padding:0;margin-bottom: 0px;background:transparent;" id="explore">
+                    <section style="background:white;">
                             <div class="kt-portlet__head text-center" style="min-height:30px;">
                                 <div class="kt-portlet__head-label" style="width:100%;min-height:30px;">
                                     <h3 class="kt-portlet__head-title text-center" style="font-size: 1.5rem;width:100%;border-radius:0px !important;margin:10px;padding:10px;">
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                         </section>
-                    <section  style="background:#FFFFFF;margin-top:15px;">
+                    <section  style="padding-top:15px;background:white;">
                         <div class="kt-portlet__head text-center" style="background:transparent;min-height:30px;">
                             <div class="kt-portlet__head-label" style="width:100%;min-height:30px;">
                                 <h3 class="kt-portlet__head-title text-center" style="font-size: 1.5rem;width:100%;border-radius:0px !important;margin:10px;padding:10px;">
@@ -223,14 +223,14 @@
                     </section>
                     
                     @if(!$user)
-                    <section style="background:rgba(0,0,0,0.6);">
+                    <section style="backdrop-filter: blur(3px) brightness(0.5);">
                        
                         <div class="kt-portlet__body" >
                             <div class="kt-container ">
                             <br>
                                 <h3 class="text-white">
                                    
-                                    Join Avanturistic now and make your map of favorite outdoor locations.                                 
+                                    Join Avanturistic now  <br>    and make your map of favorite outdoor locations.                                 
                                </h5>
                                <br>
                                

@@ -50,7 +50,10 @@
                          {{--   <a class="text-muted" href=" https://avanturistic.com/welcome-adventurer">
                                 <b>Discover more about Avanturistic</b> 
                             </a> --}}
-
+                            <br>
+                            <p class="text-white">
+                                Made with <i class="fa fa-heart"></i> by outdoor enthusiasts.
+                            </p>
                             <p class="margin20 text-muted">
                                 Copyright ©
                                 {{ date("Y")}}
