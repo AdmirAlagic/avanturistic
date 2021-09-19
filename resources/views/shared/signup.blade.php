@@ -7,7 +7,7 @@
                             <div class="kt-portlet__head-label text-center" style="width:100%">
                                 <h2 class="kt-portlet__head-title text-center" style="width:100%;color:#474747;">
                                     Welcome aboard!
-                                </h4>
+                                </h2>
                                 
                             </div>
                         </div>

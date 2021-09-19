@@ -70,7 +70,7 @@
                                             @endif
                                             </div>
                                         @endif
-                                        
+                                        <div class="swiper-lazy-preloader"></div>
 
                                     </a>
                                     </div>
