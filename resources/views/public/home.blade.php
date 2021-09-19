@@ -250,8 +250,8 @@
                                     <div class="col-sm-3" style="">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                            <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
+                                                <div   style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                            <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
                                                             src="/img/placeholder-icon.svg" alt="Outdoor photography & film" data-src="{{ url('/img/photos-white.svg') }}" data-srcset="{{ url('/img/photos-white.svg') }}">
                                                         </div>
                                                         <h2  style="font-size:1.2rem;"><b>Outdoor Photography & Film</b></h2>
@@ -272,8 +272,8 @@
                                     <div class="col-sm-3">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
+                                                <div     style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
                                                         src="/img/placeholder-icon.svg" alt="Trip & travel stories" data-src="{{ url('/img/travel.svg') }}" data-srcset="{{ url('/img/travel.svg') }}">
                                                     </div>
                                                     <h2  style="font-size:1.2rem;"><b>Trip & Travel Stories</b></h2>
@@ -298,8 +298,8 @@
                                     <div class="col-sm-3">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8"  >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy " width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
+                                                <div     style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                        <img class="lazy " width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
                                                         src="/img/placeholder-icon.svg" alt="Adventure Tourism" data-src="{{ url('/img/tourism-white.svg') }}" data-srcset="{{ url('/img/tourism-white.svg') }}">
                                                     </div>
                                                     <h2  style="font-size:1.2rem;"><b>Adventure Tourism</b></h2>
@@ -320,8 +320,8 @@
                                     <div class="col-sm-3">
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;background:#474747;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;" 
+                                                <div   style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
+                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
                                                         src="/img/placeholder-icon.svg" alt="Local tourism promotion" data-src="{{ url('/img/map-white.svg') }}" data-srcset="{{ url('/img/map-white.svg') }}">
                                                     </div>
                                                     <h2  style="font-size:1.2rem;"><b>Promote Your Country</b></h2>
@@ -401,7 +401,7 @@
                                             <a href="/country/{{ $obj->slug }}" class="img-fade-hover">
                                                     @if($obj->code2)
                                                     <div style="margin-left:-1px;position:relative;display:inline-block;border:1px solid #fbfbfb;background-image:url('/img/countries/svg/{{ strtolower($obj->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 50px; height: 50px;border:1px solid #999;">
-                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:30px;height:30px;background:#474747;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
+                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:30px;height:30px;border:2px solid #474747 !important;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
                                                     </div>
                                                     
                                                     @endif

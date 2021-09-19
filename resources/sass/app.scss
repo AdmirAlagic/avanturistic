@@ -2467,9 +2467,9 @@ border-top-right-radius: 4px;
   
 }
 .popEffect span{
-	animation: pop 13s linear infinite 0s;
-	-ms-animation: pop 13s linear infinite 0s;
-	-webkit-animation: pop 13s linear infinite 0s;
+	animation: pop 13s cubic-bezier(0.4, 0, 1, 1) infinite 0s;
+	-ms-animation: pop 13s cubic-bezier(0.4, 0, 1, 1) infinite 0s;
+	-webkit-animation: pop 13s cubic-bezier(0.4, 0, 1, 1) infinite 0s;
 	color: $green;
 	opacity: 0;
 	overflow: hidden;
