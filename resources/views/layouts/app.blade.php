@@ -135,7 +135,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com"> 
 @endif
-
+<meta  rel="preconnect" href="https://images.unsplash.com/">
 @if(isset($mixStyles))
     @foreach($mixStyles as $key => $value)
         <link  href="{{mix(url($value)) }}" rel="stylesheet" media="all">

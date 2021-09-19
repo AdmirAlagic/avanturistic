@@ -261,6 +261,7 @@
                                                 <p class="text-center ">
                                                    <em>Interested in outdoor & nature photography and film? </em>
                                                 </p>
+                                                <br>
                                                 <p>
                                                 Whether you are a professional or amateur  share  <b>photos</b> and <b>videos</b> of your outdoor activities & favorite adventure locations. <br> Attach  <b>YouTube's</b>  videos just by 
                                                     inserting video URL and increase your videos visibility.
@@ -287,6 +288,7 @@
                                                     <p class="text-center">
                                                     <em>Do you write stories about trips & travel?</em>
                                                     </p>
+                                                    <br>
                                                     <p>
                                                         Share your stories from trips & travel and <b>promote your blog</b>.<br>  Give others useful tips about travel destinations & outdoor activities that you have experienced in your country or while traveling.
                                                     </p>
@@ -311,6 +313,7 @@
                                                         <p class="text-center ">
                                                             <em>Do you provide adventure tourism services?</em>
                                                         </p>
+                                                        <br>
                                                         <p>You are welcome to promote your <b>adventure tourism services</b> for free and help others discover them.</p>
                                                         <p>Provide exact locations with contact information and make your business visible.</p>
                                                     </div>
@@ -332,8 +335,9 @@
                                                     <p class="text-center">
                                                         <em>Engage in <b>local tourism promotion</b> and share your country's hidden gems.</em>
                                                     </p> 
+                                                    <br>
                                                     <p>Let others discover the best outdoor activities that they can experience in your country and less popular outdoor locations that you admire the most. </p>
-                                                    <p>
+                                                    <p class="k-font">
                                                         <b>
                                                             <em>Show us your country in a way you see it.</em>
                                                         </b>
