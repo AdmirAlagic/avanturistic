@@ -1,7 +1,7 @@
 @if(count($nearbyPosts))
 
     <div class="kt-portlet" style="margin-bottom:0px;">
-        <div class="kt-portlet__head">
+        <div class="kt-portlet__head" style="border-bottom:1px solid #eee;">
             <div class="kt-portlet__head-label" style="width:100%;">
                                                         <span class="kt-portlet__head-icon">
                                                             <i class="fa fa-map-signs text-success"></i>
@@ -49,19 +49,19 @@
                             @if($obj->image)
                                 @php $image = json_decode($obj->image);@endphp
                                 @if(isset($image[0]))
-                                    <div class="swiper-slide" style="position:relative;z-index:2;min-height:200px; {{ count($post->image) == 1 ? 'border-bottom:3px solid #474747;' : '' }}">
+                                    <div class="swiper-slide " style="position:relative;z-index:2;min-height:200px; {{ count($post->image) == 1 ? 'border-bottom:3px solid #474747;' : '' }}">
                                         <a href="/adventure/{{ $obj->id }}/{{ $obj->slug }}" class="loading img-hover-zoom">
-                                        <img style="width:100%;" src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class=" lazy" > 
+                                        <img style="width:100%;" src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class="swiper-lazy" > 
                                        
                                         @if($obj->title)
-                                            <div class="  flex items-center" style="position:absolute;bottom:0px;left:0px;width:100%;">
+                                            <div class="  flex items-center" style="bottom:-13px;position:absolute;left:0px;width:100%;">
                                                 
-                                                <div class=" overflow-dots k-font text-white" style="padding:0.5rem 1rem;font-size: 1.2rem; background-color: #000000bd;"> 
+                                                <div class=" overflow-dots k-font text-white" style="padding:0.5rem 1rem;font-size: 1.2rem; height:40px;background-color: #000000;"> 
                                                     @if($obj->title)<b>{{ Str::limit($obj->title, 56) }}  @endif 
                                                     </b>
                                                 </div>  
                                                 @if(isset($obj->distance))
-                                                <div class="text-white text-right " style="padding:0.5rem 1rem;width:42%; background-color: #000000;">
+                                                <div class="text-white text-right " style="padding:0.5rem 1rem;width:42%; height:40px;background-color: #000000;">
                                                     <small style="font-size:0.8em;">
                                                         {{ number_format($obj->distance, 2, '.', '') }} km
                                                         &nbsp;<i class="fa fa-location-arrow"></i>
@@ -70,9 +70,10 @@
                                             @endif
                                             </div>
                                         @endif
-                                        <div class="swiper-lazy-preloader"></div>
+                                        
 
                                     </a>
+                                    <div class="swiper-lazy-preloader"></div>
                                     </div>
                                      
                                 @endif

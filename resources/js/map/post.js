@@ -23,16 +23,25 @@ $(document).ready(function(){
             }
           });
 
-          var nearbyPostsSwiper = new Swiper('.nearby-swiper', {
-            autoHeight:true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              },
-            loop:true,
-          
-          })
+        
        
+    }
+    if($('.nearby-swiper').length){
+    var nearbyPostsSwiper = new Swiper('.nearby-swiper', {
+        autoHeight:true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          watchSlidesVisibility: true,
+
+        loop:true,
+        preloadImages: false,
+        lazy: true,
+        lazy: {   loadOnTransitionStart:true,
+            loadPrevNextAmount:2,
+            loadPrevNext: true},
+      })
     }
     var map;
     var baseUrl = window.pageHostname;
