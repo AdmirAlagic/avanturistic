@@ -409,7 +409,8 @@
                                                     </div>
                                                     
                                                     @endif
-                                                    <h6 class="text-muted">{{ $obj->title }}</h6>
+                                                  
+                                                    <h6 class="font-light mt-10">{{ $obj->title }}</h6>
                                                     <br>
                                                      
                                                   
