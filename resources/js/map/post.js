@@ -375,7 +375,7 @@ $(document.body, '#button-background').on('mouseup touchend', function (event) {
 	var relativeMouse = Math.abs(currentMouse) - initialMouse;
       relativeMouse = Math.abs(relativeMouse);
 	if (relativeMouse  < slideMovementTotal / 2) {
-        $('.next-post-info').show();
+        
 		$('.slide-text').fadeTo(300, 1);
 		/* slider.animate({
 			left: "10px"
