@@ -404,8 +404,8 @@
                                             <div class="col-4 col-sm-3 text-center" style="margin-bottom:15px;height:100px;">
                                             <a href="/country/{{ $obj->slug }}" class="img-fade-hover">
                                                     @if($obj->code2)
-                                                    <div style="margin-left:-1px;position:relative;display:inline-block;border:1px solid #fbfbfb;background-image:url('/img/countries/svg/{{ strtolower($obj->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 50px; height: 50px;border:1px solid #999;">
-                                                    <div style="position:absolute;right:-15px;top:-10px;padding:5px;border-radius:50%;width:30px;height:30px;border:2px solid #474747 !important;color:#FFFFFF;border:2px solid #FFFFFF;">{{ count($obj->posts) }}</div>
+                                                    <div class="" style="margin-left:-1px;position:relative;display:inline-block;border:1px solid #fbfbfb;background-image:url('/img/countries/svg/{{ strtolower($obj->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 50px; height: 50px;border:1px solid #999;">
+                                                        <div  class="flex items-center justify-center" style="font-weight:500;position:absolute;right:-15px;top:-15px; border-radius:50%;width:30px;height:30px;background: #474747 !important;color:white;font-size:1rem;border:3px solid #FFFFFF;">{{ count($obj->posts) }}</div>
                                                     </div>
                                                     
                                                     @endif
