@@ -1488,6 +1488,13 @@ transition: all .3s ease;
 }
 .swiper-button-next, .swiper-button-prev{
   outline:none !important;
+  width: 40px;
+  height: 40px;
+  background-color: #474747;
+  border-radius: 50%;
+  &:after{
+    font-size:1rem;
+  }
   &:hover,&:focus, &:active{
     outline:none !important;
   }
@@ -2059,7 +2066,7 @@ border-radius: 10px;
  
 
 .swiper-button-next:after, .swiper-button-prev:after{
-  font-size:2rem !important;
+   
   font-weight:bold !important;
 }
  
