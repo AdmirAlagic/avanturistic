@@ -334,7 +334,7 @@
                 <div class=" kt-header__topbar-item  ">
                     <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;" href="/login"  >
                    
-                        <div class="kt-hidden-tablet-and-mobile font-light">
+                        <div class="kt-hidden-tablet-and-mobile ">
                            LOGIN
                         </div>
                     </a>
@@ -342,8 +342,8 @@
                 <div class=" kt-header__topbar-item  ">
                     <a class="loading img-fade-hover topbar-search" style="display: inline-flex;align-items:center; padding-left: 15px;padding-right: 15px;" href="/" data-toggle="modal" data-target="#signUpModal" >
                    
-                        <div class="kt-hidden-tablet-and-mobile text-success" style="white-space: nowrap;">
-                           SIGN UP
+                        <div class="kt-hidden-tablet-and-mobile" style="white-space: nowrap;">
+                           <b>SIGN UP</b>
                         </div>
                     </a>
                 </div>

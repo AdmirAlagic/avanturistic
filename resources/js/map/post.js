@@ -375,6 +375,7 @@ $(document.body, '#button-background').on('mouseup touchend', function (event) {
 	var relativeMouse = Math.abs(currentMouse) - initialMouse;
       relativeMouse = Math.abs(relativeMouse);
 	if (relativeMouse  < slideMovementTotal / 2) {
+        $('.next-post-info').show();
 		$('.slide-text').fadeTo(300, 1);
 		/* slider.animate({
 			left: "10px"
@@ -399,6 +400,7 @@ $(document.body).on('mousemove touchmove', function(event){
 	var slidePercent = 1 - (relativeMouse / slideMovementTotal);
     relativeMouse = Math.abs(relativeMouse);
 	$('.slide-text').fadeTo(0, slidePercent);
+   
     $('#nextpostswipe').fadeTo(1, slidePercent);
 	 
 	if (relativeMouse >= slideMovementTotal + 10) {

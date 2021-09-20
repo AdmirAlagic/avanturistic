@@ -63,7 +63,10 @@
                                                 Next {{ $nextTxt != 'next' ? $nextTxt : '' }} {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
                                             @endif
                                         </span>
-                                            <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#acc957 100%) left bottom transparent no-repeat;">
+                                            <div class="next-post-info" style="position: absolute;top:0;right:0;display:none;">
+                                                {{ $nextPost->title}}
+                                            </div>
+                                            <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#26bcbd 100%) left bottom transparent no-repeat">
                                                 <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;width:50px;border: 2px solid #FFF;">
                                             </div>
                                             <span>&nbsp;
@@ -86,7 +89,7 @@
                                             @endif
                                            
                                         </span>
-                                        <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#acc957 100%) left bottom transparent no-repeat;">
+                                        <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#26bcbd 100%) left bottom transparent no-repeat">
                                             <i id="locker"  ><img  src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;border:2px solid #FFF;"></a></i>
                                         </div>
                                     </div>
