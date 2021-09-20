@@ -54,7 +54,7 @@
                                         <img style="width:100%;" src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class="swiper-lazy" > 
                                        
                                         @if($obj->title)
-                                            <div class="  flex items-center" style="bottom:-13px;position:absolute;left:0px;width:100%;">
+                                            <div class="  flex items-center" style="bottom:-5px;position:absolute;left:0px;width:100%;">
                                                 
                                                 <div class=" overflow-dots k-font text-white" style="padding:0.5rem 1rem;font-size: 1.2rem; height:40px;background-color: #000000;"> 
                                                     @if($obj->title)<b>{{ Str::limit($obj->title, 56) }}  @endif 
