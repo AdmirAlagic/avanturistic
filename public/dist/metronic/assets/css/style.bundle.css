@@ -4835,8 +4835,7 @@ strong {
 .kt-notification .kt-notification__item .kt-notification__item-details .kt-notification__item-title {
     transition: color 0.3s ease;
     font-size: 1rem;
-    font-weight: 400;
-    color: #595d6e;
+    font-weight: 300;
 }
 .kt-notification .kt-notification__item .kt-notification__item-details .kt-notification__item-time {
     font-size: 1rem;
