@@ -204,7 +204,7 @@
                                 </div>
                               
                                   <div>
-                                    {{ $post->country->title }} <small> <div class="text-gray">{{ $post->country->subregion }}</div></small>   
+                                    <span class="font-light">{{ $post->country->title }}</span> <small> <div class="text-gray">{{ $post->country->subregion }}</div></small>   
                                   </div>
                                
                                  
@@ -221,7 +221,7 @@
                                  <b>{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b><br>
                                 </span> --}}
 
-                                    <div  style="position: absolute;left: 0;bottom:0px;z-index: 1;background-color: #333333c7; border-bottom-left-radius: 4px; border-top-right-radius: 4px;  ">
+                                    <div  style="position: absolute;left: 0;bottom:0px;z-index: 1;background-color: #474747; border-bottom-left-radius: 4px; border-top-right-radius: 4px;  ">
 
                                         <a style="padding-left:10px;padding-right:10px;" class="btn showSatelite  text-white" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
