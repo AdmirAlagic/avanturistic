@@ -8,14 +8,10 @@
         <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-bold  " role="tablist" style=" display: inline-flex;">  
             <li class="nav-item" style="display: inline-block;">
                 <a id="nav-link-info" class="nav-link nav-link-profile active"  style="font-size:0.8em;"  data-toggle="tab" href="#info" role="tab">
-                    <div class="img-circle" style="margin-left: auto;margin-right: auto;width:45px;height:45px;border-width:2px;text-align:center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 23 23" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:6px;">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <polygon points="0 0 24 0 24 24 0 24"/>
-                                <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.5"/>
-                                <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
-                            </g>
-                        </svg>
+                    <div class="img-circle flex items-center justify-center  " style="margin-left: auto;margin-right: auto;padding:5px;width:40px;height:40px;border-width:2px;text-align:center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:auto;margin-right:auto;" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
                     </div>
                     <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Profile
@@ -25,14 +21,10 @@
             </li>
             <li class="nav-item nav-adventures" style="display: inline-block;">
                 <a  id="nav-link-interests" class="nav-link nav-link-profile"  style="font-size:0.8em;"  data-toggle="tab" href="#interests" role="tab">
-                    <div class="img-circle" style="margin-left: auto;margin-right: auto;width:45px;height:45px;border-width:2px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 23 23" version="1.1" class="kt-svg-icon"  style="margin:0;margin-top:5px;">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                           
-                            <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" fill="#000000" opacity="0.3"/>
-                            <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#000000"/>
-                        </g>
-                    </svg>
+                    <div class="img-circle flex items-center justify-center " style="margin-left: auto;margin-right: auto;padding:5px;width:40px;height:40px;border-width:2px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:auto;margin-right:auto;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                          </svg>
                     </div>
                     <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Interests
@@ -42,13 +34,11 @@
             </li>
             <li  class="nav-item nav-map" style="display: inline-block;">
                 <a id="nav-link-visited-countries"  class="nav-link nav-link-profile"  style="font-size:0.8em;"  data-toggle="tab" href="#visited-countries" role="tab" >
-                    <div class="img-circle" style="margin-left: auto;margin-right: auto;width:45px;height:45px;border-width:2px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="30px" viewBox="0 0 23 23" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:5px;">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                 
-                                <path d="M5,10.5 C5,6 8,3 12.5,3 C17,3 20,6.75 20,10.5 C20,12.8325623 17.8236613,16.03566 13.470984,20.1092932 C12.9154018,20.6292577 12.0585054,20.6508331 11.4774555,20.1594925 C7.15915182,16.5078313 5,13.2880005 5,10.5 Z M12.5,12 C13.8807119,12 15,10.8807119 15,9.5 C15,8.11928813 13.8807119,7 12.5,7 C11.1192881,7 10,8.11928813 10,9.5 C10,10.8807119 11.1192881,12 12.5,12 Z" fill="#000000" fill-rule="nonzero"/>
-                            </g>
-                        </svg>
+                    <div class="img-circle flex items-center justify-center " style="margin-left: auto;margin-right: auto;padding:5px;width:40px;height:40px;border-width:2px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:auto;margin-right:auto;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
                     </div>
                     <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Visited countries
@@ -58,15 +48,11 @@
             </li>
             <li class="nav-item" style="display: inline-block;">
                 <a  id="nav-link-security" class="nav-link nav-link-profile"  style="font-size:0.8em;"  data-toggle="tab" href="#security" role="tab">
-                    <div class="img-circle" style="margin-left: auto;margin-right: auto; width:45px;height:45px;border-width:2px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 23 23" version="1.1" class="kt-svg-icon" style="margin:0;margin-top:5px;">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                
-                                <path d="M4,4 L11.6314229,2.5691082 C11.8750185,2.52343403 12.1249815,2.52343403 12.3685771,2.5691082 L20,4 L20,13.2830094 C20,16.2173861 18.4883464,18.9447835 16,20.5 L12.5299989,22.6687507 C12.2057287,22.8714196 11.7942713,22.8714196 11.4700011,22.6687507 L8,20.5 C5.51165358,18.9447835 4,16.2173861 4,13.2830094 L4,4 Z" fill="#FFFFFF" opacity="0.3"/>
-                                <path d="M12,11 C10.8954305,11 10,10.1045695 10,9 C10,7.8954305 10.8954305,7 12,7 C13.1045695,7 14,7.8954305 14,9 C14,10.1045695 13.1045695,11 12,11 Z" fill="#000000" opacity="0.8"/>
-                                <path d="M7.00036205,16.4995035 C7.21569918,13.5165724 9.36772908,12 11.9907452,12 C14.6506758,12 16.8360465,13.4332455 16.9988413,16.5 C17.0053266,16.6221713 16.9988413,17 16.5815,17 C14.5228466,17 11.463736,17 7.4041679,17 C7.26484009,17 6.98863236,16.6619875 7.00036205,16.4995035 Z" fill="#000000" opacity="0.8"/>
-                            </g>
-                        </svg>
+                    <div class="img-circle flex items-center justify-center " style="margin-left: auto;margin-right: auto;padding:5px; width:40px;height:40px;border-width:2px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:auto;margin-right:auto;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
                     </div>
                     <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
                         Account
