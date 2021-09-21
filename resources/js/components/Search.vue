@@ -18,7 +18,7 @@
             <p class="text-gray" style="margin-top:5px;margin-bottom:0;"><small>
                 Search for users, countries and adventure locations</small></p>
 
-            <div v-html="this.results"></div>
+            <div class="mt-10" v-html="this.results"></div>
         </div>
     </div>
 </template>
