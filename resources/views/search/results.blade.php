@@ -26,22 +26,25 @@
             @endforeach
             @foreach($posts as $post)
 
-                <a href="/adventure/{{$post->id}}/{{ $post->slug }}#" class="kt-notification__item kt-nav__link--active">
-                    <div class="kt-notification__item-icon kt-pulse kt-pulse--light"  style="margin-right:2rem;flex:0 50px;position:relative;" >
+                <a href="/adventure/{{$post->id}}/{{ $post->slug }}#" class="kt-notification__item kt-nav__link--active" style="align-items:flex-start;">
+                    <div class="kt-notification__item-icon kt-pulse kt-pulse--light"  style="margin-right:2rem;flex:0 80px;min-width: 80px;position:relative;" >
                         @if(isset($post->image[0]['thumb_path']))
 
-                            <span ><img class="border-r4"  src="{{ $post->image[0]['thumb_path'] }}" style="width:60px;border:none;"></span>
+                            <span ><img class="border-r4"  src="{{ $post->image[0]['thumb_path'] }}" style="width:80px;border:none;"></span>
                             
                         @endif
                         @if($post->country)
-                            <div style="position:absolute;bottom:-10px;right:-10px;margin-left:-1px;display:inline-block;border:2px solid #FFFFFF;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 25px; height: 25px;">
+                            <div style="position:absolute;top:-10px;right:-10px;margin-left:-1px;display:inline-block;border:2px solid #FFFFFF;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 25px; height: 25px;">
                         </div>
                         @endif
                     </div>
                     <div class="kt-notification__item-details">
                         <div class="kt-notification__item-title ">
                             <p style="margin-bottom:0px;">
-                                <i class="fa fa-map-marker-alt "></i>  {{$post->title}}
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:15px;height:15px;margin-right:10px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  </svg> {{$post->title}}
                             </p>
                             
                            
@@ -51,6 +54,7 @@
                                     <div class=>{{ $post->address }}</div>
                                 @endif --}}
                                  <div class="text-gray">
+                                    
                                     {{ $post->country ? $post->country->title  : '' }}
                                  </div>
                                  
