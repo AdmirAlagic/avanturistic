@@ -45,13 +45,13 @@
                     <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;">
                         
                         @if($post)
-                            <div class="row post lastPost" data-routes="{{ isset($post->map_options['route']) ? json_encode($post->map_options['route']) : null  }}"  data-title="{{ $post->title }}" data-lat="{{ $post->lat }}" data-lng="{{ $post->lng }}" data-img="{{ isset($post->image[0]['thumb_path']) ? $post->image[0]['thumb_path'] : 'default' }}">
+                            <div class="row post lastPost" " data-routes="{{ isset($post->map_options['route']) ? json_encode($post->map_options['route']) : null  }}"  data-title="{{ $post->title }}" data-lat="{{ $post->lat }}" data-lng="{{ $post->lng }}" data-img="{{ isset($post->image[0]['thumb_path']) ? $post->image[0]['thumb_path'] : 'default' }}">
                                 
                                 @include('shared.post.post_toolbar')
                                 @if($nextPost && !$isMobile)
-                              
+                             
                                 <a class=" img-fade-hover" href="{{ $nextPostUrl}}" style="width:100%;color:#474747;">
-                                    <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:20px;">
+                                    <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:20px;background:#eeeeee;">
                                         <div class="nextPostBtn" style="  padding:10px;display: flex;align-items: center;justify-content: flex-end;"> 
                                             
                                             <span style="margin-right:20px;">
@@ -70,8 +70,9 @@
                                                 <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;width:50px;border: 2px solid #FFF;">
                                             </div>
                                             <span>&nbsp;
-                                            <i class="fa fa-angle-right"></i></span>
-                                         
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" style="width:20px;" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                  </svg>
                                         </div>
                                     </div>
                                     </a>
@@ -110,6 +111,7 @@
                                             </div>
                                            
                                         @endif
+                                        @include('shared.post.badges')
                                         @if($post->video && $post->video != ' ')
 
                                             @php
@@ -175,7 +177,24 @@
             <div class="col-sm-5">
                 <!--begin::Portlet-->
                 <div class="kt-portlet" style="padding-top:10px;margin-bottom:0px;">
+                  
                    
+                    <div class="flex">
+                        @if($post->address)
+                        <div class="kt-portlet__head">
+                            <div class="kt-portlet__head-label" style="width:100%;">
+                            <span class="kt-portlet__head-icon" style="padding-right:0px;text-align:center;width:35px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:35px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  </svg>
+                            </span>
+                                <h2 class="kt-portlet__head-title text-left" style="width: 100%;margin-left:5px;">
+                                    <small>{{ $post->address }}</small>
+                                </h2>
+                            </div>
+                        </div>
+                    @endif
                     @if($post->country)
                         <div class="kt-portlet__head">
                             <div class="kt-portlet__head-label" style="width:100%;">
@@ -184,26 +203,14 @@
                                              
                                 </div>
                                 <div style="margin-left:45px;margin-top:-42px;line-height:18px;">
-                                    {{ $post->country->title }} <small> <br><span class="text-gray">{{ $post->country->subregion }}</span></small> &nbsp;<i class="fa fa-search-location text-gray"></i>   
+                                    {{ $post->country->title }} <small> <br><span class="text-gray">{{ $post->country->subregion }}</span></small>   
                                 </div>
                                  
                             </a>
                             </div>
                         </div>
                     @endif
-                    @if($post->address)
-                        <div class="kt-portlet__head">
-                            <div class="kt-portlet__head-label" style="width:100%;">
-                            <span class="kt-portlet__head-icon" style="padding-right:0px;text-align:center;width:35px;">
-                                <i class="fa fa-map-marker-alt text-muted" style="font-size:1.8rem;"></i>
-                            </span>
-                                <h2 class="kt-portlet__head-title text-left" style="width: 100%;margin-left:5px;">
-                                    <small>{{ $post->address }}</small>
-                                </h2>
-                            </div>
-                        </div>
-                    @endif
-                    @include('shared.post.badges')
+                    </div>
                     <div class="kt-portlet__body" style="padding-bottom:0px;">
                         <div class="row">
                             <div class="col-sm-12">
