@@ -181,30 +181,32 @@
                    
                     <div class="flex">
                         @if($post->address)
-                        <div class="kt-portlet__head">
+                        <div class="kt-portlet__head" style="width:38.2%;">
                             <div class="kt-portlet__head-label" style="width:100%;">
-                            <span class="kt-portlet__head-icon" style="padding-right:0px;text-align:center;width:35px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:35px;">
+                            <span class="kt-portlet__head-icon" style="padding-right:0px;text-align:center;width:35px;margin-right:5px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:35px;height:35px;margin-right:10px;">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                   </svg>
                             </span>
-                                <h2 class="kt-portlet__head-title text-left" style="width: 100%;margin-left:5px;">
+                                
                                     <small>{{ $post->address }}</small>
-                                </h2>
+                             
                             </div>
                         </div>
                     @endif
                     @if($post->country)
-                        <div class="kt-portlet__head">
+                        <div class="kt-portlet__head justify-end" style="width: 61.8%;">
                             <div class="kt-portlet__head-label" style="width:100%;">
-                            <a class="text-muted" style="font-weight:400;padding-bottom:6px;" href="/country/{{ $post->country->slug }}">
-                                <div style="margin-left:-1px;display:inline-block;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;">
+                            <a class="text-muted flex" style="font-weight:400;" href="/country/{{ $post->country->slug }}">
+                                <div style="margin-left:-1px;margin-right:5px;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;">
                                              
                                 </div>
-                                <div style="margin-left:45px;margin-top:-42px;line-height:18px;">
-                                    {{ $post->country->title }} <small> <br><span class="text-gray">{{ $post->country->subregion }}</span></small>   
-                                </div>
+                              
+                                  <div>
+                                    {{ $post->country->title }} <small> <div class="text-gray">{{ $post->country->subregion }}</div></small>   
+                                  </div>
+                               
                                  
                             </a>
                             </div>
