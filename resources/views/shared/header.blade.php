@@ -55,10 +55,10 @@
                     @if(isset($user) && $user)
 
                         <li  class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel " data-ktmenu-submenu-toggle="click" aria-haspopup="true" >
-                            <a href="/my-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'my-adventures' ?  'kt-menu__link--active' :  '' }}">
-                               <!--  <div class="img-circle" style="display:inline-block;width:30px;height:30px;border-width:2px;padding:4px;border-color:#4D4D4D;background: #101010;margin-right:2px;"> -->
-                                    <img class="" src="/img/triangles-black.svg" style="width:30px;height:30px;margin-top:4px;padding-left:2px;margin-right:5px;padding-bottom:5px;" alt="My adventures">
-                              <!--    </div>  -->
+                            <a href="/my-adventures" class="kt-menu__link {{ isset($activePage) && $activePage == 'my-adventures' ?  'kt-menu__link--active' :  '' }}" style="white-space: nowrap;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#636363" style="width:20px;margin-right:5px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                  </svg>
                                 <span style="padding-top: 10px; padding-bottom: 10px;font-size:0.9rem;" class="kt-menu__link-text  ">My Adventures</span>
                             </a>
                         </li>
