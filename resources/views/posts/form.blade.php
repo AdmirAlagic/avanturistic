@@ -203,7 +203,7 @@
                                     <label>Title</label><span class=""><small></small></span>
                                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                                     <br>
-                                    <label>{{ @trans('posts.description') }}</label>
+                                    <label>{{ __('More info about this adventure location') }}</label>
                                     {{--<br><small class="">Enter informative description  about adventure & location</small>--}}
                                     <div class="description-emoji">
                                         {!! Form::textarea('description', null, ['class' => 'form-control ' ,   'rows' => 2, 'id' => 'cke-description', 'style' => 'resize: x;']) !!}

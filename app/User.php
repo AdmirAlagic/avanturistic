@@ -9,6 +9,8 @@ use Cache;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Notifications\VerifyEmail;
 
+use function PHPSTORM_META\map;
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, SoftDeletes;
@@ -36,7 +38,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'users',
         'last_login_at',
         'newsletter',
-        'fcm_token'
+        'fcm_token',
+        'business_fields'
     ];
 
     /**
@@ -60,7 +63,8 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
         'options' => 'array',
-        'social_links' => 'array'
+        'social_links' => 'array',
+        'business_fields' => 'array'
     ];
 
     public function isOnline()
@@ -68,13 +72,15 @@ class User extends Authenticatable implements MustVerifyEmail
         return Cache::has('user-is-online-' . $this->id);
     }
 
-    public static $_USER_GROUP_USER = 1;
-    public static $_USER_GROUP_ADMIN = 2;
+    public static $_USER_GROUP_USER = 'user';
+    public static $_USER_GROUP_ADMIN = 'admin';
+    public static $_USER_GROUP_BUSINESS = 'business';
 
     public static function getUserGroups(){
         return [
             self::$_USER_GROUP_USER => 'User',
             self::$_USER_GROUP_ADMIN => 'Admin',
+            self::$_USER_GROUP_BUSINESS => 'Business',
         ];
     }
 

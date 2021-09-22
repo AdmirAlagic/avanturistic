@@ -19,6 +19,21 @@
                 </a>
                 
             </li>
+            @if($user->group == \App\User::$_USER_GROUP_BUSINESS)
+                <li class="nav-item nav-adventures" style="display: inline-block;">
+                    <a  id="nav-link-business" class="nav-link nav-link-profile"  style="font-size:0.8em;"  data-toggle="tab" href="#business" role="tab">
+                        <div class="img-circle flex items-center justify-center "   style="margin-left: auto;margin-right: auto;padding:5px;width:40px;height:40px;border-width:2px;text-align:center;">
+                            <svg xmlns="http://www.w3.org/2000/svg"  style="margin-left:auto;margin-right:auto;"  fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              </svg>
+                        </div>
+                        <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
+                            Business Info
+                        </div>
+                    </a>
+                    
+                </li>
+            @endif
             <li class="nav-item nav-adventures" style="display: inline-block;">
                 <a  id="nav-link-interests" class="nav-link nav-link-profile"  style="font-size:0.8em;"  data-toggle="tab" href="#interests" role="tab">
                     <div class="img-circle flex items-center justify-center " style="margin-left: auto;margin-right: auto;padding:5px;width:40px;height:40px;border-width:2px;">
@@ -32,6 +47,7 @@
                 </a>
                 
             </li>
+         
             <li  class="nav-item nav-map" style="display: inline-block;">
                 <a id="nav-link-visited-countries"  class="nav-link nav-link-profile"  style="font-size:0.8em;"  data-toggle="tab" href="#visited-countries" role="tab" >
                     <div class="img-circle flex items-center justify-center " style="margin-left: auto;margin-right: auto;padding:5px;width:40px;height:40px;border-width:2px;">
@@ -84,7 +100,7 @@
                                         </div>
                                     @endif
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-sm-3 col-form-label">Profile Picture</label>
+                                        <label class="col-xl-3 col-sm-3 col-form-label">{{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Business Logo' : 'Profile Picture' }}</label>
                                         <div class="col-sm-9 col-xl-6 text-center ">
                                             <div class="kt-avatar kt-avatar--outline kt-avatar--circle- "  >
                                                 <div class="kt-avatar__holder dropzone-file-area dropzone dz-clickable" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url(&quot;{{ $model->avatar ? $model->avatar : '/img/avatar.png' }}&quot;);">
@@ -103,7 +119,7 @@
 
                                    
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-sm-3 col-form-label">Display Name</label>
+                                        <label class="col-xl-3 col-sm-3 col-form-label">{{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Business Name' : 'Display Name' }}</label>
                                         <div class="col-sm-9 col-xl-6">
 
                                             <div class="form-group">
@@ -119,7 +135,7 @@
                                             <div class="form-group">
 
                                                 <div class="description-emoji">
-                                                    {!! Form::textarea('description', $model->description, ['class' => 'form-control','data-emojiable' => 'true','maxlength' => '100', 'rows' => '5', 'placeholder' => 'Status/About me']) !!}
+                                                    {!! Form::textarea('description', $model->description, ['class' => 'form-control','data-emojiable' => 'true','maxlength' => '100', 'rows' => '5', 'placeholder' =>   $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Describe your services' : 'About me'  ]) !!}
 
                                                 </div>
                                             </div>
@@ -274,18 +290,76 @@
                                         </div>
                                         
                                     </div>
-
-                                  {{--   <h4 >
-                                        We care for your feedback
-                                    </h4> --}}
-                                   
-                                      
-                                      
-                                    
-                                   
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="business" role="tabpanel">
+                    <div class="kt-form kt-form--label-right">
+                        <div class="kt-form__body">
+                            <div class="kt-section kt-section--first">
+                                <div class="kt-section__body">
+                                <h5 class="text-center text-gray font-light">Business Info</h5>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-sm-3 col-form-label">Contact Email</label>
+                                        <div class="col-sm-9 col-xl-6">
+                                            <div class="input-group">
 
+                                                <div class="input-group-prepend"><span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"  style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                                                      </svg>
+                                                    </span></div>
+                                                {!! Form::text('business_fields[email]', isset($model->business_fields['email']) ? $model->business_fields['email']  : null , ['class' => 'form-control', 'aria-describedby', 'basic-addon1', 'placeholder' => 'Enter contact email address']) !!}
+                                            </div>
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-sm-3 col-form-label">Business Phone</label>
+                                        <div class="col-sm-9 col-xl-6">
+                                            <div class="input-group">
+
+                                                <div class="input-group-prepend"><span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                        
+                                                      </svg>
+                                                </span></div>
+                                                {!! Form::text('business_fields[phone]', isset($model->business_fields['phone']) ? $model->business_fields['phone']  : null , ['class' => 'form-control', 'placeholder' => 'Enter business phone number']) !!}
+                                            </div>
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-sm-3 col-form-label">Business Address</label>
+                                        <div class="col-sm-9 col-xl-6">
+                                            <div class="input-group">
+
+                                                <div class="input-group-prepend"><span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"  style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                      </svg>
+                                                </span></div>
+                                                {!! Form::text('business_fields[address]', isset($model->business_fields['address']) ? $model->business_fields['address']  : null , ['class' => 'form-control', 'placeholder' => 'Enter business address']) !!}
+                                            </div>
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="form-group row mt-10">
+                                        <label class="col-xl-3 col-sm-3 col-form-label"></label>
+                                        <div class="col-sm-9 col-xl-6">
+                                            <div class="form-group">
+                                                {!! Form::submit(__('general.update'), ['class' => 'btn btn-success']) !!}
+                                            </div>
+                                         
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -296,7 +370,8 @@
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
                                     <h5 class="text-center text-gray font-light">
-                                        Outdoor Activities Interests
+                                      
+                                        {{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Outdoor Services' : 'Outdoor Activities Interests' }}
                                     </h5>
                                     <p class="text-center text-gray"><small>
                                         Selected activities will be shown on your profile</small></p>

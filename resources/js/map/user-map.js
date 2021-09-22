@@ -125,7 +125,7 @@ $(document).ready(function(){
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
-        OpenStreetMap_Mapnik.addTo(map);
+    /*     OpenStreetMap_Mapnik.addTo(map); */
 
         var countries = {
             "type": "FeatureCollection",
@@ -13703,10 +13703,10 @@ $(document).ready(function(){
             if(inArray > -1){
                 layer.setStyle({
                     weight: 1,
-                    color: '#26bcbd',
+                    color: '#acc957',
                     dashArray: '',
-                    fillOpacity: 0,
-                    fillColor: '#26bcbd',
+                    fillOpacity: 0.4,
+                    fillColor: '#acc957',
 
                 });
             } else {
@@ -13723,8 +13723,8 @@ $(document).ready(function(){
         L.geoJSON(countries, {
                 style: function(feature) {
                     return {
-                        fillColor: "#000000", // Default color of countries.
-                        fillOpacity: 0.1,
+                        fillColor: "#eeeeee", // Default color of countries.
+                        fillOpacity: 1,
                         stroke: false,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1

@@ -189,8 +189,8 @@ class ProfileController extends AppController
         if($user->group == 'support' || $user->group == 'admin')
             return redirect('/message/'.$user->id);
 
-
-        return view('profile.public', $data);
+        $view = $user->group == User::$_USER_GROUP_BUSINESS ? 'profile.business' : 'profile.public';
+        return view($view, $data);
     }
 
     public function notifications(){
