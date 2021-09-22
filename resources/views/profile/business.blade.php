@@ -20,7 +20,12 @@
 
                                         <div class="kt-widget__section">
                                             <a href="#" class="kt-widget__username text-dark" >
-                                                <h1 style="font-size:1.4rem;font-weight:300;margin:2rem;">{{ $model->name }}</h1>
+                                                <h1 style="font-size:1.4rem;font-weight:300;margin:2rem;">{{ $model->name }}
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-success"  style="width:18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                                      </svg>
+                                                </span></h1>
                                             </a>
                                         </div>
                                         <div class="kt-widget__media text-center">
@@ -49,7 +54,7 @@
                                           
                                             @endif
                                             @if($user && $model->id == $user->id)
-                                                <a href="/profile" class="flex items-center justify-center mt-10 mb-10">
+                                                <a href="/profile" class="btn btn-default flex items-center justify-center mt-10 mb-10">
                                                     <svg class="mr-5" xmlns="http://www.w3.org/2000/svg" style="width:16px;" viewBox="0 0 20 20" fill="currentColor">
                                                         <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                                                         <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
@@ -117,7 +122,7 @@
                                                 <div class="kt-portlet p25 text-left m-lr-auto br-8" style="width: max-content;margin-bottom: 0;">
                                                     @if(isset($model->business_fields['address'])  && $model->business_fields['address'])
                                                     <div class=" mb-10">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                           </svg>
@@ -128,7 +133,7 @@
                                                 @endif
                                                     @if(isset($model->business_fields['phone'])  && $model->business_fields['phone'])
                                                         <div class=" mb-10" >
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-10 text-dark" style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-10 text-dark" style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                                                 
                                                             </svg>
@@ -137,7 +142,7 @@
                                                     @endif
                                                     @if(isset($model->business_fields['email'])  && $model->business_fields['email'])
                                                         <div class=" mb-10">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                                                               </svg>
                                                             <a class="font-light" href="mailto:{{ $model->business_fields['email'] }}">{{ $model->business_fields['email'] }}</a>

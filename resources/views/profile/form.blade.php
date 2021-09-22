@@ -42,7 +42,7 @@
                           </svg>
                     </div>
                     <div class="kt-hidden-tablet-and-mobile nav-link-desc" style="text-transform: uppercase;text-align:center;margin-left:10px;color:#3C3C3C;">
-                        Interests
+                        {{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Services' : 'Interests' }}
                     </div>
                 </a>
                 

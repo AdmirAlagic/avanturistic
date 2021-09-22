@@ -14,7 +14,11 @@
                         <div class="kt-chat__head ">
                             <div class="kt-chat__left">
                                 <div class="kt-chat__label">
-                                    <a href="/messages" class="kt-chat__title text-muted"><i class="fa fa-arrow-left"></i></a>
+                                    <a href="{{ url()->previous()  }}" class="kt-chat__title text-muted">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </a>
 
                                 </div>
 
