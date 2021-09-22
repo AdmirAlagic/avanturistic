@@ -1154,7 +1154,7 @@ html .ui-button.ui-state-disabled:active {
 	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
 	background: #f6f6f6/*{bgColorDefault}*/ /*{bgImgUrlDefault}*/ /*{bgDefaultXPos}*/ /*{bgDefaultYPos}*/ /*{bgDefaultRepeat}*/;
 	font-weight: normal/*{fwDefault}*/;
-	color: #454545/*{fcDefault}*/;
+	color: #474747/*{fcDefault}*/;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -1163,7 +1163,7 @@ a.ui-button,
 a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
-	color: #454545/*{fcDefault}*/;
+	color: #474747/*{fcDefault}*/;
 	text-decoration: none;
 }
 .ui-state-hover,

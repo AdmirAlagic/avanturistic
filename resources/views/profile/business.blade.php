@@ -59,14 +59,14 @@
                                                
                                             @endif 
                                             @if($hasSocial)
-                                                <div class="kt-widget__content mt-10 mb-10 " style="padding-bottom:15px;">
+                                                <div class="kt-widget__content mt-10 mb-10 profile-social-links " style="padding-bottom:15px;">
                                                     
                                                     <div class="row">
 
                                                         <div class="col-12 text-center">
                                                             @if(isset($model->social_links['website']) && $model->social_links['website'] && $model->social_links['website'] != ' ')
                                                             <p>
-                                                                <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['website'] , '') }}">
+                                                                <a class="font-light" target="_blank" href="{{ UtilHelper::externalURL($model->social_links['website'] , '') }}">
                                                                      {{ UtilHelper::stripUrl($model->social_links['website']) }}
                                                                 </a>
                                                             </p>
@@ -74,37 +74,37 @@
                                                            
                                                             @if(isset($model->social_links['facebook']))
                                                                 <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['facebook'] , 'facebook.com') }}">
-                                                                    <i class="la la-facebook text-dark img-fade-hover" style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-facebook  img-fade-hover" style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                             @if(isset($model->social_links['instagram']))
                                                             <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['instagram'] , 'instagram.com') }}">
-                                                                    <i class="la la-instagram text-dark img-fade-hover" style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-instagram img-fade-hover" style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                             @if(isset($model->social_links['youtube']))
                                                             <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['youtube'] , 'youtube.com/channel') }}">
-                                                                    <i class="la la-youtube-play text-dark img-fade-hover" style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-youtube-play img-fade-hover" style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                             @if(isset($model->social_links['pinterest']))
                                                             <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['pinterest'] , 'pinterest.com') }}">
-                                                                    <i class="la la-pinterest text-dark img-fade-hover" style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-pinterest img-fade-hover" style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                             @if(isset($model->social_links['linkedin']))
                                                             <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['linkedin'] , 'linkedin.com/in') }}">
-                                                                    <i class="la la-linkedin text-dark img-fade-hover" style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-linkedin img-fade-hover" style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                             @if(isset($model->social_links['twitter']))
                                                             <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['twitter'] , 'twitter.com') }}">
-                                                                    <i class="la la-twitter text-dark img-fade-hover" style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-twitter img-fade-hover" style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                             @if(isset($model->social_links['tripadvisor']))
                                                             <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['tripadvisor'] , 'tripadvisor.com') }}">
-                                                                    <i class="la la-tripadvisor text-dark img-fade-hover"  style="font-size:2.5rem;"></i>
+                                                                    <i class="la la-tripadvisor img-fade-hover"  style="font-size:2.3rem;"></i>
                                                                 </a>
                                                             @endif
                                                         
@@ -114,43 +114,54 @@
                                                 </div>
                                                 @endif
                                                 @if($model->group == \App\User::$_USER_GROUP_BUSINESS)
-                                                <div>
-                                                  
-                                                    @if(isset($model->business_fields['phone'])  && $model->business_fields['phone'])
-                                                        <div class="flex items-center justify-center">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-10" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="#999">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                                                
-                                                            </svg>
-                                                            {{ $model->business_fields['phone'] }}
-                                                        </div>
-                                                    @endif
-                                                    @if(isset($model->business_fields['email'])  && $model->business_fields['email'])
-                                                        <div class="flex items-center justify-center ">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10"  style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="#999">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                                                              </svg>
-                                                            <a href="mailto:{{ $model->business_fields['email'] }}">{{ $model->business_fields['email'] }}</a>
-                                                        </div>
-                                                    @endif
-
+                                                <div class="kt-portlet p25 text-left m-lr-auto br-8" style="width: max-content;margin-bottom: 0;">
                                                     @if(isset($model->business_fields['address'])  && $model->business_fields['address'])
-                                                    <div class="flex items-center justify-center">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10"  style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                                    <div class=" mb-10">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#999">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                           </svg>
-                                                        <a href="mailto:{{ $model->business_fields['address'] }}">{{ $model->business_fields['address'] }}</a>
+                                                          <span class="font-light">
+                                                            {{ $model->business_fields['address'] }}
+                                                          </span>
                                                     </div>
                                                 @endif
+                                                    @if(isset($model->business_fields['phone'])  && $model->business_fields['phone'])
+                                                        <div class=" mb-10" >
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-10 text-dark" style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                                
+                                                            </svg>
+                                                            <a  class="font-light" href="tel:{{ $model->business_fields['phone'] }}">{{ $model->business_fields['phone'] }}</a>
+                                                        </div>
+                                                    @endif
+                                                    @if(isset($model->business_fields['email'])  && $model->business_fields['email'])
+                                                        <div class=" mb-10">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                                                              </svg>
+                                                            <a class="font-light" href="mailto:{{ $model->business_fields['email'] }}">{{ $model->business_fields['email'] }}</a>
+                                                        </div>
+                                                    @endif
+
+                                                    <a class="btn btn-default mt-10 mb-10" href="/message/{{ $model->id }}">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                          </svg>
+                                                          <span>Send Message</span>
+                                                    </a>
                                                 </div>
+
                                                 @endif
+                                              
                                                 @if($model->description)
                                                 <div class="row">
-                                                    <div class="col-12" style="padding:20px;">
+                                                    <div class="col-12 flex items-center justify-center" style="padding:20px;">
                                                     
 
-                                                            <span><i class="fa fa-info-circle text-gray"></i></span>&nbsp;&nbsp;
+                                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                          </svg>
 
                                                             <span class="kt-widget__data text-center" style="font-size:0.9em;">
 

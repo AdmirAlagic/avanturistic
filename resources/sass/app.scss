@@ -238,17 +238,17 @@ border:2px solid #FFFFFF;
 
 .kt-header-mobile .kt-header-mobile__toolbar .kt-header-mobile__toolbar-toggler span {
  
-  background: #454545;
+  background: #474747;
   height:3px;
 
   &:before {
     height:3px;
-    background: #454545;
+    background: #474747;
     
   }
   &:after {
     height:3px;
-    background:#454545;
+    background:#474747;
   
   }
 }
@@ -273,7 +273,7 @@ border:2px solid #FFFFFF;
 }
 
 .kt-header__topbar .kt-header__topbar-item:hover .kt-header__topbar-icon, .kt-header__topbar .kt-header__topbar-item.show .kt-header__topbar-icon {
-  background-color: #454545;
+  background-color: #474747;
 }
 
 .kt-header-mobile__toolbar-topbar-toggler--active {
@@ -369,7 +369,7 @@ border:2px solid #FFFFFF;
 .btn.btn-default {
   background-color: transparent;
   border-color: #eeeeee;
-  color: #454545;
+  color: #474747;
 
   &:hover,&:active{
     color: #FFFFFF !important;
@@ -413,7 +413,7 @@ a {
 
 .alert.alert-danger {
   background: #ffffff;
-  color: #454545;
+  color: #474747;
   border: 1px solid #474747 !important;
  
 }
@@ -906,7 +906,7 @@ html {
   -webkit-border-radius: 9999em;
   -moz-border-radius: 9999em;
   border-radius: 9999em;
-  background-color:#454545;
+  background-color:#474747;
   transition: box-shadow 0.3s;
   width:30px;
   height: 30px;
@@ -1046,7 +1046,7 @@ html {
     -webkit-appearance: none;
     background-color: #fff;
     background-image: none;
-    color: #454545;
+    color: #474747;
     cursor: pointer;
     outline: none;
     overflow: hidden;
@@ -1114,8 +1114,8 @@ body{
 
 .profile-badge.active.badge-wrap{
   //border-radius: 99em;
-  background-color: #454545;
-  border-color:#454545;
+  background-color: #474747;
+  border-color:#474747;
 
 }
 .profile-badge.inactive{
@@ -1659,7 +1659,7 @@ border-radius: 4px;
 
 label {
   font-weight:500 !important;
-  color: #454545;
+  color: #474747;
 }
 
 .country{
@@ -2132,7 +2132,7 @@ $slideTextColor: #3a3d55;
 }
  
 .slide-text {
-	color: #454545;
+	color: #474747;
   font-size: 1rem;
   margin-left:25%;
   width:70%;
@@ -2162,7 +2162,7 @@ $slideTextColor: #3a3d55;
   display:inline-flex;
   font-weight:100;
   transition:color ease 0.3s;
-  color:#454545;
+  color:#474747;
   border:1px solid #eee;
   span{
     margin-top:-1px;
@@ -2174,7 +2174,7 @@ $slideTextColor: #3a3d55;
     
   }
   &:hover{
-    background:#454545;
+    background:#474747;
     color: #FFFFFF !important;
     span{
       color: #FFFFFF !important;
@@ -2326,7 +2326,7 @@ border-top-right-radius: 4px;
   }
 }
 .btnOutline{
-  border: 1px solid #454545;
+  border: 1px solid #474747;
   padding: 6px;
   margin-top: 2px;
   font-size:1rem;
@@ -2361,7 +2361,7 @@ border-top-right-radius: 4px;
   right:-11px;
   width:22px;
   height:22px;
-  background:#454545;
+  background:#474747;
   text-align:center;
   padding:1px;
   border:2px solid #111;
@@ -2609,4 +2609,9 @@ top:0;
   margin-left: auto !important; 
   margin-right:auto !important;
 
+}
+.profile-social-links{
+ a{
+   color:#474747;
+ } 
 }

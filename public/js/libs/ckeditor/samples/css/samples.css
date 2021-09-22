@@ -1400,7 +1400,7 @@ div.toolbarModifier > ul > li p span button {
 div.toolbarModifier > ul > li p span button:not(.disabled):hover,
 div.toolbarModifier > ul > li p span button:not(.disabled):focus {
   color: #fff;
-  background-color: #454545;
+  background-color: #474747;
   border-color: transparent;
 }
 div.toolbarModifier > ul > li p span button.move.disabled {

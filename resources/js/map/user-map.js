@@ -13713,7 +13713,7 @@ CartoDB_VoyagerOnlyLabels.addTo(map)
                     weight: 1,
                     color: '#FFFFFF',
                     dashArray: '',
-                    fillOpacity: 0.2,
+                    fillOpacity: 0.35,
                     fillColor: '#474747',
 
                 });
@@ -13732,7 +13732,7 @@ CartoDB_VoyagerOnlyLabels.addTo(map)
                 style: function(feature) {
                     return {
                         fillColor: "#eeeeee", // Default color of countries.
-                        fillOpacity: 0.5,
+                        fillOpacity: 0.8,
                         stroke: true,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1

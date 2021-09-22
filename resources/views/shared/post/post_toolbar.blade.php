@@ -6,7 +6,7 @@
         <div class="col-6">
             <div class=" text-right" style="margin-top:4px;">
                 @if($post->user)
-                    @if($post->user->group == 'user')
+                    
                         <a class="text-dark text-right" href="/{{ '@' .$post->user->name_slug }}" >
                        
                             @if($post->user->avatar && $post->user->avatar != ' ' && $post->user->avatar != '')
@@ -17,9 +17,7 @@
                            
                             <div class="text-right" style="font-size: 0.8em;margin-top:5px;">{{ $post->user->name }}&nbsp;</div>
                         </a>
-                    @else
-                        <span><img class="avatar" src="/img/logo.svg" style="width:37px;height: 37px;"  alt="Avanturistic"></span>
-                    @endif
+                    
                 @endif
             </div>
         </div>
