@@ -120,13 +120,21 @@ $(document).ready(function(){
         L.control.zoom({
             position:'topright'
        }).addTo(map);
-
+/* 
         OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        });
-    /*     OpenStreetMap_Mapnik.addTo(map); */
+        }); */
+        var CartoDB_VoyagerOnlyLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
+})
+  
 
+CartoDB_VoyagerOnlyLabels.addTo(map)
+    /*     OpenStreetMap_Mapnik.addTo(map); */
+      
         var countries = {
             "type": "FeatureCollection",
             "features": [{
@@ -13703,19 +13711,19 @@ $(document).ready(function(){
             if(inArray > -1){
                 layer.setStyle({
                     weight: 1,
-                    color: '#acc957',
+                    color: '#FFFFFF',
                     dashArray: '',
-                    fillOpacity: 0.4,
-                    fillColor: '#acc957',
+                    fillOpacity: 0.2,
+                    fillColor: '#474747',
 
                 });
             } else {
                 return {
-                    fillColor: "#000", // Default color of countries.
-                    fillOpacity: 0.9,
+                    fillColor: "#474747", // Default color of countries.
+                    fillOpacity: 0.2,
                     stroke: false,
                     color: "#eeeeee", // Lines in between countries.
-                    weight: 2
+                    weight: 1
                 };
             }
 
@@ -13724,8 +13732,8 @@ $(document).ready(function(){
                 style: function(feature) {
                     return {
                         fillColor: "#eeeeee", // Default color of countries.
-                        fillOpacity: 1,
-                        stroke: false,
+                        fillOpacity: 0.5,
+                        stroke: true,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1
                     };

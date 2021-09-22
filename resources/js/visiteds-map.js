@@ -29,11 +29,14 @@ $(document).ready(function(){
             }
         });
        
-        OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        });
-        OpenStreetMap_Mapnik.addTo(map);
+        var CartoDB_VoyagerOnlyLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        })
+          
+        
+        CartoDB_VoyagerOnlyLabels.addTo(map)
 
         resizeWindow();
         var searchControl = L.esri.Geocoding.geosearch().addTo(map);
@@ -13614,11 +13617,11 @@ $(document).ready(function(){
             if($.inArray(country_id, visited_countries) > -1){
 
                 layer.setStyle({
-                    fillColor: "#D3D3D3", // Default color of countries.
-                    fillOpacity: 0.01,
-                    stroke: false,
-                    color: "#acc957", // Lines in between countries.
-                    weight: 1
+                    weight: 1,
+                    color: '#acc957',
+                    dashArray: '',
+                    fillOpacity: 0.4,
+                    fillColor: '#acc957',
 
                 });
                 var index = visited_countries.indexOf(country_id);
@@ -13627,9 +13630,9 @@ $(document).ready(function(){
                 visited_countries.push(country_id);
                 layer.setStyle({
                     weight: 1,
-                    color: '#fff',
+                    color: '#acc957',
                     dashArray: '',
-                    fillOpacity: 0.6,
+                    fillOpacity: 0.4,
                     fillColor: '#acc957',
 
                 });
@@ -13661,9 +13664,9 @@ $(document).ready(function(){
                 console.log('ee');
                 layer.setStyle({
                     weight: 1,
-                    color: '#fff',
+                    color: '#acc957',
                     dashArray: '',
-                    fillOpacity: 0.6,
+                    fillOpacity: 0.4,
                     fillColor: '#acc957',
 
                 });
@@ -13675,11 +13678,11 @@ $(document).ready(function(){
         L.geoJSON(countries, {
             style: function(feature) {
                 return {
-                    fillColor: "#D3D3D3", // Default color of countries.
-                    fillOpacity: 0.01,
-                    stroke: false,
-                    color: "#acc957", // Lines in between countries.
-                    weight: 1
+                    fillColor: "#636363", // Default color of countries.
+                        fillOpacity: 0.3,
+                        stroke: true,
+                        color: "#eeeeee", // Lines in between countries.
+                        weight: 1
                 };
             },
             onEachFeature: onEachFeature
