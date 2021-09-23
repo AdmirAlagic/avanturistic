@@ -164,7 +164,7 @@
  --}}
                         @if($user->avatar && $user->avatar != '' && $user->avatar != ' ')
                             <span class="kt-header__topbar-icon ">
-                                <img class="img-circle"  alt="{{ $user->name }}" style="border-width:2px;border-color:#474747;" src="{{ $user->avatar }}" />
+                                <img class="img-circle"  alt="{{ $user->name }}" style="border-width:1px;border-color:#474747;" src="{{ $user->avatar }}" />
                             </span>
                         @else
                             <span class="post-avatar " style=" align-self:center;"><b class=" text-white">{{ ucfirst($user->name[0]) }}</b></span>

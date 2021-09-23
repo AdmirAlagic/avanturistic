@@ -13711,17 +13711,17 @@ CartoDB_VoyagerOnlyLabels.addTo(map)
             if(inArray > -1){
                 layer.setStyle({
                     weight: 1,
-                    color: '#FFFFFF',
+                    color: '#acc957',
                     dashArray: '',
-                    fillOpacity: 0.35,
-                    fillColor: '#474747',
+                    fillOpacity: 0.4,
+                    fillColor: '#acc957',
 
                 });
             } else {
                 return {
-                    fillColor: "#474747", // Default color of countries.
-                    fillOpacity: 0.2,
-                    stroke: false,
+                    fillColor: "#636363", // Default color of countries.
+                    fillOpacity: 0.3,
+                    stroke: true,
                     color: "#eeeeee", // Lines in between countries.
                     weight: 1
                 };
@@ -13731,8 +13731,8 @@ CartoDB_VoyagerOnlyLabels.addTo(map)
         L.geoJSON(countries, {
                 style: function(feature) {
                     return {
-                        fillColor: "#eeeeee", // Default color of countries.
-                        fillOpacity: 0.8,
+                        fillColor: "#636363", // Default color of countries.
+                        fillOpacity: 0.3,
                         stroke: true,
                         color: "#eeeeee", // Lines in between countries.
                         weight: 1

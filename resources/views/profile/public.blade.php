@@ -46,7 +46,7 @@
                                             <br>
                                             @if($user && $model->id != $user->id)
                                             <a class="btn btn-line-rounded mt-10 mb-10" href="/message/{{ $model->id }}">
-                                                <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                                <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                   </svg>
                                                   <span>Send Message</span>
@@ -119,114 +119,22 @@
                                                 </div>
                                                 @endif
                                                 @if($model->description)
-                                                <div class="row">
-                                                    <div class="col-12" style="padding:20px;">
-                                                    
-
-                                                            <span><i class="fa fa-info-circle text-gray"></i></span>&nbsp;&nbsp;
-
-                                                            <span class="kt-widget__data text-center" style="font-size:0.9em;">
-
-                                                        {!! $model->description!!}
-                                                        </span>
-                                                    
-                                                    </div>
-                                                </div>
-                                                @endif
-                                                @if($user && $model->id == $user->id)
-                                                    @if(!$model->country || !isset($model->options['badges']) || !$model->avatar)
-                                                        <div style="padding:10px;margin:10px;border:1px solid #eeeeee;" class="border-r4">
-                                                            @php $progressCountry = 1;@endphp
-                                                            @if($model->avatar)
-                                                                @php $progressCountry += 33;@endphp
-                                                            @endif
-                                                            @if($model->country)
-                                                                @php $progressCountry += 33;@endphp
-                                                            @endif
-                                                            @if(isset($model->options['badges']) && count($model->options['badges']))
-                                                                @php $progressCountry += 33;@endphp
-                                                            @endif
-                                                            <p class="text-center" style="margin-top:20px;">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                    <polygon points="0 0 24 0 24 24 0 24"/>
-                                                                    <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#666666" fill-rule="nonzero" opacity="0.3"/>
-                                                                    <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#666666" fill-rule="nonzero"/>
-                                                                </g>
-                                                            </svg>
-                                                            Complete your profile
-                                                            </p>
-                                                            <p class="text-gray" style="margin:0;">
-                                                            {{
-                                                                intval( $progressCountry / 30)
-                                                            }}/3 completed
-                                                            </p>
+                                                    <div class="row">
+                                                        <div class="col-12" style="padding:20px;">
                                                         
-                                                                
-                                                            <div class="progress">
-                                                                    <div class="progress-bar kt-bg-success" role="progressbar" style="width: {{ $progressCountry}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            <div style="margin-bottom:20px;">
-                                                                
-                                                            
-                                                            @if(!$model->avatar)
-                                                                <a href="/profile#info" class="btn btn-line-rounded" style="width:100%;padding: .5em;">
-                                                                    <div class="row img-fade-hover">
-                                                                        <div class="col-2">
-                                                                            <i style="font-size:1.1em;" class="fa fa-user text-muted"></i>
-                                                                        </div>
-                                                                        <div class="col-10 text-left">
-                                                                        
-                                                                            <span class="text-dark">Upload profile picture
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                
-                                                                </a>
-                                                                <br>
-                                                            @endif
-                                                            
-                                                            @if(!$model->country)
-                                                                <a href="/profile#info" class="btn btn-line-rounded" style="width:100%;padding: .5em;">
-                                                                    <div class="row img-fade-hover">
-                                                                        <div class="col-2">
-                                                                            <i style="font-size:1.1em;" class="fa fa-flag text-muted"></i> 
-                                                                        </div>
-                                                                        <div class="col-10 text-left">
-                                                                        
-                                                                            <span class="text-dark">Set your country
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                
-                                                                </a>
-                                                                <br>
-                                                                
-                                                            @endif
-                                                            
-                                                            @if(!isset($model->options['badges']))
-                                                                <a href="/profile#interests" class="btn btn-line-rounded" style="width:100%;padding: .5em;">
-                                                                    <div class="row img-fade-hover">
-                                                                        <div class="col-2">
-                                                                            <i style="font-size:1.1em;" class="fa fa-mountain text-muted"></i> 
-                                                                        </div>
-                                                                        <div class="col-10 text-left">
-                                                                        
-                                                                            <span class="text-dark">Choose your interests
-                                                                        
-                                                                        </div>
-                                                                    </div>
-                                
-                                                                </a>
-                                                             
-                                                            @endif
-                                                            <br>
+
+                                                                <span><i class="fa fa-info-circle text-gray"></i></span>&nbsp;&nbsp;
+
+                                                                <span class="kt-widget__data text-center" style="font-size:0.9em;">
+
+                                                            {!! $model->description!!}
+                                                            </span>
+                                                        
                                                         </div>
                                                     </div>
-                                                       
                                                 @endif
-                                            @endif
-                                            @include('profile.quests.promote_country')
+                                                @include('profile.quests.set_info')
+                                                @include('profile.quests.promote_country')
                                         </div>
                                     </div>
                                 </div>

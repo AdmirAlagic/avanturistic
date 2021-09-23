@@ -13617,11 +13617,11 @@ $(document).ready(function(){
             if($.inArray(country_id, visited_countries) > -1){
 
                 layer.setStyle({
-                    weight: 1,
-                    color: '#acc957',
-                    dashArray: '',
-                    fillOpacity: 0.4,
-                    fillColor: '#acc957',
+                    fillColor: "#636363", // Default color of countries.
+                    fillOpacity: 0.3,
+                    stroke: true,
+                    color: "#eeeeee", // Lines in between countries.
+                    weight: 1
 
                 });
                 var index = visited_countries.indexOf(country_id);
@@ -13629,12 +13629,12 @@ $(document).ready(function(){
             } else {
                 visited_countries.push(country_id);
                 layer.setStyle({
+                    
                     weight: 1,
                     color: '#acc957',
                     dashArray: '',
                     fillOpacity: 0.4,
                     fillColor: '#acc957',
-
                 });
 
 
@@ -13679,10 +13679,10 @@ $(document).ready(function(){
             style: function(feature) {
                 return {
                     fillColor: "#636363", // Default color of countries.
-                        fillOpacity: 0.3,
-                        stroke: true,
-                        color: "#eeeeee", // Lines in between countries.
-                        weight: 1
+                    fillOpacity: 0.3,
+                    stroke: true,
+                    color: "#eeeeee", // Lines in between countries.
+                    weight: 1
                 };
             },
             onEachFeature: onEachFeature

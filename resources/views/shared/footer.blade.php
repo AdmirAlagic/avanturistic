@@ -52,7 +52,7 @@
                             </a> --}}
                             <br>
                             <p class="text-white">
-                                Made with <i class="fa fa-heart"></i> by outdoor enthusiasts.
+                                Made with <i class="fa fa-heart text-success"></i> by outdoor enthusiasts.
                             </p>
                             <p class="margin20 text-muted">
                                 Copyright ©
