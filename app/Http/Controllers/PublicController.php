@@ -250,7 +250,7 @@ class PublicController extends AppController
         if ($request->has('query') && $request->query != '' && $request->query != ' ') {
             
             $q = $request->input('query');
-            $users = DB::table('users')->where('group', 'user')->where('name', 'LIKE',  $q . '%')->take(10)->latest()->get();
+            $users = DB::table('users')->whereIn('group', ['user', 'business'])->where('name', 'LIKE',  $q . '%')->take(10)->latest()->get();
             $countries = Country::where('title', 'LIKE', '%' . $q . '%')->whereHas('posts')->take(10)->get();
             $posts = Post::where('title', 'LIKE', '%' . $q . '%')->orWhere('description', 'LIKE', '%' . $q )->orWhere('address', 'LIKE', '%' . $q )->orWhere('options', 'LIKE', '%' . $q . '%')->latest()->with('country')->take(20)->get();
         }

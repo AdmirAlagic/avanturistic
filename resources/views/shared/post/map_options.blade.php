@@ -19,8 +19,12 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-                <a class="btn btn-dark" style="margin-top:10px;padding:5px;background:#474747;-webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;padding-left: 10px; padding-right: 10px; " target="_blank" href="https://www.google.com/maps/search/?api=1&query={{$post->lat}},{{$post->lng}}">
-                    <b><span class="text-white">Get Directions</span></b>
+                <a class="btn btn-line-rounded  " style="margin-top:10px;  -webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;padding-left: 10px; padding-right: 10px; " target="_blank" href="https://www.google.com/maps/search/?api=1&query={{$post->lat}},{{$post->lng}}">
+                   
+                    <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
+                    Get Directions</b>
                 </a>
             </div>
         </div>

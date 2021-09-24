@@ -4,20 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Conversation;
 use App\Events\MessageSent;
-use App\FavoriteUser;
 use App\Http\Requests\UpdateProfile;
 use App\Http\Requests\ChangePassword;
 use App\Message;
-use App\PostVisited;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Str;
-use App\Post;
-use DB;
-use Intervention\Image\ImageManagerStatic as Image;
+
 use Auth;
-use App\PostLike;
+
 use App\Country;
 
 class ProfileController extends AppController
@@ -310,6 +306,15 @@ class ProfileController extends AppController
             'password' => bcrypt($request->password)
         ]);
         return redirect('profile')->with('success', 'Password changed.');
+    }
+
+    public function switchToBusiness(){
+        $user = Auth::user();
+        $user->update([
+            'group' => User::$_USER_GROUP_BUSINESS
+        ]);
+
+        return redirect('profile')->with('success', 'You have successfully switched your account to business.');
     }
 
 

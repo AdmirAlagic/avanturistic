@@ -228,7 +228,9 @@ class PostController extends AppController
         view()->share('scripts', $scripts);
         view()->share('mixScripts', $mixScripts);
 
-      
+        $styles[] = '/dist/metronic/assets/plugins/line-awesome/css/line-awesome.css';
+        view()->share('styles', $styles);
+
         $post = Post::findOrFail($id);
         $sessionPostId  = session('post_id_'.$id);
         $mainActivity = null;

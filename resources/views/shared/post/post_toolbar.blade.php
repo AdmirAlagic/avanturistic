@@ -12,7 +12,7 @@
                             @if($post->user->avatar && $post->user->avatar != ' ' && $post->user->avatar != '')
                                 <img class="img-circle img-fade-hover" src="{{ url($post->user->avatar) }}" style="width:37px;height:37px;margin-top:-3px;border:1px solid #474747;box-shadow:none;">
                             @else
-                            <div style="display:inline-flex;margin:0;" class=" kt-header__topbar-icon  post-avatar"><b>{{ ucfirst($post->user->name[0]) }}</b></div>
+                            <div style="display:inline-flex;margin:0;" class=" kt-header__topbar-icon  text-white post-avatar"><b>{{ ucfirst($post->user->name[0]) }}</b></div>
                             @endif
                            
                             <div class="text-right" style="font-size: 0.8em;margin-top:5px;">{{ $post->user->name }}&nbsp;</div>

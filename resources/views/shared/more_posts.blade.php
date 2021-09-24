@@ -122,7 +122,7 @@
                             <div class="row">
                                 <div class="col-6 text-left " style="position:relative;">
                                    
-                                        @if($obj->group == 'user')
+                                        @if($obj->group == 'user' || $obj->group == 'business')
                                           
                                                 <a class="text-white img-fade-hover overflow-dots" href="/{{ '@' .$obj->username_slug }}" style="position: relative; display:inline-block;">
                                                     <span>

@@ -90,7 +90,8 @@
                         <div class="kt-form__body">
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
-                                <h5 class="text-center text-gray font-light">Profile Info</h5>   
+                                <h5 class="text-center text-gray font-light mb-10">Profile Info</h5>   
+                                <br>
                                     @if(session()->has('success') || session()->has('error') || $errors->any())
                                         <div class="form-group row">
                                             <label class="col-xl-3 col-sm-3 col-form-label"></label>
@@ -249,47 +250,81 @@
                         <div class="kt-form__body">
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
-                                <h5 class="text-center text-gray font-light">Account Settings</h5>
+                                <h5 class="text-center text-gray font-light mb-10">Account Settings</h5>
+                                <br>
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-sm-3 col-form-label">Email Address</label>
                                         <div class="col-sm-9 col-xl-6">
                                             <div class="input-group">
 
-                                                <div class="input-group-prepend"><span class="input-group-text"><b>@</b></span></div>
+                                                <div class="input-group-prepend"><span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                                                  </svg>
+
+                                                    </span></div>
                                                 {!! Form::text('email', $model->email, ['class' => 'form-control', 'aria-describedby', 'basic-addon1', 'disabled' => true]) !!}
                                             </div>
                                             <small class="text-gray">Email address is not visible on your profile</small>
                                         </div>
                                     </div>
                                     <div class="form-group row mt-10">
-
-                                        <label class="col-xl-3 col-sm-3 col-form-label"></label>
-                                        <div class="col-sm-9 col-xl-6">
-                                            <a class="btn pl-0 flex items-center" href="/profile/change-password" style="font-weight:normal;">
-                                               <i class="fa fa-key   mr-10" style="width:18px;"></i> <span>Change Password</span>
+ 
+                                        <div class="col-sm-9 col-xl-6 offset-sm-3 offset-xl-3">
+                                            <a class="btn btn-line-roundedd pl-0 flex items-center" href="/profile/change-password" style="font-weight:normal;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" style="width:20px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                  </svg>
+                                                   <span>Change Password</span>
                                             </a>   
                                         </div>
                                     </div>
+                                    @if($model->group == \App\User::$_USER_GROUP_USER)
+                                    {{-- <div class="form-group row">
 
+                                        <div class="col-sm-9 col-xl-6 offset-sm-3 offset-xl-3">
+                                            <a class="btn pl-0   sweet-alert-custom flex items-center" href="{{ url('/switch-to-businesss') }}" data-alert_title="Are you sure you want to switch your account to business?" data-alert_type="warning" data-alert_text="You wont be able to revert this change.">
+                                                <svg xmlns="http://www.w3.org/2000/svg" style="width:20px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                  </svg>
+                                                <span>
+                                                    Switch to business account
+                                                
+                                                </span>
+                                            </a>
+                                         
+                                            <small class="pl-10 text-gray">
+                                               
+                                            </small>
+                                            
+                                        </div>
+                                        
+                                    </div> --}}
+                                @endif
                                     <div class="form-group row">
 
-                                        <label class="col-xl-3 col-sm-3 col-form-label"></label>
-                                        <div class="col-sm-9 col-xl-6">
+ 
+                                        <div class="col-sm-9 col-xl-6 offset-sm-3 offset-xl-3">
                                             <a class="btn pl-0  flex items-center" href="{{ url('/support') }}">
-                                                <img class="lazy mr-10" src="/img/placeholder-dark.svg"  data-src="/img/support.svg" data-srcset="/img/support.svg" alt="Avanturistic Support"  style="width: 18px; height: 18px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-10" style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                  </svg>
                                                 <span>
                                                     Contact Support
                                                    
                                                 </span>
                                             </a>
                                            
-                                            <small class="pl-10 text-gray">
-                                                If you are experiencing any issues with your account or just want to share an idea with us - send a direct message to our support.
-                                            </small>
+                                            <div class="pl-10 text-gray" style="padding-left:30px;">
+                                                <small>
+                                                    If you are experiencing any issues with your account or just want to share an idea with us - send a direct message to our support.
+                                                </small>
+                                            </div>
                                                
                                         </div>
                                         
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -301,6 +336,7 @@
                             <div class="kt-section kt-section--first">
                                 <div class="kt-section__body">
                                 <h5 class="text-center text-gray font-light">Business Info</h5>
+                                <br>
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-sm-3 col-form-label">Contact Email</label>
                                         <div class="col-sm-9 col-xl-6">
@@ -373,6 +409,7 @@
                                       
                                         {{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Outdoor Services' : 'Outdoor Activities Interests' }}
                                     </h5>
+                                    <br>
                                     <p class="text-center text-gray"><small>
                                         Selected activities will be shown on your profile</small></p>
                                     <div class="form-group  row">
@@ -416,6 +453,7 @@
                                         <input type="hidden" id="country-lng" value="{{ $model->country->lng }}">
                                     @endif
                                     <h5 class="text-center text-gray font-light">Visited Countries</h5>
+                                    <br>
                                     <p class="text-center text-gray"><small>Visited countries are automatically updated when you share adventure locations</small></p>
                                     <h6 class="text-center"><span class="font-size:0.9em;"><i class="fa fa-hand-pointer text-success"></i></span>&nbsp;<b><em>Tap on map to mark country as visited</em></b></h6>
                                     <div id="visiteds-map" style="width:100%; height:300px;">

@@ -51,14 +51,14 @@
                                 @if($nextPost && !$isMobile)
                              
                                 <a class=" img-fade-hover" href="{{ $nextPostUrl}}" style="width:100%;color:#474747;">
-                                    <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:20px;background:#eeeeee;">
-                                        <div class="nextPostBtn" style="  padding:10px;display: flex;align-items: center;justify-content: flex-end;"> 
+                                    <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:10px;">
+                                        <div class="nextPostBtn justify-center" style="  padding:10px;display: flex;align-items: center; margin:1rem;"> 
                                             
                                             <span style="margin-right:20px;">
                                             @if($sort && $sort == 'u')
-                                               More adventures from <b>{{ $post->user->name }}</b>
+                                               More from <b>{{ $post->user->name }}</b>
                                             @elseif($sort && $sort == 'c' && isset($post->country->title))
-                                               Next adventure from <b>{{ $post->country->title }}</b>
+                                               Next adventure in <b>{{ $post->country->title }}</b>
                                             @else
                                                 Next {{ $nextTxt != 'next' ? $nextTxt : '' }} {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
                                             @endif
@@ -67,11 +67,12 @@
                                                 {{ $nextPost->title}}
                                             </div>
                                             <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#26bcbd 100%) left bottom transparent no-repeat">
-                                                <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;width:50px;border: 2px solid #FFF;">
+                                                <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" width="50"  height="50" style="border-radius:50%;width:50px;height:50px;border: 2px solid #FFF;">
                                             </div>
                                             <span>&nbsp;
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" style="width:20px;" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                
+                                                  <svg xmlns="http://www.w3.org/2000/svg"  style="width:20px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                                   </svg>
                                         </div>
                                     </div>
@@ -80,15 +81,17 @@
                                 @if($nextPost && $isMobile && isset($nextPost->image[0]['thumb_path']))
                                 <div class="text-center" style="width:100%;padding:10px;">
                                     <div id="button-background" data-next-url="{{ $nextPostUrl}}">
-                                        <span class="slide-text">
+                                        <span class="slide-text flex items-center justify-center">
                                             @if($sort && $sort == 'u')
-                                               Swipe for more adventures from <b>{{ $post->user->name }}</b>
+                                               More from&nbsp;<b>{{ $post->user->name }}</b>
                                             @elseif($sort && $sort == 'c' && isset($post->country->title))
-                                            Swipe for more adventures from <b>{{ $post->country->title }}</b>
+                                            More from&nbsp;<b>{{ $post->country->title }}</b>
                                             @else
-                                                Swipe to  {{ $nextTxt }}  {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
+                                                Next &nbsp;{{ $nextTxt }}  {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
                                             @endif
-                                           
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                                              </svg>
                                         </span>
                                         <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#26bcbd 100%) left bottom transparent no-repeat">
                                             <i id="locker"  ><img  src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;border:2px solid #FFF;"></a></i>
@@ -144,7 +147,7 @@
                                             <br>
                                             @if($translatableText && $translatableText != '')
 
-                                                <a target="_blank" href="https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text={{ $translatableText }}">
+                                                <a target="_blank" class="ml-5" href="https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text={{ $translatableText }}">
                                                     <small><i class="fa fa-language text-muted"></i> <b>See translation</b></small>
                                                 </a>
                                             @endif
@@ -160,8 +163,8 @@
                 </div>
                 <div class="kt-portlet">
                     <div class="kt-portlet__body" style="padding:15px;">
-                            <h3 class="text-gray text-center" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
-                            <br><span style="font-style: italic;" class="text-muted"> Share your toughts in comments</span> </small></h3>
+                            <h3 class="font-light text-center" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
+                            <br><span style="" class="text-gray font-light"> Share your toughts in comments</span> </small></h3>
 
                             
                             <div id="comments-list" style="margin-top:10px;">
@@ -176,8 +179,92 @@
             </div>
             <div class="col-sm-5">
                 <!--begin::Portlet-->
+                @if($post->user->group == \App\User::$_USER_GROUP_BUSINESS)
+                   <div class="kt-portlet">
+                       <div class="kt-portlet__body" style="padding:15px;">
+                           <div class=" ">
+                            <div class="">
+                                <a href="/{{ '@'. $post->user->name_slug }}">
+                                    <h3 class="text-dark" style=margin-bottom:0px;">{{ $post->user->name }}</h3>
+                                </a>
+                               
+                                <div class="flex  profile-social-links">
+                                  
+                                    @if(isset($post->user->social_links['facebook']))
+                                        <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['facebook'] , 'facebook.com') }}">
+                                            <i class="la la-facebook  img-fade-hover" style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                    @if(isset($post->user->social_links['instagram']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['instagram'] , 'instagram.com') }}">
+                                            <i class="la la-instagram img-fade-hover" style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                    @if(isset($post->user->social_links['youtube']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['youtube'] , 'youtube.com/channel') }}">
+                                            <i class="la la-youtube-play img-fade-hover" style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                    @if(isset($post->user->social_links['pinterest']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['pinterest'] , 'pinterest.com') }}">
+                                            <i class="la la-pinterest img-fade-hover" style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                    @if(isset($post->user->social_links['linkedin']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['linkedin'] , 'linkedin.com/in') }}">
+                                            <i class="la la-linkedin img-fade-hover" style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                    @if(isset($post->user->social_links['twitter']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['twitter'] , 'twitter.com') }}">
+                                            <i class="la la-twitter img-fade-hover" style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                    @if(isset($post->user->social_links['tripadvisor']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['tripadvisor'] , 'tripadvisor.com') }}">
+                                            <i class="la la-tripadvisor img-fade-hover"  style="font-size:2.3rem;"></i>
+                                        </a>
+                                    @endif
+                                
+                                </div>
+                            </div>
+                            <div class="flex flex-col ">
+                                @if(isset($post->user->social_links['website']) && $post->user->social_links['website'])
+                                    <a class="font-light" href="{{ $post->user->social_links['website'] }}"> <small>{{ $post->user->social_links['website'] }}</small></a>
+                                @endif
+                                @if(isset($post->user->business_fields['email']) && $post->user->business_fields['email'])
+                               
+                                <a class="font-light" href="{{ $post->user->business_fields['email'] }}"> <small>{{ $post->user->business_fields['email'] }}</small></a>
+                                @endif
+                                
+                            </div>
+                           <div class="flex justify-start mt-10" style="width:100%;">
+                            <a class="btn btn-line-rounded mt-10 mb-10 btn-tall mr-10" style="width:max-content;" href="/message/{{ $post->user->id }}">
+                                <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>Send Message</span>
+                                       
+                            </a>
+                            @if(isset($post->user->business_fields['phone']) && $post->user->business_fields['phone'])
+                                <a class="btn btn-line-rounded btn-tall mt-10 mb-10 font-light  " href="tel:{{ $post->user->business_fields['phone'] }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  style="width: 18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                    {{ $post->user->business_fields['phone'] }}
+                                </a>
+                            @endif
+                           
+
+                           </div>
+                           </div>
+                                               
+                       </div>
+                   
+                   </div>
+                        
+                @endif
                 <div class="kt-portlet" style="padding-top:10px;margin-bottom:0px;">
-                  
                    
                     <div class="flex">
                         @if($post->address)
@@ -204,7 +291,7 @@
                                 </div>
                               
                                   <div>
-                                    <span class="font-light">{{ $post->country->title }}</span> <small> <div class="text-gray">{{ $post->country->subregion }}</div></small>   
+                                    <small> <span class="font-light">{{ $post->country->title }}</span> <div class="text-gray">{{ $post->country->subregion }}</div></small>   
                                   </div>
                                
                                  

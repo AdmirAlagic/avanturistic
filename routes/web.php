@@ -10,6 +10,7 @@ Route::get('/terms-and-conditions', 'PublicController@terms');
 
 Route::get('/share', 'PostController@create');
 Route::get('/profile', 'ProfileController@privateProfile')->name('profile');
+Route::get('/switch-to-businesss', 'ProfileController@switchToBusiness');
 //Route::group(['middleware'=> 'verified'], function(){
 //});
 Route::get('/my-adventures', 'PublicController@myPosts');

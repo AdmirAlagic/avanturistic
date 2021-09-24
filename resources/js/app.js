@@ -80,6 +80,27 @@ $(function() {
         });
     }
 
+    if($('.sweet-alert-custom').length > 0) {
+        $('.sweet-alert-custom').on('click', function (e) {
+
+            e.preventDefault();
+            var $this = $(this);
+            var type = $(this).data('alert_type');
+            var title = $(this).data('alert_title');
+            var text = $(this).data('alert_text');
+            swal.fire({
+                title: title,
+                text: text,
+                type: type,
+                showCancelButton: true,
+                confirmButtonText: 'Yes'
+            }).then(function (result) {
+                if(result.dismiss != 'cancel')
+               window.location = $this.attr('href');
+            });
+        });
+    }
+
     $(document).on('submit', '#signup-form', function (e) {
         e.preventDefault();
         $('#signup-errors').html('');
