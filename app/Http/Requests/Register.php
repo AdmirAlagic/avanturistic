@@ -37,10 +37,10 @@ class Register extends FormRequest
 
     public function messages(){
         return [
-            'name.required' => 'Display name is required',
+            'name.required' => 'Profile name is required',
             'password.required' => 'Password is required',
             'email.required' => 'Email is required.',
-            'name.alpha' => 'Display name can only contain letters'
+            'name.alpha' => 'Profile name can only contain letters'
         ];
     }
 

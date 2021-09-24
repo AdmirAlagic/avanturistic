@@ -10,10 +10,10 @@
         <div class="row">
             
             <div class="col-12  text-center">
-                <h6>
+                <h5>
                     Coordinates 
-                </h6>
-                <b>{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b>
+                </h5>
+                <p class="text-gray">{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b>
                
             </div>
         </div>

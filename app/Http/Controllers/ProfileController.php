@@ -65,7 +65,7 @@ class ProfileController extends AppController
         $message = 'Your profile has been updated.';
         $nameExists = User::where('name', $input['name'])->where('id', '!=', $this->user->id)->withTrashed()->first();
         if($nameExists)
-            return back()->with('error', 'Display name already exists. Please choose another one.');
+            return back()->with('error', 'Profile name already exists. Please choose another one.');
         $input['name_slug'] = Str::slug($input['name']);
         $user = Auth::user();
        

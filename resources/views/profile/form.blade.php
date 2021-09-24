@@ -120,7 +120,7 @@
 
                                    
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-sm-3 col-form-label">{{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Business Name' : 'Display Name' }}</label>
+                                        <label class="col-xl-3 col-sm-3 col-form-label">{{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Business Name' : 'Profile name' }}</label>
                                         <div class="col-sm-9 col-xl-6">
 
                                             <div class="form-group">

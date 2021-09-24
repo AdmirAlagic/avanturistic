@@ -88,7 +88,7 @@ class RegisterController extends Controller
 
         $nameExists = User::where('name', $input['name'])->withTrashed()->first();
             if($nameExists)
-                return back()->withInput()->with('error', 'Display name already exists. Please choose another one.');
+                return back()->withInput()->with('error', 'Profile name already exists. Please choose another one.');
         try{
             DB::beginTransaction();
             $input['password'] = bcrypt($input['password']);
@@ -122,7 +122,7 @@ class RegisterController extends Controller
 
         $nameExists = User::where('name', $input['name'])->withTrashed()->first();
             if($nameExists)
-                return response()->json(['error' => 'Display name already exists. Please choose another one.']); */
+                return response()->json(['error' => 'Profile name already exists. Please choose another one.']); */
         try{
             DB::beginTransaction();
             $input['password'] = bcrypt($input['password']);

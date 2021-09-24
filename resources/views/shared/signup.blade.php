@@ -25,7 +25,7 @@
                                         {!! Form::text('email', null, ['class' => 'auth-input form-control', 'placeholder' => 'Email', ]) !!}
                                     </div>
                                     <div class="form-group" style="margin-bottom:1rem;">
-                                        {!! Form::text('name', null, ['class' => 'auth-input form-control', 'placeholder' => 'Display Name', ]) !!}
+                                        {!! Form::text('name', null, ['class' => 'auth-input form-control', 'placeholder' => 'Profile name', ]) !!}
                                     </div>
                                     <div class="form-group" >
                                         {!! Form::password('password', ['class' => 'auth-input form-control', 'placeholder' => 'Password', 'id' => 'password', ]) !!}
