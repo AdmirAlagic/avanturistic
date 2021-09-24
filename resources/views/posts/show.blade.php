@@ -60,7 +60,7 @@
                                             @elseif($sort && $sort == 'c' && isset($post->country->title))
                                                Next adventure in <b>{{ $post->country->title }}</b>
                                             @else
-                                                Next {{ $nextTxt != 'next' ? $nextTxt : '' }} {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
+                                             {{ $nextTxt != 'next' ? $nextTxt : '' }} {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
                                             @endif
                                         </span>
                                             <div class="next-post-info" style="position: absolute;top:0;right:0;display:none;">
