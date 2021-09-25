@@ -23,9 +23,12 @@
                                         </svg>
                                         &nbsp;Cancel
                                     </a>
-                                    <a  style="position:absolute;top:0;right:0;border:none;height:50px;;"    class="to-location btn btn-tall   btn-md flex kt-font-transform-u noborder-r">
+                                    <a  style="position:absolute;top:0;right:0;border:none;height:50px;;"    class="flex to-location btn btn-tall   btn-md flex kt-font-transform-u noborder-r">
                                         <span >
-                                            Next
+                                            Next&nbsp;
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                              </svg>
                                         </span>
                                     </a>
                                 </div>
@@ -38,7 +41,10 @@
                                         &nbsp;Back
                                     </a>
                                     <button class="finish-form btn btn-tall   btn-md flex kt-font-transform-u noborder-r "  style="position:absolute;top:0;right:0;border:none;height:50px;; " >
-                                        Describe & Finish
+                                        Describe & Finish&nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                          </svg>
                                     </button>
 
                                 </div>
@@ -50,9 +56,12 @@
                                         </svg>
                                         &nbsp;Back
                                     </a>
-                                    <button   type="submit " class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:fixed;top:0;right:0;z-index:9999;" >
+                                    <button   type="submit " class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="background: white;border:none;height: 50px;;border:none;position:fixed;top:0;right:0;z-index:9999;" >
                                        
-                                           Share
+                                           Share&nbsp;
+                                           <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                          </svg>
                                     </button>
                                    <div style="height:50px;;width:100%;"></div>
                                 </div>
@@ -70,19 +79,24 @@
                                     </a>
                                     <a  style="position:absolute;top:0;right:0;border:none;height:50px;;"    class=" to-location btn btn-tall    btn-md flex kt-font-transform-u noborder-r">
                                         <span >
-                                            Next
+                                            Next&nbsp;<svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                              </svg>
                                         </span>
                                     </a>
                                 </div>
                                 <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:50px;;">
-                                    <a   class="back-to-location btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                    <a   class="back-to-upload btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
                                         <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                         </svg>
                                         &nbsp;Back
                                     </a>
                                     <button class=" finish-form btn   btn-md flex kt-font-transform-u noborder-r" style="position:absolute;top:0;right:0;border:none;height:50px;; " >
-                                        Describe & Finish
+                                        Describe & Finish&nbsp;
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                          </svg>
                                     </button>
 
                                 </div>
@@ -93,9 +107,12 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                           </svg> Back
                                     </a>
-                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:absolute;top:0;right:0;font-weight:500;" >
+                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="background: white;border:none;height: 50px;;border:none;position:absolute;top:0;right:0;font-weight:500;" >
                                        
-                                           Share
+                                           Share&nbsp;
+                                           <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                          </svg>
                                     </button>
                                    <div style="height:50px;;width:100%;"></div>
                                 </div>
