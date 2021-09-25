@@ -384,6 +384,21 @@
                                          
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-sm-3 col-form-label">Services</label>
+                                        <div class="col-sm-9 col-xl-6">
+                                            <div class="input-group">
+
+                                                <div class="input-group-prepend"><span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                                                      </svg>
+                                                </span></div>
+                                                {!! Form::text('business_fields[address]', isset($model->business_fields['services']) ? $model->business_fields['services']  : null , ['class' => 'form-control', 'placeholder' => 'Enter more services you offer']) !!}
+                                            </div>
+                                         
+                                        </div>
+                                    </div>
                                     <div class="form-group row mt-10">
                                         <label class="col-xl-3 col-sm-3 col-form-label"></label>
                                         <div class="col-sm-9 col-xl-6">
@@ -412,6 +427,7 @@
                                     <br>
                                     <p class="text-center text-gray"><small>
                                         Selected activities will be shown on your profile</small></p>
+                                       
                                     <div class="form-group  row">
                                         <div class="row">
                                             @foreach($badges as $key => $val)
@@ -434,6 +450,7 @@
                                         </div>
                                     </div>
                                     <hr>
+                                    
                                     <div class="text-center">
                                     {!! Form::submit(__('general.update'), ['class' => 'btn btn-success']) !!}
                                     </div>

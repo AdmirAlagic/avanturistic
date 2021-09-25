@@ -60,7 +60,7 @@
                                             @elseif($sort && $sort == 'c' && isset($post->country->title))
                                                Next adventure in <b>{{ $post->country->title }}</b>
                                             @else
-                                             {{ $nextTxt != 'next' ? $nextTxt : '' }} {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
+                                            {{ $nextPost->title}}
                                             @endif
                                         </span>
                                             <div class="next-post-info" style="position: absolute;top:0;right:0;display:none;">
@@ -87,7 +87,12 @@
                                             @elseif($sort && $sort == 'c' && isset($post->country->title))
                                             More from&nbsp;<b>{{ $post->country->title }}</b>
                                             @else
-                                                 &nbsp;{{ $nextTxt }}  {{ isset($mainActivity) && $mainActivity ? $mainActivity : ''}}  adventure
+                                                @if($nextPost->title)
+                                                    {{ Str::words($nextPost->title, 10)}}
+                                                    
+                                                @else
+                                                    Next adventure
+                                                @endif
                                             @endif
                                             <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
