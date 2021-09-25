@@ -2347,8 +2347,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
     .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link {
        text-transform: uppercase;
-       font-weight: 500;
-       color: #474747;
+       font-weight: 300;
     }
 
 }
