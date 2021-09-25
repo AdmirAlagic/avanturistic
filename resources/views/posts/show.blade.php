@@ -81,7 +81,7 @@
                                 @if($nextPost && $isMobile && isset($nextPost->image[0]['thumb_path']))
                                 <div class="text-center" style="width:100%;padding:10px;">
                                     <div id="button-background" data-next-url="{{ $nextPostUrl}}">
-                                        <span class="slide-text flex items-center justify-center">
+                                        <span class="slide-text flex items-center justify-between">
                                             @if($sort && $sort == 'u')
                                                More from&nbsp;<b>{{ $post->user->name }}</b>
                                             @elseif($sort && $sort == 'c' && isset($post->country->title))
@@ -94,7 +94,7 @@
                                                     Next adventure
                                                 @endif
                                             @endif
-                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 20px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                               </svg>
                                         </span>
