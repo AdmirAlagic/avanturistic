@@ -4,9 +4,9 @@
         <i class="message-notification-icon fa fa-envelope {{ count($user->unreadMessages) ? 'text-success' : '' }}"></i>
         </a>
 
-        @if(count($user->unreadMessages))
+   {{--      @if(count($user->unreadMessages))
             <span class="kt-pulse__ring" style="position: absolute;top:-3px;left:-3px;"></span>
-        @endif
+        @endif --}}
     </span>
 
     <!--<span class="kt-badge kt-badge--light"></span>-->

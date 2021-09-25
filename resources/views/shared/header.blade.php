@@ -126,8 +126,16 @@
                 <div class="kt-header__topbar-item  " id="last-messages" style=" padding-left:5px; padding-right:5px;" >
                     <div class=" kt-header__topbar-item  " >
                         <a class="loading img-fade-hover " style="display: inline-flex;align-items:center; padding-left: 10px;padding-right: 10px;font-size:1.5rem;color:#3C3C3C;width:max-content;" href="/messages"  >
-                            <img src="{{ url('/img/chat.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == 'messages' ? 'active' : '' }}" alt="">
-                            
+                            <div style="position: relative; width:max-content;">
+                               
+                                <img src="{{ url('/img/chat.svg')}}" style="height:22px;"  class="{{ Request::segment(1) == 'messages' ? 'active' : '' }}" alt="">
+                                @if(count($user->unreadMessages)  > 0)
+                                    <div class="circle notification-mobile  font-boldest" >
+                                        {{ count($user->unreadMessages) }}
+                                    </div>
+                                @endif
+                            </div>
+                           
                         </a>
                     </div>
                 </div>
@@ -138,7 +146,7 @@
                                
                                 <img src="{{ url('/img/bell.svg')}}" style="height:22px;" class="{{ Request::segment(1) == 'notifications' ? 'active' : '' }}" alt="">
                                 @if($unreadNotifications  > 0)
-                                    <div class="circle notification-mobile ">
+                                    <div class="circle notification-mobile font-boldest ">
                                         {{ $unreadNotifications }}
                                     </div>
                                 @endif
