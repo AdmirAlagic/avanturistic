@@ -42,13 +42,13 @@
                                     </button>
 
                                 </div>
-                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:50px;;">
+                                <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;min-height:50px;;">
 
-                                    <a   class="back-to-location btn  kt-font-transform-u btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                    <a   class="back-to-location btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
                                         <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                         </svg>
-                                         Back
+                                        &nbsp;Back
                                     </a>
                                     <button   type="submit " class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:fixed;top:0;right:0;z-index:9999;" >
                                        
@@ -75,7 +75,7 @@
                                     </a>
                                 </div>
                                 <div class="kt-wizard-v1__nav-item item-location" style="display: none;min-height:50px;;">
-                                    <a   class="back-to-upload btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
+                                    <a   class="back-to-location btn flex  kt-font-transform-u justify-center  btn-tall  noborder-r" style="position:absolute;top:0;left:0;height: 100%;" >
                                         <svg xmlns="http://www.w3.org/2000/svg" style="width:16px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                                         </svg>
@@ -89,9 +89,11 @@
                                 <div class="kt-wizard-v1__nav-item item-finish"  style="display: none;height:50px;;">
 
                                     <a   class="back-to-location btn  kt-font-transform-u btn-tall  noborder-r" style="position:absolute;top:0;left:0;" >
-                                        <i class="fa fa-angle-left "></i> Back
+                                        <svg xmlns="http://www.w3.org/2000/svg"  style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                          </svg> Back
                                     </a>
-                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:absolute;top:0;right:0;" >
+                                    <button  type="submit"   class="submitPost btn btn-tall   btn-md flex kt-font-transform-u noborder-r" style="border:none;height: 50px;;border:none;position:absolute;top:0;right:0;font-weight:500;" >
                                        
                                            Share
                                     </button>
@@ -118,7 +120,9 @@
                                     <div class="image-msg text-center"></div>
                                     <div id="image-files"></div>
                                     <p><small>
-                                            <i class="fa fa-info-circle ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                          </svg>
 
                                             </i> Tap area below to add photos
                                         </small></p>

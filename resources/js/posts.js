@@ -120,9 +120,9 @@ $(document).ready(function () {
         if(!lat ||  !lng){
             // $('.item-location').trigger('click');
             console.log(lat);
-            toastr.warning('Please add a map marker.', 'Location required', {timeOut: 1500})
-/*             $('.location-msg').html('<div class="alert alert-danger text-center">Location is required.</div>');
- */            var loc = document.getElementById('location-msg');
+         /*    toastr.warning('Please add a map marker.', 'Location required', {timeOut: 1500}) */
+            $('.location-msg').html('<div class="alert alert-danger text-center">Location is required.</div>');
+            var loc = document.getElementById('location-msg');
             $('.item-finish').hide();
             $('.back-to-location').trigger('click');
             // $('html,body').scrollTop(loc.offsetTop );
