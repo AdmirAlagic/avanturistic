@@ -32,6 +32,7 @@ class ProfileController extends AppController
         $scripts[] = '/js/libs/cropper/cropper.js';
         $scripts[] = '/js/libs/cropper/jquery-cropper.min.js';
         
+        $mixScripts[] = '/dist/js/edit-profile.js';
         $mixScripts[] = '/dist/js/visiteds-map.js';
 
         $mixScripts[] = '/dist/js/avatar.js';
@@ -81,7 +82,7 @@ class ProfileController extends AppController
 
         return redirect()->to('/@'.$user->name_slug)->with('success', $message);
     }
-    public function publicProfile($slug = null){
+    public function publicProfile(Request $request, $slug = null){
 
         if(!$this->user){
             return redirect('/sign-up')->with('error', 'Create an account to see users profiles.');
@@ -167,6 +168,35 @@ class ProfileController extends AppController
                 $visitedCountries =   $visitedCountries->where('id', '!=', $user->country->id);
              $visitedCountries = $visitedCountries->get();
          }
+         $alwaysOpen = false;
+         $isOpen = false;
+         $timezone = $request->session()->get('timezone');
+         $currentDay = Carbon::now()->dayOfWeek;
+         $openingHours = [];
+         
+         if($user->opening_hours && $user->opening_hours ==='allways-open')
+            $alwaysOpen = true;
+       
+         if(!$alwaysOpen && isset($user->opening_hours[$currentDay]) && $user->opening_hours[$currentDay])
+         {
+          
+             
+             $now   = Carbon::now($timezone);
+          
+             $hours = $user->opening_hours[$currentDay];
+             if(isset($hours['from'])  && $hours['from'] && isset($hours['to']) && $hours['to']){
+                 $openingHours = $hours['from'] . '-' . $hours['to'];
+               
+                 $start = Carbon::createFromFormat('H:i', $hours['from'], $timezone);
+                 $end = Carbon::createFromFormat('H:i', $hours['to'], $timezone);
+                
+                 if ($now->between($start, $end)) 
+                     $isOpen = true;
+             }
+ 
+            
+         }
+
         $data = [
             'model' => $user,
             'pageTitle' => $pageTitle,
@@ -175,13 +205,15 @@ class ProfileController extends AppController
             'pageImage' => $pageImage,
             'hasSocial' => $hasSocial,
 /*             'timelapses' => $user->timelapses()->public()->latest()->get(),
- */            'visitedCountries' => $visitedCountries
+ */            'visitedCountries' => $visitedCountries,
+            'openingHours' => $openingHours,
+            'isOpen' => $isOpen,
+            'alwaysOpen' => $alwaysOpen,
         ];
 
         view()->share('meta', $meta);
-
+       
         
-
         if($user->group == 'support' || $user->group == 'admin')
             return redirect('/message/'.$user->id);
 

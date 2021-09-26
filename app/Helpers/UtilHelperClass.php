@@ -127,4 +127,16 @@ class UtilHelperClass
         
     }
 
+    public static function getWorkingHours(){
+        $workingHours = [];
+        $intervals = ['00', '15', '30', '45'];
+        for($i = 0; $i < 24; $i++){
+           foreach($intervals as $interval){
+               $hours = ($i < 10 ? '0'.$i : $i) . ':'. $interval;
+               $workingHours[$hours] = $hours;
+           }
+        }
+        return $workingHours;
+    }
+
 }

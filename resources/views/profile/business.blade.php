@@ -37,9 +37,11 @@
                                                 <div  class="kt-avatar__holder {{ $user && $user->id == $model->id ? 'dropzone-file-area dropzone dz-clickable' : '' }} img-circle" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url('{{ $model->avatar ? url($model->avatar) : '/img/avatar.png' }}');">
                                                     @if($user && $user->id == $model->id)
                                                         <div class="dz-message">
-                                                            <label class="kt-avatar__upload dropzone-file-area  dz-clickable">
-                                                                <i class="fa fa-camera text-muted"></i>
-
+                                                            <label class="kt-avatar__upload dropzone-file-area  dz-clickable" >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                                  </svg>
                                                             </label>
                                                         </div>
                                                     @endif
@@ -57,7 +59,7 @@
                                           
                                             @endif
                                             @if($user && $model->id == $user->id)
-                                                <a href="/profile" class="btn btn-default flex items-center justify-center mt-10 mb-10">
+                                                <a href="/profile" class="btn btn-line-rounded  mt-10 mb-10">
                                                     <svg class="mr-5" xmlns="http://www.w3.org/2000/svg" style="width:16px;" viewBox="0 0 20 20" fill="currentColor">
                                                         <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                                                         <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
@@ -122,10 +124,10 @@
                                                 </div>
                                                 @endif
                                                 @if($model->group == \App\User::$_USER_GROUP_BUSINESS)
-                                                <div class="kt-portlet p25 text-left m-lr-auto br-8" style="width: max-content;margin-bottom: 0;">
+                                                <div class="kt-portlet p25 text-left m-lr-auto br-8" style="margin-bottom: 0;">
                                                     @if(isset($model->business_fields['address'])  && $model->business_fields['address'])
                                                     <div class=" mb-10">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:22px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                                           </svg>
@@ -139,7 +141,7 @@
                                                 @endif
                                                     @if(isset($model->business_fields['phone'])  && $model->business_fields['phone'])
                                                         <div class=" mb-10" >
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-10 text-dark" style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-10 text-dark" style="width:22px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                                                 
                                                             </svg>
@@ -148,19 +150,46 @@
                                                     @endif
                                                     @if(isset($model->business_fields['email'])  && $model->business_fields['email'])
                                                         <div class=" mb-10">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:20px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:22px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                                                               </svg>
                                                             <a class="font-light" href="mailto:{{ $model->business_fields['email'] }}">{{ $model->business_fields['email'] }}</a>
                                                         </div>
                                                     @endif
-
+                                                    @if($alwaysOpen)
+                                                    <div class="flex items-center mb-10">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:22px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                        </svg> 
+                                                        <span class="text-green font-boldest">Open now</span>
+                                                    </div>
+                                                    @else
+                                                        @if($openingHours)
+                                                            <div class="flex items-center mb-10">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"  class="mr-10 text-dark"  style="width:22px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                                </svg> 
+                                                            
+                                                                <div>   
+                                                                    {{ $openingHours }}
+                                                                    <b>@if($isOpen)
+                                                                        <span class="text-green">Open</span>
+                                                                        @else
+                                                                        Closed
+                                                                        @endif</b>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                        
+                                                    @endif
+                                                    @if($user && $model->id != $user->id)
                                                     <a class="btn btn-line-rounded mt-10 mb-10" href="/message/{{ $model->id }}">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                           </svg>
                                                           <span>Send Message</span>
                                                     </a>
+                                                    @endif
                                                 </div>
 
                                                 @endif
@@ -183,8 +212,7 @@
                                                     </div>
                                                 @endif
                                                 @include('profile.quests.set_info')
-                                            
-                                                @include('profile.quests.promote_country')
+                                             
                                         </div>
                                     </div>
                                 </div>

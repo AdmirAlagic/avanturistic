@@ -4471,8 +4471,8 @@ strong {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -10px;
-    top: -10px;
+    right: -15px;
+    top: -0px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -4492,7 +4492,7 @@ strong {
 }
 .kt-avatar .kt-avatar__upload:hover {
     transition: all 0.3s;
-    background-color: #acc957;
+
 }
 .kt-avatar .kt-avatar__upload:hover i {
     color: #fff;

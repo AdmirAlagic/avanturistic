@@ -21,8 +21,8 @@ use Str;
 use App\Repositories\Notifications\NotificationRepository;
 use App\Notification;
 use App\Http\Controllers\AppController;
- 
- 
+use Carbon\Carbon;
+
 class PostController extends AppController
 {
     public function __construct()
@@ -474,6 +474,35 @@ class PostController extends AppController
         if(isset($nearbyCollection[0])){
             $nearbyCollection = $nearbyCollection[0];
         }
+        $alwaysOpen = false;
+        $openingHours = false;
+        $isOpen = false;
+        $currentDay = Carbon::now()->dayOfWeek;
+      
+       
+        if($post->user->opening_hours && $post->user->opening_hours == 'allways-open')
+            $alwaysOpen = true;
+        
+        if(!$alwaysOpen && isset($post->user->opening_hours[$currentDay]) && $post->user->opening_hours[$currentDay])
+        {
+            $timezone = $request->session()->get('timezone');
+            
+            $now   = Carbon::now($timezone);
+         
+            $hours = $post->user->opening_hours[$currentDay];
+            if(isset($hours['from'])  && $hours['from'] && isset($hours['to']) && $hours['to']){
+                $openingHours = $hours['from'] . '-' . $hours['to'];
+              
+                $start = Carbon::createFromFormat('H:i', $hours['from'], $timezone);
+                $end = Carbon::createFromFormat('H:i', $hours['to'], $timezone);
+               
+                if ($now->between($start, $end)) 
+                    $isOpen = true;
+            }
+
+           
+        }
+        
         $data = [
             'post' => $post,
             'sort' => $sort,
@@ -492,7 +521,11 @@ class PostController extends AppController
             'alreadyLiked' => $postLikeExists ? true : false,
             'translatableText' => $translatableText,
             'nearbyPosts' => $nearbyCollection,
-            'keywords'  => implode(',', $keywords)
+            'keywords'  => implode(',', $keywords),
+            'openingHours' => $openingHours,
+            'isOpen' => $isOpen,
+            'alwaysOpen' => $alwaysOpen,
+
 
         ];
 

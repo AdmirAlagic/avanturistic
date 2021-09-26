@@ -21,6 +21,7 @@ mix.styles([
 
 
 mix.js('resources/js/app.js', 'public/dist/js')
+    .js('resources/js/edit-profile.js', 'public/dist/js')
     .js('resources/js/general.js', 'public/dist/js')
     .js('resources/js/search.js', 'public/dist/js')
     .js('resources/js/vue.js', 'public/dist/js')

@@ -385,18 +385,41 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-xl-3 col-sm-3 col-form-label">Services</label>
+                                        <label class="col-xl-3 col-sm-3 col-form-label">
+                                        
+                                          Business Hours</label>
                                         <div class="col-sm-9 col-xl-6">
-                                            <div class="input-group">
+                                           <label class="mt-10 always-open">
+                                            {!! Form::checkbox('opening_hours' ,'allways-open' , null, [  'id' => 'always-open-checkbox']) !!} &nbsp; Always open  
+                                           </label>
+                                            <div class="opening-hours">
+                                                @php $days = [1 => 'monday', 2 => 'tuesday', 3 =>  'wednesday', 4 => 'thursday', 5 => 'friday', 6 => 'saturday', 0 => 'sunday' ];@endphp
+                                                @foreach($days as $key => $day) 
+                                                    
+                                                    <div class="form-group mt-10">
+                                                    
+                                                        <div class="row">
+                                                            <div class="col-4 items-center flex">
+                                                                <label class="text-gray font-light">
+                                                                    <b> {{ ucfirst($day)}}</b>
+                                                                </label>
+            
+                                                            </div>
+                                                            <div class="col-4  text-right">
+                                                            
+                                                                {!! Form::select('opening_hours['.$key.'][from]', UtilHelper::getWorkingHours(), isset($model->opening_hours[$key]['from']) ? $model->opening_hours[$key]['from']  : null , ['class' => 'form-control', 'placeholder' => 'From']) !!}
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                {!! Form::select('opening_hours['.$key.'][to]', UtilHelper::getWorkingHours(), isset($model->opening_hours[$key]['to']) ? $model->opening_hours[$key]['to']  : null , ['class' => 'form-control', 'placeholder' => 'To']) !!}
+                                                            </div>
+                                                        </div>
+                                                        
 
-                                                <div class="input-group-prepend"><span class="input-group-text">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
-                                                      </svg>
-                                                </span></div>
-                                                {!! Form::text('business_fields[address]', isset($model->business_fields['services']) ? $model->business_fields['services']  : null , ['class' => 'form-control', 'placeholder' => 'Enter more services you offer']) !!}
+                                                    
+                                                    </div>
+                                                @endforeach
                                             </div>
-                                         
+                                            
                                         </div>
                                     </div>
                                     <div class="form-group row mt-10">

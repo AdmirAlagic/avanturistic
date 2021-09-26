@@ -653,11 +653,9 @@ body,#home{
 }
 
 .kt-avatar .kt-avatar__upload:hover {
-  background-color: $background;
-  color: #FFFFFF;
-  i {
-    color:#FFFFFF !important;
-  }
+  
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.3);
+
 }
 
 

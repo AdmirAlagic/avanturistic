@@ -39,7 +39,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'last_login_at',
         'newsletter',
         'fcm_token',
-        'business_fields'
+        'business_fields',
+        'opening_hours'
     ];
 
     /**
@@ -64,7 +65,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'options' => 'array',
         'social_links' => 'array',
-        'business_fields' => 'array'
+        'business_fields' => 'array',
+        'opening_hours' => 'array',
     ];
 
     public function isOnline()

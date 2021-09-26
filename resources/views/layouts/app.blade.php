@@ -36,7 +36,9 @@
     @else
         <meta name="keywords" content="{{ isset($post->title) ? $post->title .' ,' : '' }} {{ isset($post->address) ? $post->address .' ,' : '' }} avanturistic, adventure outdoor, outdoor adventure photos, outdoors activity near me, outdoor adventure videos, outdoor adventures, adventure outdoors, outdoors, outdoor activity near me,  adventures near me, fun adventures near me, avanturistički, adventure stories, personal outdoor experiences, discover new travel destinations,  adrenaline tourism, rare locations, sport, travel photos, travel videos, travel blog, extreme sports, travel,  adventourist, adventoruous, turist, tourism, adventures outdoors,  share adventures, explore, hiking, traveling, seasight {{isset($badges_kewords) ? $badges_kewords : ''}} ">
     @endif
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.16/moment-timezone-with-data.min.js"></script>
     @if (isset($meta))
     @foreach ($meta as $key => $obj)<meta property="{{$key}}" content="{{ $obj }}" />
     @endforeach
@@ -69,6 +71,7 @@
         </script>
             
     @endif
+   
 
     @if(config('app.debug') == false && ((!isset($user) || !$user) || (($user && $user->email != 'admir@omnitask.ba') &&  ($user && $user->group != 'admin'  && $user->group != 'moderator'))))
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -408,6 +411,23 @@ console.log(document.getElementById('loged_user').value)
     </script>
     @endif
 @endif
+<script>
+    var tz = moment.tz.guess();
+    if(tz !== undefined){
+            $.ajax({
+            url: '/set-timezone',
+            method: 'POST',
+            dataType:'json',
+            data: {timezone:tz},
+            success:function(response){
+            
+            },
+        
+        });
+        
+    }
+    
+</script>
 <script defer src="https://unpkg.com/esri-leaflet-geocoder@2.2.14/dist/esri-leaflet-geocoder.js"
         integrity="sha512-uK5jVwR81KVTGe8KpJa1QIN4n60TsSV8+DPbL5wWlYQvb0/nYNgSOg9dZG6ViQhwx/gaMszuWllTemL+K+IXjg=="
         crossorigin=""></script>

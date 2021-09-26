@@ -3,6 +3,7 @@
 
 //user verified routes
 
+Route::post('/set-timezone', 'PublicController@asnycSetTimeZone');
 Route::get('/email-preferences', 'PublicController@unsubscribe');
 Route::post('/postUnsubscribe', 'PublicController@postUnsubscribe');
 Route::get('/privacy-policy', 'PublicController@privacy');

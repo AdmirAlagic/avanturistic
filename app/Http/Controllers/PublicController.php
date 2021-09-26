@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Session;
 use Str;
 use Log;
 
@@ -598,5 +599,9 @@ class PublicController extends AppController
             'timelapses' => $timelapsesArray
         ];
         return view('public.highlights', $data);
+    }
+
+    public function asnycSetTimeZone(Request $request){
+        $request->session()->put('timezone', $request->input('timezone'));
     }
 }
