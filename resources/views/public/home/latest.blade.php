@@ -113,7 +113,7 @@
                             <div class="row">
                                 <div class="col-6 text-left " style="position:relative;">
                                    
-                                        @if($obj->user && $obj->user->group == 'user')
+                                        @if($obj->user && ($obj->user->group == 'user' || $obj->user->group == 'business'))
                                           
                                                 <a class="text-white img-fade-hover overflow-dots" href="/{{ !$user ? '#' : '@' .$obj->user->name_slug }}"  {{ !$user ? 'data-toggle=modal data-target=#signUpModal' : 'data-toggle=kt-tooltip' }} style="position: relative; display:inline-block;">
                                                    
