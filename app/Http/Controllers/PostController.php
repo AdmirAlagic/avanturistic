@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Events\ActivityCreated;
+use App\Facades\CurrencyHelper;
 use App\Http\Requests\CommentRequest;
 
 use App\Repositories\Timelapse\TimelapseService;
@@ -152,7 +153,7 @@ class PostController extends AppController
 
         $input['slug'] = Str::slug($input['title']);
         $input['user_id'] = $this->user->id;
-
+        $input['price'] = isset($input['price']) && $input['price'] ? CurrencyHelper::convertToStringIntByNumberOfDecimals($input['price'], 2) : null;
         $post = Post::create($input);
 
         if($input['country_code'])

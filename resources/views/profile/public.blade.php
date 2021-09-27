@@ -72,7 +72,7 @@
                                                             @if(isset($model->social_links['website']) && $model->social_links['website'] && $model->social_links['website'] != ' ')
                                                             <p>
                                                                 <a target="_blank" href="{{ UtilHelper::externalURL($model->social_links['website'] , '') }}">
-                                                                     {{ UtilHelper::stripUrl($model->social_links['website']) }}
+                                                                     {{ UtilHelper::cleanUrl($model->social_links['website']) }}
                                                                 </a>
                                                             </p>
                                                             @endif

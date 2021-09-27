@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Facades\CurrencyHelper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -38,7 +39,10 @@ class Post extends Model
         'views',
         'has_route',
         'is_recommended',
+        'price',
+        'currency_code'
     ];
+
     protected $casts = [
         'image' => 'array',
         'user_reported_ids' => 'array',
@@ -76,5 +80,9 @@ class Post extends Model
 
     public function timelapse(){
         return $this->hasOne(Timelapse::class, 'post_id');
+    }
+
+    public function getDisplayPriceAttribute(){
+        return CurrencyHelper::displayAmountToUserByNumberOfDecimals($this->price, 2);
     }
 }

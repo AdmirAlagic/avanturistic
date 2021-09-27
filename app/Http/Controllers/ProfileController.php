@@ -172,7 +172,7 @@ class ProfileController extends AppController
          $isOpen = false;
          $timezone = $request->session()->get('timezone');
          $currentDay = Carbon::now()->dayOfWeek;
-         $openingHours = [];
+         $openingHours = null;
          
          if($user->opening_hours && $user->opening_hours ==='allways-open')
             $alwaysOpen = true;

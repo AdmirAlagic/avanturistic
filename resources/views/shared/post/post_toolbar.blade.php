@@ -22,8 +22,8 @@
             </div>
         </div>
     </div>
-    <div class="row" style="padding-top:10px;border-top:1px solid #eeeeee;">
-        <div class="col-4">
+    <div class="row items-center" style="padding-top:10px;border-top:1px solid #eeeeee;">
+        <div class="col-3">
             <div class="text-muted" style="margin:5px;">
                 <b>{{ $post->views > 1000  ? intval($post->views / 1000). 'K+' : $post->views }}</b>
                
@@ -34,7 +34,24 @@
                     @endif
             </div>
         </div>
-        <div class="col-8 text-right">
+        <div class="col-6 text-center">
+            @if($post->price)
+                <span>
+                    <h2 class=" btn">
+                        Price: 
+                        <span class="text-success font-boldest">
+                            @if($post->currency_code == 'EUR')
+                                €@elseif($post->currency_code == 'USD')
+                            $@else
+                                {{ $post->currency_code }}
+                            @endif
+                        </span><b>{{ $post->displayPrice }}</b>
+                    </h2>
+                </span>
+            @endif
+        </div>
+        <div class="col-3 text-right">
+            
             <a href="#" class="dropdown-toggle dots pull-right "data-toggle="dropdown">
                 <div class="text-muted  img-fade-hover" >
                 

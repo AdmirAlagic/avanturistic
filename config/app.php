@@ -229,6 +229,8 @@ return [
         'UtilHelper' => App\Facades\UtilHelper::class,
         'FCM'      => LaravelFCM\Facades\FCM::class,
 	    'FCMGroup' => LaravelFCM\Facades\FCMGroup::class, // Optional
+        'CurrencyHelper' => App\Facades\CurrencyHelper::class,
+
 
     ],
     'ffmpeg' => env('APP_ENV') == 'local' ? '/usr/local/bin/ffmpeg' : '/snap/bin/ffmpeg'

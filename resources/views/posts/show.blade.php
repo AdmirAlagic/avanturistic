@@ -42,7 +42,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;">
+                    <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;padding:10px;">
                         
                         @if($post)
                             <div class="row post lastPost" " data-routes="{{ isset($post->map_options['route']) ? json_encode($post->map_options['route']) : null  }}"  data-title="{{ $post->title }}" data-lat="{{ $post->lat }}" data-lng="{{ $post->lng }}" data-img="{{ isset($post->image[0]['thumb_path']) ? $post->image[0]['thumb_path'] : 'default' }}">
@@ -139,15 +139,16 @@
                                             @endif
                                         @endif
 
-                                        @if($post->embeded_code)
-                                            <hr>
+                                        @if($post->embeded_code && $post->embeded_code != '')
+                                          
                                             <p>
                                                 {!! $post->embeded_code !!}
                                             </p>
                                             
                                         @endif
                                         @if($post->description)
-                                            <hr>
+                                          <div style="padding:10px;">
+                                            <br>
                                             {!! $post->description !!}
                                             <br>
                                             @if($translatableText && $translatableText != '')
@@ -157,6 +158,7 @@
                                                 </a>
                                             @endif
                                             
+                                          </div>
                                         @endif
 
                                     </div>
@@ -187,68 +189,70 @@
                 @if($post->user->group == \App\User::$_USER_GROUP_BUSINESS)
                    <div class="kt-portlet">
                        <div class="kt-portlet__body" style="padding:15px;">
-                           <div class=" ">
-                            <div class="">
-                                <a href="/{{ '@'. $post->user->name_slug }}">
-                                    <h3 class="text-dark" style=margin-bottom:0px;">{{ $post->user->name }}</h3>
-                                </a>
-                               
-                                <div class="flex  profile-social-links">
-                                  
-                                    @if(isset($post->user->social_links['facebook']))
-                                        <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['facebook'] , 'facebook.com') }}">
-                                            <i class="la la-facebook  img-fade-hover" style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                    @if(isset($post->user->social_links['instagram']))
-                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['instagram'] , 'instagram.com') }}">
-                                            <i class="la la-instagram img-fade-hover" style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                    @if(isset($post->user->social_links['youtube']))
-                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['youtube'] , 'youtube.com/channel') }}">
-                                            <i class="la la-youtube-play img-fade-hover" style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                    @if(isset($post->user->social_links['pinterest']))
-                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['pinterest'] , 'pinterest.com') }}">
-                                            <i class="la la-pinterest img-fade-hover" style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                    @if(isset($post->user->social_links['linkedin']))
-                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['linkedin'] , 'linkedin.com/in') }}">
-                                            <i class="la la-linkedin img-fade-hover" style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                    @if(isset($post->user->social_links['twitter']))
-                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['twitter'] , 'twitter.com') }}">
-                                            <i class="la la-twitter img-fade-hover" style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                    @if(isset($post->user->social_links['tripadvisor']))
-                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['tripadvisor'] , 'tripadvisor.com') }}">
-                                            <i class="la la-tripadvisor img-fade-hover"  style="font-size:2.3rem;"></i>
-                                        </a>
-                                    @endif
-                                
-                                </div>
-                            </div>
-                            <div class="flex flex-col ">
+                          
+                           
+                            <a href="/{{ '@'. $post->user->name_slug }}">
+                                <h3 class="text-dark" style=margin-bottom:0px;">{{ $post->user->name }}</h3>
+                            </a>
+                            <div class="flex flex-col mt-10">
                                 @if(isset($post->user->social_links['website']) && $post->user->social_links['website'])
-                                    <a class="font-light" href="{{ $post->user->social_links['website'] }}"> <small>{{ $post->user->social_links['website'] }}</small></a>
+                                    <a class="font-light" href="{{ $post->user->social_links['website'] }}">
+                                        <b>{{ UtilHelper::cleanUrl($post->user->social_links['website']) }}</b>
+                                        </a>
                                 @endif
                                 @if(isset($post->user->business_fields['email']) && $post->user->business_fields['email'])
-                               
+                            
                                 <a class="font-light" href="{{ $post->user->business_fields['email'] }}"> <small>{{ $post->user->business_fields['email'] }}</small></a>
                                 @endif
                                 
                             </div>
+                            <div class="flex  profile-social-links mt-10">
+                            
+                                @if(isset($post->user->social_links['facebook']))
+                                    <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['facebook'] , 'facebook.com') }}">
+                                        <i class="la la-facebook  img-fade-hover" style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                                @if(isset($post->user->social_links['instagram']))
+                                <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['instagram'] , 'instagram.com') }}">
+                                        <i class="la la-instagram img-fade-hover" style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                                @if(isset($post->user->social_links['youtube']))
+                                <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['youtube'] , 'youtube.com/channel') }}">
+                                        <i class="la la-youtube-play img-fade-hover" style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                                @if(isset($post->user->social_links['pinterest']))
+                                <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['pinterest'] , 'pinterest.com') }}">
+                                        <i class="la la-pinterest img-fade-hover" style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                                @if(isset($post->user->social_links['linkedin']))
+                                <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['linkedin'] , 'linkedin.com/in') }}">
+                                        <i class="la la-linkedin img-fade-hover" style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                                @if(isset($post->user->social_links['twitter']))
+                                <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['twitter'] , 'twitter.com') }}">
+                                        <i class="la la-twitter img-fade-hover" style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                                @if(isset($post->user->social_links['tripadvisor']))
+                                <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['tripadvisor'] , 'tripadvisor.com') }}">
+                                        <i class="la la-tripadvisor img-fade-hover"  style="font-size:2.3rem;"></i>
+                                    </a>
+                                @endif
+                            
+                            </div>
+                            
+                           
                             @if($openingHours)
                                 <div class="flex items-center mt-10">
                                     <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                      </svg> 
-                                  
+                                    </svg> 
+                                
                                     <div>   
                                         {{ $openingHours }}
                                         <b>@if($isOpen)
@@ -258,30 +262,29 @@
                                             @endif</b>
                                     </div>
                                 </div>
-                               
+                            
 
                             @endif
-                           <div class="flex justify-start mt-10" style="width:100%;">
-                            <a class="btn btn-line-rounded mt-10 mb-10 btn-tall mr-10" style="width:max-content;" href="/message/{{ $post->user->id }}">
-                                <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                <span class="font-light">Send Message</span>
-                                       
-                            </a>
-                            @if(isset($post->user->business_fields['phone']) && $post->user->business_fields['phone'])
-                                <a class="btn btn-line-rounded btn-tall mt-10 mb-10 font-light  " href="tel:{{ $post->user->business_fields['phone'] }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  style="width: 18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            <div class="flex justify-start mt-10" style="width:100%;">
+                                <a class="btn btn-line-rounded mt-10 mb-10 btn-tall mr-10" style="width:max-content;" href="/message/{{ $post->user->id }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
-                                    {{ $post->user->business_fields['phone'] }}
+                                    <span class="font-light">Send Message</span>
+                                        
                                 </a>
-                            @endif
-                           
+                                @if(isset($post->user->business_fields['phone']) && $post->user->business_fields['phone'])
+                                    <a class="btn btn-line-rounded btn-tall mt-10 mb-10 font-light  " href="tel:{{ $post->user->business_fields['phone'] }}">
+                                        <svg xmlns="http://www.w3.org/2000/svg"  style="width: 18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        {{ $post->user->business_fields['phone'] }}
+                                    </a>
+                                @endif
+                            
 
-                           </div>
-                           </div>
-                                               
+                            </div>
+                                          
                        </div>
                    
                    </div>
@@ -308,8 +311,8 @@
                     @if($post->country)
                         <div class="kt-portlet__head justify-end" style="width: 61.8%;">
                             <div class="kt-portlet__head-label" style="width:100%;">
-                            <a class="text-muted flex" style="font-weight:400;" href="/country/{{ $post->country->slug }}">
-                                <div style="margin-left:-1px;margin-right:5px;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;">
+                            <a class="text-muted flex" style="font-weight:500;" href="/country/{{ $post->country->slug }}">
+                                <div style="margin-left:-1px;margin-right:10px;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;">
                                              
                                 </div>
                               

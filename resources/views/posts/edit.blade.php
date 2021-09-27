@@ -27,6 +27,30 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @if($user->group == \App\User::$_USER_GROUP_BUSINESS)
+                                    <div class="form-group row">
+                                        <label class="col-xl-3 col-lg-3 col-form-label">{{  __('Price') }}</label>
+                                        <div class="col-lg-9 ">
+                                            <div class="row mt-10">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                    
+                                                        {!! Form::text('price', $post->price ? $post->displayPrice : null, ['class' => 'form-control', 'placeholder' => 'Price']) !!}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                   
+                                                    <input type="text" name="currency_code" value="{{  $post->currency_code }}" list="currencies" class="form-control" placeholder="Price currency">
+                                                    <datalist id="currencies">
+                                                      <option value="EUR">
+                                                      <option value="USD">
+                                                    </datalist>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                   
                                     <div class="form-group row">
                                         <label class="col-xl-3 col-lg-3 col-form-label">{{ @trans('posts.description') }}</label>
                                             {{--<br><small class="text-muted">Enter informative description <br> about adventure & location</small> </label>--}}

@@ -9,16 +9,16 @@
    
         <div class="row">
             
-            <div class="col-12  text-center">
+            <div class="col-6  text-left">
                 <h5>
                     Coordinates 
                 </h5>
-                <p class="text-gray">{{ UtilHelper::latLngtoDMS($post->lat,$post->lng) }}</b>
+                <p class="small">
+                    {{ UtilHelper::latLngtoDMS($post->lat, $post->lng) }}
+                </b>
                
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-6 text-right">
                 <a class="btn btn-line-rounded  " style="margin-top:10px;  -webkit-border-radius: 4px !important;-moz-border-radius: 4px !important;border-radius: 4px !important;padding-left: 10px; padding-right: 10px; " target="_blank" href="https://www.google.com/maps/search/?api=1&query={{$post->lat}},{{$post->lng}}">
                    
                     <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,6 +28,7 @@
                 </a>
             </div>
         </div>
+        
         @if(isset($post->map_options['length'] )) 
         <br>
         <div class="row">

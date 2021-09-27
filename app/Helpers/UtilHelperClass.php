@@ -85,7 +85,7 @@ class UtilHelperClass
        
     }
 
-    public function stripUrl($url){
+    public function cleanUrl($url){
         $url = str_replace(['http://', 'https://', 'www.'], '', $url);
         return $url;
     }

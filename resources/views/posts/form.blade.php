@@ -225,12 +225,31 @@
                                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                                     <br>
                                     <label>{{ __('More info about this adventure location') }}</label>
-                                    {{--<br><small class="">Enter informative description  about adventure & location</small>--}}
+                                  
                                     <div class="description-emoji">
                                         {!! Form::textarea('description', null, ['class' => 'form-control ' ,   'rows' => 2, 'id' => 'cke-description', 'style' => 'resize: x;']) !!}
                                     </div>
                                     <br>
+                                    
                                 </div>
+                                @if($user->group == \App\User::$_USER_GROUP_BUSINESS)
+                                    <div class="row mt-10">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Price</label><span class=""><small></small></span>
+                                                {!! Form::text('price', null, ['class' => 'form-control']) !!}
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label>Currency code</label><span class=""><small></small></span>
+                                            <input type="text" name="currency_code" list="currencies" class="form-control">
+                                            <datalist id="currencies">
+                                              <option value="EUR">
+                                              <option value="USD">
+                                            </datalist>
+                                         </div>
+                                    </div>
+                                @endif
                                 <br>
                                 <div style="border: 1px solid #f1f1f1;padding: 10px;border-radius: 10px;">
                                     <div class="video">

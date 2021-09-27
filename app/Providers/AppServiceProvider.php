@@ -6,6 +6,7 @@ use App\Helpers\UtilHelperClass;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use App;
+use App\Helpers\CurrencyHelperClass;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
     {
         App::bind('UtilHelper',function() {
             return new UtilHelperClass();
+        });
+        App::bind('CurrencyHelper',function() {
+            return new CurrencyHelperClass();
         });
     }
 
