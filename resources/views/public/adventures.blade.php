@@ -59,7 +59,7 @@
 
                            </div>
                         
-                           <div id="more-posts" style="min-height:700px;">
+                           <div id="more-posts" class="mt-20" style="min-height:700px;">
                                 @if(isset($more_posts) && $more_posts)
                                  {!! $more_posts !!}
                                 @endif

@@ -6,7 +6,7 @@ $green: #ACC957;
 $greenSmaragd: #25BCBD;
 $background:#000000;
 $orange:#ffb822;
-  
+$phi: 1.6180339887498948482;
 
 body {
   font-size: 14px;
@@ -2615,3 +2615,7 @@ top:0;
    color:#474747;
  } 
 }
+.bb-e{
+  border-bottom: 1px solid #eeeeee;
+}
+

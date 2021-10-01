@@ -150,7 +150,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                                    <div id="more-posts mb-10" style="min-height:100px;padding:15px;">
+                                    <div id="more-posts" class="mt-20 mb-10" style="min-height:100px;">
                                         
                                         @include('public.home.latest')
                                         
@@ -167,7 +167,7 @@
                                 </h3>
                             </div>
                         </div>
-                        <div class="kt-portlet__body" style="margin-bottom: 0;padding-bottom:0;">
+                        <div class="kt-portlet__body" style="margin-bottom: 0;padding:0;">
                             <div class="kt-container" >
                                 <p class="text-center">
                                     Explore <b>personal impressions</b> from other users outdoor adventures and <b>get useful tips</b>.

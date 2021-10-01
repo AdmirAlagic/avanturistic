@@ -147,7 +147,7 @@
             <div class="col-md-7 col-sm-7" style="padding:0;margin:0;">
 
                 <div class="kt-portlet kt-portlet--tabs profile-tabs text-center " style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
-                    <div class="text-center">
+                    <div class="text-center bb-e">
                     
                         <ul class="nav nav-tabs nav-tabs-space-xl nav-tabs-line nav-tabs-line-brand" role="tablist" style=" display: inline-flex;margin:0;">  
                             <li class="nav-item" id="nav-item-adventures" style="display: inline-block;">
