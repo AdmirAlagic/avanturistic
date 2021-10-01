@@ -79,7 +79,7 @@
                                     </a>
                                 @endif
                                 @if($nextPost && $isMobile && isset($nextPost->image[0]['thumb_path']))
-                                <div class="text-center" style="width:100%;padding:10px;">
+                                <div class="text-center mt-10" style="width:100%;padding:10px;">
                                     <div id="button-background" data-next-url="{{ $nextPostUrl}}">
                                         <span class="slide-text flex items-center justify-between">
                                             @if($sort && $sort == 'u')
