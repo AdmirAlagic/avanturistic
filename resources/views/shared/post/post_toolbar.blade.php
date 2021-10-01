@@ -1,25 +1,26 @@
 <div class="col-sm-12 post-toolbar"  >
     <div class="row" >
-        <div class="col-6">
-            @include('shared.post.post_share')
-        </div>
-        <div class="col-6">
-            <div class=" text-right" style="margin-top:4px;">
+       
+        <div class="col-8">
+            <div class="" style="margin-top:4px;">
                 @if($post->user)
                     
-                        <a class="text-dark text-right" href="/{{ '@' .$post->user->name_slug }}" >
+                        <a class="text-dark text-right flex items-center" href="/{{ '@' .$post->user->name_slug }}" >
                        
                             @if($post->user->avatar && $post->user->avatar != ' ' && $post->user->avatar != '')
-                                <img class="img-circle img-fade-hover" src="{{ url($post->user->avatar) }}" style="width:37px;height:37px;margin-top:-3px;border:1px solid #474747;box-shadow:none;">
+                                <img class="img-circle img-fade-hover" src="{{ url($post->user->avatar) }}" style="width:37px;height:37px;border:1px solid #474747;box-shadow:none;">
                             @else
                             <div style="display:inline-flex;margin:0;" class=" kt-header__topbar-icon  text-white post-avatar"><b>{{ ucfirst($post->user->name[0]) }}</b></div>
                             @endif
                            
-                            <div class="text-right" style="font-size: 0.8em;margin-top:5px;">{{ $post->user->name }}&nbsp;</div>
+                            <div class="text-right" style="font-size: 0.8em;margin-left:10px;">{{ $post->user->name }}</div>
                         </a>
                     
                 @endif
             </div>
+        </div>
+        <div class="col-4 text-right">
+            @include('shared.post.post_share')
         </div>
     </div>
     <div class="row items-center" style="padding-top:10px;border-top:1px solid #eeeeee;">
@@ -37,7 +38,7 @@
         <div class="col-6 text-center">
             @if($post->price)
                 <span>
-                    <h2 class=" btn">
+                    <h2 class=" btn btn-line-rounded">
                         Price: 
                         <span class="text-success font-boldest">
                             @if($post->currency_code == 'EUR')
