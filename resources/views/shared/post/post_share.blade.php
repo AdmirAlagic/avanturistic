@@ -10,7 +10,7 @@
         &nbsp;<span style="margin-left: -3px;" class="text-muted" id="visitedsCount">{{ $post->visiteds }}
         </span>
     </a>
-    @if($post->is_recommended)
+  {{--   @if($post->is_recommended)
                                         
         <span style="-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
                 <img class="lazy" src="/img/placeholder.jpg" data-src="{{ url('/img/star.svg') }}" alt="Starred" data-srcset="{{ url('/img/star.svg') }}" width="45" style="width:40px;margin-top:-2px;">
@@ -20,6 +20,6 @@
             <div style="min-height:10px;">
 
             </div>
-    @endif  
+    @endif   --}}
 </span>
 

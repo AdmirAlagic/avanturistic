@@ -342,11 +342,10 @@ class ProfileController extends AppController
 
     public function switchToBusiness(){
         $user = Auth::user();
-        $user->update([
-            'group' => User::$_USER_GROUP_BUSINESS
-        ]);
+        $user->group  = User::$_USER_GROUP_BUSINESS;
+        $user->save();
 
-        return redirect('profile')->with('success', 'You have successfully switched your account to business.');
+        return redirect('profile')->with('success', 'Account successfully changed to Business.');
     }
 
 

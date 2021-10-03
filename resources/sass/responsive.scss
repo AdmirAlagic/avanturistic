@@ -148,13 +148,17 @@ $green: #acc957;
   .kt-container.post{
     padding: 0px;
   }
+  .kt-container.profile-container{
+    padding:0px;
+  }
 }
 
 @media (min-width: 1025px){
   .kt-container.post{
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 2fem;
   }
+  
   body{
     padding-top: 80px;
   }
