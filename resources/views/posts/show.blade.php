@@ -42,7 +42,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;padding:10px;">
+                    <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;padding:10px;padding-top:0;">
                         
                         @if($post)
                             <div class="row post lastPost" " data-routes="{{ isset($post->map_options['route']) ? json_encode($post->map_options['route']) : null  }}"  data-title="{{ $post->title }}" data-lat="{{ $post->lat }}" data-lng="{{ $post->lng }}" data-img="{{ isset($post->image[0]['thumb_path']) ? $post->image[0]['thumb_path'] : 'default' }}">

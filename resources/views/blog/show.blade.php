@@ -10,9 +10,7 @@
             <div class="col-sm-8">
 
 
-                {{--<a  href="#" data-blog_id="{{ $blog->id }}" id="likeBtn" class="btn  {{ $alreadyLiked ? 'text-red' : 'text-muted' }}"> <i class="fa fa-heart "></i>  <span class="text-muted" id="likesCount">{{ count($blog->likesModel) }}</span></a>--}}
-
-
+ 
                 <div class="kt-portlet" style="min-height: 620px;" >
 
                     <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;padding:0;">
