@@ -367,7 +367,7 @@ class PostController extends AppController
             
         $sql .= ' where deleted_at IS NULL AND is_public = 1 AND lat is NOT NULL and lng is not null'; 
         if($mainActivity)
-            $sql .= " AND posts.options LIKE '%". $mainActivity . "%' ";
+            $sql .= " AND posts.options LIKE '%". $mainActivity . "%' AND id != ".$id;
         $sql .= ' ORDER BY distance ASC';
         $nearByPosts = DB::select( DB::raw($sql));
         $ids = array();
