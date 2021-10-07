@@ -128,8 +128,10 @@
                                                     @if($model->country)
                                                         <div class=" mb-10">
                                                              
-                                                            <span class="font-light text-right">
-                                                                {{ $model->country->emoji }}&nbsp;{{ $model->country->title }}
+                                                            <span class="font-light text-right " >
+                                                                <span class="mr-10" style="font-size:1.5rem;">
+                                                                    {{ $model->country->emoji }}
+                                                                    </span>&nbsp;{{ $model->country->title }}
                                                             {{--   @if($model->country)
                                                                     <span class="text-gray">{{ $model->country->title }}</span>
                                                                 @endif --}}
