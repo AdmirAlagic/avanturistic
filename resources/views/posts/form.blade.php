@@ -237,15 +237,16 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label>Price</label><span class=""><small></small></span>
-                                                {!! Form::text('price', null, ['class' => 'form-control']) !!}
+                                                {!! Form::text('price', null, ['class' => 'form-control', 'placeholder' => 'Leave empty if no price']) !!}
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <label>Currency code</label><span class=""><small></small></span>
                                             <input type="text" name="currency_code" list="currencies" class="form-control">
                                             <datalist id="currencies">
-                                              <option value="EUR">
-                                              <option value="USD">
+                                                <option value="EUR">
+                                                <option value="USD">
+                                                <option value=" GBP">
                                             </datalist>
                                          </div>
                                     </div>
