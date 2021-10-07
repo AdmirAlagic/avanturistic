@@ -119,6 +119,7 @@
                                             </div>
                                            
                                         @endif
+                                      
                                         @include('shared.post.badges')
                                         @if($post->video && $post->video != ' ')
 
@@ -160,7 +161,7 @@
                                             
                                           </div>
                                         @endif
-
+                                       
                                     </div>
                                     
                                 </div>

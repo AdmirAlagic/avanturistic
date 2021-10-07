@@ -221,7 +221,7 @@ class PostController extends AppController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $slug = null, Request $request)
+    public function show(Request $request, $id, $slug = null)
     {
 
         $mixScripts[] = '/dist/js/post.js';

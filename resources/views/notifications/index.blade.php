@@ -6,7 +6,8 @@
             <div class="kt-portlet__head kt-hidden-tablet-and-mobile">
                 <div class="kt-portlet__head-label">
                         <span class="kt-portlet__head-icon">
-                            <i class="fa fa-bell"></i>
+                            <img src="{{ url('/img/bell.svg')}}" style="height:22px;">
+
                         </span>
                     <h3 class="kt-portlet__head-title text-dark">
                        Notifications

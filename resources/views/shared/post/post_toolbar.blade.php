@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="row items-center" style="padding-top:10px;border-top:1px solid #eeeeee;">
-        <div class="col-3">
+        <div class="col-6">
             <div class="text-muted" style="margin:5px;">
                 <b>{{ $post->views > 1000  ? intval($post->views / 1000). 'K+' : $post->views }}</b>
                
@@ -33,25 +33,33 @@
                     @else
                         views
                     @endif
+                    @if($post->price)
+                    <span>
+                        <h3 class="">
+                            <span class="text-gray">
+                                Price:
+                            </span>
+                            <span class="tfont-boldest">
+                                <b>{{ $post->displayPrice }}</b>
+                                <span class="text-success">
+                                    @if($post->currency_code == 'EUR')
+                                    €@elseif($post->currency_code == 'USD')
+                                </span>
+                            </span>
+                          
+                        $@else
+                            {{ $post->currency_code }}
+                        @endif
+                        </h3>
+                    </span>
+                @endif
             </div>
+            
+             
+            
         </div>
-        <div class="col-6 text-center">
-            @if($post->price)
-                <span>
-                    <h2 class=" btn btn-line-rounded">
-                        Price: 
-                        <span class="text-success font-boldest">
-                            @if($post->currency_code == 'EUR')
-                                €@elseif($post->currency_code == 'USD')
-                            $@else
-                                {{ $post->currency_code }}
-                            @endif
-                        </span><b>{{ $post->displayPrice }}</b>
-                    </h2>
-                </span>
-            @endif
-        </div>
-        <div class="col-3 text-right">
+       
+        <div class="col-6 text-right">
             
             <a href="#" class=" dots pull-right "  data-toggle="modal" data-target="#shareModal">
                 <div class="text-muted  img-fade-hover" >

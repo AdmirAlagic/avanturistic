@@ -11,11 +11,12 @@
     </p>
     @php $progress = 1;@endphp
     
-    @if($countryPostsCount)
+    @if($countryPostsCount > 1)
         @php $progress = 1 / $countryPostsCount * 100; @endphp
     @endif
+   
  
-      
+     
     <p class="text-center text-gray" style="margin:0;">
         @php $countLeftDifference =  3 - $countryPostsCount;@endphp
         <small> {{ $countryPostsCount }}/3 completed</small>

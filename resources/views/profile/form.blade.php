@@ -82,7 +82,7 @@
         </div>
     </div> 
     
-    <div class="kt-portlet">
+    <div class="kt-portlet" style="padding:15px;">
     <div class="kt-portlet__body" style="padding-top:20px;">
         
         {!! Form::model($model , ['url' => 'updateProfile', 'method' => 'POST', 'enctype' => 'multipart/form-data'])  !!}
@@ -282,7 +282,7 @@
                                         </div>
                                     </div>
                                     @if($model->group == \App\User::$_USER_GROUP_USER)
-                                   {{--  <div class="form-group row">
+                                    <div class="form-group row">
 
                                         <div class="col-sm-9 col-xl-6 offset-sm-3 offset-xl-3">
                                             <a class="btn pl-0   sweet-alert-custom flex items-center" href="{{ url('/switch-to-businesss') }}" data-alert_title="Are you sure you want to switch your account to business?" data-alert_type="warning" data-alert_text="You wont be able to revert this change.">
@@ -301,7 +301,7 @@
                                             
                                         </div>
                                         
-                                    </div> --}}
+                                    </div>
                                 @endif
                                     <div class="form-group row">
 

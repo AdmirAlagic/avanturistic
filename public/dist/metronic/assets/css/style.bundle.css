@@ -3002,8 +3002,8 @@ a.text-dark:hover {
     color:#999;
 }
 .alert.alert-success {
-    background: #acc957;
-    border: 1px solid #acc957;
+    background: #636363;
+    
     color: #fff;
 }
 .alert.alert-success .alert-icon i {
