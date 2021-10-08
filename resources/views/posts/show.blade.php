@@ -192,7 +192,7 @@
                        <div class="kt-portlet__body" style="padding:15px;">
                           
                            
-                            <div class="flex">
+                            <div class="flex" style="border-bottom: 1px solid #eee; padding-bottom: 15px;">
                                 <a   href="/{{ '@'. $post->user->name_slug }}">
                                     @if($post->user->avatar && $post->user->avatar != ' ' && $post->user->avatar != '')
                                         <img class="img-circle img-fade-hover mr-10" src="{{ url($post->user->avatar) }}" style="width:60px;height:60px;border:1px solid #474747;box-shadow:none;">
@@ -226,9 +226,9 @@
                                     {{ $openingHours }}
                                     <b>
                                         @if($isOpen)
-                                            <span class="text-green">Open</span>
+                                            <span class="text-green">Open now</span>
                                         @else
-                                            Closed
+                                            Closed now
                                         @endif
                                     </b>
                                 </div>
