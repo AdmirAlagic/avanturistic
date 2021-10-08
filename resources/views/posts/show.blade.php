@@ -192,80 +192,102 @@
                        <div class="kt-portlet__body" style="padding:15px;">
                           
                            
-                            <a href="/{{ '@'. $post->user->name_slug }}">
-                                <h3 class="text-dark" style=margin-bottom:0px;">{{ $post->user->name }}</h3>
-                            </a>
-                            <div class="flex flex-col mt-10">
-                                @if(isset($post->user->social_links['website']) && $post->user->social_links['website'])
-                                    <a class="font-light" href="{{ $post->user->social_links['website'] }}">
-                                        <b>{{ UtilHelper::cleanUrl($post->user->social_links['website']) }}</b>
-                                        </a>
-                                @endif
-                                @if(isset($post->user->business_fields['email']) && $post->user->business_fields['email'])
-                            
-                                <a class="font-light" href="{{ $post->user->business_fields['email'] }}"> <small>{{ $post->user->business_fields['email'] }}</small></a>
-                                @endif
+                            <div class="flex">
+                                <a   href="/{{ '@'. $post->user->name_slug }}">
+                                    @if($post->user->avatar && $post->user->avatar != ' ' && $post->user->avatar != '')
+                                        <img class="img-circle img-fade-hover mr-10" src="{{ url($post->user->avatar) }}" style="width:60px;height:60px;border:1px solid #474747;box-shadow:none;">
+                                    @else
+                                        <div style="display:inline-flex;margin:0;" class=" kt-header__topbar-icon  text-white post-avatar"><b>{{ ucfirst($post->user->name[0]) }}</b></div>
+                                    @endif
+                                </a>
+                               <div class="flex flex-col">
+                                    <a   href="/{{ '@'. $post->user->name_slug }}">
+                                        <h3 class="text-dark" style=margin-bottom:0px;">{{ $post->user->name }}</h3>
+                                    </a>
+                                    @if(isset($post->user->social_links['website']) && $post->user->social_links['website'])
+                                        <a class="font-light" href="{{ $post->user->social_links['website'] }}">
+                                            <b>{{ UtilHelper::cleanUrl($post->user->social_links['website']) }}</b>
+                                            </a>
+                                    @endif
                                 
+                                    @if(isset($post->user->business_fields['email']) && $post->user->business_fields['email'])
+                        
+                                    <a class="font-light" href="{{ $post->user->business_fields['email'] }}"> <small>{{ $post->user->business_fields['email'] }}</small></a>
+                                    @endif
+                               </div>
+                               
                             </div>
+                            @if($openingHours)
+                            <div class="flex items-center mt-10">
+                                <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>                    
+                                <div>   
+                                    {{ $openingHours }}
+                                    <b>
+                                        @if($isOpen)
+                                            <span class="text-green">Open</span>
+                                        @else
+                                            Closed
+                                        @endif
+                                    </b>
+                                </div>
+                            </div>      
+                        @endif
+                            @if($post->user->description)
+                                <p class=" mb-10 mt-10">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="width:18px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="#999">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                   
+                                    {!! ltrim($post->user->description) !!}
+                                   
+                                </p>
+                            @endif
+                           
                             <div class="flex  profile-social-links mt-10">
                             
                                 @if(isset($post->user->social_links['facebook']))
                                     <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['facebook'] , 'facebook.com') }}">
-                                        <i class="la la-facebook  img-fade-hover" style="font-size:2.3rem;"></i>
+                                        <i class="la la-facebook  img-fade-hover" style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                                 @if(isset($post->user->social_links['instagram']))
                                 <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['instagram'] , 'instagram.com') }}">
-                                        <i class="la la-instagram img-fade-hover" style="font-size:2.3rem;"></i>
+                                        <i class="la la-instagram img-fade-hover" style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                                 @if(isset($post->user->social_links['youtube']))
                                 <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['youtube'] , 'youtube.com/channel') }}">
-                                        <i class="la la-youtube-play img-fade-hover" style="font-size:2.3rem;"></i>
+                                        <i class="la la-youtube-play img-fade-hover" style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                                 @if(isset($post->user->social_links['pinterest']))
                                 <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['pinterest'] , 'pinterest.com') }}">
-                                        <i class="la la-pinterest img-fade-hover" style="font-size:2.3rem;"></i>
+                                        <i class="la la-pinterest img-fade-hover" style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                                 @if(isset($post->user->social_links['linkedin']))
                                 <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['linkedin'] , 'linkedin.com/in') }}">
-                                        <i class="la la-linkedin img-fade-hover" style="font-size:2.3rem;"></i>
+                                        <i class="la la-linkedin img-fade-hover" style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                                 @if(isset($post->user->social_links['twitter']))
                                 <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['twitter'] , 'twitter.com') }}">
-                                        <i class="la la-twitter img-fade-hover" style="font-size:2.3rem;"></i>
+                                        <i class="la la-twitter img-fade-hover" style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                                 @if(isset($post->user->social_links['tripadvisor']))
                                 <a target="_blank" class="ml-5" href="{{ UtilHelper::externalURL($post->user->social_links['tripadvisor'] , 'tripadvisor.com') }}">
-                                        <i class="la la-tripadvisor img-fade-hover"  style="font-size:2.3rem;"></i>
+                                        <i class="la la-tripadvisor img-fade-hover"  style="font-size:2.6rem;"></i>
                                     </a>
                                 @endif
                             
                             </div>
                             
                            
-                            @if($openingHours)
-                                <div class="flex items-center mt-10">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg> 
-                                
-                                    <div>   
-                                        {{ $openingHours }}
-                                        <b>@if($isOpen)
-                                            <span class="text-green">Open</span>
-                                            @else
-                                            Closed
-                                            @endif</b>
-                                    </div>
-                                </div>
                             
 
-                            @endif
                             <div class="flex justify-start mt-10" style="width:100%;">
                                 <a class="btn btn-line-rounded mt-10 mb-10 btn-tall mr-10" style="width:max-content;" href="/message/{{ $post->user->id }}">
                                     <svg xmlns="http://www.w3.org/2000/svg"  style="width:18px;margin-top: -2px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
