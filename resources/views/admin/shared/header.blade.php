@@ -5,7 +5,7 @@
         <!-- begin:: Brand -->
         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand" style="padding:10px;">
           
-            <a href="/" class="font-weight-bold"><img class="header-logo-img" src="{{ url('/img/logo.svg') }}" style="width:30px;position: absolute;left:0;top: 8px; " alt=""/> <span>Avanturistic</span></a>
+            <a href="/" class="font-weight-bold"><img class="header-logo-img" src="{{ url('/img/logo.svg') }}" style="width:26px;position: absolute;left:0;top: 8px; " alt=""/> <span>Avanturistic</span></a>
         </div>
 
         <!-- end:: Brand -->
