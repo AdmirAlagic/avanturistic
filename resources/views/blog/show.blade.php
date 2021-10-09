@@ -35,7 +35,7 @@
                         <hr>
                         @if($user && $user->id == $blog->user_id)
                             <a href="/blog/{{ $blog->id }}/edit">
-                                <i class="fa fa-cogs text-muted"></i> Edit
+                                <i class="fa fa-cogs "></i> Edit
                             </a>
                         @endif
 
@@ -79,7 +79,7 @@
                                 @if(!$user)
 
                                     <div class="col col-12">
-                                        <small><span class="text-muted">Your email address will not be published. Required fields are marked *</span></small>
+                                        <small><span class="">Your email address will not be published. Required fields are marked *</span></small>
                                         
                                         <div class="row">
                                             <div class="col-4">
@@ -126,7 +126,7 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label" style="width: 100%;">
                             <h3 class="kt-portlet__head-title" style="width: 100%;">
-                            <img src="{{ url('/img/blog.svg') }}" style="height:20px;" alt="Recent News & Stories"> Recent News & Stories
+                             Recent News & Stories
 
                             </h3>
                         </div>
@@ -144,9 +144,9 @@
                                         @endif
                                     </div>
                                     <div class="col-8">
-                                        <h5 class="text-muted"><b>{{ $obj->title }}</b></h5>
+                                        <h5 class=""><b>{{ $obj->title }}</b></h5>
 
-                                        <div class="text-muted text-light" style="line-height:1.4rem;font-weight:normal;">
+                                        <div class=" text-light" style="line-height:1.4rem;font-weight:normal;">
                                             {!! Str::words($obj->description, 20) !!}
                                         </div>
                                     </div>
@@ -160,7 +160,7 @@
                         <div class="kt-portlet__head-label" style="width: 100%;">
                             <h3 class="kt-portlet__head-title" style="width: 100%;">
                             
-                                <img src="{{ url('/img/map_pin.svg') }}" style="height:20px;" alt="The world map of outdoor adventures">   The world map of outdoor adventures
+                                The world map of outdoor adventures
 
                             </h3>
                         </div>
@@ -177,7 +177,7 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label" style="width: 100%;">
                             <h3 class="kt-portlet__head-title" style="width: 100%;">
-                                <img src="{{ url('/img/backpacking-gray.svg') }}" style="height:20px;" alt="Latest outdoor adventures">   Latest Outdoor Adventures
+                             Latest Outdoor Adventures
 
                             </h3>
                         </div>
@@ -219,13 +219,13 @@
                                         </div>
                                     @endif
                                     <a href="/adventure/{{ $obj->id }}/{{ $obj->slug }}" style="font-weight: 400;">
-                                        <h6 class="text-muted"><b>{{ $obj->title }}</b></h5>
+                                        <h6 class=""><b>{{ $obj->title }}</b></h5>
                                         @if($obj->country || $obj->address)
                                             <p>
-                                                <i class="fa fa-map-marker-alt text-muted"></i>
+                                                <i class="fa fa-map-marker-alt "></i>
                                                 @if($obj->country)
                                                     <span class="text-gray">{{  $obj->country->title }}   @if($obj->address)
-                                                            <br><span class="text-muted">{{ Str::words($obj->address, 10) }}</span>
+                                                            <br><span class="">{{ Str::words($obj->address, 10) }}</span>
                                                         @endif</span>
                                                 @endif
 

@@ -1951,13 +1951,15 @@ div.img{
 
 #blog-show{
   ins{
-    background: #acc957;
-    background: #acc957;
+  
+    background: #474747;
     display: inline-block;
     width: 40px;
     
     text-align: center;
-   
+    -webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
     color: #fff;
     margin-right: 8px;
     float: left;
