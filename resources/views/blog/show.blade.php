@@ -24,13 +24,14 @@
 
                                     </div>
                                 </a>
+                                <br>
+                                <small class="text-gray">{!! $blog->created_at->format('jS F Y') !!} <br></small>
                             </div>
 
                         @endif
                     </div>
                     <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;">
-                        <br>
-                        <small class="text-gray">{!! $blog->created_at->format('jS F Y') !!} <br></small>
+                       
                         <h1 style="font-size:2rem; font-weight:900;">{{ $blog->title }}</h1>
                         <hr>
                         @if($user && $user->id == $blog->user_id)
