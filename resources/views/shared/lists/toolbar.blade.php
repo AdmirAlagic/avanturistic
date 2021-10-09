@@ -51,17 +51,26 @@
                     <ul id="sortBy" style="background:white;">
 
                         <li class="sortBy active" data-sort="date" style="">
-                            <a href="#" data-sort="date" class="text-muted">
+                            <a href="#" data-sort="date" >
                                 <span>Latest</span>
                                 <br>
-                                Sort by latest.
+                                <span class="text-gray font-light">
+                                    Sort by latest.
+                                </span>
                             </a>
                         </li>
                         <li class="sortBy" data-sort="distance">
-                            <a href="#" class="text-muted">
+                            <a href="#" >
                                 <span>Near Me</span>
                                 <br>
-                                Sort by nearest. <br>To get more precise distances from your current location enable location services and use "Update location".
+                                <div class="text-gray font-light">
+                                    Sort by nearest. <br>
+                                    <div class="mt-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="#474747">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>To get more precise distances from your current location enable location services and use <span class="text-dark">"Update location"</span>.
+                                    </div>
+                                </div>
                             </a>
                         </li>
                     </ul>
