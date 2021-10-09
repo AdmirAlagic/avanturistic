@@ -42,7 +42,7 @@
                         <div style="line-height: 1.6em;">{!! $blog->body !!}</div>
                         <br>
                         <div class="share-buttons text-center mt-20" style="padding-left:10px;padding-right:10px;margin-bottom:10px;">
-                            <p class="k-font">Share the adventure</p>
+                            <p class="k-font">Share </p>
                             <!-- Sharingbutton Facebook -->
                             <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https://avanturistic.com/adventure/{{ $blog->id}}" target="_blank" rel="noopener" aria-label="">
                                <img src="{{ url('/img/social/fb.svg') }}" style="width:30px;" alt="">
