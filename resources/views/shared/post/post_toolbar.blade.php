@@ -3,7 +3,7 @@
        
         <div class="col-8">
             <div class="" style="margin-top:4px;">
-                @if($post->user)
+                @if($post->user &&  $post->user->group != \App\User::$_USER_GROUP_BUSINESS)
                     
                         <a class="text-dark text-right flex items-center" href="/{{ '@' .$post->user->name_slug }}" >
                        
