@@ -70,7 +70,7 @@ $(document).ready(function(){
 
             map = L.map('single-map', {
                 center: center,
-                zoom: 12,
+                zoom: 14,
                 maxZoom:19,
 
             });

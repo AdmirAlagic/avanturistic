@@ -33,26 +33,7 @@
                     @else
                         views
                     @endif
-                    @if($post->price)
-                    <span>
-                        <h3 class="">
-                            <span class="text-gray">
-                                Price:
-                            </span>
-                            <span class="tfont-boldest">
-                                <b>{{ $post->displayPrice }}</b>
-                                <span class="text-success">
-                                    @if($post->currency_code == 'EUR')
-                                    €@elseif($post->currency_code == 'USD')
-                                </span>
-                            </span>
-                          
-                        $@else
-                            {{ $post->currency_code }}
-                        @endif
-                        </h3>
-                    </span>
-                @endif
+                   
             </div>
             
              

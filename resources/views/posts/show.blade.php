@@ -48,146 +48,7 @@
                             <div class="row post lastPost" " data-routes="{{ isset($post->map_options['route']) ? json_encode($post->map_options['route']) : null  }}"  data-title="{{ $post->title }}" data-lat="{{ $post->lat }}" data-lng="{{ $post->lng }}" data-img="{{ isset($post->image[0]['thumb_path']) ? $post->image[0]['thumb_path'] : 'default' }}">
                                 
                                 @include('shared.post.post_toolbar')
-                                @if($nextPost && !$isMobile)
-                             
-                                <a class=" img-fade-hover" href="{{ $nextPostUrl}}" style="width:100%;color:#474747;">
-                                    <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:10px;">
-                                        <div class="nextPostBtn justify-center" style="  padding:10px;display: flex;align-items: center; margin:1rem;"> 
-                                            
-                                            <span style="margin-right:20px;">
-                                            @if($sort && $sort == 'u')
-                                               More from <b>{{ $post->user->name }}</b>
-                                            @elseif($sort && $sort == 'c' && isset($post->country->title))
-                                               Next adventure in <b>{{ $post->country->title }}</b>
-                                            @else
-                                            {{ $nextPost->title}}
-                                            @endif
-                                        </span>
-                                            <div class="next-post-info" style="position: absolute;top:0;right:0;display:none;">
-                                                {{ $nextPost->title}}
-                                            </div>
-                                            <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#acc957 100%) left bottom transparent no-repeat;">
-                                                <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" width="50"  height="50" style="border-radius:50%;width:50px;height:50px;border: 2px solid #FFF;">
-                                            </div>
-                                            <span>&nbsp;
-                                                
-                                                  <svg xmlns="http://www.w3.org/2000/svg"  style="width:20px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                                                  </svg>
-                                        </div>
-                                    </div>
-                                    </a>
-                                @endif
-                                @if($nextPost && $isMobile && isset($nextPost->image[0]['thumb_path']))
-                                <div class="text-center mt-10" style="width:100%;padding:10px;">
-                                    <div id="button-background" data-next-url="{{ $nextPostUrl}}">
-                                        <span class="slide-text flex items-center justify-between">
-                                            @if($sort && $sort == 'u')
-                                               More from&nbsp;<b>{{ $post->user->name }}</b>
-                                            @elseif($sort && $sort == 'c' && isset($post->country->title))
-                                            More from&nbsp;<b>{{ $post->country->title }}</b>
-                                            @else
-                                                @if($nextPost->title)
-                                                    {{ Str::words($nextPost->title, 10)}}
-                                                    
-                                                @else
-                                                    Next adventure
-                                                @endif
-                                            @endif
-                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                                              </svg>
-                                        </span>
-                                        <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#acc957 100%) left bottom transparent no-repeat;">
-                                            <i id="locker"  ><img  src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;border:2px solid #FFF;"></a></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                @endif
-                                <div class="col-sm-12">
- 
-                                    <div class="clearfix">
-                                      
-
-                                        
-                                        @if($post->title)
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <h1 class="blog-title text-center" style="margin-top: 10px; font-size: 1.6rem;">{{ $post->title }}</h1>
-                                                </div>
-                                            </div>
-                                           
-                                        @endif
-                                      
-                                        @include('shared.post.badges')
-                                        @if($post->video && $post->video != ' ')
-
-                                            @php
-                                                $videoId = UtilHelper::parseYtUrl($post->video);
-
-                                            @endphp
-                                            @if($videoId)
-                                                <hr>
-                                                <iframe class="video-iframe" style="border:none; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;"  width="100%" height="315" allowfullscreen="allowfullscreen"
-                                                        mozallowfullscreen="mozallowfullscreen"
-                                                        msallowfullscreen="msallowfullscreen"
-                                                        oallowfullscreen="oallowfullscreen"
-                                                        webkitallowfullscreen="webkitallowfullscreen"
-                                                        data-src="https://www.youtube.com/embed/<?php echo $videoId ?>?rel=0&showinfo=0&color=white&iv_load_policy=3">
-                                                </iframe>
-                                               
-                                            @endif
-                                        @endif
-
-                                        @if($post->embeded_code && $post->embeded_code != '')
-                                          
-                                            <p>
-                                                {!! $post->embeded_code !!}
-                                            </p>
-                                            
-                                        @endif
-                                        @if($post->description)
-                                          <div style="padding:10px;">
-                                            <br>
-                                            {!! $post->description !!}
-                                            <br>
-                                            @if($translatableText && $translatableText != '')
-
-                                                <a target="_blank" class="ml-5" href="https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text={{ $translatableText }}">
-                                                    <small><i class="fa fa-language text-muted"></i> <b>See translation</b></small>
-                                                </a>
-                                            @endif
-                                            
-                                          </div>
-                                        @endif
-                                       
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        @endif
-                    </div>
-                </div>
-                <div class="kt-portlet">
-                    <div class="kt-portlet__body" style="padding:15px;">
-                            <h3 class="font-light text-center" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
-                            <br><span style="" class="text-gray font-light"> Share your toughts in comments</span> </small></h3>
-
-                            
-                            <div id="comments-list" style="margin-top:10px;">
-                                @foreach($comments as $obj)
-                                    @include('shared.single_comment')
-                                @endforeach
-                            </div>
-                            @include('shared.comment_form')
-                    </div>
-                </div>
-                <!--end::Portlet-->
-            </div>
-            <div class="col-sm-5">
-                <!--begin::Portlet-->
-                @if($post->user->group == \App\User::$_USER_GROUP_BUSINESS)
+                                @if($post->user->group == \App\User::$_USER_GROUP_BUSINESS)
                    <div class="kt-portlet">
                        <div class="kt-portlet__body" style="padding:15px;">
                           
@@ -313,6 +174,173 @@
                    </div>
                         
                 @endif
+                                @if($nextPost && !$isMobile)
+                             
+                                <a class=" img-fade-hover" href="{{ $nextPostUrl}}" style="width:100%;color:#474747;">
+                                    <div class="text-right" style="width:100%;border-bottom:1px solid #eeeeee;margin-bottom:10px;">
+                                        <div class="nextPostBtn justify-center" style="  padding:10px;display: flex;align-items: center; margin:1rem;"> 
+                                            
+                                            <span style="margin-right:20px;">
+                                            @if($sort && $sort == 'u')
+                                               More from <b>{{ $post->user->name }}</b>
+                                            @elseif($sort && $sort == 'c' && isset($post->country->title))
+                                               Next adventure in <b>{{ $post->country->title }}</b>
+                                            @else
+                                            {{ $nextPost->title}}
+                                            @endif
+                                        </span>
+                                            <div class="next-post-info" style="position: absolute;top:0;right:0;display:none;">
+                                                {{ $nextPost->title}}
+                                            </div>
+                                            <div style="border-radius:50%;padding:5px;display:inline-flex;width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#acc957 100%) left bottom transparent no-repeat;">
+                                                <img src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" width="50"  height="50" style="border-radius:50%;width:50px;height:50px;border: 2px solid #FFF;">
+                                            </div>
+                                            <span>&nbsp;
+                                                
+                                                  <svg xmlns="http://www.w3.org/2000/svg"  style="width:20px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                                                  </svg>
+                                        </div>
+                                    </div>
+                                    </a>
+                                @endif
+                                @if($nextPost && $isMobile && isset($nextPost->image[0]['thumb_path']))
+                                <div class="text-center mt-10" style="width:100%;padding:10px;">
+                                    <div id="button-background" data-next-url="{{ $nextPostUrl}}">
+                                        <span class="slide-text flex items-center justify-between">
+                                            @if($sort && $sort == 'u')
+                                               More from&nbsp;<b>{{ $post->user->name }}</b>
+                                            @elseif($sort && $sort == 'c' && isset($post->country->title))
+                                            More from&nbsp;<b>{{ $post->country->title }}</b>
+                                            @else
+                                                @if($nextPost->title)
+                                                    {{ Str::words($nextPost->title, 10)}}
+                                                    
+                                                @else
+                                                    Next adventure
+                                                @endif
+                                            @endif
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="width: 18px;" class="ml-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                                              </svg>
+                                        </span>
+                                        <div id="nextpostswipe"  style="width:60px;height:60px;background: linear-gradient(267deg,#e25d98 0,#26bcbd 70%,#acc957 100%) left bottom transparent no-repeat;">
+                                            <i id="locker"  ><img  src="{{ $nextPost->image[0]['thumb_path'] }}" alt="Next Adventure" style="border-radius:50%;border:2px solid #FFF;"></a></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                @endif
+                                <div class="col-sm-12">
+ 
+                                    <div class="clearfix">
+                                      
+
+                                        
+                                        @if($post->title)
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h1 class="blog-title text-center" style="margin-top: 10px; font-size: 1.6rem;">{{ $post->title }}</h1>
+                                                </div>
+                                            </div>
+                                           
+                                        @endif
+                                        @if($post->price)
+                                         
+                                                <div class="text-center mt-10 mb-10" style="text-decoration: underline; text-decoration-color: #999; ">
+                                                   <h4>
+                                                    <span class="font-light">
+                                                        Price from:
+                                                    </span>
+                                                    <span class="tfont-boldest">
+                                                        <b>{{ $post->displayPrice }}</b><span class="text-muted">
+                                                            @if($post->currency_code == 'EUR')€@elseif($post->currency_code == 'USD')$@else{{ $post->currency_code }}@endif
+                                                        </span>
+                                                    </span>
+                                                   </h4>
+                                         
+                                            </div>
+                                          
+                                        @endif
+                                        @include('shared.post.badges')
+                                        @if($post->video && $post->video != ' ')
+
+                                            @php
+                                                $videoId = UtilHelper::parseYtUrl($post->video);
+
+                                            @endphp
+                                            @if($videoId)
+                                                <hr>
+                                                <iframe class="video-iframe" style="border:none; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;"  width="100%" height="315" allowfullscreen="allowfullscreen"
+                                                        mozallowfullscreen="mozallowfullscreen"
+                                                        msallowfullscreen="msallowfullscreen"
+                                                        oallowfullscreen="oallowfullscreen"
+                                                        webkitallowfullscreen="webkitallowfullscreen"
+                                                        data-src="https://www.youtube.com/embed/<?php echo $videoId ?>?rel=0&showinfo=0&color=white&iv_load_policy=3">
+                                                </iframe>
+                                               
+                                            @endif
+                                        @endif
+
+                                        @if($post->embeded_code && $post->embeded_code != '')
+                                          
+                                            <p>
+                                                {!! $post->embeded_code !!}
+                                            </p>
+                                            
+                                        @endif
+                                        @if($post->description)
+                                          <div style="padding:10px;">
+                                            <br>
+                                            {!! $post->description !!}
+                                            <br>
+                                            @if($translatableText && $translatableText != '')
+
+                                                <a target="_blank" class="ml-5" href="https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text={{ $translatableText }}">
+                                                    <small><i class="fa fa-language text-muted"></i> <b>See translation</b></small>
+                                                </a>
+                                            @endif
+                                            
+                                          </div>
+                                        @endif
+                                       
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+                <div class="kt-portlet">
+                     
+                    <div class="kt-portlet__head" style="border-bottom:1px solid #eeeeee;">
+                        
+                        <div class="kt-portlet__head-label text-center" style="width:100%;padding:2rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width:3em;margin-right:20px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                              </svg>
+                                
+                            <h3 class="font-light text-center" style="font-size:1.3rem;"><small> Have more info about this location or want to a ask question?
+                          
+    
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body" style="padding:15px;">
+                         <span style="" class="text-gray font-light"> Share your toughts in comments</span> </small></h3>
+                            
+                            <div id="comments-list" style="margin-top:10px;">
+                                @foreach($comments as $obj)
+                                    @include('shared.single_comment')
+                                @endforeach
+                            </div>
+                            @include('shared.comment_form')
+                    </div>
+                </div>
+                <!--end::Portlet-->
+            </div>
+            <div class="col-sm-5">
+                <!--begin::Portlet-->
+                
                 <div class="kt-portlet" style="padding-top:10px;margin-bottom:0px;">
                    
                     <div class="flex">
