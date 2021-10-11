@@ -41,7 +41,7 @@
         </tr>
     </table>
 
-    <table class="wrapper" width="100%" cellpadding="0" align="center"  cellspacing="0" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;padding-top:1rem;margin-bottom:1rem;">
+    <table class="wrapper" width="100%" cellpadding="0" align="center"  cellspacing="0" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;padding-top:1rem;">
         <tr>
             <td align="center">
                 <table class="content" align="center" style="width:100%;padding:2em;text-align: center;border-radius:4px;border:1px solid #eeeeee; max-width:570px;background:#FFFFFF;font-family: 'Montserrat',sans-serif;" cellpadding="0" cellspacing="0" >
