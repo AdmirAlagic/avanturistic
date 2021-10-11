@@ -1,7 +1,7 @@
 <div>
     <div class="row">
         <div class="col-12 ">
-            <a style="margin-top:10px;width:8rem;height:8rem;" class="btn loginBtn--facebook br-8 border-gray" href="/login/facebook">
+            <a style="margin-top:10px;width:8rem;height:8rem;margin-right:1em;" class="btn loginBtn--facebook br-8 border-gray" href="/login/facebook">
                 <img class="mt-10" src="/img/facebook.svg" width="30" style="width:30px;" alt="">
                 <div class="mt-10 mb-10">
                     <b>Facebook</b>
