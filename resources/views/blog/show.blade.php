@@ -3,7 +3,7 @@
 @section('content')
     @include('shared.success_error')
 
-    <div class="kt-container" id="blog-show">
+    <div class="kt-container" id="blog-show" style="font-size:15px;">
         <div class="row">
 
 
@@ -13,23 +13,7 @@
  
                 <div class="kt-portlet" style="min-height: 620px;" >
 
-                    <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;padding:0;">
-                       
-
-                        @if(isset($blog->image[0]['path']))
-                            <div class="text-center" style="width:100%;">
-                                <a href="{{ $blog->image[0]['path'] }}" class="spotlight" data-control="page,fullscreen,zoom" >
-                                    <div style="position: relative;">
-                                        <img src="{{ $blog->image[0]['path'] }}" alt="" style="width:100%;">
-
-                                    </div>
-                                </a>
-                                <br>
-                                <small class="text-gray">{!! $blog->created_at->format('jS F Y') !!} <br></small>
-                            </div>
-
-                        @endif
-                    </div>
+ 
                     <div class="kt-portlet__body" style="background: #FFFFFF; border-radius:0;">
                        
                         <h1 style="font-size:2rem; font-weight:900;">{{ $blog->title }}</h1>
