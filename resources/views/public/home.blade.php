@@ -618,7 +618,7 @@
                                                         <a href="/{{$obj->slug}}">
                                                             <img class="image-thumbnail lazy top-radius" style=""  src="/img/placeholder-trans.png" data-src="{{ $obj->image[0]['thumb_path'] }}" data-srcset="{{ $obj->image[0]['thumb_path'] }}" alt="{{ $obj->title }} " title="{{ $obj->title }}" style="-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;">
 
-                                                            <h3 style="font-weight: 900;font-size:1.3rem;margin-top:10px;padding:15px;" class="text-dark">
+                                                            <h3 style="font-weight: 900;font-size:1.3rem;margin-top:10px;padding:15px;" >
                                                                 {{ $obj->title }}
                                                             </h3>
                                                         </a>
