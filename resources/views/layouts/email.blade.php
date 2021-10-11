@@ -29,7 +29,7 @@
                                         <a  href="https://avanturistic.com" target="_blank" style="font-size:1.5rem;padding-top:15px;color:#474747;text-decoration:none;vertical-align:middle;letter-spacing:2px;">
                                             <b>Avanturistic</b>
                                         </a>
-                                        <p style="color:#999999;font-size:13px;font-size: 0.85em;margin-top:0px;padding-top: 0px;padding-left: 3px;font-weight:100;font-family: 'Montserrat',sans-serif;letter-spacing: 1px;padding-left:3px;">A network for adventure</p>
+                                        <p style="color:#999999;font-size:0.99rem;margin-top:0px;padding-top: 0px;padding-left: 3px;font-weight:100;font-family: 'Montserrat',sans-serif;letter-spacing: 1px;padding-left:3px;">A network for adventure</p>
                                     </td>
                                 </tr>
                             </table>
