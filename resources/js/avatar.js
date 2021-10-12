@@ -56,7 +56,7 @@ $(document).ready(function () {
             editor.style.top = 0;
             editor.style.bottom = 0;
             editor.style.zIndex = 9999;
-            editor.style.backgroundColor = '#000000';
+            editor.style.backgroundColor = '#FFFFFF';
 
             // Create the confirm button
             var confirm = document.createElement('button');
@@ -69,26 +69,28 @@ $(document).ready(function () {
             back.style.zIndex = 9999;
             back.textContent = 'Cancel';
             back.style.float = 'left';
-            back.style.color = '#FFFFFF';
-            back.style.backgroundColor = '#000000';
+            back.style.color = '#474747';
+            back.style.backgroundColor = '#FFFFFF';
             back.style.padding = '10px';
             back.style.border = 'none';
 
             helpText.style.zIndex = 9999;
             helpText.textContent = 'Zoom in/out, drag black area or use rectangle to crop image';
             helpText.style.textAlign = 'center';
-            helpText.style.color = '#FFFFFF';
+            helpText.style.color = '#474747';
 
             helpText.style.padding = '5px';
-            helpText.style.marginTop = '10px';
+            helpText.style.borderTop = '1px solid #eeeeee';
+            
+            helpText.style.paddingTop = '15px';
             helpText.style.fontSize = '0.7em';
             helpText.style.border = 'none';
 
 
             confirm.style.zIndex = 9999;
-            confirm.textContent = 'Next';
-            confirm.style.color = '#FFFFFF';
-            confirm.style.backgroundColor = '#acc957';
+            confirm.textContent = 'Upload';
+            confirm.style.color = '#474747';
+            confirm.style.backgroundColor = '#FFFFFF';
             confirm.style.padding = '10px';
             confirm.style.border = 'none';
             confirm_wrapper.appendChild(back);

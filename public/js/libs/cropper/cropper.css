@@ -227,11 +227,12 @@
 }
 
 .cropper-point.point-se {
-  bottom: -3px;
+  bottom: -10px;
   cursor: nwse-resize;
   height: 20px;
   opacity: 1;
-  right: -3px;
+  right: -10px;
+  border-radius:50%;
   width: 20px;
 }
 
