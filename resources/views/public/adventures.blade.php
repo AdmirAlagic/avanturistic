@@ -13,8 +13,9 @@
             will-change: transform; // creates a new paint layer
         z-index: -1;
         }</style>
-    <div class="full-width-bg" style="position:relative;overflow: hidden;">
+    
         @if(!$user)
+        <div class="full-width-bg" style="position:relative;overflow: hidden;">
         <div class="kt" style=" padding: 50px 10px 50px 10px;background:rgba(0,0,0,0.6);color:white;">
             <div class="kt-portlet__head text-center" style="width:100%;">
                 <h1 style="width:100%;margin-top: 10px;"><b>Outdoor Adventures</b></h1>
@@ -40,9 +41,10 @@
                 </div>
             </div>
         </div>
+    </div>
         @endif
 
-    </div>
+ 
 
   
    <div class="kt-portlet__body" style="background-color:#FFFFFF;">
