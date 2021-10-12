@@ -24,10 +24,8 @@
             <br>
             <div  class="text-center text-white">
                 @if(!$user)
-                    
-                      
-                    {{-- <h3 class="k-font" style="margin-top:15px;margin-bottom:15px;padding:20px;"  >Welcome to a network for outdoor enthusiasts, nature lovers and travelers</b>.</h3> --}}
-                    <div class="" style=" margin-bottom:15px;margin-top:15px;padding:20px;">
+                  
+                    <div class="" style=" margin-bottom:30px;margin-top:15px;padding:20px;">
                         <h3 class="k-font">Welcome to a network for
                             <div class="popEffect">
                             <span>outdoor enthusiasts</span>
@@ -230,21 +228,11 @@
                             <br>
                                 <h3 class="text-white">
                                    
-                                    Join Avanturistic now  <br>    and make your map of favorite outdoor locations.                                 
+                                    Create a personal or business account and share your adventure locations.                   
                                </h5>
                                <br>
                                
-                               <div class="row">
-                                   <div class="col-12 text-center">
-                                           <div class="clearfix">
-                                               <a  href="#" data-toggle="modal" data-target="#signUpModal" class="btn-more btn--with-icon">
-                                                   <i class="btn-icon fa fa-angle-right"></i> 
-                                                   <div>CREATE A FREE ACCOUNT</div>
-                                               </a>
-                                           </div>
-                                       </div>
-                                   </div>
-                               <br>
+                               
                             <br>
                                 <div class="row">
                                     <div class="col-sm-3" style="">
@@ -348,7 +336,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                            <div class="clearfix mt-10">
+                                                <a  href="#" data-toggle="modal" data-target="#signUpModal" class="btn-more btn--with-icon">
+                                                    <i class="btn-icon fa fa-angle-right"></i> 
+                                                    <div>CREATE A FREE ACCOUNT</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <br>
                             </div>
                         </div>
                     </section>
