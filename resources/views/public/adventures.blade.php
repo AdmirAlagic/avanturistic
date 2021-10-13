@@ -19,7 +19,7 @@
         <div class="kt" style=" padding: 50px 10px 50px 10px;background:rgba(0,0,0,0.6);color:white;">
             <div class="kt-portlet__head text-center" style="width:100%;">
                 <h1 style="width:100%;margin-top: 10px;"><b>Outdoor Adventures</b></h1>
-                <p>Personal impressions of best outdoor locations <br> & adventure activities worldwide</p>
+                <p>Explore personal impressions of best outdoor locations <br> & adventure activities worldwide</p>
             </div>
             <div class="kt-portlet_body">
                 <div class="kt-container text-center">
