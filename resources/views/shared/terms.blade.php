@@ -2,14 +2,14 @@
 
 @section('content')
     @include('shared.success_error')
-    <div class="kt-container">
+    <div class="kt-container padding0">
     <div class="kt-portlet">
-        <div class="kt-portlet__head text-center" style="width:100%">
+    <div class="kt-portlet__head kt-visible-desktop text-center" style="width:100%;border-bottom:1px solid #eeeeee;">
             <div class="kt-portlet__head-label text-center"  style="width:100%">
-                <h1 class="text-dark text-center"  style="width:100%">Avanturistic - Terms and conditions </h2>
+                <h3 class="text-dark text-center"  style="width:100%">Terms and conditions </h3>
             </div>
         </div>
-        <div class="kt-portlet__body">
+        <div class="kt-portlet__body" style="padding: 15px;">
 
 
             <div class="tab-content" style="font-size:0.9em;">

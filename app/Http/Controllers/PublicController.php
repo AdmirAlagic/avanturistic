@@ -271,6 +271,7 @@ class PublicController extends AppController
         view()->share('activePage', $activePage);
         $data = [
             'pageTitle' => 'Privacy policy',
+            'mobileTitle' => 'Privacy policy',
             'pageDescription' => 'Read about Avanturistic\'s privacy regulations.',
         ];
         return view('shared.privacy', $data);
@@ -282,6 +283,7 @@ class PublicController extends AppController
         view()->share('activePage', $activePage);
         $data = [
             'pageTitle' => 'Terms and Conditions',
+            'mobileTitle' => 'T&C',
             'pageDescription' => 'Read about Avanturistic\'s terms of usage.',
         ];
         return view('shared.terms', $data);
