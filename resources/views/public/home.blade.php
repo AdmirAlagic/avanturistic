@@ -169,9 +169,9 @@
                             <div class="kt-container" >
                                 <p class="text-center">
                                     Explore <b>personal impressions</b> from other users outdoor adventures and <b>get useful tips</b>.
-                                    <br><br> Every adventure is location based, so we will help you to find outdoor recreation activity <b>near you</b>.
+                                    <br><br><span class="text-gray"> Every adventure is location based, so we will help you to find outdoor recreation activity <b>near you</b></span>.
                                 </p>
-                                <p class="text-gray">Choose your favorite outdoor activity</p>
+                               <br>
                                 <div class="row" style="margin-bottom:20px;margin-top: 30px; ">
 
                                     @foreach($badges as $key => $val)
@@ -223,9 +223,9 @@
                     @if(!$user)
                     <section style="backdrop-filter: blur(3px) brightness(0.5);">
                        
-                        <div class="kt-portlet__body" >
+                        <div class="kt-portlet__body" style="padding-top: 4rem;">
                             <div class="kt-container ">
-                            <br>
+                             
                                 <h3 class="text-white">
                                    
                                     Create a personal or business account and share your adventure locations.                   
