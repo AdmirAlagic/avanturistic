@@ -106,7 +106,7 @@
                                         <label class="col-xl-3 col-sm-3 col-form-label">{{ $model->group == \App\User::$_USER_GROUP_BUSINESS ? 'Business Logo' : 'Profile Picture' }}</label>
                                         <div class="col-sm-9 col-xl-6 text-center ">
                                             <div class="kt-avatar kt-avatar--outline kt-avatar--circle- "  >
-                                                <div class="kt-avatar__holder dropzone-file-area dropzone dz-clickable" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url(&quot;{{ $model->avatar ? $model->avatar : '/img/avatar.png' }}&quot;);">
+                                                <div class="kt-avatar__holder dropzone-file-area dropzone dz-clickable" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url(&quot;{{ $model->avatar ? $model->avatar : '' }}&quot;);">
                                                     <div class="dz-message"><label class="kt-avatar__upload dropzone-file-area  dz-clickable">
                                                             <i class="fa fa-camera text-muted"></i>
 

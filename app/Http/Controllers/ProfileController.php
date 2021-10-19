@@ -84,13 +84,7 @@ class ProfileController extends AppController
     }
     public function publicProfile(Request $request, $slug = null){
 
-        if(!$this->user){
-            return redirect('/sign-up');
-        }
-
-        if(!$this->user){
-            return redirect('/')->with('success', 'Log in to continue');
-        }
+       
         if($slug){
             $user = User::where('name_slug', $slug)->first();
         } else {
@@ -118,14 +112,8 @@ class ProfileController extends AppController
         $styles[] = '/dist/metronic/assets/plugins/line-awesome/css/line-awesome.css';
 //        $styles[] = '/js/libs/spotlight/css/spotlight.css';
         view()->share('styles',$styles);
-
-        $currentUser = Auth::user();
-        if(!$currentUser){
-            return redirect('/login')->with('success', 'Log in or create account.');
-        }
-       
-
-        if($this->user->id == $user->id){
+ 
+        if($this->user && $this->user->id == $user->id){
 
             $activePage = 'my-profile';
             view()->share('activePage', $activePage);

@@ -25,8 +25,8 @@
                                         </div>
                                         <div class="kt-widget__media text-center">
                                             
-                                            <div class="kt-avatar kt-avatar--outline kt-avatar--circle- " >
-                                                <div  class="kt-avatar__holder {{ $user && $user->id == $model->id ? 'dropzone-file-area dropzone dz-clickable' : '' }} img-circle" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url('{{ $model->avatar ? url($model->avatar) : '/img/avatar.png' }}');">
+                                            <div class="kt-avatar kt-avatar--outline kt-avatar--circle- " style="margin-bottom:30px;" >
+                                                <div  class="kt-avatar__holder {{ $user && $user->id == $model->id ? 'dropzone-file-area dropzone dz-clickable' : '' }} img-circle" id="avatarImage" style="border-style:solid !important;border-radius:50%;background-image: url('{{ $model->avatar ? url($model->avatar) : '' }}');">
                                                     @if($user && $user->id == $model->id)
                                                         <div class="dz-message">
                                                             <label class="kt-avatar__upload dropzone-file-area  dz-clickable">
@@ -145,7 +145,7 @@
                 </div>
             </div>
             <div class="col-md-7 col-sm-7" style="padding:0;margin:0;">
-
+            @if(Auth::check())
                 <div class="kt-portlet kt-portlet--tabs profile-tabs text-center " style="padding: 0;margin-bottom: 0;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;margin-bottom: 0px;">
                     <div class="text-center bb-e">
                     
@@ -316,6 +316,19 @@
                
                 </div>
             </div>
+            @else
+                <div class="kt-portlet">
+                    <div class="kt-portlet__body flex items-center" style="background-color:#eeeeee;">
+                    <p style="margin:0;padding:0;">
+                     
+                        <svg xmlns="http://www.w3.org/2000/svg" style="width:44px;border-right: 1px solid #999; padding-right: 10px;" class="mr-10" fill="none" viewBox="0 0 24 24" stroke="#999">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <a class="btn btn-line-rounded mr-10" href="/login">Log in</a> or <a data-toggle=modal data-target=#signUpModal class="btn btn-line-rounded mr-10 ml-10" href="/sign-up">Sign Up</a> to view full profile.
+                    </p>
+                    </div>
+                </div>
+                @endif
         </div>
     </div>
 </div>
