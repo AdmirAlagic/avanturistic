@@ -673,7 +673,7 @@
             </section> -->
      
             
-            <div class="kt-container text-center" >
+            <div class="kt-container text-center" style="padding:4em;" >
                 <section>
                     <div class="text-center text-white" style="padding-top:4rem;padding-bottom:4rem;width:80%;margin-left:auto;margin-right:auto;;">
                         <h3 class="quote k-font" style="font-weight:400;font-size:1.8rem; font-style:italic;">{{ $quote->title}}</h3>
