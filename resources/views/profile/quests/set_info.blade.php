@@ -32,7 +32,7 @@
                 
             
             @if(!$model->avatar)
-                <a href="/profile#info" class="btn btn-line-rounded" style="width:100%;padding: .5em;">
+                <a href="/profile#info" class="btn " style="width:100%;padding: .5em;">
                     <div class="row img-fade-hover">
                         <div class="col-2">
                             <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,7 +52,7 @@
             @endif
             
             @if(!$model->country)
-                <a href="/profile#info" class="btn btn-line-rounded" style="width:100%;padding: .5em;">
+                <a href="/profile#info" class="btn " style="width:100%;padding: .5em;">
                     <div class="row img-fade-hover">
                         <div class="col-2">
                             <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,7 +72,7 @@
             @endif
             
             @if(!isset($model->options['badges']))
-                <a href="/profile#interests" class="btn btn-line-rounded" style="width:100%;padding: .5em;">
+                <a href="/profile#interests" class="btn " style="width:100%;padding: .5em;">
                     <div class="row img-fade-hover">
                         <div class="col-2">
                             <svg xmlns="http://www.w3.org/2000/svg" style="width:16px;" fill="none" viewBox="0 0 24 24" stroke="#474747">
