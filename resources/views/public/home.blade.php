@@ -236,15 +236,14 @@
                             <br>
                                 <div class="row">
                                     <div class="col-sm-3" style="">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" >
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8"  style="padding: 25px;padding-bottom: 0px;" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                            <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
-                                                            src="/img/placeholder-icon.svg" alt="Outdoor photography & film" data-src="{{ url('/img/photos-white.svg') }}" data-srcset="{{ url('/img/photos-white.svg') }}">
-                                                        </div>
-                                                        <h2  style="font-size:1.2rem;"><b>Outdoor Photography & Film</b></h2>
+                                               
+                                                <h2  style="font-size:1.6rem;"><b>Outdoor Photography & Film</b></h2>
+                                                <img class="lazy" width="40" height="40" style="" src="/img/placeholder-icon.svg" alt="Outdoor photography & film" data-src="{{ url('/img/motorcycle.svg') }}" data-srcset="{{ url('/img/motorcycle.svg') }}">
+                                                       
                                             </div> 
-                                            <div class="kt-portlet__body text-center" style="padding:20px;">
+                                            <div class="kt-portlet__body text-center" >
                                                 <div class="text-justify">
                                                 <p class="text-center ">
                                                    <em>Interested in outdoor & nature photography and film? </em>
@@ -259,19 +258,16 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" >
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8"  style="padding: 25px;padding-bottom: 0px;" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
-                                                        src="/img/placeholder-icon.svg" alt="Trip & travel stories" data-src="{{ url('/img/travel.svg') }}" data-srcset="{{ url('/img/travel.svg') }}">
-                                                    </div>
-                                                    <h2  style="font-size:1.2rem;"><b>Trip & Travel Stories</b></h2>
+                                                 
+                                                <h2  style="font-size:1.6rem;"><b>Trip & Travel Stories</b></h2>
+                                                <img class="lazy" width="40" height="40" style="" src="/img/placeholder-icon.svg" alt="Trip & travel stories" data-src="{{ url('/img/location.svg') }}" data-srcset="{{ url('/img/location.svg') }}">
+                                                    
+                                                  
                                             </div>  
-                                            <div class="kt-portlet__body text-center" style="padding:20px;">
-                                                <div style="width:100%">
-                                                
-                                                   
-                                                </div>
+                                            <div class="kt-portlet__body text-center" >
+                                                 
                                                 <div class="text-justify ">
                                                     <p class="text-center">
                                                     <em>Do you write stories about trips & travel?</em>
@@ -286,15 +282,15 @@
                                         
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8"  >
+                                        <div class="kt-portlet kt-portlet--height-fluid  border-r8"  style="padding: 25px;padding-bottom: 0px;" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div     style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy " width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
-                                                        src="/img/placeholder-icon.svg" alt="Adventure Tourism" data-src="{{ url('/img/tourism-white.svg') }}" data-srcset="{{ url('/img/tourism-white.svg') }}">
-                                                    </div>
-                                                    <h2  style="font-size:1.2rem;"><b>Adventure Tourism</b></h2>
+                                                
+                                                <h2  style="font-size:1.6rem;"><b>Adventure Tourism</b></h2>
+                                                <img class="lazy " width="40" height="40" style="" src="/img/placeholder-icon.svg" alt="Adventure Tourism" data-src="{{ url('/img/tourism.svg') }}" data-srcset="{{ url('/img/tourism.svg') }}">
+                                                     
+                                                   
                                             </div>   
-                                            <div class="kt-portlet__body text-center" style="padding:20px;">
+                                            <div class="kt-portlet__body text-center" >
                                                     
                                                    
                                                     <div class="text-justify ">
@@ -309,15 +305,16 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="kt-portlet kt-portlet--height-fluid border-r8" >
+                                        <div class="kt-portlet kt-portlet--height-fluid border-r8"  style="padding: 25px;padding-bottom: 0px;" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
-                                                <div   style="width:60px;height:60px;border:2px solid #474747 !important;padding:15px;border-radius:50%;margin:10px;margin-left:auto;margin-right:auto;">
-                                                        <img class="lazy" width="40" height="40" style="margin-bottom:15px;margin-left:auto;margin-right:auto;filter:invert(0.8) !important;" 
-                                                        src="/img/placeholder-icon.svg" alt="Local tourism promotion" data-src="{{ url('/img/map-white.svg') }}" data-srcset="{{ url('/img/map-white.svg') }}">
-                                                    </div>
-                                                    <h2  style="font-size:1.2rem;"><b>Promote Your Country</b></h2>
-                                                </div> 
-                                            <div class="kt-portlet__body text-center" style="padding:20px;">
+                                                
+                                            <h2  style="font-size:1.6rem;"><b>Promote Your Country</b></h2>
+                                                <img class="lazy" width="40" height="40" style="" 
+                                                src="/img/placeholder-icon.svg" alt="Local tourism promotion" data-src="{{ url('/img/join.svg') }}" data-srcset="{{ url('/img/join.svg') }}">
+                                            </div>
+                                            
+                                                 
+                                            <div class="kt-portlet__body text-center" []>
                                                     
                                             <div class="text-justify ">
                                                     <p class="text-center">
