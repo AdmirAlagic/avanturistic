@@ -363,7 +363,7 @@
                         <div class="kt-portlet__head justify-end" style="width: 61.8%;">
                             <div class="kt-portlet__head-label" style="width:100%;">
                             <a class="text-muted flex" style="font-weight:500;" href="/country/{{ $post->country->slug }}">
-                                <div style="margin-left:-1px;margin-right:10px;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; width: 35px; height: 35px;">
+                                <div style="margin-left:-1px;margin-right:10px;border:1px solid #999;background-image:url('/img/countries/svg/{{ strtolower($post->country->code2) }}.svg');background-repeat:no-repeat;background-size:cover; background-position: 50% 50%;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; width: 35px; height: 35px;">
                                              
                                 </div>
                               
