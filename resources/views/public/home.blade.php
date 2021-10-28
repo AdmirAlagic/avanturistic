@@ -239,7 +239,7 @@
                                         <div class="kt-portlet kt-portlet--height-fluid border-r8"  style="padding: 25px;padding-bottom: 0px;" >
                                             <div style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #eee;">
                                                
-                                                <h2  style="font-size:1.6rem;"><b>Outdoor Photography & Film</b></h2>
+                                                <h2  style="font-size:1.6rem;"><b>Outdoor Photos & Videos</b></h2>
                                                 <img class="lazy" width="40" height="40" style="" src="/img/placeholder-icon.svg" alt="Outdoor photography & film" data-src="{{ url('/img/motorcycle.svg') }}" data-srcset="{{ url('/img/motorcycle.svg') }}">
                                                        
                                             </div> 
