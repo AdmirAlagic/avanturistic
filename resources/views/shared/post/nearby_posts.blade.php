@@ -54,19 +54,17 @@
                                         <img style="width:100%;" src="{{ url(isset($image[0]->placeholder) ? $image[0]->placeholder : '/img/placeholder-trans.png') }}" data-src="{{ url($image[0]->thumb_path) }}" data-srcset="{{ url($image[0]->thumb_path) }}" class="swiper-lazy" > 
                                        
                                         @if($obj->title)
-                                            <div class="  flex items-center" style="bottom:-5px;position:absolute;left:0px;width:100%;">
+                                            <div  style="bottom:-5px;position:absolute;left:0px;width:100%;background-color: #fbfbfb;padding:1rem;">
                                                 
-                                                <div class=" overflow-dots k-font text-white" style="padding:0.5rem 1rem;font-size: 1.2rem; height:40px;background-color: #000000;"> 
-                                                    @if($obj->title)<b>{{ Str::limit($obj->title, 56) }}  @endif 
-                                                    </b>
+                                                <div class=" flex items-center overflow-dots k-font text-dark"> 
+                                                    <h4>@if($obj->title)<b>{{ Str::limit($obj->title, 56) }}  @endif 
+                                                    </b></h4>
                                                 </div>  
                                                 @if(isset($obj->distance))
-                                                <div class="text-white text-right " style="padding:0.5rem 1rem;width:42%; height:40px;background-color: #000000;">
-                                                    <small style="font-size:0.8em;">
-                                                        {{ number_format($obj->distance, 2, '.', '') }} km
-                                                        &nbsp;<i class="fa fa-location-arrow"></i>
-                                                    </small>
-                                                </div>
+                                                    <div class="flex items-center text-right " style="width:43%;font-size:1rem;">
+                                                    <p style="margin:0;">{{ number_format($obj->distance, 2, '.', '') }} km   &nbsp;<i class="fa fa-location-arrow"></i></p>   
+                                                
+                                                    </div>
                                             @endif
                                             </div>
                                         @endif
