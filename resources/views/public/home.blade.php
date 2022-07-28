@@ -161,7 +161,7 @@
                         <div class="kt-portlet__head text-center" style="background:transparent;min-height:30px;">
                             <div class="kt-portlet__head-label" style="width:100%;min-height:30px;">
                                 <h3 class="kt-portlet__head-title text-center" style="font-size: 1.5rem;width:100%;border-radius:0px !important;margin:10px;padding:10px;">
-                                    Find Your Next Adventure
+                                    <a href="/outdoor-adventures">Find Your Next Adventure</a>
                                 </h3>
                             </div>
                         </div>

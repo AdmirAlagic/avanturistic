@@ -1,7 +1,7 @@
 @if(count($posts))
-    <div class="row" id="more-posts">
+    <div class="row" id="more-posts" style="padding: 25px;padding-bottom: 0px;">
         @foreach($posts as $obj)
-            <div class="col-sm-6 col-lg-3" style="margin-bottom: 15px; position:relative">
+            <div class="col-sm-6 col-lg-6" style="margin-bottom: 15px; position:relative">
                 <div class="top-border-radius" style=" -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;overflow:hidden;">
 
                     <div style="position:relative;">
