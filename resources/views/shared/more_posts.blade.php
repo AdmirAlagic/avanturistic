@@ -3,7 +3,7 @@
         @foreach($posts as $obj)
             @php $options = json_decode($obj->opts);@endphp
             @php $images = json_decode($obj->image);@endphp
-            <div class="col-sm-6 col-lg-3" style="margin-bottom: 15px; position:relative">
+            <div class="col-sm-6 col-lg-6 offset-lg-3" style="margin-bottom: 15px; position:relative">
                 <div class="top-border-radius" style=" -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;">
 
                     <div style="position:relative;">
