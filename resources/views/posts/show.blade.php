@@ -4,7 +4,7 @@
     <div class="kt-container post">
         @include('shared.success_error')
         <div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-6 offset-sm-1">
                 <!--begin::Portlet-->
                 <div class="kt-portlet" style="background: none;">
                     <div class="" style="padding: 0;width:100% !important;">
@@ -338,7 +338,7 @@
                 </div>
                 <!--end::Portlet-->
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-4">
                 <!--begin::Portlet-->
                 
                 <div class="kt-portlet" style="padding-top:10px;margin-bottom:0px;">
