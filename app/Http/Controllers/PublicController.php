@@ -316,6 +316,7 @@ class PublicController extends AppController
             'selectedCategory' => $request->session()->pull('selectedCategory'),
             'badges' => config('badges.list'),
             'pageTitle' => $country->title . ' map of outdoor adventures',
+            'pageIcon' => url('/img/countries/svg/'.strtolower($country->code2).'.svg'),
             'mobileTitle' => $country->title,
             
             'pageImage' => url(isset($bestPost->image[0]['path']) ? $bestPost->image[0]['path'] : '/img/avanturistic.jpg'),

@@ -170,7 +170,7 @@ console.log(document.getElementById('loged_user').value)
                         </svg>
                     </a>
                 @else
-                    <img  src="{{ url('/img/logo.svg') }}" style="width:26px !important;" alt="avanturistic.com" title="Avanturistic" /> 
+                    <img  src="{{ isset($pageIcon) ? $pageIcon : url('/img/logo.svg') }}" style="width:26px !important;" alt="avanturistic.com" title="Avanturistic" /> 
                 @endif
                 @if(isset($mobileTitle) && $mobileTitle)
                     <h2 style="margin-left: 10px;min-width:0;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size:1.2rem;margin: 0; margin-left: 10px;font-weight:300;">

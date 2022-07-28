@@ -7,31 +7,36 @@
         <!--begin::Portlet-->
         <div id="home">
             <div class="kt-portlet kt-portlet--height-fluid" style="margin-top: 0px;padding:0;">
-                <div class="kt-portlet__head text-center" style="width: 100%;">
-                    <div class="kt-portlet__head-label text-left" style="width: 100%;">
-                    <span style="margin-right:10px;"> <img src="{{ url('/img/countries/svg/'.strtolower($country->code2).'.svg') }}" alt="{{ $country->title}}" class="spotlight" style="height:22px; "> </span> 
+            
+                <!-- <div class="kt-portlet__head text-center" style="width: 100%;">
+                    <div class="kt-portlet__head-label text-center" style="width: 100%;justify-content: center; align-items: center;margin-top:15px;">
+                        <span style="margin-right:10px;"> <img src="{{ url('/img/countries/svg/'.strtolower($country->code2).'.svg') }}" alt="{{ $country->title}}" class="spotlight" style="height:22px; "> </span> 
 
-                        <h1 class="kt-portlet__head-title" style="width: 100%;font-size:1.4rem;">
-                              <b>{{ $country->title }}</b> <br>
+                        <h1 class="kt-portlet__head-title" style="width: 100%;font-size:1.4rem;width: fit-content !important;">
+                              <b  class="text-dark">{{ $country->title }}</b> <br>
                         </h1>
 
                     </div>
 
-                </div>
-                <div class="kt-portlet__body text-center" style="padding:0;padding-top: 10px;">
+                </div> -->
+                <div class="kt-portlet__body text-center" style="padding:0; ">
                    
                     <div class="row">
                         <div class="col-12 text-center">
-                            <div style="padding:10px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; ">
+                            <div style="padding:10px;margin-bottom:20px;margin-top:20px; -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px; ">
                             <h4> <i class="fa fa-info-circle text-muted"></i> Country Facts</h4>
 
                                 <div class="text-gray">
-                                    Original Name: <b>{{ $country->origin_title }}</b><br>
+                                <div style="margin-bottom:10px;"> <img src="{{ url('/img/countries/svg/'.strtolower($country->code2).'.svg') }}" alt="{{ $country->title}}" class="spotlight" style="width:140px; "> </div> 
 
-                                    Region: <b>{{ $country->subregion }}</b> <br>
-                                    Language: <b>{{ $country->language }}</b> <br>
-                                    Phone Code: <b>+{{ $country->phone_code }}</b> <br>
-                                    Capital City: <b>{{ $country->capital }}</b> <br>
+                                    <p>
+                                    Original Name: <b  class="text-dark">{{ $country->origin_title }}</b><br>
+
+                                    Region: <b  class="text-dark">{{ $country->subregion }}</b> <br>
+                                    Language: <b  class="text-dark">{{ $country->language }}</b> <br>
+                                    Phone Code: <b  class="text-dark">+{{ $country->phone_code }}</b> <br>
+                                    Capital City: <b  class="text-dark">{{ $country->capital }}</b> <br>
+                                    </p>
                                 </div>
                             
                              </div>
@@ -50,7 +55,7 @@
         <div class="kt-portlet__head text-center" style="z-index: 1;background:#FFFFFF;">
             <div class="kt-portlet__head-label text-center" style="width:100%">
                 <div class="text-center" style="width:100%;padding: 10px;">
-                    <h2 class="text-muted" style="font-size:1.4rem;"> <b>Outdoor adventures in {{ $country->title }}</b> <br></h2>
+                    <h2 class="text-muted" style="font-size:1.4rem;"> <b  class="text-dark">Outdoor adventures in {{ $country->title }}</b> <br></h2>
                     <p class="text-center">Explore impressions from best adventure locations and find outdoor activities in {{ $country->title }}</p>
                     
                 </div>
